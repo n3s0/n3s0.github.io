@@ -10,7 +10,7 @@ categories:
 So, I decided to create another one. Another blog that is. Figured it'd be good to separate
 different hats with different platforms. The idea behind this one is my journey while I
 learn different programming languages and concepts. I've done some of it to solve problems
-for CTFs in my other blog [n3s0 || sys](https://n3s0.gitlab.io/). Though, I thought maybe
+for CTFs in my other blog [n3s0 || info](https://n3s0.gitlab.io/). Though, I thought maybe
 it'd be best to make that into it's own little niche. There are some CTFs I've played on there
 along with some sysadmin stuff. I may program to solve problems on it. But, those are generally
 small scripts. They don't solve problems long term. It's where I will house a lot of my "Hacking",
@@ -46,13 +46,13 @@ because it was just easier. Jekyll isn't hard, per se. But, you know. I'm lazy. 
 like a one liner command that will create a new page or post for you. But, learning how Jekyll 
 works and how to deploy it is beneficial.
 
-The Jekyll theme I'm using is named [minimal-mistakes](). That link is the Github link. I certainly
-enjoy the layout and the overall feel. One project might be porting the theme over to Hugo
-so that community can use it. But, I fear I'm a long ways away before I start porting the theme
+The Jekyll theme I'm using is named [minimal-mistakes](https://github.com/mmistakes/minimal-mistakes). 
+That is the Github link. I certainly enjoy the layout and the overall feel. One project might be porting 
+the theme over to Hugo so that community can use it. But, I fear I'm a long ways away before I start porting the theme
 to a differnet platform. Figured I'd deploy it as a Jekyll application as a reminder.
 Nothing against Jekyll. I just enjoy using one tool to do the job. Jekyll is an awesome framework
 for static site building. I'll probably be releasing my notes for installing Jekyll on my laptop
-to [n3s0 || sys](https://n3s0.gitlab.io/) at some point.
+to [n3s0 || info](https://n3s0.gitlab.io/) at some point.
 
 Please note that the two blogs will be complimenting each other. Though they don't look the same.
 References will be made that will take you to the other one. Not sure why I'm reexplaining this.
