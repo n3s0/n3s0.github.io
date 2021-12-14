@@ -5,6 +5,4 @@ permalink: /about/
 classes: wide
 ---
 
-## About
-
-My name is Timothy Loftus. 
+My name is Timothy Loftus (n3s0). More to come soon.
