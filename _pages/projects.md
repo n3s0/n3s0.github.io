@@ -1,6 +1,6 @@
 ---
 layout: single
-title: projects
+title: Projects
 permalink: /projects/
 class: wide
 ---

@@ -1,5 +1,9 @@
 # main links
 main:
+  #- title: "blog"
+  #  url: /
+  - title: "posts"
+    url: /year-archive/
   - title: "about"
     url: /about/
   - title: "projects"

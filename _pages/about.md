@@ -1,6 +1,6 @@
 ---
 layout: single
-title: about
+title: About
 permalink: /about/
 classes: wide
 ---
