@@ -1,7 +1,8 @@
 ---
 title: "The Python Challenge"
 date: "2021-03-14"
-exerpt: "Notes and PoC code for my crack at The Python Challenge. This is an on going post that I update as I solve challenges."
+class: "wide"
+excerpt: "Notes and PoC code for my crack at The Python Challenge. This is an on going post that I update as I solve challenges."
 categories:
 - python
 - challenge
