@@ -1,5 +1,5 @@
 ---
-title: "The Python Challenge"
+title: "The Python Challenge - Writeup"
 date: "2021-03-14"
 class: "wide"
 excerpt: "Notes and PoC code for my crack at The Python Challenge. This is an on going post that I update as I solve challenges."
@@ -25,10 +25,22 @@ If anyone would like to try their hand at this also, they can find it at the fol
 
 - [Python Challenge](http://www.pythonchallenge.com/index.php)
 
-I'm available should anyone be stuck. I welcome those who would like to. I may learn something from your method for 
-attacking the problems.
+I'm available should anyone be stuck. I welcome those who would need assistance to contact me. I will assist however I can without
+giving you everything. Personally, I hope you don't read this article until you finish it. You are welcome to send me solutions. I
+would love to see them.
 
-#### About
+### Solution Repository
+
+I have hosted the solution to this on my GitHub. I built a modular commandline script that will list the available modules available.
+Not only that. But, the script will also go through the solution. It's a very simple script. Only two arguments are required. Help
+if you count that. Help will output if you just run the script without any arguments.
+
+- [n3s0/python-challenge](https://github.com/n3s0/python-challenge)
+
+The repository will provide information should you need to clone it to your local machine. Please submit any issues that you find
+with the code. It would be most appreciated.
+
+### About
 
 Below is from the about page for The Python Challenge. I'm just posting this to provide the authors explaination on what this is.
 
@@ -55,40 +67,46 @@ Link for this challenge is below.
 
 - [http://www.pythonchallenge.com/pc/def/0.html](http://www.pythonchallenge.com/pc/def/0.html)
 
-This is a picture of an old monitor with a picture. The picture shows two to power of 38. This also provides the following hint.
+This is a picture of an old monitor with a picture. The picture shows 2 to power of 38. This also provides the following hint.
 
 - Hint: try to change the URL address.
 
 ### Solution
 
-Below is the script for the solution.
+Below is the function that provides the solution. The solution is to utilize the numbers provided on the screen to
+obtain the exponent. When it's appended by to the URL it will take you to the next challenge.
 
 ```python
-"""
-title: Python Challenge - 0 - Solution
-author: Timothy Loftus (n3s0)
-date: 03/14/2021
-file: 0.py
-"""
+def solutionZero():
+    """
+    Solves the zeroeth challenge for The Python Challenge.
+    """
+    # Partial URL for the challenge
+    PARTIAL_CHALLENGE_URL = "http://www.pythonchallenge.com/pc/def/"
 
-# Partial URL to make string formatting easy.
-partial_url = "http://www.pythonchallenge.com/pc/def/"
-solution = 2**38 # Exponents
+    # Exponent Solution provided from the image.
+    solution = 2**38
 
-# Print the new URL.
-print(partial_url + "{0}.html".format(str(solution)))
-print("Woot")
+    # Solution URL -- Returned
+    SOLUTION_URL = "{0}{1}.html".format(PARTIAL_CHALLENGE_URL, str(solution))
+
+    return SOLUTION_URL
+
 ```
 
-Below is the ouput from the script. This has provided the link to the new challenge. 
-
-- [http://www.pythonchallenge.com/pc/def/274877906944.html](http://www.pythonchallenge.com/pc/def/274877906944.html)
+Below is the ouput from the script.
 
 ```sh
-n3s0:PythonChallenge/ $ python 0.py                                                                        [1:22:59]
-http://www.pythonchallenge.com/pc/def/274877906944.html
-Woot
+The Python Challenge Solutions
+Challenge: 0
+Initializing module...
+Solution: http://www.pythonchallenge.com/pc/def/274877906944.html
 ```
+
+The script provides the solution URL to be the following link. This will also take me to the next challenge. Which will be
+discussed in the next section.
+
+- [http://www.pythonchallenge.com/pc/def/274877906944.html](http://www.pythonchallenge.com/pc/def/274877906944.html)
 
 ## Challenge 1
 
@@ -105,11 +123,3 @@ Below is the challenge text.
 ```
 g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj. 
 ```
-
-### Solution
-
-This is a cipher text challenge. In this case, deciphering the text requires that you shift all of the letters in the cipher 
-text by two and ignoring special characters and white space. So, G will be I for example. This can be done by hand. But, it's 
-a programming challenge. Need to write a script so the challenge can be solved using a programming language; Python specifically. 
-
-More will be comming soon.
