@@ -98,8 +98,8 @@ Below is the ouput from the script.
 
 ```sh
 The Python Challenge Solutions
-Challenge: 0
 Initializing module...
+Challenge: 0
 Solution: http://www.pythonchallenge.com/pc/def/274877906944.html
 ```
 
