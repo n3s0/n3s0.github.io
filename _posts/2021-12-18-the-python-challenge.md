@@ -88,9 +88,9 @@ def solutionZero():
     solution = 2**38
 
     # Solution URL -- Returned
-    SOLUTION_URL = "{0}{1}.html".format(PARTIAL_CHALLENGE_URL, str(solution))
+    solution_url = "{0}{1}.html".format(PARTIAL_CHALLENGE_URL, str(solution))
 
-    return SOLUTION_URL
+    return solution_url
 
 ```
 
