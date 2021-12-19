@@ -1,7 +1,7 @@
 ---
 title: "The Python Challenge - Writeup"
 date: "2021-12-18"
-class: "wide"
+classes: "wide"
 excerpt: "Notes and PoC code for my crack at The Python Challenge. This is an on going post that I update as I solve challenges."
 categories:
 - "python"
