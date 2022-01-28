@@ -69,6 +69,13 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 
+# Analytics
+analytics:
+  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id          : "G-Q36Q6JN2P1"
+    anonymize_ip         : # true, false (default)
+    
 # Site Author
 author:
   name             : "Timothy Loftus (n3s0)"
