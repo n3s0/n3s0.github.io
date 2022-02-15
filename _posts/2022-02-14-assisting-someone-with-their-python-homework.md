@@ -151,3 +151,12 @@ String in UPPER case: FDSGFDSGFDSGFDSAGFDSAGFDSGFDSAFDS
 String in lower case: fdsgfdsgfdsgfdsagfdsagfdsgfdsafds
 String with 'Python' attached to it: fdsgfdsgfdsgfdsagfdsagfdsgfdsafdsPython
 ```
+
+## Resources
+
+Below are the resources provided for comming up with the solution to the assignment.
+
+- [Builtin Types](200~https://docs.python.org/3/library/stdtypes.html)
+- [len(s) Builtin Function](https://docs.python.org/3/library/functions.html#len)
+- [str.upper() Method](https://docs.python.org/3/library/stdtypes.html#str.upper)
+- [str.lower() Method](https://docs.python.org/3/library/stdtypes.html#str.lower)
