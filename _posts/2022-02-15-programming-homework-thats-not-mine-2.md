@@ -1,0 +1,213 @@
+---
+title: "Programming Homework That's Not Mine - Assignment 2"
+date: "2022-02-15"
+classes: "wide"
+excerpt: "Assisted someone with their Python Programming class homework and here are my solutions."
+categories:
+- "python"
+- "homework"
+- "assignment"
+tags:
+- "python"
+- "homework"
+- "assignment"
+---
+
+## Overview
+
+Another programming assignment that I found on ```r/learnpython```. Looks like the OP wanted
+help with a Python programming homework assignment. There hasn't been much traction on it.
+It's about two months old. So, it should be fair game! Let's go!
+
+## Assignment
+
+Below is the assignment.
+
+hey guys! I need help with this: how do you use python to print a program that prints 
+out a list from 1-6,4 times and have one gap between each list and it is vertical.
+
+Below is their desired output based on the OP's comment. Where is the gap between each 
+list? Though, this is not what they explained. So, I am going to do both. The requirements 
+from their explaination. Then, I will do it from the expected output.
+
+```sh
+1
+2
+3
+4
+5
+6
+1
+2
+3
+4
+5
+6
+1
+2
+3
+4
+5
+6
+1
+2
+3
+4
+5
+6
+```
+
+## Solutions
+
+### Solution 1 - As Explained
+
+This is the solution to the problem the OP provided. As explained.
+
+1. It lists 1-6 four times.
+2. It has one gap between each list.
+3. It's vertical. 
+
+#### Code
+
+Utilized a ```for()``` loop to iterate between the numbers one through four using 
+```range()```. Nested another ```for()``` loop within it and iterated 
+though one and seven. Printed the number it's on. Printed an empty line after the 
+nested iteration was completed.
+
+This continues until the range for the parent loop reaches the end of the loop. In 
+this case it's four. So, when it hits five. It will just quit.
+
+Can do this with ```while()``` loops also. This was just the quick and easy way.
+I'll do it later some time.
+
+```python
+"""
+file: homework.py
+author: Timothy (n3s0)
+description:
+
+Working on someones homework. This is the solution that I came up with.
+
+hey guys! I need help with this: how do you use python to print a program that prints 
+out a list from 1-6,4 times and have one gap between each list and it is vertical.
+
+"""
+
+# Iterate through the range 1 through 4 and assign each
+# value to the variable counter. 
+for counter in range(1, 5):
+    # iterate through 1 and 6 and assign each value to the
+    # the variable number
+    for number in range(1, 7):
+	# print the number
+        print(number)
+    # print the gap requested.
+    print()
+
+```
+
+#### Output
+
+Below is the output for the output they requested in the explaination. It iterates through
+
+```sh
+python homework.py
+1
+2
+3
+4
+5
+6
+
+1
+2
+3
+4
+5
+6
+
+1
+2
+3
+4
+5
+6
+
+1
+2
+3
+4
+5
+6
+
+```
+
+## Solution 2 - Expected Output
+
+This is what the solution that provides the solution for the output they was expecting.
+
+### Code
+
+This is the same code for the previous solution. Only I don't print the gap after the nested loop.
+
+```python
+"""
+file: homework.py
+author: Timothy (n3s0)
+description:
+
+Working on someones homework. This is the solution that I came up with.
+
+hey guys! I need help with this: how do you use python to print a program that prints
+out a list from 1-6,4 times and have one gap between each list and it is vertical.
+
+"""
+
+# Iterate through the range 1 through 4 and assign each
+# value to the variable counter. 
+for counter in range(1, 5):
+    # iterate through 1 and 6 and assign each value to the
+    # the variable number
+    for number in range(1, 7):
+        # print the number
+        print(number)
+```
+
+### Output
+
+```sh
+python homework.py 
+1
+2
+3
+4
+5
+6
+1
+2
+3
+4
+5
+6
+1
+2
+3
+4
+5
+6
+1
+2
+3
+4
+5
+6
+```
+
+## Resources
+
+Like with all things. This is about learning. I may not explain this very well. 
+So, I'm providing some of the resources I used to solve the problem below.
+
+- [range() - Python Documentation](https://docs.python.org/3/library/functions.html#func-range)
+- [range() - Python Documentation](https://docs.python.org/3/library/stdtypes.html#range)
+- [for statements - Python Documentation](https://docs.python.org/3/tutorial/controlflow.html#for-statements)

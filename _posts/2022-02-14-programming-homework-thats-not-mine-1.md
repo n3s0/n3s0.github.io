@@ -1,14 +1,16 @@
 ---
-title: "Programming Homework That's Not Mine - Python - Assignment 1"
+title: "Programming Homework That's Not Mine - Assignment 1"
 date: "2022-02-14"
 classes: "wide"
 excerpt: "Assisted someone with their Python Programming class homework and here are my solutions."
 categories:
 - "python"
-- "yourhomework"
+- "homework"
+- "assignment"
 tags:
 - "python"
-- "yourhomework"
+- "homework"
+- "assignment"
 ---
 
 ## Overview
@@ -16,6 +18,8 @@ tags:
 So, sometimes I assist people with their homework. Sometimes for fun I will pluck their homework
 assignment from the web and just do it. Not doing this to be mean. I genuinely help them and point
 them to resources after I've solved it using a few different code snippets.
+
+Home work this time is someone who needs help with their Python programming assignment.
 
 I used to do this all the time for college students in the past. Just figured I document it from
 now on. Perhaps it will provide some insight. Who knows.
