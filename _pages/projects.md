@@ -5,11 +5,13 @@ permalink: /projects/
 classes: wide
 ---
 
-This is more of a table of projects that I've been working on in my spare time. This includes coding challenges 
-and other personal projects I've used to solve various challenges. I will also inlcude challenges that I've contributed 
-to in the table as well. Links in the name of the project will contain the source code repository containing the code.
+List of projects I've been working on in my spare time. This includes coding challenges 
+and my personal projects. Included will also be challenges that I've contributed to. Links 
+in the name will take you to either the repository or documentation for the project.
+
 Review and give feedback as you see fit.
 
 | Name |  Language | Version | Description |
 |-----|------|----|----|
 | [n3s0/python-challenge](https://github.com/n3s0/python-challenge) | Python | 1.0 | Personal repository containing my code solutions for [The Python Challenge](https://n3s0.github.io/2021/03/14/the-python-challenge). |
+| [n3s0/reference](https://gitlab.com/n3s0/reference) | Python | 1.0 | Provides reference tables for various topics. |
