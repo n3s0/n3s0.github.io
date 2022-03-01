@@ -33,5 +33,5 @@ Below is the list.
 - Library Management System (LMS) - I have a lot of books. So, why not.
 - DHT Dashboard - Dashboard for displaying Temp/Humidity in an area.
 - Plant irrigation system using Arduino and various sensors.
-- Python data visualization and reporting for VMware data pulled from
+- Python data visualization and reporting for VMware data pulled using 
   PowerCLI.
