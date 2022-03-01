@@ -28,7 +28,8 @@ removed from this list and added to the projects list.
 Below is the list.
 
 - Reference app. But, a web application.
-- Favlinks. Online bookmarks. Will replace Favlinks on n3s0 || info.
+- Favlinks. Online bookmarks. Will replace Favlinks on 
+  ```n3s0 || info```.
 - Arduino universal remote. (TVs, A/C Units, etc.)
 - Library Management System (LMS) - I have a lot of books. So, why not.
 - DHT Dashboard - Dashboard for displaying Temp/Humidity in an area.
