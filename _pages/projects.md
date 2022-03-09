@@ -16,7 +16,7 @@ Review and give feedback as you see fit.
 | Name |  Language | Version | Description |
 |-----|------|----|----|
 | [n3s0/python-challenge](https://github.com/n3s0/python-challenge) | Python | 1.0 | Personal repository containing my code solutions for [The Python Challenge](https://n3s0.github.io/2021/03/14/the-python-challenge). |
-| [n3s0/reference-cli](https://gitlab.com/n3s0/reference-cli) | Python | 1.0 | Command line interface that provides reference tables for various topics. |
+| [n3s0/reference-cli](https://gitlab.com/n3s0/reference-cli) | Python | 1.0 | CLI that provides reference tables for various topics. |
 
 ### Ideas
 
