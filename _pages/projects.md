@@ -28,7 +28,7 @@ removed from this list and added to the projects list.
 | Name | Language | Description |
 |-----|---------|---------|
 | Reference | PHP | Web application that provides references on various topics. |
-| FavLinks | PHP | Web application that will house my frequented sites in categories.  Hosted on ```n3s0 || info```.|
+| FavLinks | PHP | Web application that will house my frequented sites in categories. Will replace Favlinks on ```n3s0 || info```. | 
 | Arduino TV Remote (ATVR) | C/Cpp | Arduino TV remote. |
 | Universal TV Remote (UTVR) | Undecided | Universal TV remote that's web based. (TVs, A/C Units, etc.) |
 | Arcanaeum LMS | PHP | Library Management System for my books. I have a lot so why not. |
