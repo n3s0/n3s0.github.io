@@ -5,9 +5,10 @@ permalink: /projects/
 classes: wide
 ---
 
-List of projects I've been working on in my spare time. This includes coding challenges 
-and my personal projects. Included will also be challenges that I've contributed to. Links 
-in the name will take you to either the repository or documentation for the project.
+List of projects I've been working on in my spare time. This includes 
+coding challenges and my personal projects. Included will also be 
+challenges that I've contributed to. Links in the name will take you to 
+either the repository or documentation for the project.
 
 Review and give feedback as you see fit.
 
