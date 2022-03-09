@@ -34,5 +34,4 @@ removed from this list and added to the projects list.
 | Arcanaeum LMS | PHP | Library Management System for my books. I have a lot so why not. |
 | DHT Dashboard (DHTD) | PHP/C/Cpp | Tempurature and Humidity dashboard that displays data that's collected. |
 | Plan Irrigation System | Unknown | Irrigation system for plants and a yard coupled with a few sensors. Meant to be a good project for learning. |
-| VMware PowerCLI Data Visualizer | Python | Visualize data pulled from VMWare
-hosts using PowerCLI. | 
+| VMware PowerCLI Data Visualizer | Python | Visualize data pulled from VMWare hosts using PowerCLI. | 
