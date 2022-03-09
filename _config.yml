@@ -81,11 +81,8 @@ author:
   name             : "Timothy Loftus (n3s0)"
   bio              : "Where I put my thoughts and coding/programming projects."
   location         : "Earth"
-  email            : "n3s0@protonmail.com"
+  email            : "tloftus@protonmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:tloftus@protonmail.com"
     - label: "n3s0 || info"
       icon: "fas fa-fw fa-link"
       url: "https://n3s0.gitlab.io/"
