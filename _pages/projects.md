@@ -25,14 +25,14 @@ jot down things I want to do in the future. Helps me keep on the right
 track. Everything that has at least one major version number will be
 removed from this list and added to the projects list.
 
-Below is the list.
-
-- Reference app. But, a web application.
-- Favlinks. Online bookmarks. Will replace Favlinks on 
-  ```n3s0 || info```.
-- Arduino universal remote. (TVs, A/C Units, etc.)
-- Library Management System (LMS) - I have a lot of books. So, why not.
-- DHT Dashboard - Dashboard for displaying Temp/Humidity in an area.
-- Plant irrigation system using Arduino and various sensors.
-- Python data visualization and reporting for VMware data pulled using 
-  PowerCLI.
+| Name | Language | Description |
+|-----|---------|---------|
+| Reference | PHP | Web application that provides references on various topics. |
+| FavLinks | PHP | Web application that will house my frequented sites in categories.  Hosted on ```n3s0 || info```.|
+| Arduino TV Remote (ATVR) | C/Cpp | Arduino TV remote. |
+| Universal TV Remote (UTVR) | Undecided | Universal TV remote that's web based. (TVs, A/C Units, etc.) |
+| Arcanaeum LMS | PHP | Library Management System for my books. I have a lot so why not. |
+| DHT Dashboard (DHTD) | PHP/C/Cpp | Tempurature and Humidity dashboard that displays data that's collected. |
+| Plan Irrigation System | Unknown | Irrigation system for plants and a yard coupled with a few sensors. Meant to be a good project for learning. |
+| VMware PowerCLI Data Visualizer | Python | Visualize data pulled from VMWare
+hosts using PowerCLI. | 
