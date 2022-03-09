@@ -27,3 +27,4 @@ this time there isn't anything to list. Will update this as soon as
 possible.
 
 - [README](/reference-cli/readme)
+- [Changelog](/reference-cli/changelog)
