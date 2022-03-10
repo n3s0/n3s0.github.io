@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Python Challenge Solutions - README
+title: The Python Challenge Solutions - README
 permalink: /python-challenge-s/readme
 classes: wide
 ---
