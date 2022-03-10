@@ -1,6 +1,6 @@
 ---
 layout: single
-title: The Python Challenge CP Documentation
+title: The Python Challenge Solutions Documentation
 permalink: /python-challenge-s/
 classes: wide
 ---
