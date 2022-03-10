@@ -36,3 +36,14 @@ removed from this list and added to the projects list.
 | DHT Dashboard (DHTD) | PHP/C/Cpp | Tempurature and Humidity dashboard that displays data that's collected. |
 | Plan Irrigation System | Unknown | Irrigation system for plants and a yard coupled with a few sensors. Meant to be a good project for learning. |
 | VMware PowerCLI Data Visualizer | Python | Visualize data pulled from VMWare hosts using PowerCLI. | 
+
+### Archived Projects
+
+Place for the projects that I've either abandoned or stopped working on for 
+the sake of no longer needing to or they just didn't have a use.
+
+No archived projects to note at this time.
+
+| Name |  Language | Version | Description |
+|-----|------|----|----|
+| | | |
