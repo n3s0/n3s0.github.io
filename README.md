@@ -7,11 +7,11 @@ This is one of my personal blogs. It's built on [Jekyll](https://jekyllrb.com/) 
 
 Below is a link to the blog.
 
-- [n3s0 || codes](https://n3s0.github.io/)
+- [n3s0 || code](https://code.n3s0.tech/)
 
 Below is a link to my other blog.
 
-- [n3s0 || info](https://n3s0.gitlab.io)
+- [n3s0 || info](https://info.n3s0.tech/)
 
 ## Setup
 
