@@ -85,7 +85,7 @@ author:
   links:
     - label: "n3s0 || info"
       icon: "fas fa-fw fa-link"
-      url: "https://n3s0.gitlab.io/"
+      url: "http://info.n3s0.tech/"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       url: "https://gitlab.com/n3s0/"
