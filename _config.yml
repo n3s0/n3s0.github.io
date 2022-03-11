@@ -98,7 +98,7 @@ footer:
   links:
     - label: "n3s0 || info"
       icon: "fas fa-fw fa-link"
-      url: "https://n3s0.gitlab.io"
+      url: "https://info.n3s0.tech/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/n3s0/"

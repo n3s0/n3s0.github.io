@@ -17,7 +17,7 @@ Review and give feedback as you see fit.
 | Name |  Language | Version | Description |
 |-----|------|----|----|
 | [reference-cli](/reference-cli/) | Python | 1.0 | CLI that provides reference tables for various topics. |
-| [n3s0/python-challenge](https://github.com/n3s0/python-challenge) | Python | 1.0 | Personal repository containing my code solutions for [The Python Challenge](https://n3s0.github.io/2021/03/14/the-python-challenge). |
+| [python-challenge-s](/python-challenge-s/) | Python | 1.0 | Personal repository containing my code solutions for [The Python Challenge](https://n3s0.github.io/2021/03/14/the-python-challenge). |
 
 ### Ideas
 
@@ -36,3 +36,14 @@ removed from this list and added to the projects list.
 | DHT Dashboard (DHTD) | PHP/C/Cpp | Tempurature and Humidity dashboard that displays data that's collected. |
 | Plan Irrigation System | Unknown | Irrigation system for plants and a yard coupled with a few sensors. Meant to be a good project for learning. |
 | VMware PowerCLI Data Visualizer | Python | Visualize data pulled from VMWare hosts using PowerCLI. | 
+
+### Archived Projects
+
+Place for the projects that I've either abandoned or stopped working on for 
+the sake of no longer needing to or they just didn't have a use.
+
+No archived projects to note at this time.
+
+| Name |  Language | Version | Description |
+|-----|------|----|----|
+| | | |
