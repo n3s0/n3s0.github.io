@@ -14,7 +14,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "n3s0 || codes"
+title                    : "n3s0 || code"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Timothy Loftus (n3s0)"
@@ -85,7 +85,7 @@ author:
   links:
     - label: "n3s0 || info"
       icon: "fas fa-fw fa-link"
-      url: "http://info.n3s0.tech/"
+      url: "https://info.n3s0.tech/"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       url: "https://gitlab.com/n3s0/"
