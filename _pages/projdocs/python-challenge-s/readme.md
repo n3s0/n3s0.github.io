@@ -22,7 +22,7 @@ If you would like to look at the code on your local machine. You're
 welcome to clone it. Below is how one can clone it should you want to.
 
 ```sh
-git clone https://github.com/n3s0/python-challenge.git
+git clone https://github.com/n3s0/python-challenge-s.git
 ```
 
 ## Running
@@ -57,8 +57,3 @@ optional arguments:
 Written by Timothy Loftus (n3s0)
 ```
 
-## Development
-
-This script was made to be modular. I will provide better documentation 
-soon. But, in the meantime review the code if you wish. The code is very 
-simple to understand.
