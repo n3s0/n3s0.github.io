@@ -16,7 +16,7 @@ below.
 
 | Name/Repo | Language | Version | Repository |
 |------|---------|---------|------|---------|
-| reference-cli | Python | 1.0 | [n3s0/reference-cli](https://gitlab.com/n3s0/reference-cli) | 
+| Reference CLI | Python | 1.0 | [n3s0/reference-cli](https://gitlab.com/n3s0/reference-cli) | 
 
 
 ## Documentation
