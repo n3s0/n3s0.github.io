@@ -39,7 +39,7 @@ removed from this list and added to the projects list.
 
 ## Standards
 
-Links to standards I follow for code and development documentation.
+Links to standards I follow for the blog and project documentation.
 
 Nothing to display just yet.
 
