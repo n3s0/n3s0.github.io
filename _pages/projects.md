@@ -12,14 +12,14 @@ either the repository or documentation for the project.
 
 Review and give feedback as you see fit.
 
-### Projects
+## Projects
 
 | Name |  Language | Version | Description |
 |-----|------|----|----|
 | [reference-cli](/reference-cli/) | Python | 1.0 | CLI that provides reference tables for various topics. |
 | [python-challenge-s](/python-challenge-s/) | Python | 1.0 | Personal repository containing my code solutions for [The Python Challenge](https://n3s0.github.io/2021/03/14/the-python-challenge). |
 
-### Ideas
+## Ideas
 
 Thought I'd list some project ideas I have. As time goes on, I like to
 jot down things I want to do in the future. Helps me keep on the right
@@ -37,7 +37,13 @@ removed from this list and added to the projects list.
 | Plan Irrigation System | Unknown | Irrigation system for plants and a yard coupled with a few sensors. Meant to be a good project for learning. |
 | VMware PowerCLI Data Visualizer | Python | Visualize data pulled from VMWare hosts using PowerCLI. | 
 
-### Archived Projects
+## Standards
+
+Links to standards I follow for code and development documentation.
+
+Nothing to display just yet.
+
+## Archived Projects
 
 Place for the projects that I've either abandoned or stopped working on for 
 the sake of no longer needing to or they just didn't have a use.
