@@ -1,8 +1,9 @@
 ---
 layout: single
 title: Reference CLI Documentation
-permalink: /reference-cli/
 classes: wide
+permalink: /reference-cli/
+collection: reference-cli
 ---
 
 ## Overview

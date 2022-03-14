@@ -14,7 +14,7 @@ and reflected accurately on this site.
 Some general information; without getting too detailed, can be found
 below.
 
-| Name/Repo | Language | Version | Repository |
+| Name | Language | Version | Repository |
 |------|---------|---------|------|---------|
 | Python Challenge Solutions | Python | 1.0 | [n3s0/python-challenge-s](https://github.com/n3s0/python-challenge-s) | 
 

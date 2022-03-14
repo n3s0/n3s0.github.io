@@ -18,6 +18,8 @@ Review and give feedback as you see fit.
 |-----|------|----|----|
 | [reference-cli](/reference-cli/) | Python | 1.0 | CLI that provides reference tables for various topics. |
 | [python-challenge-s](/python-challenge-s/) | Python | 1.0 | Personal repository containing my code solutions for [The Python Challenge](https://n3s0.github.io/2021/03/14/the-python-challenge). |
+| info.n3s0.tech | | | Personal blog for general information regarding tech and other useful items. [info.n3s0.tech](https://info.n3s0.tech/) |
+| code.n3s0.tech | | | Personal blog that houses documentation for my code. Along with my thoughts for code. [code.n3s0.tech](https://code.n3s0.tech/) |
 
 ## Ideas
 
@@ -34,7 +36,7 @@ removed from this list and added to the projects list.
 | Universal TV Remote (UTVR) | Undecided | Universal TV remote that's web based. (TVs, A/C Units, etc.) |
 | Arcanaeum LMS | PHP | Library Management System for my books. I have a lot so why not. |
 | DHT Dashboard (DHTD) | PHP/C/Cpp | Tempurature and Humidity dashboard that displays data that's collected. |
-| Plan Irrigation System | Unknown | Irrigation system for plants and a yard coupled with a few sensors. Meant to be a good project for learning. |
+| Plant Irrigation System | Unknown | Irrigation system for plants and a yard coupled with a few sensors. Meant to be a good project for learning. |
 | VMware PowerCLI Data Visualizer | Python | Visualize data pulled from VMWare hosts using PowerCLI. | 
 
 ## Standards

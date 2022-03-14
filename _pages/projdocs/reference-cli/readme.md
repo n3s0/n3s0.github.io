@@ -1,8 +1,9 @@
 ---
 layout: single
 title: Reference CLI - README
-permalink: /reference-cli/readme
 classes: wide
+permalink: /reference-cli/changelog
+collection: reference-cli
 ---
 
 ## Overview
