@@ -197,6 +197,9 @@ tag_archive:
   type: liquid
   path: /tags/
 
+collections:
+  - reference-cli
+
     # - https://jch.penibelst.de/
 compress_html:
   clippings: all
