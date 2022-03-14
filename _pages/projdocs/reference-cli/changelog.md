@@ -3,6 +3,7 @@ layout: single
 title: Reference CLI - Changelog
 permalink: /reference-cli/changelog
 classes: wide
+collection: reference-cli
 ---
 
 ## Overview
