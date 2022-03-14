@@ -1,6 +1,6 @@
 ---
 title: "Collections Archive"
 permalink: /collections-archive/
-layout: posts
+layout: collection
 author_profile: true
 ---
