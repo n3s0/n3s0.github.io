@@ -3,6 +3,8 @@ layout: single
 title: The Python Challenge Solutions - README
 permalink: /python-challenge-s/readme
 classes: wide
+collections:
+- python-challenge-s
 ---
 
 ## Overview
