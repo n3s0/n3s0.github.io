@@ -2,6 +2,7 @@
 layout: single
 title: Reference CLI Documentation
 classes: wide
+permalink: /reference-cli/
 collection: reference-cli
 ---
 
