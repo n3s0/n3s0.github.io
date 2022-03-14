@@ -30,3 +30,11 @@ possible.
 
 - [README](/reference-cli/readme)
 - [Changelog](/reference-cli/changelog)
+- [Modules](/reference-cli/modules)
+- [Requirements & Support](/reference-cli/requirements)
+
+### Development
+
+- [Development Environment Setup](/reference-cli/devenv)
+- [File & Directory Structure](/reference-cli/file-dir-structure)
+- [Functions](/reference-cli/functions)
