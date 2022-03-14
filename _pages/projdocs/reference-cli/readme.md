@@ -2,7 +2,7 @@
 layout: single
 title: Reference CLI - README
 permalink: /reference-cli/readme
-category:
+categories:
 - "reference-cli"
 - "docs"
 classes: wide
