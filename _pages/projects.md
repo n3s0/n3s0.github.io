@@ -18,6 +18,8 @@ Review and give feedback as you see fit.
 |-----|------|----|----|
 | [reference-cli](/reference-cli/) | Python | 1.0 | CLI that provides reference tables for various topics. |
 | [python-challenge-s](/python-challenge-s/) | Python | 1.0 | Personal repository containing my code solutions for [The Python Challenge](https://n3s0.github.io/2021/03/14/the-python-challenge). |
+| info.n3s0.tech | | | Personal blog for general information regarding tech and other useful items. [info.n3s0.tech](https://info.n3s0.tech/) |
+| code.n3s0.tech | | | Personal blog that houses documentation for my code. Along with my thoughts for code. [code.n3s0.tech](https://code.n3s0.tech/) |
 
 ## Ideas
 
