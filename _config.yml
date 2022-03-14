@@ -198,7 +198,7 @@ tag_archive:
   path: /tags/
 
 collections:
-  reference-cli:
+  portfolio:
     output: true
     permalink: /:collection/:path
 
