@@ -8,3 +8,29 @@ main:
     url: /about/
   - title: "projects"
     url: /projects/
+
+reference-cli:
+  - title: "General"
+    url: /reference-cli/
+    children:
+      - title: "Home"
+        url: /reference-cli/
+      - title: "README"
+        url: /reference-cli/readme/
+      - title: "Changelog"
+        url: /reference-cli/changelog/
+      - title: "Requirements"
+        url: /reference-cli/requirements/
+  - title: "User"
+    children:
+      - title: "Modules"
+        url: /reference-cli/modules/
+  - title: "Development"
+    children:
+      - title: "Development Environment"
+        url: /reference-cli/devenv/
+      - title: "Folder & Directory Structure"
+        url: /reference-cli/structure/
+      - title: "Functions"
+        url: /reference-cli/sourcedoc/
+

@@ -1,9 +1,11 @@
 ---
 layout: single
 title: Reference CLI Documentation
-classes: wide
-permalink: /reference-cli/
-collection: reference-cli
+permalink: "/reference-cli/"
+toc: true
+class: wide
+sidebar:
+  nav: "reference-cli"
 ---
 
 ## Overview
@@ -27,15 +29,18 @@ key documents such as the README, development documentation, etc. At
 this time there isn't anything to list. Will update this as soon as
 possible.
 
-### General
+### General 
 
-- [README](/reference-cli/readme)
-- [Changelog](/reference-cli/changelog)
-- [Modules](/reference-cli/modules)
-- [Requirements & Support](/reference-cli/requirements)
+- [README](/reference-cli/readme/)
+- [Changelog](/reference-cli/changelog/)
+- [Requirements & Support](/reference-cli/requirements/)
+
+### User
+
+- [Modules](/reference-cli/modules/)
 
 ### Development
 
-- [Development Environment Setup](/reference-cli/devenv)
-- [File & Directory Structure](/reference-cli/file-dir-structure)
-- [Functions](/reference-cli/functions)
+- [Development Environment Setup](/reference-cli/devenv/)
+- [File & Directory Structure](/reference-cli/structure/)
+- [Source Documentation](/reference-cli/sourcedoc/)

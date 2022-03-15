@@ -1,9 +1,10 @@
 ---
 layout: single
-title: Reference CLI - Changelog
-permalink: /reference-cli/changelog
-classes: wide
-collection: reference-cli
+title: Changelog
+permalink: "/reference-cli/changelog/"
+toc: true
+sidebar:
+  nav: "reference-cli"
 ---
 
 ## Overview
