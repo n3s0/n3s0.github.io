@@ -25,9 +25,12 @@ below.
 ## Documentation
 
 Below are the links to Reference CLI's documentation. This will provide
-key documents such as the README, development documentation, etc. At
-this time there isn't anything to list. Will update this as soon as
-possible.
+key documents such as the README, development documentation, etc.
+
+Feel free to utilize the Toggle Menu and Side bar if available to 
+navigate through the documentation for ```reference-cli```. The previous
+and next arrows will allow guests to browse the coumentation in the
+order it's configured.
 
 ### General 
 
