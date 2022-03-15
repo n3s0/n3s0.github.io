@@ -9,7 +9,7 @@ sidebar:
 
 ## Overview
 
-NOTE: This documentation is still under construction.
+NOTE: This page is still under construction.
 
 This article is here to act as documentation for the functions,
 variables, etc. within the applications. These have been documented by

@@ -29,7 +29,7 @@ key documents such as the README, development documentation, etc.
 
 Feel free to utilize the Toggle Menu and Side bar if available to 
 navigate through the documentation for ```reference-cli```. The previous
-and next arrows will allow guests to browse the coumentation in the
+and next arrows will allow guests to browse the documentation in the
 order it's configured.
 
 ### General 
