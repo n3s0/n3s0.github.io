@@ -119,7 +119,11 @@ No parameters are required for this function.
 
 ##### phonetic_alphabet_ref.nato_pa()
 
+Coming soon.
+
 ##### morse_code_ref.international_morse_code()
+
+Coming soon.
 
 #### Third Party 
 
@@ -128,19 +132,33 @@ their structure.
 
 ##### argparse.ArgumentParser()
 
+Comming soon.
+
 ##### parser.add_argument()
+
+Comming soon.
 
 ##### parser.parse_args()
 
+Coming soon.
+
 ##### parser.print_help()
+
+Coming soon.
 
 ##### args.list
 
+Coming soon.
+
 ##### args.show
+
+Coming soon.
 
 ### Operational Structure
 
 This section discusses the operational structure for the application.
 So, if one of the functions is run from above. I'll disect it a little
 and proide clarity as to what it's doing.
+
+Wow. Such empty. Much wow.
 
