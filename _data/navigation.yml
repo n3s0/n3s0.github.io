@@ -4,8 +4,8 @@ main:
   #  url: /
   - title: "posts"
     url: /year-archive/
-  - title: "about"
-    url: /about/
+  - title: "whoami"
+    url: https://info.n3s0.tech/whoami/
   - title: "projects"
     url: /projects/
 
