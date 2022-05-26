@@ -39,6 +39,7 @@ removed from this list and added to the projects list.
 | DHT Dashboard (DHTD) | PHP/C/Cpp | Tempurature and Humidity dashboard that displays data that's collected. |
 | Plant Irrigation System | Unknown | Irrigation system for plants and a yard coupled with a few sensors. Meant to be a good project for learning. |
 | VMware PowerCLI Data Visualizer | Python | Visualize data pulled from VMWare hosts using PowerCLI. | 
+| GitHub/GitLab CI Job Status Checker | Python | Obtain the status of last couple of jobs from GitHub/GitLab |
 
 ## Standards
 
