@@ -6,7 +6,15 @@
     <description>Recent content on n3s0 || journal</description>
     <generator>Hugo -- 0.134.0</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Mon, 16 Sep 2024 16:49:01 +0600</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Entry 09-16-2024</title>
+      <link>//localhost:1313/entries/20240916164901/</link>
+      <pubDate>Mon, 16 Sep 2024 16:49:01 +0600</pubDate>
+      <guid>//localhost:1313/entries/20240916164901/</guid>
+      <description> 16:55 Picked a good time to deploy a new website to Github Pages. At this time Github is experiencing service degredation on their Actions and Pages as of 21:31 UTC. So, if you start seeing weird it&rsquo;s probably because there is in fact some weird.
+</description>
+    </item>
   </channel>
 </rss>
