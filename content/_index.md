@@ -21,3 +21,4 @@ With that being said. One motto that I live by:
 > "Compare yourself to who you were yesterday, not to who someone else is today."
 > -- Jordon Peterson
 
+
