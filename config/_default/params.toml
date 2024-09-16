@@ -116,3 +116,8 @@ url = "https://github.com/n3s0"
 name = "Email"
 icon = "email"
 url = "mailto:tloftus@protonmail.com"
+
+[[social]]
+name = "rss"
+icon = "rss"
+url = "/index.xml"

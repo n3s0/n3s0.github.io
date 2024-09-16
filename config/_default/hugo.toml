@@ -1,7 +1,7 @@
 # -- Site Configuration --
 
 # URL to the root of your website.
-baseURL = "https://your_domain.com/"
+baseURL = "/"
 
 # Site's language code
 languageCode = 'en-us'
@@ -20,7 +20,7 @@ enableEmoji = true
 enableRobotsTXT = true
 
 # Length of default summaries.
-summaryLength = 0
+summaryLength = 1
 
 # Build drafts during site generation.
 buildDrafts = true
