@@ -6,7 +6,7 @@
 # [Optional] Path to the site logo image relative to assets/ folder. Displayed before the Site Title in the header. Minimum size: 64x64px.
 # logo = "/imgs/logo.png"
 # Site description.
-description = "Compare yourself to who you were yesterday, not to who someone else is today."
+description = ""
 # [Optional] Copyright owner name.
 copyright = "Timothy Loftus (n3s0)"
 # Whether to optimize images per view port.
@@ -22,9 +22,9 @@ highlightCurrentMenu = true
 # The sections to display in the recent articles list. If not provided, the section with the most articles is used.
 mainSections = ["entries", "notes"]
 # Whether to remove Hugo and theme attribution in the footer.
-removeAttribution = false
+removeAttribution = true
 # Whether to show anchor links in headings. Can be overridden by Page-specific `showHeadingAnchors` in its front matter.
-showHeadingAnchors = false
+showHeadingAnchors = true
 # Whether to enable search. Needs JSON output for this to work.
 enableSearch = true
 
