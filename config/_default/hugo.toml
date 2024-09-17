@@ -20,7 +20,7 @@ enableEmoji = true
 enableRobotsTXT = true
 
 # Length of default summaries.
-summaryLength = 0
+summaryLength = 1
 
 # Build drafts during site generation.
 buildDrafts = true

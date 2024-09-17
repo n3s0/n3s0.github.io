@@ -24,7 +24,7 @@ mainSections = ["entries", "notes"]
 # Whether to remove Hugo and theme attribution in the footer.
 removeAttribution = false
 # Whether to show anchor links in headings. Can be overridden by Page-specific `showHeadingAnchors` in its front matter.
-showHeadingAnchors = true
+showHeadingAnchors = false
 # Whether to enable search. Needs JSON output for this to work.
 enableSearch = true
 
@@ -45,7 +45,7 @@ showRecentLabel = "entries"
 showRecentItems = 4
 # Whether to display a "Show more" link at the end of recent section that directs to `showMoreDest`.
 showMore = true
-showMoreDest = "/entries"
+showMoreDest = "/notes"
 [homepage.profile]
 # [Optional] Displayed at the top of your homepage.
 headline = "Welcome to my journal"
