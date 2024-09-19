@@ -1,6 +1,6 @@
 ---
 title: "Under The Wire"
-date: 2024-09-18T08:08:15-06:00
+date: 2019-04-20T08:08:05-0600
 summary: "List of solutions for the Under The Wire Wargames."
 draft: false
 hidden: false
