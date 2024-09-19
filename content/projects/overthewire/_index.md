@@ -1,6 +1,6 @@
 ---
 title: "Over The Wire"
-date: 2024-09-18T08:08:15-06:00
+date: 2019-04-01T05:52:26-0600
 summary: "List of solutions for the Over The Wire Wargames."
 draft: false
 hidden: false
