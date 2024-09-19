@@ -1,6 +1,6 @@
 ---
 title: "Initial Baselines"
-date: 2024-09-18T15:59:15-06:00
+date: 2022-12-01T15:59:10-06:00
 summary: "List of server and network configuration and performance baselines."
 draft: false
 hidden: false
