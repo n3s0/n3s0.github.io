@@ -1,6 +1,6 @@
 ---
 title: "Vulnhub"
-date: 2024-09-16T03:08:15-06:00
+date: 2022-01-16T03:08:15-06:00
 summary: "Writeups from playing with Vulnhub machines"
 draft: false
 hidden: false

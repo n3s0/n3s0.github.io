@@ -1,6 +1,6 @@
 ---
 title: "SadServers"
-date: 2024-09-18T03:08:15-06:00
+date: 2023-09-18T03:08:15-06:00
 summary: "List of solutions for the SadServers scenarios."
 draft: false
 hidden: false
