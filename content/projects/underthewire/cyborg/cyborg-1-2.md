@@ -1,6 +1,6 @@
 ---
 title: "Under The Wire: Cyborg 1 -> 2"
-date: 2022-01-22T08:08:15-06:00
+date: 2022-01-22T08:08:30-06:00
 summary: "Solution for Cyborg 1 -> 2."
 draft: false
 hidden: false
