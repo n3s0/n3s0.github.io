@@ -29,6 +29,8 @@ goes on.
 There are about thirteen wargames alone on the site. Mostly online
 online challenges. But, there is also one online challenge.
 
+A list of the online challenges can be found below.
+
 - [Bandit](https://overthewire.org/wargames/bandit/)
 - Natas
 - Leviathan
