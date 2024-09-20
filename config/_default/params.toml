@@ -73,9 +73,22 @@ showToC = true
 # Whether to open the Table of Contents when the page is loaded.
 openToC = false
 # Check https://mnjm.github.io/kayal/docs/advanced-customization/#comments
-showComments = false
+showComments = true
 # Whether to display breadcrumbs
 showBreadcrumbs = false
+
+[giscus]
+repo = "n3s0/n3s0.github.io"
+repoID = "R_kgDOGzJrfg"
+category = "Articles"
+categoryID = "DIC_kwDOGzJrfs4CP2TM"
+mapping = "og:title"
+reactionsEnabled = "1"
+emitMetadata = "0"
+inputPosition = "bottom"
+theme = "light"
+lang = "en"
+loading = "lazy"
 
 # List template settings
 [list]
