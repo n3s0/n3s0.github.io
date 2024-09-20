@@ -13,7 +13,7 @@ showPagination: true
 invertPagination: true
 showToC: true
 openToC: false
-showComments: false
+showComments: true
 showHeadingAnchors: true
 ---
 
