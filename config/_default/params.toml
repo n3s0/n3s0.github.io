@@ -79,9 +79,9 @@ showBreadcrumbs = false
 
 [giscus]
 repo = "n3s0/n3s0.github.io"
-repoID = "R_kgDOGzJrfg"
+repoID = "R_kgDOMyo-C"
 category = "Articles"
-categoryID = "DIC_kwDOGzJrfs4CP2TM"
+categoryID = "DIC_kwDOMyo-Cs4CipcA"
 mapping = "og:title"
 reactionsEnabled = "1"
 emitMetadata = "0"
