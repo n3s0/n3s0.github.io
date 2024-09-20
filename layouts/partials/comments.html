@@ -1,5 +1,5 @@
 {{- if isset .Site.Params "giscus" -}}
-  {{- if and (isset .Site.Params.giscus "repo") (not (eq .Site.Params.giscus.repo "" )) (eq (.Params.article.showComments | default true) false) -}}
+  {{- if and (isset .Site.Params.giscus "repo") (not (eq .Site.Params.giscus.repo "" )) (eq (.Site.Params.article.showComments | default true) false) -}}
   <script src="https://giscus.app/client.js"
     data-repo="{{ .Site.Params.giscus.repo }}"
     data-repo-id="{{ .Site.Params.giscus.repoID }}"
