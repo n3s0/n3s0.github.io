@@ -1,6 +1,6 @@
 ---
 title: "SadServers: Geneva: Renew an SSL Certificate"
-date: 2024-23-09T09:56:47-06:00
+date: 2024-09-23T09:56:47-06:00
 summary: "Notes from running through the Geneva scenario from SadServers."
 draft: false
 hidden: false
