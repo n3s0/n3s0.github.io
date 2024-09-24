@@ -23,9 +23,9 @@ enableRobotsTXT = true
 summaryLength = 1
 
 # Build drafts during site generation.
-buildDrafts = true
+buildDrafts = false
 # Build pages with future dates during site generation.
-buildFuture = true
+buildFuture = false
 
 # The types of outputs to generate for the homepage.
 # RSS is required to create RSS feeds, and JSON is needed for the search to function.
