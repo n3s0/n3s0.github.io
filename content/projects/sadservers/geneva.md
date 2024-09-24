@@ -2,7 +2,7 @@
 title: "SadServers: Geneva: Renew an SSL Certificate"
 date: 2024-22-09T09:56:47-06:00
 summary: "Notes from running through the Geneva scenario from SadServers."
-draft: true
+draft: false
 hidden: false
 externalURL: false
 showDate: true
@@ -48,7 +48,7 @@ echo | openssl s_client -connect localhost:443 2>/dev/null | openssl x509 -noout
 and...
 
 ```sh
-echo | openssl s_client -connect localhost
+echo | openssl s_client -connect localhost:443 2>/dev/null | openssl x509 -noout -subject
 ```
 
 Time to Solve: 10 minutes.
@@ -56,21 +56,50 @@ Time to Solve: 10 minutes.
 ## Solution
 ---
 
+First it's time to check on the dates for the file using the openssl 
+command.
+
 ```sh
-root@i-00416d65740f1418b:~# echo | openssl s_client -connect localhost:443 2>/dev/null | openssl x509 -noout -dates
+echo | openssl s_client -connect localhost:443 2>/dev/null | openssl x509 -noout -dates
+```
+
+Looks like it's expired based on the notAfter date. In fact they've been
+switched around somehow. So it's safe to say that this isn't a valid 
+certificate.
+
+```sh
 notBefore=Sep 17 22:34:18 2024 GMT
 notAfter=Sep 18 22:34:18 2023 GMT
 ```
 
-```sh
-admin@i-00416d65740f1418b:~$ echo | openssl s_client -connect localhost
-140201174730048:error:0200206F:system library:connect:Connection refused:../crypto/bio/b_sock2.c:110:
-140201174730048:error:2008A067:BIO routines:BIO_connect:connect error:../crypto/bio/b_sock2.c:111:
-connect:errno=111
-```
+Checked the subject for the certificate using the following openssl command.
 
 ```sh
-admin@i-0c554da986852082f:~$ echo | openssl s_client -connect localhost:443
+echo | openssl s_client -connect localhost:443 2>/dev/null | openssl x509 -noout -subject
+```
+
+Below is the output for it. Looks like we're expected to make the other
+certificate similar or the same.
+
+```sh
+subject=CN = localhost, O = Acme, OU = IT Department, L = Geneva, ST = Geneva, C = CH
+```
+
+Now I'm curious. What does the current TLS handshake look like? I use 
+the openssl command with less options to do this.
+
+```sh
+echo | openssl s_client -connect localhost:443
+```
+
+The output for this command can be found below. Note that the config is
+wrong because the notAfter date is a year behind the notBefore date. 
+
+I'll explain what is happening with this handshake in a later post.
+Provide more clarity as to what's happening. I will provide a link
+below when I've finished with that.
+
+```sh
 CONNECTED(00000003)
 Can't use SSL_get_servername
 depth=0 CN = localhost, O = Acme, OU = IT Department, L = Geneva, ST = Geneva, C = CH
@@ -206,6 +235,21 @@ read R BLOCK
 DONEecho | openssl s_client -connect localhost:443
 ```
 
+Decided to look at the configuration file for the web server (Nginx).
+This is a brief explaination of what all of this means.
+
+- It's listening on 443 or the HTTPS port with SSL.
+- Server name it's binding to is localhost. So the local machine.
+- Certificate file is located at the /etc/nginx/ssl/nginx.crt path.
+- Private Key is located at the /etc/nginx/ssl/nginx.key path.
+- It's using modern ssl_protocols; TLS version 1.2 and 1.3.
+- ssl_prefer_server_ciphers is set to off so clients can choose which
+  ciphers are used.
+- root location for storing its hosted files is /var/www/html.
+- The index file can be either index.html or index.htm.
+
+The explaination is clear as mud. But, that's what it's all doing.
+
 ```sh
 # BEGIN ANSIBLE MANAGED BLOCK
 server {
@@ -226,9 +270,40 @@ server {
 # END ANSIBLE MANAGED BLOCK
 ```
 
+Check the ssl directory for the /etc/nginx/ssl/nginx.crt file.
+
 ```sh
-root@i-0c554da986852082f:/var/www/html# cat index.html
+ls -lha /etc/nginx/ssl/nginx.crt
 ```
+
+Looks like it's in there. It's owned by root. So we'll need to become
+root or use sudo to do modifications to it.
+
+```sh
+-rw-r--r-- 1 root root 1.4K Sep 17 22:34 /etc/nginx/ssl/nginx.crt
+```
+
+Then we check the ssl directory fo the /etc/nginx/ssl/nginx.key file.
+
+```sh
+ls -lha /etc/nginx/ssl/nginx.key
+```
+
+That one is in there as well. It is also owned as root.
+
+```sh
+-rw------- 1 root root 1.7K Sep 17 22:34 /etc/nginx/ssl/nginx.key
+```
+
+Checking to see if the index.html file is in the /var/www/html/ 
+directory.
+
+```sh
+cat index.html
+```
+
+Based on the output. It is. Just a simple web page that will show a 
+heading of Hello, World! in the browser.
 
 ```html
 <!DOCTYPE html>
@@ -242,19 +317,209 @@ root@i-0c554da986852082f:/var/www/html# cat index.html
 </html>
 ```
 
-```sh
-root@i-00416d65740f1418b:/etc/nginx/sites-available# ls -lha /etc/nginx/ssl/nginx.crt
--rw-r--r-- 1 root root 1.4K Sep 17 22:34 /etc/nginx/ssl/nginx.crt
-```
-
-
-
-```sh
-root@i-00416d65740f1418b:/etc/nginx/sites-available# ls -lha /etc/nginx/ssl/nginx.key
--rw------- 1 root root 1.7K Sep 17 22:34 /etc/nginx/ssl/nginx.key
-```
-
 After looking at it. It looks like this is self-signed. So there isn't
 really a renewal process. Just regenerate a certificate and replace it.
 
-I will do it the non-interactive way first.
+Need to remember that the certificate needs to have the same issuer and
+subject. Below is the data for reference.
+
+```sh
+subject=CN = localhost, O = Acme, OU = IT Department, L = Geneva, ST = Geneva, C = CH
+```
+
+I will try the interactive method first. Though I have the suspicion
+that the output for the subject will need to be exactly the same as the
+subject above. Although, this will be correct as far as subjects are 
+concerned. The script checking it will expect this to be exact.
+
+```sh
+openssl req -x509 -nodes -newkey rsa:2048 -keyout nginx.key -out nginx.crt -sha256 -days 365
+```
+
+Below is the ouput of this command. It's generating a 2048 bit private
+key and placing it in the current directory. Then we're asked to provide
+some information about our certificate and who owns it.
+
+```sh
+Generating a RSA private key
+................................................................................+++++
+........................................+++++
+writing new private key to 'nginx.key'
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:CH
+State or Province Name (full name) [Some-State]:Geneva
+Locality Name (eg, city) []:Geneva
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Acme
+Organizational Unit Name (eg, section) []:IT Department
+Common Name (e.g. server FQDN or YOUR name) []:localhost
+Email Address []:
+```
+
+Checking the certificate dates and it's subject using the certificate
+file just created.
+
+```sh
+openssl x509 -in nginx.crt -dates -subject -noout 
+```
+
+Looks like the dates are good for it. But, the string doesn't match
+what they specified is the correct deliverable.
+
+```sh
+notBefore=Sep 24 03:59:42 2024 GMT
+notAfter=Sep 24 03:59:42 2025 GMT
+subject=C = CH, ST = Geneva, L = Geneva, O = Acme, OU = IT Department, CN = localhost
+```
+
+Going to issue the same command on the the nginx.crt file in the ssl 
+config directory. Checking for dates and the subject.
+
+```sh
+openssl x509 -in /etc/nginx/ssl/nginx.crt -subject -noout 
+```
+
+Looks like the following is the expected output for the certificate. I'm
+going to need to workout adding a custom subject to my command here.
+
+```sh
+subject=CN = localhost, O = Acme, OU = IT Department, L = Geneva, ST = Geneva, C = CH
+```
+
+To do this. I add the -subj flag to it and add the value as shown below.
+By doing this, I wont need to worry about entering this in manually like
+I needed to do before.
+
+```sh
+openssl req -x509 -nodes -newkey rsa:2048 -keyout nginx.key -out nginx.crt -sha256 -days 356 -subj "/CN=localhost/O=Acme/OU=IT Department/L=Geneva/ST=Geneva/C=CH"
+```
+
+Below is the output for it. It generates a 2048 RSA private key and puts
+the nginx.key file in the current directory.
+
+```sh
+Generating a RSA private key
+..............................................+++++
+.................................................................................+++++
+writing new private key to 'nginx.key'
+-----
+```
+
+Decided the check the certificate that was just created to look at the
+dates and subject.
+
+```sh
+openssl x509 -in nginx.crt -dates -subject -noout
+```
+
+The output shows that the certificate wont expire until 2025. So we're 
+good there. It wont expire for another year.
+
+As for the subject or issuer statement for the certificate. It looks
+the same as the one in production; that shouldn't be.
+
+```sh
+notBefore=Sep 24 04:10:00 2024 GMT
+notAfter=Sep 15 04:10:00 2025 GMT
+subject=CN = localhost, O = Acme, OU = IT Department, L = Geneva, ST = Geneva, C = CH
+```
+
+Now for configuring the new TLS certificate with Nginx. This needs to
+be completed using elevated privileges. So, I went into an interactive
+root / administrator prompt.
+
+```sh
+sudo -i
+```
+
+Changed directories to the /etc/nginx/ssl/ directory.
+
+```sh
+cd /etc/nginx/ssl/
+```
+
+Checked to confirm that this was where the .crt and .key files were in
+that directory.
+
+```sh
+ls
+```
+
+Based on the output below they are.
+
+```sh
+nginx.crt  nginx.key
+```
+
+Created a backup folder so we can move them back should we break the 
+configuration.
+
+```sh
+mkdir bak
+```
+
+Backed up the nginx.key and nginx.crt files to the bak folder. This 
+will only effect the files in the currect directory.
+
+```sh
+mv nginx.* bak/
+```
+
+Moved the nginx.key and nginx.crt files located in the admin users home
+directory to the /etc/nginx/ssl/ directory.
+
+```sh        
+cp /home/admin/nginx.* ./
+```
+
+Checked the configuration for Nginx. 
+
+```sh
+nginx -t
+```
+
+Below is the output for that. It looks like everything is OK.
+
+```sh
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+```
+
+Restarted the Nginx service and that didn't error out either. So I 
+think we're good.
+
+```sh
+systemctl restart nginx
+```
+
+Using the script provided by the scenario. I checked the solution.
+
+```sh   
+sh /home/admin/agent/check.sh 
+```
+
+Looks like the script approves of the output. So, we're good to go.
+
+```sh
+OK
+```
+
+Also clicked the "Check My Solution" button on the page and it gave the
+"Congragulations you finished" banner that I enjoy so much. Time to move
+on to other challenges.
+
+This challenge is good for those who would like to learn how SSL/TLS 
+certificates work, how to generate self-signed certificates using
+openssl, and how to configure them in Nginx. I wouldn't necessarily
+trust this configuration. But, it was definately a good refresher for
+me. 
+
+Self-Signed certificates are the low low cost of free. But, by the same
+token. So are Lets Encrypt certificates. Which would be a good thing
+to write about down the road.
