@@ -25,3 +25,9 @@ name = "projects"
 title = "projects"
 url = "/projects/"
 weight = 3
+
+[[main]]
+name = "favlinks"
+title = "favlinks"
+url = "/favlinks/"
+weight = 4
