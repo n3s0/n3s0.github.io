@@ -131,8 +131,8 @@ icon = "email"
 url = "mailto:tloftus@protonmail.com"
 
 [[social]]
-name = "x"
-icon = "x"
+name = "x-twitter"
+icon = "x-twitter"
 url = "https://x.com/n3s0_"
 
 [[social]]
