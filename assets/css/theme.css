@@ -17,11 +17,11 @@
 
 .dark {
   --primary-color: #EFEFE6;
-  --secondary-color: #292929;
+  --secondary-color: #151515;
   --tertiary-color: #0F0;
   --tertiary-color-light: #0F0;
   --link-color: #0F0;
-  --secondary-color-dark: #3D3D29;
+  --secondary-color-dark: #2E5A1C;
   --scrollbar-track: #292929;
   --scrollbar-thumb: #525252;
 }
