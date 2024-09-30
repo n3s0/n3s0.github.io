@@ -80,6 +80,11 @@ This is a copy of some of my favorite reference tables related to subnetting.
 ---
 
 {{< mermaid >}}
+%%{
+    init: {
+        'theme': 'forest',
+    }
+}%%
 pie
     "/25" : 256
     "/26" : 64
