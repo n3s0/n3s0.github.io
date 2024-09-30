@@ -26,8 +26,8 @@
 }
 
 @font-face {
-  font-family: 'Ubuntu Sans Mono';
+  font-family: 'Fira Code',monospace;
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/UbuntuSansMono-Regular.ttf') format('ttf');
+  src: url('../fonts/FiraCode-Regular.woff2') format('woff2');
 }
