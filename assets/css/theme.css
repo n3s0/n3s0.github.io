@@ -19,19 +19,11 @@
   --primary-color: #EFEFE6;
   --secondary-color: #151515;
   --tertiary-color: #0F0;
-  --tertiary-color-light: #0F0;
+  --tertiary-color-light: #151515;
   --link-color: #0F0;
   --secondary-color-dark: #2E5A1C;
   --scrollbar-track: #292929;
   --scrollbar-thumb: #525252;
-}
-
-.meta a {
-  border: 1px solid var(--tertiary-color);
-  padding: 2px;
-  border-radius: var(--radius);
-  background: var(--tertiary-color-light );
-  margin: 0 2px;
 }
 
 @font-face {
