@@ -1,0 +1,26 @@
+{{ $scripts := slice "js/theme.js" }}
+
+{{ if .Site.Params.enableCodeCopy | default false }}
+  {{ $scripts = $scripts | append "js/codecopy.js" }}
+{{ end }}
+
+{{ if .Site.Params.enableSearch | default false }}
+  {{ $scripts = $scripts | append "js/search.js" }}
+{{ end }}
+
+{{ if .Site.Params.enablePageQRCode | default false }}
+  {{ $scripts := $scripts | append "js/genpageqr.js"}}
+{{ end }}
+
+{{ range $scripts }}
+  {{ with resources.Get . }}
+    {{ with . | js.Build }}
+      {{- if eq hugo.Environment "development" }}
+        <script src="{{ .RelPermalink }}"></script>
+      {{ else }}
+        {{ $builtJS := . | resources.Minify | resources.Fingerprint "sha512" }}
+        <script defer type="text/javascript" src="{{ $builtJS.RelPermalink }}" integrity="{{ $builtJS.Data.Integrity }}"> </script>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}

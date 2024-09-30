@@ -27,6 +27,8 @@ removeAttribution = true
 showHeadingAnchors = true
 # Whether to enable search. Needs JSON output for this to work.
 enableSearch = true
+# Whether to enable qrcodes to be available on page.
+enablePageQrCode = false
 
 # Site search engine verification tags.
 # [verification]

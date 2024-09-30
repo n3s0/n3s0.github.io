@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+{{/* Cover Image */}}
+{{ if .Params.coverImg }}
+  {{ $imgData := dict "Page" . "URL" .Params.coverImg "Alt" "Cover Image" "Style" "cover-img" }}
+  {{ partial "image-renderer.html" $imgData }}
+{{ end }}
+
+{{/* Breadcrumbs */}}
+{{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false ) }}
+{{ partial "breadcrumbs.html" . }}
+{{ end }}
+
+<h1 class="pg-title">{{ .Title | emojify }}</h1>
+
+{{/* Meta */}}
+<div class="meta">
+  {{ partial "single/meta.html" . }}
+  {{ partial "single/meta-tags.html" . }}
+</div>
+
+{{ partial "single/toc.html" . }}
+
+{{ .Content }}
+
+{{/* Pagination */}}
+{{ partial "single/pagination.html" . }}
+
+{{/* Comments */}}
+{{ if .Params.showComments | default (.Site.Params.article.showComments | default false) }}
+  {{ if templates.Exists "partials/comments.html" }}
+  <div class="comment">
+    {{ partial "comments.html" . }}
+  </div>
+  {{ else }}
+    {{ warnf "Comments are enabled for %s but no comments partial exists." .File.Path }}
+  {{ end }}
+{{ end }}
+
+{{ end }}

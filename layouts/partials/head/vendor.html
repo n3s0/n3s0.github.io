@@ -1,0 +1,59 @@
+{{/* Katex */}}
+{{ if .Page.HasShortcode "katex" }}
+{{ $katexCSS := resources.Get "lib/katex/katex.min.css" }}
+{{ $katexCSS := $katexCSS | resources.Fingerprint "sha512" }}
+<link type="text/css" rel="stylesheet" href="{{ $katexCSS.RelPermalink }}" integrity="{{ $katexCSS.Data.Integrity }}" />
+{{ $katexJS := resources.Get "lib/katex/katex.min.js" }}
+{{ $katexJS := $katexJS | resources.Fingerprint "sha512" }}
+<script defer src="{{ $katexJS.RelPermalink }}" integrity="{{ $katexJS.Data.Integrity }}"></script>
+{{ $katexRenderJS := resources.Get "lib/katex/auto-render.min.js" }}
+{{ $katexRenderJS := $katexRenderJS | resources.Fingerprint "sha512" }}
+<script defer src="{{ $katexRenderJS.RelPermalink }}" integrity="{{ $katexRenderJS.Data.Integrity }}"
+  onload="renderMathInElement(document.body);"></script>
+{{ $katexFonts := resources.Match "lib/katex/fonts/*" }}
+{{ range $katexFonts }}
+<!-- {{ .RelPermalink }} -->
+{{ end }}
+{{ end }}
+
+{{/* Mermaid */}}
+{{ if .Page.HasShortcode "mermaid" }}
+  {{ $mermaidLib := resources.Get "lib/mermaid/mermaid.min.js" }}
+  {{ $mermaidConfig := resources.Get "js/mermaid.js" }}
+  {{ $mermaidConfig := $mermaidConfig | resources.Minify }}
+  {{ $mermaidJS := slice $mermaidLib $mermaidConfig | resources.Concat "js/mermaid.bundle.js" | resources.Fingerprint "sha512" }}
+  <script
+    defer
+    type="text/javascript"
+    src="{{ $mermaidJS.RelPermalink }}"
+    integrity="{{ $mermaidJS.Data.Integrity }}"
+  ></script>
+{{ end }}
+
+{{/* Fuse */}}
+{{ if .Site.Params.enableSearch | default false }}
+  {{ if and .IsHome (not (.OutputFormats.Get "JSON")) }}
+    {{ errorf "Search is enabled. Add 'JSON' to outputs.home in hugo.toml" }}
+  {{ end }}
+  {{ with resources.Get "lib/fuse/fuse.min.js" | resources.Fingerprint "sha512" }}
+    <script
+      defer
+      type="text/javascript"
+      src="{{ .RelPermalink }}"
+      integrity="{{ .Data.Integrity }}"
+    ></script>
+  {{ end }}
+{{ end }}
+
+{{/* Page QR Codes */}}
+{{/* https://github.com/jeromeetienne/jquery-qrcode */}}
+{{ if .Site.Params.enablePageQRCode | default false }}
+  {{ with resources.Get "lib/jquery-qrcode/jquery.qrcode.min.js" | resources.Fingerprint "sha512" }}
+    <script
+      defer
+      type="text/javascript"
+      src="{{ .RelPermalink }}"
+      integrity="{{ .Data.Integrity }}"
+    ></script>
+  {{ end }}
+{{ end }}
