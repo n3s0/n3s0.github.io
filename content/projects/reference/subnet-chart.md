@@ -80,17 +80,13 @@ This is a copy of some of my favorite reference tables related to subnetting.
 ---
 
 {{< mermaid >}}
-%%{init: {"pie": {"textPosition": 0.5}, "themeVariables": {"pieOuterStrokeWidth": "5px"}} }%%
-pie showData
-    title "Subnet Proportion"
+pie
     "/25" : 256
     "/26" : 64
     "/27" : 32
     "/28" : 16
     "/29" : 8
     "/30" : 4
-    "/31" : 2
-    "/32" : 1
 {{< /mermaid >}}
 
 ## Classful Ranges
