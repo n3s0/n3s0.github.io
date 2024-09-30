@@ -26,17 +26,17 @@
   --scrollbar-thumb: #525252;
 }
 
+.meta a {
+  border: 1px solid var(--tertiary-color);
+  padding: 2px;
+  border-radius: var(--radius);
+  background: var(--tertiary-color-light );
+  margin: 0 2px;
+}
+
 @font-face {
   font-family: "Fira Code",monospace;
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/FiraCode-Regular.woff2') format('woff2');
-}
-
-.meta a {
-  border: 1px solid var(--tertiary-color);
-  padding: 2px;
-  border-radius: var(--radius);
-  background: var(--secondary-color );
-  margin: 0 2px;
 }
