@@ -32,3 +32,11 @@
   font-weight: 400;
   src: url('../fonts/FiraCode-Regular.woff2') format('woff2');
 }
+
+.meta a {
+  border: 1px solid var(--tertiary-color);
+  padding: 2px;
+  border-radius: var(--radius);
+  background: var(--secondary-color );
+  margin: 0 2px;
+}
