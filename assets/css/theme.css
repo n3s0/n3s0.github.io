@@ -1,5 +1,5 @@
 :root{
-  --ff: 'Ubuntu Sans Mono';
+  --ff: "Fira Code",monospace;
   --radius: 6px;
   --primary-color: #292929;
   --secondary-color: #EFEFE6;
