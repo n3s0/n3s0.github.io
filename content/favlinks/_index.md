@@ -26,11 +26,11 @@ List of my personal blogs and sites I maintain for myself.
 ## Blogs
 ---
 
-- [Ted Unangst's Blog (https://www.tedunangst.com/)](https://www.tedunangst.com/)
-- [Jack Rhysider's Blog (https://www.tunnelsup.com/)](https://www.tunnelsup.com/)
-- [Crypto Hack Blog (https://blog.cryptohack.org/)](https://blog.cryptohack.org/)
-- [Joshua Steins Blog (https://jcs.org/)](https://jcs.org/)
-- [Brandan Greggs blog (https://www.brendangregg.com/blog/)](https://www.brendangregg.com/blog/)
+- [Ted Unangst's Blog](https://www.tedunangst.com/)
+- [Jack Rhysider's Blog](https://www.tunnelsup.com/)
+- [Crypto Hack Blog)](https://blog.cryptohack.org/)
+- [Joshua Steins Blog](https://jcs.org/)
+- [Brandan Greggs blog](https://www.brendangregg.com/blog/)
 - [Andrei Ciabanu's blog (https://www.andreinc.net/)](https://www.andreinc.net/)
 - [Justin Meiner's Blog (https://justinmeiners.github.io/)](https://justinmeiners.github.io/)
 - [John Gilmore's Blog (http://www.toad.com/)](http://www.toad.com/)
@@ -102,6 +102,9 @@ List of my personal blogs and sites I maintain for myself.
 - [MANRS Observatory](https://observatory.manrs.org/#/overview)
 - [ARIN - Reference & Tools](https://www.arin.net/reference/)
 - [NSRC - EOT Training Calendar](https://nsrc.org/calendar/)
+- [URL Scan](https://urlscan.io/)
+- [QR Code Image Reader](https://qrcodedynamic.com/qr-reader)
+- [Virus Total](https://www.virustotal.com/)
 
 ## DNS
 ---
