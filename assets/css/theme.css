@@ -1,5 +1,5 @@
 :root{
-  --ff: 'Ubuntu';
+  --ff: 'Ubuntu Sans Mono';
   --radius: 6px;
   --primary-color: #292929;
   --secondary-color: #EFEFE6;
@@ -26,8 +26,8 @@
 }
 
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu Sans Mono';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/Ubuntu-Regular') format('woff2');
+  src: url('../fonts/UbuntuSansMono-Regular.ttf') format('ttf');
 }
