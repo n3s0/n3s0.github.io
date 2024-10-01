@@ -28,7 +28,7 @@ showHeadingAnchors = true
 # Whether to enable search. Needs JSON output for this to work.
 enableSearch = true
 # Whether to enable qrcodes to be available on page.
-enablePageQRCode  = true
+enablePageQRCode  = false
 
 # Site search engine verification tags.
 # [verification]
