@@ -46,9 +46,9 @@
 {{ end }}
 
 {{/* Page QR Codes */}}
-{{/* https://github.com/jeromeetienne/jquery-qrcode */}}
+{{/* https://github.com/davidshimjs/qrcodejs */}}
 {{ if .Site.Params.enablePageQRCode | default false }}
-  {{ with resources.Get "lib/jquery-qrcode/jquery.qrcode.min.js" | resources.Fingerprint "sha512" }}
+  {{ with resources.Get "lib/qrcode/qrcode.min.js" | resources.Fingerprint "sha512" }}
     <script
       defer
       type="text/javascript"

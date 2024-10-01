@@ -11,7 +11,7 @@ title = "n3s0 || journal"
 theme = "kayal" # UNCOMMENT THIS LINE
 
 # Number of articles per page in the listing.
-paginate = 20
+pagination.pagerSize = 20
 
 # Enable processing of emojis in markdown.
 enableEmoji = true

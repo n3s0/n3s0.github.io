@@ -28,7 +28,7 @@ showHeadingAnchors = true
 # Whether to enable search. Needs JSON output for this to work.
 enableSearch = true
 # Whether to enable qrcodes to be available on page.
-enablePageQrCode = false
+enablePageQRCode  = true
 
 # Site search engine verification tags.
 # [verification]
@@ -87,8 +87,8 @@ categoryID = "DIC_kwDOMyo-Cs4CipcA"
 mapping = "og:title"
 reactionsEnabled = "1"
 emitMetadata = "0"
-inputPosition = "bottom"
-theme = "light"
+inputPosition = "top"
+theme = "dark"
 lang = "en"
 loading = "lazy"
 
