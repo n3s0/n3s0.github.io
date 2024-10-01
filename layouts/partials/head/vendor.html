@@ -48,12 +48,12 @@
 {{/* Page QR Codes */}}
 {{/* https://github.com/davidshimjs/qrcodejs */}}
 {{ if .Site.Params.enablePageQRCode | default false }}
-  {{ with resources.Get "lib/qrcode/qrcode.min.js" | resources.Fingerprint "sha512" }}
+  {{ $qrcodeJS := resources.Get "lib/qrcode/qrcode.min.js" }}
+  {{ $qrcodeJS := $qrcodeJS | resources.Fingerprint "sha512" }}
     <script
       defer
       type="text/javascript"
-      src="{{ .RelPermalink }}"
-      integrity="{{ .Data.Integrity }}"
+      src="{{ $qrcodeJS.RelPermalink }}"
+      integrity="{{ $qrcodeJS.Data.Integrity }}"
     ></script>
-  {{ end }}
 {{ end }}
