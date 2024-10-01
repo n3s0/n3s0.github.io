@@ -9,7 +9,7 @@
 {{ end }}
 
 {{ if .Site.Params.enablePageQRCode | default false }}
-  {{ $scripts := $scripts | append "js/pageqr.js" }}
+  {{ $scripts := $scripts | append "js/pageqrcode.js" }}
 {{ end }}
 
 {{ range $scripts }}
