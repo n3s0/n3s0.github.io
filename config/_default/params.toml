@@ -79,6 +79,7 @@ showComments = true
 # Whether to display breadcrumbs
 showBreadcrumbs = false
 
+# Giscus commenting
 [giscus]
 repo = "n3s0/n3s0.github.io"
 repoID = "R_kgDOMyo-C"
