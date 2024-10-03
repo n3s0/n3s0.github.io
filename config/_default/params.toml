@@ -4,7 +4,7 @@
 # https://mnjm.github.io/kayal/docs/configuration/#theme-parameters
 
 # [Optional] Path to the site logo image relative to assets/ folder. Displayed before the Site Title in the header. Minimum size: 64x64px.
-# logo = "/imgs/logo.png"
+#logo = "imgs/logo.png"
 # Site description.
 description = ""
 # [Optional] Copyright owner name.
@@ -52,7 +52,7 @@ showMoreDest = "/notes"
 # [Optional] Displayed at the top of your homepage.
 headline = "Welcome to my journal"
 # [Optional] Path to the profile image relative to assets/ folder. Minimum size: 200x200px.
-# image = "imgs/profile.svg"
+image = "imgs/profile.jpg"
 # Image position.
 where = "right"  # Options: right, left, top
 
