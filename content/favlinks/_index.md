@@ -47,6 +47,7 @@ List of my personal blogs and sites I maintain for myself.
 - [Mete Balci Blog](https://metebalci.com/)
 - [Aaron Toponce Blog](https://pthree.org/)
 - [Sam Bowne Blog](https://samsclass.info/)
+- [Black Hills Information Security Blog](https://www.blackhillsinfosec.com/blog/)
 
 ## Online Dashboards
 ---
