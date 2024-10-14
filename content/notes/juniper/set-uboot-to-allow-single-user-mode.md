@@ -1,7 +1,7 @@
 ---
 title: 'Juniper: Configure U-Boot To Enable Singe-User Mode Boot'
 date: 2024-10-14T12:10:01-06:00
-summary: "Notes for booting to Single User Mode to enter recovery mode."
+summary: "Notes for configuring u-boot to enter single user mode."
 draft: false
 hidden: false
 externalURL: false

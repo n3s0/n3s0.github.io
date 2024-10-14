@@ -1,7 +1,7 @@
 ---
 title: 'Juniper: Root Password Recovery In Recovery Mode'
 date: 2024-10-14T12:20:01-06:00
-summary: ""
+summary: "Notes for changing Juniper password in recovery mode."
 draft: false
 hidden: false
 externalURL: false
