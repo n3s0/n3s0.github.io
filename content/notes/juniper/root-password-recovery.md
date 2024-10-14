@@ -1,6 +1,6 @@
 ---
 title: 'Juniper: Root Password Recovery In Recovery Mode'
-date: 2024-10-14T12:23:01-06:00
+date: 2024-10-14T12:20:01-06:00
 summary: ""
 draft: false
 hidden: false
@@ -21,7 +21,7 @@ it in a lab. These are the steps I used to do that.
 
 Boot to single user mode first. There is a note for this found below.
 
-- [Juniper: Boot To Single-User Mode](#)
+- [Juniper: Boot To Single-User Mode](/notes/juniper/root-password-recovery/)
 
 ## Root Password Recovery
 ---
