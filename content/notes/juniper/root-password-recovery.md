@@ -21,7 +21,7 @@ it in a lab. These are the steps I used to do that.
 
 Boot to single user mode first. There is a note for this found below.
 
-- [Juniper: Boot To Single-User Mode](/notes/juniper/root-password-recovery/)
+- [Juniper: Boot To Single-User Mode](/notes/juniper/boot-to-single-user-mode/)
 
 ## Root Password Recovery
 ---
