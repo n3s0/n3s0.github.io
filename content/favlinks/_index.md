@@ -174,23 +174,40 @@ List of my personal blogs and sites I maintain for myself.
 ### Linux/Unix
 ---
 
+{{< collapse summary="General" open=false >}}
 - [Linux Handbook](https://linuxhandbook.com/)
 - [Linux Upskill Challenge](https://linuxupskillchallenge.org/)
 - [Linux From Scratch](https://linuxfromscratch.org/)
+{{< /collapse >}}
+
+{{< collapse summary="OpenBSD" open=false >}}
 - [OpenBSD](https://www.openbsd.org/)
+- [OpenBSD FAQ](https://www.openbsd.org/faq/index.html)
+{{< /collapse >}}
+
+{{< collapse summary="FreeBSD" open=false >}}
+- [FreeBSD](https://www.freebsd.org/)
+- [FreeBSD Documentation](https://docs.freebsd.org/en/)
+{{< /collapse >}}
+
+{{< collapse summary="Arch Linux" open=false >}}
 - [Arch Linux](https://archlinux.org/)
 - [Arch Linux User Repository](https://aur.archlinux.org/)
+{{< /collapse >}}
+
+{{< collapse summary="Alpine" open=false >}}
 - [Alpine Linux](https://www.alpinelinux.org/)
+{{< /collapse >}}
+
+
+
 - [Fedora](https://getfedora.org/)
 - [CentOS](https://www.centos.org/)
 - [Red Hat](https://www.redhat.com/)
 - [Ubuntu](https://ubuntu.com/)
 - [Debian](https://www.debian.org/)
 - [openSUSE](https://www.opensuse.org/)
-- [FreeBSD](https://www.freebsd.org/)
 - [Oracle Linux](https://www.oracle.com/linux/)
-- [OpenBSD FAQ](https://www.openbsd.org/faq/index.html)
-- [FreeBSD Documentation](https://docs.freebsd.org/en/)
 - [Ubuntu Wiki](https://wiki.ubuntu.com/)
 - [Fedora Wiki](https://fedoraproject.org/wiki/Fedora_Project_Wiki)
 - [Oracle Documentation](https://docs.oracle.com/en/operating-systems/index.html)
