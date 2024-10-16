@@ -130,7 +130,6 @@ List of my personal blogs and sites I maintain for myself.
 ---
 
 - [https://lobste.rs/](https://lobste.rs/)
-- [https://undeadly.org/](https://undeadly.org/)
 - [Hacker News](https://news.ycombinator.com/news)
 - [512KB Club](https://512kb.club/)
 - [Research Gate](https://www.researchgate.net/topics)
@@ -183,6 +182,7 @@ List of my personal blogs and sites I maintain for myself.
 {{< collapse summary="OpenBSD" open=false >}}
 - [OpenBSD](https://www.openbsd.org/)
 - [OpenBSD FAQ](https://www.openbsd.org/faq/index.html)
+- [https://undeadly.org/](https://undeadly.org/)
 {{< /collapse >}}
 
 {{< collapse summary="FreeBSD" open=false >}}
@@ -200,17 +200,31 @@ List of my personal blogs and sites I maintain for myself.
 {{< /collapse >}}
 
 
-
-- [Fedora](https://getfedora.org/)
-- [CentOS](https://www.centos.org/)
+{{< collapse summary="Red Hat" open=false >}}
 - [Red Hat](https://www.redhat.com/)
-- [Ubuntu](https://ubuntu.com/)
-- [Debian](https://www.debian.org/)
-- [openSUSE](https://www.opensuse.org/)
-- [Oracle Linux](https://www.oracle.com/linux/)
-- [Ubuntu Wiki](https://wiki.ubuntu.com/)
+- [Fedora](https://getfedora.org/)
 - [Fedora Wiki](https://fedoraproject.org/wiki/Fedora_Project_Wiki)
+- [CentOS](https://www.centos.org/)
+{{< /collapse >}}
+
+{{< collapse summary="OpenSUSE" open=false >}}
+- [openSUSE](https://www.opensuse.org/)
+{{< /collapse >}}
+
+{{< collapse summary="Oracle" open=false >}}
+- [Oracle Linux](https://www.oracle.com/linux/)
 - [Oracle Documentation](https://docs.oracle.com/en/operating-systems/index.html)
+{{< /collapse >}}
+
+{{< collapse summary="Ubuntu" open=false >}}
+- [Ubuntu](https://ubuntu.com/)
+- [Ubuntu Wiki](https://wiki.ubuntu.com/)
+{{< /collapse >}}
+
+{{< collapse summary="Debian" open=false >}}
+- [Debian](https://www.debian.org/)
+{{< /collapse >}}
+
 
 ### Software
 ---
