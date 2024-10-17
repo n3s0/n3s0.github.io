@@ -49,13 +49,10 @@ Time to Solve: 10 minutes.
 ---
 
 I attempted to check and see if it would work after first starting it up using
-curl.
+curl. But, it didn't show anything good. Said the ports closed.
 
 ```sh
 curl 10.43.216.196
-```
-
-```sh
 ```
 
 Checked the pods using the get pods commands.
@@ -64,8 +61,9 @@ Checked the pods using the get pods commands.
 kubectl get pods
 ```
 
-It looks like the nginx-deployment-67699598cc-zrj6f pod isn't ready yet and it
-has had an age of 268 days.
+It looks like the nginx-deployment-67699598cc-zrj6f pod isn't ready yet and its
+been in this state for 268 days. Some significant pending time. Pending time is
+the new uptime flex these days I suppose.
 
 ```sh
 NAME                                READY   STATUS    RESTARTS   AGE
