@@ -6,26 +6,30 @@ showComments: false
 showHeadingAnchors: false
 ---
 
-## Overview
+This is a humble part of the Internet where I put my bookmarks. Catagorization
+is definately a work in progress. But, as time goes on it will be well catered
+to what I need.
+
+Relying on Google, Firefox, and whatever browser you can think of to sync my
+general bookmarks doesn't seem paractical. I built this site to work for me. So,
+I figured that I might as well use it for that purpose for just about everything
+that doesn't tell everyone to much personal information.
+
+So, here are my bookmarks. If you would like to share new places on the Internet.
+Please do! Saves me a trip to Lobste.rs.
+
+## Important Links
 ---
 
-This is essentially my online bookmarks page consisting of sites I enjoy 
-browsing or wish to store in case they're needed for the future. 
-
-It is far from complete. But, I update it regularly with what I find as 
-I browse.
-
-## Personal Blogs/Sites
----
-
-List of my personal blogs and sites I maintain for myself.
-
+{{< collapse summary="My Personal Blogs" open=false >}}
 - [n3s0 || journal](https://n3s0.tech/) (You are here.)
 - [n3s0 || notes](https://notes.n3s0.tech)
+{{< /collapse >}}
 
-### People
+## Blogs
 ---
 
+{{< collapse summary="Awesome People" open=false >}}
 - [Ted Unangst's Blog](https://www.tedunangst.com/)
 - [Jack Rhysider's Blog](https://www.tunnelsup.com/)
 - [Crypto Hack Blog)](https://blog.cryptohack.org/)
@@ -47,20 +51,17 @@ List of my personal blogs and sites I maintain for myself.
 - [Aaron Toponce Blog](https://pthree.org/)
 - [Sam Bowne Blog](https://samsclass.info/)
 - [VoIPInfo.net](https://www.voipinfo.net)
+{{< /collapse >}}
+
+
 - [Celona - Private Mobile Network Blog](https://www.celona.io/private-mobile-network-blog)
 - [Marat Fayzullin's Blog](https://fms.komkon.org/)
 - [codeslinger.co.uk](http://www.codeslinger.co.uk/)
 - [RealBoy Emulator Site](https://realboyemulator.wordpress.com/)
 - [Pro Digital Forensic Consulting](https://prodigital4n6.com/blog/)
-
-
-### Entities
----
-
 - [Black Hills Information Security Blog](https://www.blackhillsinfosec.com/blog/)
 - [Its F.O.S.S.](https://itsfoss.com/)
 - [Techmint](https://www.tecmint.com/)
-- [Linux Journal](https://www.linuxjournal.com/)
 - [Patch Tuesday Blog](https://patchtuesday.com)
 
 ## Networking
@@ -90,8 +91,11 @@ List of my personal blogs and sites I maintain for myself.
 ## Tools
 ---
 
+{{< collapse summary="Source Code Management" open=false >}}
 - [Github](https://github.com)
 - [GitLab](https://gitlab.com)
+{{< /collapse >}}
+
 - [PeeringDB](https://www.peeringdb.com/)
 - [ipv6test](https://ipv6-test.com/validate.php)
 - [MANRS Observatory](https://observatory.manrs.org/#/overview)
@@ -107,6 +111,8 @@ List of my personal blogs and sites I maintain for myself.
 - [Verisin Labs - Transitive Trust Checker](https://trans-trust.verisignlabs.com/)
 - [The Go Playground](https://go.dev/play/)
 - [iFixit](https://www.ifixit.com/)
+
+{{< collapse summary="Dataset Sources" open=false >}}
 - [Bountify](https://bountify.co)
 - [Kaggle](https://www.kaggle.com/)
 - [Data.gov](https://www.data.gov/)
@@ -115,6 +121,9 @@ List of my personal blogs and sites I maintain for myself.
 - [CERN OpenData](http://opendata.cern.ch/)
 - [FBI - Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/pages/home)
 - [World Health Organization - Global Health Observatory Data Repository](https://apps.who.int/gho/data/node.home)
+{{< /collapse >}}
+
+{{< collapse summary="Search Engines" open=false >}}
 - [Google](https://www.google.com)
 - [Duck Duck Go](https://duckduckgo.com/)
 - [Bing](https://www.bing.com/)
@@ -125,18 +134,24 @@ List of my personal blogs and sites I maintain for myself.
 - [Educational Resources Information Center](https://eric.ed.gov/)
 - [Science.gov](https://www.science.gov/)
 - [Google Dataset Search](https://datasetsearch.research.google.com/)
+{{< /collapse >}}
 
 ## Feeds
 ---
 
+{{< collapse summary="Articles" open=false >}}
 - [https://lobste.rs/](https://lobste.rs/)
 - [Hacker News](https://news.ycombinator.com/news)
+- [LWN.net](https://lwn.net/)
+{{< /collapse >}}
+
+{{< collapse summary="Social Media" open=false >}}
+- [Reddit](https://www.reddit.com/)
+{{< /collapse >}}
+
 - [512KB Club](https://512kb.club/)
 - [Research Gate](https://www.researchgate.net/topics)
-- [How Stuff Works](https://auto.howstuffworks.com/)
-- [Reddit](https://www.reddit.com/)
 - [Phrack Magazine](http://phrack.org)
-- [LWN.net](https://lwn.net/)
 
 ## Documentation
 ---
@@ -144,31 +159,71 @@ List of my personal blogs and sites I maintain for myself.
 ### Software Languages
 ---
 
+{{< collapse summary="PHP" open=false >}}
 - [PHP](https://www.php.net/docs.php)
-- [Ruby](https://www.ruby-lang.org/en/documentation/)
-- [Python](https://docs.python.org/)
-- For the C programming language, documentation for the C standards need to be purchased.
-  - [ISO/ IEC JTC1/SC22/WG14 - C](http://www.open-std.org/jtc1/sc22/wg14/)
-- [.NET](https://docs.microsoft.com/en-us/dotnet/)
-- [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
-- [R](https://www.r-project.org/other-docs.html)
-- [Golang](https://go.dev/doc/)
-- [Rust](https://www.rust-lang.org/learn)
-- [JavaScript](https://jsdoc.app/)
 - [Laravel - PHP Web Framework](https://laravel.com/docs/)
+{{< /collapse >}}
+
+{{< collapse summary="Ruby" open=false >}}
+- [Ruby](https://www.ruby-lang.org/en/documentation/)
+- [Ruby on Rails - Ruby Web Framework](https://guides.rubyonrails.org/)
+{{< /collapse >}}
+
+{{< collapse summary="Python" open=false >}}
+- [Python](https://docs.python.org/)
 - [Flask - Python Web Framework](https://flask.palletsprojects.com/)
 - [Django - Python Web Framework](https://docs.djangoproject.com/en/4.0/)
-- [Ruby on Rails - Ruby Web Framework](https://guides.rubyonrails.org/)
+{{< /collapse >}}
+
+{{< collapse summary="C" open=false >}}
+- [ISO/ IEC JTC1/SC22/WG14 - C](http://www.open-std.org/jtc1/sc22/wg14/)
+{{< /collapse >}}
+
+{{< collapse summary=".NET" open=false >}}
+- [.NET](https://docs.microsoft.com/en-us/dotnet/)
+{{< /collapse >}}
+
+{{< collapse summary="C#" open=false >}}
+- [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
+{{< /collapse >}}
+
+{{< collapse summary="R" open=false >}}
+- [R](https://www.r-project.org/other-docs.html)
+{{< /collapse >}}
+
+{{< collapse summary="Go" open=false >}}
+- [Golang](https://go.dev/doc/)
+{{< /collapse >}}
+
+{{< collapse summary="Rust" open=false >}}
+- [Rust](https://www.rust-lang.org/learn)
+{{< /collapse >}}
+
+{{< collapse summary="JavaScript" open=false >}}
+- [JavaScript](https://jsdoc.app/)
 - [Express.js - JavaScript Web Framework](https://expressjs.com/)
 - [React.js - JavaScript Front-End Web Framework](https://reactjs.org/docs/getting-started.html)
 - [Vue.js - JavaScript Front-End Web Framework](https://vuejs.org/guide/introduction.html)
+{{< /collapse >}}
+
+{{< collapse summary="ARM" open=false >}}
 - [arm developer](https://developer.arm.com/documentation)
+{{< /collapse >}}
+
+{{< collapse summary="HTML & Style Markup" open=false >}}
 - [HTML](https://html.com/document/)
-- [W3Schools](https://www.w3schools.com/)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [W3Schools](https://www.w3schools.com/)
+{{< /collapse >}}
+
+{{< collapse summary="Other Markup" open=false >}}
 - [Markdown](https://www.markdownguide.org/basic-syntax/)
+{{< /collapse >}}
+
+{{< collapse summary="TeX" open=false >}}
 - [BibTeX](http://www.bibtex.org/)
 - [LaTeX](https://www.latex-project.org/)
+{{< /collapse >}}
 
 ### Linux/Unix
 ---
@@ -177,6 +232,7 @@ List of my personal blogs and sites I maintain for myself.
 - [Linux Handbook](https://linuxhandbook.com/)
 - [Linux Upskill Challenge](https://linuxupskillchallenge.org/)
 - [Linux From Scratch](https://linuxfromscratch.org/)
+- [Linux Journal](https://www.linuxjournal.com/)
 {{< /collapse >}}
 
 {{< collapse summary="OpenBSD" open=false >}}
@@ -229,48 +285,89 @@ List of my personal blogs and sites I maintain for myself.
 ### Software
 ---
 
+{{< collapse summary="DNS" open=false >}}
 - [Bind 9 Documentation](https://bind9.readthedocs.io/en/v9_18_2/)
 - [NSD Documentation](https://nsd.docs.nlnetlabs.nl/en/latest/)
 - [Unbound Documentation](https://unbound.docs.nlnetlabs.nl/en/latest/)
+{{< /collapse >}}
+
+{{< collapse summary="CRM" open=false >}}
 - [SuiteCRM Documentation](https://docs.suitecrm.com/)
+{{< /collapse >}}
+
+{{< collapse summary="Wiki & Documentation" open=false >}}
 - [BookStack Documentation](https://www.bookstackapp.com/docs/)
 - [DokuWiki](https://www.dokuwiki.org/dokuwiki)
+{{< /collapse >}}
+
+{{< collapse summary="Monitoring" open=false >}}
 - [Nagios Core](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/toc.html)
 - [Zabbix](https://www.zabbix.com/documentation/current/en/)
 - [Icinga](https://icinga.com/learn/)
 - [Prometheus](https://prometheus.io/docs/introduction/overview/)
 - [Observium](https://docs.observium.org/)
 - [Checkmk](https://docs.checkmk.com/latest/en/)
+{{< /collapse >}}
+
+{{< collapse summary="File Systems" open=false >}}
 - [OpenZFS](https://openzfs.org/)
+{{< /collapse >}}
+
+{{< collapse summary="Backup" open=false >}}
 - [Bacula](https://www.bacula.org/)
 - [Percona XtraBackup](https://www.percona.com/software/mysql-database/percona-xtrabackup)
 - [Veeam Technical Documentation](https://www.veeam.com/documentation-guides-datasheets.html)
 - [Tarsnap](https://www.tarsnap.com/)
 - [BackupPC](https://backuppc.github.io/backuppc/)
 - [restic](https://restic.net/)
+{{< /collapse >}}
+
+{{< collapse summary="Static Site Generators" open=false >}}
 - [Jekyll Docs](https://jekyllrb.com/docs/)
 - [Hugo Docs](https://gohugo.io/documentation/)
+{{< /collapse >}}
+
+{{< collapse summary="Source Code Management" open=false >}}
 - [Git Documentation](https://git-scm.com/doc)
+{{< /collapse >}}
+
+{{< collapse summary="Virtualization" open=false >}}
 - [Linux KVM](https://www.linux-kvm.org/page/Documents)
 - [libvirt](https://libvirt.org/docs.html)
 - [QEMU](https://www.qemu.org/)
 - [VMware Documentation](https://www.vmware.com/support/pubs/)
 - [VMware Knowledge Base](https://kb.vmware.com/s/)
+{{< /collapse >}}
+
+{{< collapse summary="Containers" open=false >}}
 - [Linux Containers](https://linuxcontainers.org/)
 - [Docker Documentation](https://docs.docker.com/)
 - [Podman Documentation](https://docs.podman.io/en/latest/)
 - [LXD Documenation](https://documentation.ubuntu.com/lxd/en/latest/)
+{{< /collapse >}}
+
+{{< collapse summary="Container Orchestration" open=false >}}
+- [Kubernetes Documentation](https://kubernetes.io/docs/home/)
+{{< /collapse >}}
+
+{{< collapse summary="Photo & Video Editing" open=false >}}
 - [GIMP](https://www.gimp.org/)
 - [Krita](https://krita.org/)
 - [Blender](https://www.blender.org/)
 - [kdenlive](https://kdenlive.org/)
+{{< /collapse >}}
+
+{{< collapse summary="Music Editing" open=false >}}
 - [LMMS](https://lmms.io/)
 - [Audacity](https://www.audacityteam.org/)
 - [MIXX](https://mixxx.org/)
+{{< /collapse >}}
+
+{{< collapse summary="CAD Software" open=false >}}
 - [FreeCAD](https://www.freecadweb.org/?lang=en)
 - [OpenSCAD](https://openscad.org/)
 - [QCAD](https://qcad.org/)
-
+{{< /collapse >}}
 
 ## Windows
 ---
@@ -295,17 +392,14 @@ Provides resources related to the Windows Operating System.
 ## InfoSec
 ---
 
+{{< collapse summary="Compliance & Standards" open=false >}}
 - [PCI Security Standards Council](https://www.pcisecuritystandards.org/)
 - [National Institute of Standards and Technology](https://www.nist.gov/)
 - [U.S. Department of Heath and Human Services - HIPAA](https://www.hhs.gov/hipaa/for-professionals/index.html)
 - [HIPAA - Health Insurance Portability Accountability Act](https://aspe.hhs.gov/reports/health-insurance-portability-accountability-act-1996)
-- [Blue Team Labs Online](https://blueteamlabs.online)
-- [SANs Holiday Hack Challenge (KringleCon)](https://holidayhackchallenge.com/2020/)
-- [Exploit-Exercises](https://www.vulnhub.com/series/exploit-exercises,11/)
-- [Vulnhub](https://www.vulnhub.com/)
-- [Over The Wire](https://overthewire.org/wargames/)
-- [Under The Wire](https://underthewire.tech/)
-- [Embedded Security CTF](https://microcorruption.com/login)
+{{< /collapse >}}
+
+
 - [CTF Time](https://ctftime.org/)
 - [Forensic Focus](https://www.forensicfocus.com/)
 - [SANS Information Security White Papers](https://www.sans.org/white-papers/)
@@ -333,11 +427,26 @@ Provides resources related to the Windows Operating System.
 - [0xedward/awesome-infosec](https://github.com/0xedward/awesome-infosec)
 
 
-## Challenges
+## Online Challenges & Hackathons
 ---
 
+{{< collapse summary="Systems" open=false >}}
 - [SadServers](https://sadservers.com/)
+{{< /collapse >}}
+
+{{< collapse summary="Programming" open=false >}}
 - [The Python Challenge](http://www.pythonchallenge.com/)
+{{< /collapse >}}
+
+{{< collapse summary="InfoSec" open=false >}}
+- [Blue Team Labs Online](https://blueteamlabs.online)
+- [SANs Holiday Hack Challenge (KringleCon)](https://holidayhackchallenge.com/2020/)
+- [Exploit-Exercises](https://www.vulnhub.com/series/exploit-exercises,11/)
+- [Vulnhub](https://www.vulnhub.com/)
+- [Over The Wire](https://overthewire.org/wargames/)
+- [Under The Wire](https://underthewire.tech/)
+- [Embedded Security CTF](https://microcorruption.com/login)
+{{< /collapse >}}
 
 ## Learning
 ---
@@ -355,6 +464,7 @@ Provides resources related to the Windows Operating System.
 - [CUEMATH](https://www.cuemath.com/)
 - [Sciencing](https://sciencing.com/)
 - [Calculus Made Easy](https://calculusmadeeasy.org/)
+- [How Stuff Works](https://auto.howstuffworks.com/)
 
 ## Automotive
 ---
@@ -378,11 +488,11 @@ Provides resources related to the Windows Operating System.
 ## Music
 ---
 
+- [Spotify](https://open.spotify.com/)
 - [musictheory.net](https://www.musictheory.net/)
 - [Music Notes](https://www.musicnotes.com/)
 - [Musescore](https://musescore.com/)
 - [ultimateguitar.com](https://www.ultimate-guitar.com/)
-- [Spotify](https://open.spotify.com/)
 
 ## Video
 ---
