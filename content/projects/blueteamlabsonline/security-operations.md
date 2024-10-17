@@ -1,11 +1,15 @@
 ---
 title: "Blue Team Labs Online - Security Operations"
 date: "2021-08-01T00:27:44-05:00"
-description: "Notes from doing the Blue Team Labs Online Security Operation Challenges."
-tags: ["writeups", "infosec"]
+summary: "Notes from doing the Blue Team Labs Online Security Operation Challenges."
 draft: false
-type: post
-showTableOfContents: true
+hidden: false
+externalURL: false
+showDate: true
+showModDate: true
+showReadingTime: true
+showTags: true
+showPagination: true
 ---
 
 ## Overview

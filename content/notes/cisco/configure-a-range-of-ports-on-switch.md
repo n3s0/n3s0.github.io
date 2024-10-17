@@ -1,5 +1,5 @@
 ---
-title: 'Configure Multiple Interfaces On Cisco IOS'
+title: 'Cisco: Configure A Range Of Interfaces On A Switch'
 date: 2022-02-22T16:49:01+06:00
 summary: "Discuss how to configure multiple Cisco IOS ports with the interface range command."
 draft: false

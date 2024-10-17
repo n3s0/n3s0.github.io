@@ -1,10 +1,16 @@
 ---
-title: "FortiGate: Adding Policy Address Objects Using CLI"
+title: "FortiGate: Adding Policy Address Objects On FortiGate"
 date: 2023-07-24T13:55:09-06:00
-description: "Notes for adding FortiGate address policy objects."
+summary: "Notes for adding FortiGate address policy objects."
 draft: false
-tags: [ "networking", "fortinet" ]
-type: post
+hidden: false
+externalURL: false
+showDate: true
+showModDate: true
+showReadingTime: true
+showTags: true
+showPagination: true
+tags: ["netadmin"]
 ---
 
 Notes for adding an address object for policies using the CLI. This is

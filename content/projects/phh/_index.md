@@ -1,5 +1,5 @@
 ---
-title: "Programming Helping Hand Entries"
+title: "Programming Help Entries"
 date: 2023-12-11T15:50:15-06:00
 summary: "Programming helping hand entries."
 draft: false

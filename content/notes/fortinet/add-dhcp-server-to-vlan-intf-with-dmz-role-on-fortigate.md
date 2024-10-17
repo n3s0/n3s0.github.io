@@ -1,17 +1,29 @@
 ---
-title: "FortiGate: Adding A DHCP Server To A VLAN Interface With The DMZ Role"
+title: "Fortinet: Add DHCP Server To VLAN Interface With DMZ Role On FortiGate"
 date: 2023-07-17T15:25:27-06:00
-description: "Notes for adding a DHCP server to a FortiGate firewall VLAN interface with the DMZ role through cli."
+summary: "Notes for adding a DHCP server to a FortiGate firewall VLAN interface with the DMZ role through cli."
 draft: false
-tags: [ "fortinet", "networking"  ]
-type: post
+hidden: false
+externalURL: false
+showDate: true
+showModDate: true
+showReadingTime: true
+showTags: true
+showPagination: true
+tags: ["netadmin"]
+---
+
+## Summary
 ---
 
 On FortiGate firewalls with 802.1Q VLAN interfaces. The DMZ role can be
-assigned to the interface. But, with this also comes a cavet. If this
+assigned to the interface. But, with this also comes a caveat. If this
 DMZ needs to have a DHCP server. It cant be configured through the web
 interface. So, it needs to be configured using the command line. Here I
 explore how to do do this.
+
+## Scenario
+---
 
 In this particular scenario there is a VLAN interface configured on
 port9 on a FortiGate VM named tl-app-01.
@@ -22,6 +34,9 @@ this.
 
 - Network: 172.16.172.0/30
 - Subnet: 255.255.255.252
+
+## Configuration
+---
 
 To set the configuration. You connect to the firewalls terminal and
 configure it like so. A little explaination as to what this does.
@@ -64,6 +79,6 @@ end
 ```
 
 Of course if you utilize strict firewall rules. Rules and objects will
-need to be configured so IPs within the subnet can reach things like the
+need to be configured so IPs within your subnets can reach things like the
 Internet and other things that an "app" server my need to access.
 

@@ -1,10 +1,19 @@
 ---
-title: "FortiGate: Showing DHCP Server Leases"
+title: "FortiGate: Showing DHCP Server Leases On FortiGates"
 date: 2023-07-17T08:50:46-06:00
-description: "Notes for showing DCHP server leases firewalls through CLI."
+summary: "Notes for showing DCHP server leases on FortiGate firewalls through CLI."
 draft: false
-tags: [ "fortinet", "networking"  ]
-type: post
+hidden: false
+externalURL: false
+showDate: true
+showModDate: true
+showReadingTime: true
+showTags: true
+showPagination: true
+tags: ["netadmin"]
+---
+
+## Summary
 ---
 
 Notice that this regards DHCP servers and not relays. 
@@ -17,6 +26,7 @@ networks at a time. So, don't be destroying the addresses on all of the
 networks with what's learned here.
 
 ## Listing Leases
+---
 
 The command below will list all leases handed out by the DHCP server on
 the FortiGate.
