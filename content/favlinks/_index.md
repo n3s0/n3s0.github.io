@@ -346,6 +346,12 @@ Please do! Saves me a trip to Lobste.rs.
 - [LXD Documenation](https://documentation.ubuntu.com/lxd/en/latest/)
 {{< /collapse >}}
 
+{{< collapse summary="Automation" open=false >}}
+- [Terraform Documentation](https://developer.hashicorp.com/terraform/docs)
+- [Ansible Documentation](https://docs.ansible.com/)
+{{< /collapse >}}
+
+
 {{< collapse summary="Container Orchestration" open=false >}}
 - [Kubernetes Documentation](https://kubernetes.io/docs/home/)
 {{< /collapse >}}

@@ -1,6 +1,6 @@
 ---
 title: "Ubuntu Update Playbook: Usage"
-date: 2024-10-18T01:19:10-06:00
+date: 2024-10-18T01:19:02-06:00
 summary: "Docs for my Ansible playbook that updates Ubuntu Servers."
 draft: false
 hidden: false
