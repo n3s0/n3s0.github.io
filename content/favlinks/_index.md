@@ -153,6 +153,13 @@ Please do! Saves me a trip to Lobste.rs.
 - [Research Gate](https://www.researchgate.net/topics)
 - [Phrack Magazine](http://phrack.org)
 
+## Cloud Providers
+---
+
+- [Azure](https://azure.microsoft.com/en-us)
+- [Vultr](https://www.vultr.com/)
+- [Amazon Web Services (AWS)](https://aws.amazon.com/)
+
 ## Documentation
 ---
 
