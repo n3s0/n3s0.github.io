@@ -1,7 +1,7 @@
 ---
 title: 'Randomize Wallpapers For Sway Using Python'
 date: 2024-11-01T16:50:00-06:00
-summary: "Notes for randomizing backgrounds in Sway"
+summary: "Notes for randomizing backgrounds in Sway using Python."
 draft: false
 hidden: false
 externalURL: false

@@ -51,6 +51,7 @@ Please do! Saves me a trip to Lobste.rs.
 - [Aaron Toponce Blog](https://pthree.org/)
 - [Sam Bowne Blog](https://samsclass.info/)
 - [VoIPInfo.net](https://www.voipinfo.net)
+- [Drash Smith's Blog](https://www.drashsmith.com/)
 {{< /collapse >}}
 
 
@@ -63,6 +64,7 @@ Please do! Saves me a trip to Lobste.rs.
 - [Its F.O.S.S.](https://itsfoss.com/)
 - [Techmint](https://www.tecmint.com/)
 - [Patch Tuesday Blog](https://patchtuesday.com)
+- [Your Basic - Algorithms to Go](https://yourbasic.org/)
 
 ## Networking
 ---
@@ -449,6 +451,7 @@ Provides resources related to the Windows Operating System.
 
 {{< collapse summary="Programming" open=false >}}
 - [The Python Challenge](http://www.pythonchallenge.com/)
+- [Advent of Code](https://adventofcode.com/)
 {{< /collapse >}}
 
 {{< collapse summary="InfoSec" open=false >}}
@@ -478,6 +481,7 @@ Provides resources related to the Windows Operating System.
 - [Sciencing](https://sciencing.com/)
 - [Calculus Made Easy](https://calculusmadeeasy.org/)
 - [How Stuff Works](https://auto.howstuffworks.com/)
+- [boot.dev](https://www.boot.dev/)
 
 ## Automotive
 ---
