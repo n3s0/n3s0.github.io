@@ -52,6 +52,7 @@ Please do! Saves me a trip to Lobste.rs.
 - [Sam Bowne Blog](https://samsclass.info/)
 - [VoIPInfo.net](https://www.voipinfo.net)
 - [Drash Smith's Blog](https://www.drashsmith.com/)
+- [Taran Bains's Blog](https://www.taranveerbains.ca/)
 {{< /collapse >}}
 
 
@@ -69,26 +70,40 @@ Please do! Saves me a trip to Lobste.rs.
 ## Networking
 ---
 
-- [Hurricane Electric Internet Services](https://www.he.net)
-- [The North American Network Operators’ Group (NANOG)](https://www.nanog.org)
-- [Network Startup Resource Center (NSRC)](https://nsrc.org/)
-- [American Registry for Internet Numbers (ARIN)](https://www.arin.net/)
-- [Blog of Fiber Transceivers](https://www.fiber-optic-transceiver-module.com/)
-- [Route-XP](https://www.routexp.com/)
-- [wirednot](https://wirednot.wordpress.com/)
-- [Cisco ThousandEyes Blog](https://www.thousandeyes.com/blog/)
-- [Router Freak](https://www.routerfreak.com/)
-- [The Networking Nerd](https://networkingnerd.net/)
-- [ipSpace](https://www.ipspace.net/)
-- [Enterprise Networking Planet](https://www.enterprisenetworkingplanet.com/)
-- [Network Engineering Stack Exchange](https://networkengineering.stackexchange.com/)
-- [Network World](https://www.networkworld.com/)
-- [DD-WRT Wiki](https://forum.dd-wrt.com/wiki/index.php/Main_Page)
+{{< collapse summary="Router Documentation" open=false >}}
 - [OPNsense Documentation](https://docs.opnsense.org/)
 - [Netgate Documentation](https://docs.netgate.com/)
 - [Fortinet Docs Library](https://docs.fortinet.com/)
-- [RFC Editor](https://www.rfc-editor.org/)
+- [DD-WRT Wiki](https://forum.dd-wrt.com/wiki/index.php/Main_Page)
 - [Ubiquity](https://micro-framework.readthedocs.io/en/latest/)
+{{< /collapse >}}
+
+{{< collapse summary="Internet Standards & Orgs" open=false >}}
+- [The North American Network Operators’ Group (NANOG)](https://www.nanog.org)
+- [Network Startup Resource Center (NSRC)](https://nsrc.org/)
+- [American Registry for Internet Numbers (ARIN)](https://www.arin.net/)
+- [Internet Engineering Task Force (IETF)](https://www.ietf.org/)
+- [RFC Editor](https://www.rfc-editor.org/)
+- [IETF Datatracker](https://datatracker.ietf.org/)
+- [Hurricane Electric Internet Services](https://www.he.net)
+{{< /collapse >}}
+
+{{< collapse summary="Networking Blogs" open=false >}}
+- [Blog of Fiber Transceivers](https://www.fiber-optic-transceiver-module.com/)
+- [Route-XP](https://www.routexp.com/)
+- [wirednot](https://wirednot.wordpress.com/)
+- [Router Freak](https://www.routerfreak.com/)
+- [The Networking Nerd](https://networkingnerd.net/)
+- [Network World](https://www.networkworld.com/)
+- [Enterprise Networking Planet](https://www.enterprisenetworkingplanet.com/)
+- [Cisco ThousandEyes Blog](https://www.thousandeyes.com/blog/)
+- [ipSpace](https://www.ipspace.net/)
+{{< /collapse >}}
+
+{{< collapse summary="Networking Forums" open=false >}}
+- [Network Engineering Stack Exchange](https://networkengineering.stackexchange.com/)
+{{< /collapse >}}
+
 
 ## Tools
 ---
@@ -98,21 +113,43 @@ Please do! Saves me a trip to Lobste.rs.
 - [GitLab](https://gitlab.com)
 {{< /collapse >}}
 
+{{< collapse summary="Source Code Management" open=false >}}
 - [PeeringDB](https://www.peeringdb.com/)
 - [ipv6test](https://ipv6-test.com/validate.php)
 - [MANRS Observatory](https://observatory.manrs.org/#/overview)
 - [ARIN - Reference & Tools](https://www.arin.net/reference/)
-- [NSRC - EOT Training Calendar](https://nsrc.org/calendar/)
-- [URL Scan](https://urlscan.io/)
-- [Shodan](https://www.shodan.io/)
-- [wigle.net](https://wigle.net/)
-- [QR Code Image Reader](https://qrcodedynamic.com/qr-reader)
-- [Virus Total](https://www.virustotal.com/)
 - [Verisin Labs - DNSSEC Debugger](https://dnssec-debugger.verisignlabs.com/)
 - [Verisin Labs - DNS Vizualizer](https://dnsviz.net/)
 - [Verisin Labs - Transitive Trust Checker](https://trans-trust.verisignlabs.com/)
+{{< /collapse >}}
+
+{{< collapse summary="Site Analysis" open=false >}}
+- [URL Scan](https://urlscan.io/)
+{{< /collapse >}}
+
+{{< collapse summary="Malware Analysis" open=false >}}
+- [Virus Total](https://www.virustotal.com/)
+
+{{< collapse summary="OSINT" open=false >}}
+- [Shodan](https://www.shodan.io/)
+- [wigle.net](https://wigle.net/)
+{{< /collapse >}}
+
+{{< collapse summary="Sandboxes" open=false >}}
 - [The Go Playground](https://go.dev/play/)
+{{< /collapse >}}
+
+{{< collapse summary="Break Fix References" open=false >}}
 - [iFixit](https://www.ifixit.com/)
+{{< /collapse >}}
+
+{{< collapse summary="Generators & Beautifiers" open=false >}}
+- [QR Code Image Reader](https://qrcodedynamic.com/qr-reader)
+{{< /collapse >}}
+
+{{< collapse summary="Carreer Development" open=false >}}
+- [roadmap.sh](https://roadmap.sh/)
+{{< /collapse >}}
 
 {{< collapse summary="Dataset Sources" open=false >}}
 - [Bountify](https://bountify.co)
@@ -149,18 +186,26 @@ Please do! Saves me a trip to Lobste.rs.
 
 {{< collapse summary="Social Media" open=false >}}
 - [Reddit](https://www.reddit.com/)
+- [Facebook](https://www.facebook.com/)
+- [Instagram](https://www.instagram.com/)
+- [Twitter/X](https://www.x.com/)
 {{< /collapse >}}
 
+
+{{< collapse summary="Misc." open=false >}}
 - [512KB Club](https://512kb.club/)
 - [Research Gate](https://www.researchgate.net/topics)
 - [Phrack Magazine](http://phrack.org)
+{{< /collapse >}}
 
 ## Cloud Providers
 ---
 
+{{< collapse summary="Cloud Providers" open=false >}}
 - [Azure](https://azure.microsoft.com/en-us)
 - [Vultr](https://www.vultr.com/)
 - [Amazon Web Services (AWS)](https://aws.amazon.com/)
+{{< /collapse >}}
 
 ## Documentation
 ---
@@ -415,7 +460,6 @@ Provides resources related to the Windows Operating System.
 {{< /collapse >}}
 
 
-- [CTF Time](https://ctftime.org/)
 - [Forensic Focus](https://www.forensicfocus.com/)
 - [SANS Information Security White Papers](https://www.sans.org/white-papers/)
 - [Blackbag Toool](https://blackbag.toool.nl/)
@@ -455,6 +499,7 @@ Provides resources related to the Windows Operating System.
 {{< /collapse >}}
 
 {{< collapse summary="InfoSec" open=false >}}
+- [CTF Time](https://ctftime.org/)
 - [Blue Team Labs Online](https://blueteamlabs.online)
 - [SANs Holiday Hack Challenge (KringleCon)](https://holidayhackchallenge.com/2020/)
 - [Exploit-Exercises](https://www.vulnhub.com/series/exploit-exercises,11/)
