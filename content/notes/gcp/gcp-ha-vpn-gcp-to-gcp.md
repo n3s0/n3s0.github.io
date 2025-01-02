@@ -1,6 +1,6 @@
 ---
 title: "Google Cloud Platform: HA VPN Between Two VPC Networks"
-date: 2024-11-04T10:25:01-06:00
+date: 2025-01-02T10:25:01-06:00
 summary: "Notes for setting up an HA VPN between two VPC Networks."
 draft: true
 hidden: false

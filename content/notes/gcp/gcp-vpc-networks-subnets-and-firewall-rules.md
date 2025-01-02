@@ -1,8 +1,8 @@
 ---
 title: "GCP: VPC Network With Custom Subnets and Firewall Rules Using Gcloud Shell"
-date: 2024-11-04T10:25:01-06:00
+date: 2025-01-02T16:02:01-06:00
 summary: "Notes for creating a VPC network with custom subnets using gcloud shell."
-draft: true
+draft: false
 hidden: false
 externalURL: false
 showDate: true
