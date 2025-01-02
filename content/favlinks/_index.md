@@ -129,6 +129,7 @@ Please do! Saves me a trip to Lobste.rs.
 
 {{< collapse summary="Malware Analysis" open=false >}}
 - [Virus Total](https://www.virustotal.com/)
+{{< /collapse >}}
 
 {{< collapse summary="OSINT" open=false >}}
 - [Shodan](https://www.shodan.io/)
