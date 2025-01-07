@@ -26,7 +26,7 @@ finished. I intend on providing an update every quarter with the books I've read
 and the ones I'm currently ingesting. Of course, consistancy may vary. I'll set
 a calendar reminder for it.
 
-Some links you can find me on for Reading Social Media. If that's even a thing.
+Some links you can find me on for Reading Social Media.
 
 - [Goodreads](https://www.goodreads.com/user/show/115523972-timothy-loftus)
 
