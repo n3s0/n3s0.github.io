@@ -26,6 +26,11 @@ finished. I intend on providing an update every quarter with the books I've read
 and the ones I'm currently ingesting. Of course, consistancy may vary. I'll set
 a calendar reminder for it.
 
+<iframe sandbox id="the_iframe" src="https://goodreads.com/widgets/user_update_widget?height=400&num_updates=4&user=115523972&width=250" width="248" height="330" frameborder="0"></iframe>
+
+<script src="https://www.goodreads.com/user_challenges/widget/115523972-timothy-loftus?challenge_id=11627&v=2"></script>
+
+
 ## Reading Updates
 ---
 
