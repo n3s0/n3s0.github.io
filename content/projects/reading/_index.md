@@ -39,7 +39,13 @@ time I'll build a layout/template for it and add it to this theme. But, for now.
 I'll just include the iframe above.
 
 
-## Reading Updates
+## Quarterly Reading Updates
 ---
+
+Beginning in 2025 I will be providing updates on what books I read every quarter
+with links to their reviews or my thoughts on the book. I'm a pretty slow
+reader. So, I wouldn't expect this to be filled with books each quarter. But, I
+thought it would be a good way to stay on track of this and provide periodic
+updates to my reading goal.
 
 
