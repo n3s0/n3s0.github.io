@@ -1,5 +1,5 @@
 ---
-title: "Fortinet: Netgate Rules on ForiGate Policies."
+title: "Fortinet: Negate Rules on ForiGate Policies."
 date: 2025-01-31T16:25:27-06:00
 summary: "Notes for setting up negate rules on FortiGate policies."
 draft: false
@@ -55,7 +55,7 @@ end
 For some information on how add IP blocklist feeds to your FortiGate I have
 provided a list to a note that covers this below.
 
-- []()
+- [Fortinet: Add An Address External Resource To FortiGate](https://www.n3s0.tech/notes/fortinet/adding-an-address-external-resource-to-fortigate/)
 
 ## Resources
 ---
