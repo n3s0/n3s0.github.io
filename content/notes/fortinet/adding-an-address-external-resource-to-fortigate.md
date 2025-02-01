@@ -1,5 +1,5 @@
 ---
-title: "Fortinet: Add An Address Threat Feed To FortiGate"
+title: "Fortinet: Add An Address External Resource To FortiGate"
 date: 2025-01-31T15:25:27-06:00
 summary: "Notes for adding an address threat feed to a FortiGate."
 draft: false
