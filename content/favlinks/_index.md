@@ -98,6 +98,7 @@ Please do! Saves me a trip to Lobste.rs.
 - [Enterprise Networking Planet](https://www.enterprisenetworkingplanet.com/)
 - [Cisco ThousandEyes Blog](https://www.thousandeyes.com/blog/)
 - [ipSpace](https://www.ipspace.net/)
+- [https://adriangiacometti.net/](https://adriangiacometti.net/)
 {{< /collapse >}}
 
 {{< collapse summary="Networking Forums" open=false >}}
