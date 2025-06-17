@@ -79,16 +79,12 @@ terminating a new cable.
 TDR test last run on:  June 02 01:59:04
 
 Interface Speed Local pair Pair length        Remote pair Pair status
-
 --------- ----- ---------- ------------------ ----------- --------------------
 
 Tw1/0/13     1000M Pair A     8    +/- 10 meters Pair B      Normal             
-
-                Pair B     8    +/- 10 meters Pair A      Normal             
-
-                Pair C     8    +/- 10 meters Pair D      Normal             
-
-                Pair D     8    +/- 10 meters Pair C      Normal        
+                   Pair B     8    +/- 10 meters Pair A      Normal             
+                   Pair C     8    +/- 10 meters Pair D      Normal             
+                   Pair D     8    +/- 10 meters Pair C      Normal        
 ```
 
 ## Some Things To Expect
