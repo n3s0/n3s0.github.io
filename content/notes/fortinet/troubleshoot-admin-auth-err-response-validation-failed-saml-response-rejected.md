@@ -1,6 +1,6 @@
 ---
 title: "Fortinet: Troubleshooting Response Validation Failed. SAML Response Rejected Error"
-date: 2025-06-17T15:25:27-06:00
+date: 2025-06-17T15:25:28-06:00
 summary: "Notes for troubleshooting some SAML errors Response Validation Failed."
 draft: false
 hidden: false
