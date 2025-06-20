@@ -40,6 +40,11 @@ explainations will be provided in different sections.
 - Subnets used on the network.
 - What services are provided on the network.
 
+First I'll provide the scenario, then the design, a walk through of
+those design descisions, and finally a walkthrough of how those design decisions
+will come to life. Not to mention the level of effort is needed for the end user
+and the vendor.
+
 ## Scenario
 ---
 
@@ -65,7 +70,7 @@ Provided is a summary of the design in a manner that's to the point.
 
 Customer chosen service provider that provides fiber.
 
-Chose 
+Choses the package they need for available bandwidth.
 
 Customer premise equiptment is provided by the service provider.
 
@@ -105,7 +110,78 @@ network.
 Gateway uses NAT for the IPv4 connectivity. Gateway has a public IP address
 assigned to it from the service provider from DHCP.
 
-## Internet Service Provider
+## Network Design
+---
+
+This may be a little redundant. But, this is the overall design here. Can be
+used for future reference.
+
+### Stakeholder Requirements
+---
+
+Coming soon...
+
+### WAN Options & Internet Access
+---
+
+Coming soon...
+
+### Physical Topology
+---
+
+Coming soon...
+
+### Logical Design
+---
+
+- Network: 192.168.0.0/24
+    - Network Address: 192.168.0.0
+    - Subnet Mask (CIDR): 255.255.255.0 (/24)
+    - End (Broadcast) Address: 192.168.0.255
+    - Gateway: 192.168.0.1
+    - Available Address Range: 192.168.0.1 - 192.168.0.254
+    - Addresses: 256
+    - Available Addresses: 254
+
+### Device Details
+---
+
+Coming soon...
+
+### Network Topology
+---
+
+Coming soon...
+
+### Access Details
+---
+
+In order to access the network. Devices will either need to connect to one of
+the physical ports on the router or the wireless SSID it broadcasts.
+
+Wireless SSID(s) will be set with a PSK. Both of which users will need to know
+before they can connect.
+
+### Security Measures
+---
+
+Network Address Translation (NAT): 
+
+NAT is configured on the router so connections are going out one IP address. 
+This has a layer of protection just because the outside world will have a 
+difficult time accessing the internal network.
+
+Wireless Security: 
+
+Wireless security is generally configured using WPA2 Personal with a PSK as long
+as the client doesn't just get rid of it. This will prevent unauthorized access
+to your network from the wireless network.
+
+
+## Implementation & Justification
+---
+
+### Internet Service Provider
 ---
 
 The service provider chosen depends on the markets available to the consumer. 
@@ -146,7 +222,7 @@ Chosen option:
 
 - 500 Mbps / 500 Mbps
 
-## Customer Premise Equiptment (CPE)
+### Customer Premise Equiptment (CPE)
 ---
 
 In this network it could be done in a few ways. The gear could range from any
@@ -164,7 +240,7 @@ Connection generally looks like the following with a configuration like this.
 
 ISP network -> ONT -> wireless router WAN/Internet port
 
-## Subnetting
+### Subnetting
 ---
 
 The subnet is probably shared between the wired and wireless network. Below are
@@ -184,7 +260,7 @@ choose Subnet Possibilty 1 as an example.
   - Usable Addresses: 254
   - Gateway: 192.168.0.1
 
-## IP Addressing
+### IP Addressing
 ---
 
 Some IP addresses that will be set.
@@ -200,7 +276,7 @@ Common DHCP scope and configuration setup on the router.
   - Gateway: 192.168.0.1
   - DNS: Set to ISP DNS. Which is provided by DHCP public IP.
 
-## Wireless Configuration
+### Wireless Configuration
 ---
 
 Normally in this case the involvement for the user is setting the SSID name and
@@ -220,7 +296,7 @@ prevent co-channel interferance. It's not always the greatest. But, it has its
 usecase. FortiAPs for example have a hard time with it. I've seen APs within
 the same network on the same channel.
 
-## Device Connectivity
+### Device Connectivity
 ---
 
 All devices will be on the same network. Depending on what is supported by the
@@ -229,7 +305,7 @@ device. It will connect to either the 2.4 G wireless or the 5G wireless.
 Ethernet connectivity to devices will be dependent to how close they are to
 where the router was installed.
 
-## Internet Installation
+### Internet Installation
 ---
 
 Technician will run the fiber to the home from either the pedistal or the
