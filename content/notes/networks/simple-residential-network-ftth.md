@@ -81,10 +81,10 @@ Wireless networking:
 
 Same SSID for both 2.4 and 5 GHz frequencies.
 
-- 2.4 GHz
+- 2.4G
   - For devices that don't support 5 GHz. i.g. IoT devices
   - Used by a device that prefers it.
-- 5 GHz
+- 5G
   - All other devices that support 5GHz
 
 Wireless standards that could be supported or need to be supported.
@@ -157,19 +157,94 @@ be Calix.
 
 The CPE equiptment may be as follows.
 
-- Fiber ONT
+- ONT
 - Wireless router
+
+Connection generally looks like the following with a configuration like this.
+
+ISP network -> ONT -> wireless router WAN/Internet port
 
 ## Subnetting
 ---
 
-The subnet is probably shared between the wired and wireless network.
+The subnet is probably shared between the wired and wireless network. Below are
+usually the default classful ranges associated with this setup.
 
 - Subnet Possibility 1: 192.168.0.0/24
 - Subnet Possibility 2: 192.168.1.0/24
 
+Depending on what is set. I'll usually see the following for the subnet. I'll
+choose Subnet Possibilty 1 as an example.
+
+- Network: 192.168.0.0/24
+  - Network Address: 192.168.0.0
+  - Broadcast Address: 192.168.0.255
+  - Subnet Mask (/24): 255.255.255.0 (/24)
+  - Number of Addresses: 256
+  - Usable Addresses: 254
+  - Gateway: 192.168.0.1
+
+## IP Addressing
+---
+
+Some IP addresses that will be set.
+
+- Router: 192.168.0.1
+  - Routers static route to the Internet will come from the service providers
+    DHCP server.
+
+Common DHCP scope and configuration setup on the router.
+
+- DCHP Scope:
+  - Range: 192.168.0.10 - 192.168.0.250
+  - Gateway: 192.168.0.1
+  - DNS: Set to ISP DNS. Which is provided by DHCP public IP.
+
 ## Wireless Configuration
 ---
 
+Normally in this case the involvement for the user is setting the SSID name and
+the wireless password. This can be setup with the assistance of the ISP
+technician during the install. But, 
 
-TO BE CONTINUED
+- SSID: Pretty Fly For A Wifi
+  - Password: Chosen by customer.
+  - Both 5G and 2.4G can have the same SSID. Customer can also opt into separate
+    SSIDs for the different frequencies.
+
+As far as channel selection. The customer shouldn't see that. I've seen with
+newer router models where they will just check the wireless environment around
+them and select the best channel to use based on what it determines as 
+the best one. It's called automatic channel selection. This is intended to
+prevent co-channel interferance. It's not always the greatest. But, it has its 
+usecase. FortiAPs for example have a hard time with it. I've seen APs within
+the same network on the same channel.
+
+## Device Connectivity
+---
+
+All devices will be on the same network. Depending on what is supported by the
+device. It will connect to either the 2.4 G wireless or the 5G wireless.
+
+Ethernet connectivity to devices will be dependent to how close they are to
+where the router was installed.
+
+## Internet Installation
+---
+
+Technician will run the fiber to the home from either the pedistal or the
+overhead run that's available. Just depends on where that is. It may even
+require some boring.
+
+This fiber will be housed within an enclosure that uses a bulkhead that mates
+two SC/APC cables together. This will run through the walls of the home to the
+ONT inside. Which may either be mounted on the wall or the like.
+
+Generally they will check the light levels for this to confirm everything looks
+good.
+
+Ethernet cable will be connected to the port provisioned for the customer to the
+WAN or Internet interface on the router.
+
+Sometimes the technician will help you or walk you through setting up your
+wirelss network and confirm everything is working as expected.
