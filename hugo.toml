@@ -9,7 +9,7 @@ enablePageQrCode = false
 buildDraft = false
 buildFuture = false
 
-pagination = 6
+pagination.pagerSize = 6
 
 summaryLength = 1
 
