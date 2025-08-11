@@ -9,6 +9,8 @@ enablePageQrCode = false
 buildDraft = false
 buildFuture = false
 
+pagination = 6
+
 summaryLength = 1
 
 [menus]
