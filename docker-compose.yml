@@ -1,9 +1,8 @@
-version: 3
+version: "3.8"
 services:
-  server:
-    image: klakegg/hugo:alpine
-    command: server --poll 700ms
-    volumes:
-      - ".:/src"
+  hugo-site:
+    build: .
     ports:
-      - "1313:1313"
+      - "80:80"
+    volumes:
+      - ./:/src/public

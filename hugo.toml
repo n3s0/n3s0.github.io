@@ -1,0 +1,67 @@
+baseURL = '/'
+languageCode = 'en-US'
+title = 'n3s0 || journal'
+theme = 'n3s0-hugo'
+
+enableSearch = true
+enableRobotsTxt = true
+enablePageQrCode = false
+buildDraft = false
+buildFuture = false
+
+summaryLength = 1
+
+[menus]
+  [[menus.main]]
+    name = 'Journal'
+    title = 'Journal'
+    url = '/journal'
+    weight = 1
+  [[menus.main]]
+    name = 'Build'
+    title = 'Build'
+    url = '/build'
+    weight = 2
+  [[menus.main]]
+    name = 'Notes'
+    title = 'Notes'
+    url = '/notes'
+    weight = 3
+  [[menus.main]]
+    name = 'Projects'
+    title = 'Projects'
+    url = '/projects'
+    weight = 4
+  [[menus.main]]
+    name = 'Bookmarks'
+    title = 'Bookmarks'
+    url = '/bookmarks'
+    weight = 10
+  [[menus.main]]
+    name = 'Contact'
+    title = 'Contact'
+    url = '/contact'
+    weight = 11
+  [[menus.main]]
+    name = 'Github'
+    url = 'https://github.com/n3s0/'
+    weight = 12
+  [[menus.main]]
+    name = 'GitLab'
+    url = 'https://gitlab.com/n3s0/'
+    weight = 13
+  [[menus.main]]
+    name = 'Search'
+    url = '/search'
+    weight = 14
+  [[menus.main]]
+    name = 'RSS'
+    title = 'RSS'
+    url = '/index.xml'
+    weight = 15
+
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = '0.146.0'

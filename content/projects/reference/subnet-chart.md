@@ -76,24 +76,6 @@ This is a copy of some of my favorite reference tables related to subnetting.
 | 128 | 1111 1111 | 127 | 0111 1111 |
 | 255 | 1111 1111 | 255 | 1111 1111 |
 
-## Subnet Proportion
----
-
-{{< mermaid >}}
-%%{
-    init: {
-        'theme': 'forest',
-    }
-}%%
-pie
-    "/25" : 256
-    "/26" : 64
-    "/27" : 32
-    "/28" : 16
-    "/29" : 8
-    "/30" : 4
-{{< /mermaid >}}
-
 ## Classful Ranges
 ---
 

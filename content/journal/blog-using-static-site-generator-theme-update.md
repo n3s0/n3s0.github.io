@@ -1,0 +1,112 @@
+---
+title: 'Blog Using Static Site Generator & Theme Update'
+date: 2019-04-01T17:17:32-06:00
+summary: "Announcement and notes for moving this blog to a Static Site Generator. New theme too."
+draft: false
+hidden: false
+externalURL: false
+showDate: true
+showModDate: true
+showReadingTime: true
+showTags: true
+showPagination: true
+tags: ["journal"]
+---
+
+## Overview
+---
+
+So, just thought that it was worth noting that many things have changed. 
+Perhaps even for the better. I have moved from Jekyll to Hugo as the static 
+site generator for this blog. Jekyll is an awesome framework, but I needed to 
+be able to edit this content cross platform without constantly pushing to 
+GitLab after every change to verify that it worked.
+
+Note that this is not a tutorial on Hugo. This is merely a brief look at some 
+edits I made to this blog.
+
+## About Moving Away From Jekyll
+---
+
+Note that I don’t have anything against Jekyll. It’s a fantastic platform for 
+generating static sites. But, Ruby is a little flaky on Windows and you need to 
+do a bit of manual configuration to path variables to make Bundler and Jekyll 
+functional. This would all work as expected on my FreeBSD and Linux 
+machines/VMs though.
+
+## A Little Note On Scoop
+---
+
+To install Golang and Hugo I used Scoop as the package manager. With Scoop, it 
+is easy to install packages. You’ll enter the following PowerShell command after 
+setting your execution policy to RemoteSigned. This will install scoop on the 
+workstation.
+
+```powershell
+PS C:\> iex (New-Object Net.WebClient).DownloadString('https://get.scoop.sh')
+```
+
+After Scoop is finished installing you enter the following command to install 
+Golang. Scoop will then presume to download a zip file from it’s chosen 
+repositories and install Golang after unpacking it.
+
+```powershell
+PS C:\> scoop install go
+```
+
+When Golang installation is complete. You can presume to install Hugo, as seen 
+the following command.
+
+```powershell
+PS C:\> scoop install hugo
+```
+
+Normally, you don’t need to worry about errors. Also, you normally don’t need 
+to worry about whether or not Go or Hugo will work after it is installed when 
+using Scoop.
+
+Below is the website for Scoop.
+
+- [Scoop Website](https://scoop.sh/)
+
+Now that I got that out of my system. Time to discuss Hugo for a bit. I am 
+really enjoying Hugo. It works, customization is simple and straight forward. 
+I can also edit my site and test with Hugo on my Windows boxes without having 
+to spin up a VM. Happy happy.
+
+It is structured similar to Jekyll, so there wasn’t much of a learning curve. 
+I just moved over what little content I had and I was good to go. One useful 
+thing about Hugo is how easy it is to configure themes. Which is just as simple 
+as creating a git submodule into the themes directory and edit your config file 
+to reference it.
+
+## About The New Theme
+---
+
+The theme I am using right now is named Terminal and it was developed by panr. 
+If you would like to use this theme I have shared a link below to the 
+repository. I have also provided a link to panr’s Github for reference to his 
+other repositories.
+
+- [Panr’s Terminal Hugo Theme](https://github.com/panr/hugo-theme-terminal)
+- [Panr’s Github](https://github.com/panr)
+
+## Moving To Hugo
+---
+
+For those who read this and they are interested in Hugo. I have provided a link 
+to their documentation. Mostly for my own use, but it may be useful to others 
+as well.
+
+- [Hugo Documentation](https://gohugo.io/documentation/)
+
+Anyway, moving to Hugo for this site wasn’t difficult. It only took a few 
+minutes because Hugo uses Markdown for posts as well. All I had to do was copy 
+the files from the old site and paste them into the newly appointed Hugo site. 
+It took about 10 minutes to do with 
+[https://n3s0.gitlab.io](https://n3s0.gitlab.io). So, now that I have something 
+that I can use almost anywhere, readers can expect there to be more and more 
+content posted each day.
+
+I’m not finished tinkering with the site either. But, when I make a change I 
+will make sure to post an update of my thoughts on it.
