@@ -1,5 +1,5 @@
 ---
-title: "Fortinet: Performing Cable Tests On FortiSwitch Ports"
+title: "Performing Cable Tests On FortiSwitch Ports"
 date: 2024-10-15T01:41:27-06:00
 summary: "Notes for performing cable tests on FortiSwitch ports."
 draft: false
