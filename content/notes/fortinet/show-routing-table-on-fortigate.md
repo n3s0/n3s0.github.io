@@ -1,5 +1,5 @@
 ---
-title: "Fortinet: Show Routing Table On FortiOS"
+title: "Show Routing Table On FortiOS"
 date: 2025-06-19T15:25:27-06:00
 summary: "Notes for showing the routing table on FortiOS."
 draft: false
