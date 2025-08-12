@@ -90,7 +90,7 @@ S       10.17.0.0/16 [10/0] via 10.17.2.0, test, [1/0]
 C       74.125.224.72/29 is directly connected, wan1
 
 Routing table for VRF=100
-C       10.254.0.0/24 is directly connected, Corp_guest
+C       192.168.0.0/24 is directly connected, guest
 ```
 
 There are multiple other commands that will show you specified routes. Replace
