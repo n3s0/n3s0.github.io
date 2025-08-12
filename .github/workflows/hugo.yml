@@ -36,7 +36,7 @@ jobs:
       DART_SASS_VERSION: 1.89.2
       HUGO_VERSION: 0.148.0
       HUGO_ENVIRONMENT: production
-      TZ: America/Chicago
+      TZ: America/Los_Angeles
     steps:
       - name: Install Hugo CLI
         run: |
@@ -70,18 +70,12 @@ jobs:
       - name: Configure Git
         run: git config core.quotepath false
       - name: Build with Hugo
-<<<<<<< HEAD
-=======
-        env:
-          #HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
-          HUGO_ENVIRONMENT: production
-          TZ: America/Chicago
->>>>>>> d01c1fac9e49e2ac68cf74828665b07c86df20ef
         run: |
           hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --cacheDir "${{ runner.temp }}/hugo_cache"
       - name: Cache Save
         id: cache-save
         uses: actions/cache/save@v4
