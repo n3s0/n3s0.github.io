@@ -9,9 +9,12 @@ enablePageQrCode = false
 buildDraft = false
 buildFuture = false
 
-pagination.pagerSize = 6
+pagination.pagerSize = 10
 
 summaryLength = 1
+
+[services.RSS]
+  limit = 10
 
 [menus]
   [[menus.main]]
