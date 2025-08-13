@@ -2,6 +2,7 @@
 title: "Managing Multiple Kubernetes Clusters"
 date: 2025-07-16T11:25:27-06:00
 summary: "Some notes on managing multiple Kubernetes clusters."
+layout: page
 draft: false
 hidden: false
 externalURL: false
