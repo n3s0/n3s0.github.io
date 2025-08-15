@@ -1,7 +1,7 @@
 ---
 title: 'Some Thoughts On RFCs and IPv6'
 date: 2025-06-20T01:30:01+06:00
-summary: "Wanted to briefly notate some things about RFC6598 and RFC1918. Along with some thoughts on how to think about IPv6."
+summary: "Wanted to briefly notate some things about RFC6598, RFC1918, and some thoughts about IPv6."
 draft: false
 hidden: false
 externalURL: false

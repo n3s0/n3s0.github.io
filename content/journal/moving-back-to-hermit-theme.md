@@ -1,9 +1,9 @@
 ---
-title: "Site Updates"
+title: "Moving Back To the Hermit Theme"
 date: "2021-12-11T14:18:59-05:00"
-description: "Discussing some site updates"
+description: "I can never decide on a theme for this site. But, Hermit seems to be one I keep going back to."
 draft: false
-tags: ["general"]
+tags: ["journal"]
 type: post
 showTableOfContents: false
 ---

@@ -1,12 +1,15 @@
 ---
-title: "New Blog"
+title: "New Blog For Programing Projects"
 date: "2021-12-13T18:09:46-05:00"
-summary: "Decided to start another blog catered to programming."
+summary: "Decided to start another blog catered to my programming projects."
 draft: false
 tags: ["general"]
 type: post
 showTableOfContents: false
 ---
+
+Note: I was going to move forward with this site to host documentation for
+projects. But, decided it might be easier to host it all on one site.
 
 So, I decided to create another one. Another blog that is. Figured it'd
 be good to separate different hats on different platforms. The idea 

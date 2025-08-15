@@ -1,0 +1,41 @@
+---
+title: 'Thinking Out Loud Regarding Content'
+date: 2022-03-04T15:20:10+06:00
+summary: "Some casual noodling of thoughts about school program funding and notes related to my school work."
+draft: false
+tags: ["journal"]
+---
+
+So, it’s been a while since I’ve just talked or thought “out loud”. But, it’s 
+been about five years since I’ve been in school. So, I’m considering taking my 
+notes from school and posting them on here.
+
+This includes the assignments that I’ve completed, notes from the text books I 
+still have, and personal labs I did in my spare time.
+
+This is something they encouraged while I was in school. But, I didn’t think 
+I’d need it. There are times I move back to that stuff for sure. But, I thought 
+that since I was over and done with some of that stuff that I would never use 
+it.
+
+Textbooks will certainly need to be reread and notes taken. There are lots of 
+things that I missed from when I would fall asleep reading them.
+
+Case in point. There will be little data dumps on here that I provide from my 
+school work back in the day. Should stuff be wrong inaccurate. I will fix the 
+data and notate that I was being dumb and should have done better. A lot 
+consisted of online labs with pictures.
+
+Hopefully there isn’t too much in there that would be considered relevant to 
+their programs today. I’ll need to make sure the notes cannot be used as a 
+means for cheating.
+
+But, considering the funding of some community collage IT programs, that is up 
+for consideration. Not a whole lot of funding goes into that in some places. 
+That or the money goes into other things within those programs. Generally 
+speaking it should go into teaching students products that aren’t End of Life 
+(EOL). Just a thought. Small little opinion. Students should be able to read 
+documentation anyway. It’s not that hard.
+
+Excuse the rambling, please. I’ve had five cups of coffee today. That is all. 
+Thank you.
