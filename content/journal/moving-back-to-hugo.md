@@ -1,7 +1,7 @@
 ---
 title: 'Moving Back To Hugo'
 date: 2022-09-16T10:30:22+06:00
-summary: "Moving back to Hugo. Brief announcement."
+description: "I've been moving back and forth between static site generators for this site and I keep going back to Hugo."
 draft: false
 hidden: false
 externalURL: false
