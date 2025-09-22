@@ -16,31 +16,51 @@ tags: ["infosec"]
 ## Summary
 ---
 
-This tutorial shows how to setup Artillery on Ubuntu Server 18.04 LTS. Installation can be achieved on most Linux/Unix distributions though. Binary Defense has also developed support for Windows systems. Which is awesome! Artillery was created by David Kennedy and is maintained by his company Binary Defense.
+This tutorial shows how to setup Artillery on Ubuntu Server 18.04 LTS. 
+Installation can be achieved on most Linux/Unix distributions though. Binary 
+Defense has also developed support for Windows systems. Which is awesome! 
+Artillery was created by David Kennedy and is maintained by his company Binary 
+Defense.
 
 Below is a link to Binary Defense’s Artillery repository.
 
 - [Binary Defense - Artillery](https://github.com/BinaryDefense/artillery)
 
-Artillery has a couple of great features. For those who don’t understand the gist of what what Artillery is, it is a honeypot. Which does the following.
+Artillery has a couple of great features. For those who don’t understand the 
+gist of what what Artillery is, it is a honeypot. Which does the following.
 
 - It can monitor the integrity of files on your file system.
 - Spawns a cluster of open ports. Any connection to these ports will be logged.
 - Will alert you via email should incidents occur.
 - Monitor SSH and FTP ports for brute force attacks.
-- Anti DOS support. Artillery will throttle connections when DOS attacks are detected.
+- Anti DOS support. Artillery will throttle connections when DOS attacks are 
+  detected.
 - Check web server’s root permissions.
-- It will log to the local syslog file in /var/log/syslog. Remote logging can be configured as well.
-- When it detects attacks, it will ban IP addresses with automatic ban enabled. Should it detect an attack on a port that isn’t in the exclusion list, it will put that IP in the banlist.
+- It will log to the local syslog file in /var/log/syslog. Remote logging can 
+  be configured as well.
+- When it detects attacks, it will ban IP addresses with automatic ban enabled. 
+  Should it detect an attack on a port that isn’t in the exclusion list, it 
+  will put that IP in the banlist.
 
-So, how can this help me? Well, it can definitely make an attacker’s life harder. That is a plus. Which is a pretty big plus. Seems to be a reoccurring thing in Information Security. The job is to keep them out sure. But, in reality this is can be translated to making their lives harder and respond to intrusions as they occur. From my perspective, Artillery is a great way to achieve this.
+So, how can this help me? Well, it can definitely make an attacker’s life 
+harder. That is a plus. Which is a pretty big plus. Seems to be a reoccurring 
+thing in Information Security. The job is to keep them out sure. But, in 
+reality this is can be translated to making their lives harder and respond to 
+intrusions as they occur. From my perspective, Artillery is a great way to 
+achieve this.
 
-Now that introductions are finished its time to go through the installation. The scope of this article will explain downloading, installing, and verifying that Artillery is working as expected. Configuration will be handled in another article.
+Now that introductions are finished its time to go through the installation. 
+The scope of this article will explain downloading, installing, and verifying 
+that Artillery is working as expected. Configuration will be handled in another 
+article.
 
 ## Obtaining Artillery
 ---
 
-Artillery can be obtained by cloning the Git repository on Binary Defense’s GitHub. This can be achieved by cloning the repository. If you don’t have Git, you will need to install it on your system. Below you can see how to clone the repository into the current directory.
+Artillery can be obtained by cloning the Git repository on Binary Defense’s 
+GitHub. This can be achieved by cloning the repository. If you don’t have Git, 
+you will need to install it on your system. Below you can see how to clone the 
+repository into the current directory.
 
 ```sh
 git clone https://github.com/BinaryDefense/artillery.git
@@ -60,7 +80,9 @@ Resolving deltas: 100% (760/760), done.
 
 Should you prefer to clone using SSH, you can do so with the SSH link.
 
-Below I list the contents of the artillery directory. I will not expalain everything about the directory structure. Binary Defense has provided an explaination for it in the README.md file.
+Below I list the contents of the artillery directory. I will not expalain 
+everything about the directory structure. Binary Defense has provided an 
+explaination for it in the README.md file.
 
 ```sh
 ls
