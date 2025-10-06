@@ -1,7 +1,7 @@
 ---
-title: 'Entry 10-13-2024'
+title: 'Update on Subnet Calculator, Ubuntu Desktop Praise, & Network Notes'
 date: 2024-10-13T02:49:01+06:00
-summary: "Journal entry 10-13-2024"
+summary: "Update on subnetcalc, Ubuntu Desktop praise, & Network Notes"
 draft: false
 hidden: false
 externalURL: false

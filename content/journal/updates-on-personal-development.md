@@ -1,0 +1,58 @@
+---
+title: 'Updates On Personal Development'
+date: 2024-10-02T07:49:01+06:00
+summary: "Some updates on personal development"
+draft: false
+hidden: false
+externalURL: false
+showDate: true
+showModDate: true
+showReadingTime: true
+showTags: true
+showPagination: true
+tags: ["journal"]
+---
+
+## 07:23
+---
+
+I've decided to make a goals for myself related to this project, coding 
+projects, and lab projects.
+
+First goal is to make one useful commit a programming project a day. So, do 
+one thing that could provide value to a project and push it to the code base. 
+
+Second goal is 10 to 15 blog posts a month. 
+
+Third is to learn a new concept, deploy software, design a network, design 
+software, learn about new programing languages, etc. at least 5 times a quarter 
+and write about it. 
+
+It's something to aim for and to keep me hungry for finding new ways to 
+optimize my workflow and learning new things.
+
+I think I'll also get into the habit of reading for 20 to 30 minutes a day. 
+
+## 19:11
+---
+
+First day of One Commit A Day is in the books.
+
+Wrote a Python script that uses the Pandas library to look through two CSV 
+files. One with a list of printers and the other with a list of subnets with 
+labels. 
+
+It compares the two CSV files and outputs the data to another. It's a nested 
+for loop that iterate through a Pandas data frame and then iterates through 
+another data frame to confirm some data. When it's finished it will output 
+another CSV file with the data. 
+
+Now I've also write my first blog entry for the goal as well. 
+
+## 19:53
+---
+
+There are some things I'm going to start doing to improve some as far as 
+programing is concerned. I think I'm going to walk through the basics of 
+different languages in my notes as a reference. Then I'll branch out further 
+into more advanced topics. 

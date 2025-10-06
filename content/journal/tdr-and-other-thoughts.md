@@ -1,5 +1,5 @@
 ---
-title: 'Entry 01-04-2025'
+title: 'Updates on TDR & Other Thoughts'
 date: 2025-01-04T08:00:00-06:00
 summary: "Journal entry 01-04-2025"
 draft: false

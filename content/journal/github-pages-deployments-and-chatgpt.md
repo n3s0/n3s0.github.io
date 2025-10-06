@@ -1,5 +1,5 @@
 ---
-title: 'Entry 09-16-2024'
+title: 'Github Pages Deployments and Playing With ChatGPT'
 date: 2024-09-16T16:49:01+06:00
 summary: "Journal entry 09-16-2024"
 draft: false

@@ -1,7 +1,7 @@
 ---
-title: 'Entry 09-23-2024'
+title: 'Pesky Roku Behavior'
 date: 2024-09-23T16:49:01+06:00
-summary: "Journal entry 09-23-2024"
+summary: "Pesky Roku behavior..."
 draft: false
 hidden: false
 externalURL: false

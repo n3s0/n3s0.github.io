@@ -1,7 +1,7 @@
 ---
-title: 'Entry 09-30-2024'
+title: 'Site Updates & Learning About ISC DHCP EOL Date'
 date: 2024-09-30T07:49:01+06:00
-summary: "Journal entry 09-30-2024"
+summary: "Site updates and learning about ISC DHCP EOL date."
 draft: false
 hidden: false
 externalURL: false

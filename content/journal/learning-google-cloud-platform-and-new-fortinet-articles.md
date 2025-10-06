@@ -1,5 +1,5 @@
 ---
-title: 'Entry 01-07-2025'
+title: 'Learning Google Cloud Platform & New Fortinet Articles'
 date: 2025-01-07T08:00:00-06:00
 summary: "Journal entry 01-07-2025"
 draft: false

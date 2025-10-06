@@ -1,5 +1,5 @@
 ---
-title: 'Entry 10-21-2024'
+title: 'Little Note on Ansible Deployments To OpenBSD'
 date: 2024-10-21T00:17:01+06:00
 summary: "Journal entry 10-21-2024"
 draft: false
@@ -13,7 +13,7 @@ showPagination: true
 tags: ["journal"]
 ---
 
-## 00:17
+## Ansible Deployments To OpenBSD
 ---
 
 There's something about how Ansible pushes the hostname.wg0 file in my playbook

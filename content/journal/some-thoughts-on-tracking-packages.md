@@ -1,5 +1,5 @@
 ---
-title: 'Entry 09-19-2024'
+title: 'Some Thoughts On Tracking Packages'
 date: 2024-09-19T16:49:01+06:00
 summary: "Journal entry 09-19-2024"
 draft: false

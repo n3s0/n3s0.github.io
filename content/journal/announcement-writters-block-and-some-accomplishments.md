@@ -1,7 +1,7 @@
 ---
-title: 'Entry 10-20-2024'
+title: 'Announcements, Writters block, and Some Accomplishments'
 date: 2024-10-20T16:49:01+06:00
-summary: "Journal entry 10-20-2024"
+summary: "Just a little announcement, writters block, and an accomplishment for the day."
 draft: false
 hidden: false
 externalURL: false
