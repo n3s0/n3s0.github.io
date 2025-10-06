@@ -5,3 +5,6 @@
 [submodule "themes/n3s0-hugo"]
 	path = themes/n3s0-hugo
 	url = https://github.com/n3s0/n3s0-hugo.git
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
