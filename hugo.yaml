@@ -113,11 +113,15 @@ menu:
     - identifier: notes
       name: notes
       url: /notes/
-      weight: 20
+      weight: 11
     - identifier: build
       name: build
       url: /build/
       weight: 30
+    - identifier: projects
+      name: projects
+      url: /projects/
+      weight: 31
     - identifier: bookmarks
       name: bookmarks
       url: /bookmarks/
@@ -125,11 +129,11 @@ menu:
     - identifier: contact
       name: contact
       url: /contact/
-      weight: 50
+      weight: 41
     - identifier: search
       name: search
       url: /search/
-      weight: 51
+      weight: 42
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
