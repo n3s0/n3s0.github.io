@@ -1,8 +1,10 @@
 ---
 title: "certchecker"
 date: 2025-01-02T03:08:15-06:00
+lastmod: 2025-10-08
 description: "Certificate checker is a command-line application written in Go that can perfrom ad-hoc checks for general TLS/SSL information on web servers."
 draft: false
+tags: ["certchecker"]
 ---
 
 ## What is certchecker?
@@ -64,32 +66,6 @@ sudo mv ./certchecker /usr/local/bin
 
 ## Usage
 
-Applciation can be run by issuing the command with a target host. Not URL. The
-application will take care of the url portion for you for now.
-
-### help
-
-Here is the help to provide an overview of the usage for this applciation.
-
-```sh   
-Check that TLS certificates are valid.
-
-Usage:
-  certchecker [flags]
-  certchecker [command]
-
-Available Commands:
-  completion  Generate the autocompletion script for the specified shell
-  help        Help about any command
-  version     Print version for certchecker
-
-Flags:
-  -h, --help            help for certchecker
-  -s, --server string   hostname for site being tested (i.g. www.n3s0.tech)
-
-Use "certchecker [command] --help" for more information about a command.
-```
-
 ### Example
 
 Below is an example of how it can be used and what information it can provide.
@@ -122,3 +98,9 @@ useful when the standard HTTPS port isn't being used.
 ```sh
 certcecker -s example.com -p 65443
 ```
+
+If anyone would like to follow the progress of this project. For updates and
+submitting issues. Here are some links.
+
+<a href="https://github.com/n3s0/certchecker"><button style="border-radius: 8px;">Github</button></a>
+<a href="/tags/certchecker"><button style="border-radius: 8px;">Updates</button></a>
