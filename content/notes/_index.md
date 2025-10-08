@@ -4,7 +4,18 @@ date: 2024-09-16T03:08:15-06:00
 draft: false
 ---
 
-For tidbits or little TIL (Today I Learned) articles. Notes from 
-experience help me remember on those days where I can't remember. The
-main reason for creating this blog was to write about things I learn. 
-But, it also acts as a second brain for me in a way.
+# Notes
+
+For lack of a better phrase. Notes are my life blood in most cases. They're 
+useful reference points for my day to day work and can aid me in making 
+decisions for different aspects of life. Sometimes these notes are very specific 
+or generalized topic wise. (e.g. updating router configuration or notes taken 
+from an article)
+
+If I've had to search something multiple times. It will find its way into my
+notes.
+
+{{< image src="/img/cluttered-desk.jpeg" alt="cluttered desk" position="center" style="border-radius: 8px; border-width: thin" >}}
+
+> *Be not afraid of growing slowly; be afraid only of standing still.* <br>
+> -- **Chinese Proverb**

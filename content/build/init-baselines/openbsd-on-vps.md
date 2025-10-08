@@ -2,7 +2,7 @@
 title: "OpenBSD Initial Virtual Private Server Baseline"
 date: 2022-12-01T15:59:15-06:00
 summary: "Notes acting as a baseline for OpenBSD servers hosted on VPS providers."
-draft: false
+draft: true
 hidden: false
 externalURL: false
 showDate: true

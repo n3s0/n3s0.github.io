@@ -9,6 +9,9 @@ pagination.pagerSize = 5
 [markup.goldmark.renderer]
   unsafe = true
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [params]
   contentTypeName = "notes"
   showMenuItems = 8
@@ -22,13 +25,12 @@ pagination.pagerSize = 5
   [languages.en]
     languageName = "English"
     title = "n3s0 || journal"
+    copyright = "© 2025 Timothy Loftus (n3s0)"
 
     [languages.en.params]
       subtitle = "Do not be sorry. Be better."
       owner = "Timothy Loftus (n3s0)"
-      author = "Timothy Loftus (n3s0)"
       keywords = "journal notes networking tech"
-      copyright = "© 2025 Timothy Loftus (n3s0)"
       menuMore = "Show more"
       readMore = "Read more"
       readOtherPosts = "Read other Posts"
@@ -72,15 +74,15 @@ pagination.pagerSize = 5
       [[languages.en.menu.main]]
         identifier = "contact"
         name = "Contact"
-        url = "#"
+        url = "/construction"
         weight = 41
       [[languages.en.menu.main]]
         identifier = "support"
         name = "Support"
-        url = "#"
+        url = "/construction"
         weight = 42
       [[languages.en.menu.main]]
         identifier = "search"
         name = "Search"
-        url = "#"
+        url = "/construction"
         weight = 60
