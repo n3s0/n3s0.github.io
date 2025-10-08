@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting Response Validation Failed. SAML Response Rejected Error on FortiGate Firewalls"
-date: 2025-06-17
+date: 2025-06-17T15:22:27-06:00
 lastmod: 2025-10-08
 summary: "Notes for troubleshooting some SAML errors Response Validation Failed."
 draft: false
