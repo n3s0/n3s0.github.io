@@ -1,0 +1,86 @@
+baseurl = "/"
+languageCode = "en-us"
+theme = "terminal"
+pagination.pagerSize = 5
+
+[markup.highlight]
+  noClasses = false
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  contentTypeName = "notes"
+  showMenuItems = 8
+  fullWidthTheme = false
+  centerTheme = false
+  showLastUpdated = true
+  updatedDatePrefix = "Updated:"
+  dateFormat = "2006-01-02"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "n3s0 || journal"
+
+    [languages.en.params]
+      subtitle = "Do not be sorry. Be better."
+      owner = "Timothy Loftus (n3s0)"
+      author = "Timothy Loftus (n3s0)"
+      keywords = "journal notes networking tech"
+      copyright = "© 2025 Timothy Loftus (n3s0)"
+      menuMore = "Show more"
+      readMore = "Read more"
+      readOtherPosts = "Read other Posts"
+      newerPosts = "Newer posts"
+      olderPosts = "Older posts"
+      missingContentMessage = "Page not found..."
+      missingBackButtonLabel = "Back to home page"
+      minuteReadingTime = "min read"
+      words = "words"
+
+    [languages.en.params.logo]
+      logoText = "n3s0 || journal"
+      logoHomeLink = "/"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "journal"
+        name = "Journal"
+        url = "/journal"
+        weight = 10
+      [[languages.en.menu.main]]
+        identifier = "notes"
+        name = "Notes"
+        url = "/notes"
+        weight = 11
+      [[languages.en.menu.main]]
+        identifier = "build"
+        name = "Build"
+        url = "/build"
+        weight = 30
+      [[languages.en.menu.main]]
+        identifier = "projects"
+        name = "Projects"
+        url = "/projects"
+        weight = 31
+      [[languages.en.menu.main]]
+        identifier = "bookmarks"
+        name = "Bookmarks"
+        url = "/bookmarks"
+        weight = 40
+      [[languages.en.menu.main]]
+        identifier = "contact"
+        name = "Contact"
+        url = "#"
+        weight = 41
+      [[languages.en.menu.main]]
+        identifier = "support"
+        name = "Support"
+        url = "#"
+        weight = 42
+      [[languages.en.menu.main]]
+        identifier = "search"
+        name = "Search"
+        url = "#"
+        weight = 60
