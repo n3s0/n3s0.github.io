@@ -1,49 +1,70 @@
 ---
 title: 'Playing With The Windows 10 Sticky Keys Bypass'
 date: 2021-04-13T13:18:17-06:00
+lastmod: 2025-10-08
 summary: "Notes on setting up, executing, and cleaning up the Sticky Keys bypass in Windows 10."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["infosec"]
 ---
 
 ## Summary
 ---
 
-Old but gold way for getting into workstations in any sense. Haven’t needed to use it. But, decided to try it. Now its time to document.
+Old but gold way for getting into workstations in any sense. Haven’t needed to 
+use it. But, decided to try it. Now its time to document.
 
-Sticky Keys is an accessibility feature in Windows so modifier keys like Ctrl and Del remain as if they’ve been pressed even after they’ve been released. I’ve never used it. But, it’s intended to relieve stress from your fingers so you don’t have to keep holding down those keys.
+Sticky Keys is an accessibility feature in Windows so modifier keys like Ctrl 
+and Del remain as if they’ve been pressed even after they’ve been released. 
+I’ve never used it. But, it’s intended to relieve stress from your fingers so 
+you don’t have to keep holding down those keys.
 
-Sticky Keys is generally activated by pressing the Shift key five times. The name of it’s executable is sethc.exe. and it’s located in the C:\Windows\System32\ directory. This can be done anywhere you can visibly see in Windows. This includes your Desktop, Login Screen, other Desktops, etc.
+Sticky Keys is generally activated by pressing the Shift key five times. The 
+name of it’s executable is sethc.exe. and it’s located in the 
+C:\Windows\System32\ directory. This can be done anywhere you can visibly see 
+in Windows. This includes your Desktop, Login Screen, other Desktops, etc.
 
-For system recovery reasons this “feature” is useful because if I need to I can do this to access almost any Windows 10 workstation that isn’t protected by a BIOS password or some sort of full drive encryption like Bitlocker. However, someone who is more skilled will not be detered by these things. It will just take more time.
+For system recovery reasons this “feature” is useful because if I need to I can 
+do this to access almost any Windows 10 workstation that isn’t protected by a 
+BIOS password or some sort of full drive encryption like Bitlocker. However, 
+someone who is more skilled will not be detered by these things. It will just 
+take more time.
 
-In this post I am using an installer for Windows 10 20H2. You will boot to a USB flash drive and access a command prompt. This will copy the binary that runs Sticky Keys to another directory and put the command prompt in the same directory as the sticky keys binary. Once you attempt to initiate Sticky Keys after booting to Windows again. An admin shell will pop up instead of Sticky Keys. Create a new user as a local administrator and you’re done.
+In this post I am using an installer for Windows 10 20H2. You will boot to a 
+USB flash drive and access a command prompt. This will copy the binary that 
+runs Sticky Keys to another directory and put the command prompt in the same 
+directory as the sticky keys binary. Once you attempt to initiate Sticky Keys 
+after booting to Windows again. An admin shell will pop up instead of Sticky 
+Keys. Create a new user as a local administrator and you’re done.
 
-I will also provide a method for cleaning up after yourself when you’re done doing this.
+I will also provide a method for cleaning up after yourself when you’re done 
+doing this.
 
 ## Performing The "Exploit"
 ---
 
-Performing the exploit can consist of going into Advanced Recovery Options and opening a command prompt. In the beautiful year of 2021, you have to login to a local administrator account that’s on the computer. But, if you need to do this when you don’t know the password. It’s kind of hard to do so.
+Performing the exploit can consist of going into Advanced Recovery Options and 
+opening a command prompt. In the beautiful year of 2021, you have to login to a 
+local administrator account that’s on the computer. But, if you need to do this 
+when you don’t know the password. It’s kind of hard to do so.
 
-I will document how I did it. I will leave some instructions out just to keep this brief. Hopefully I explain this well enough without having to provide too many pictures.
+I will document how I did it. I will leave some instructions out just to keep 
+this brief. Hopefully I explain this well enough without having to provide too 
+many pictures.
 
 1. Create a bootable USB of Windows 10.
     - I will probably need to create an instructional on this at some point.
-    - For now, go to the following link, download the file, and have a USB flash drive that is at least 8 GB so you can go through the process of creating the bootable USB disk.
+    - For now, go to the following link, download the file, and have a USB flash 
+      drive that is at least 8 GB so you can go through the process of creating 
+      the bootable USB disk.
         - [Download Windows 10](https://www.microsoft.com/en-us/software-download/windows10%20)
-2. Boot to the Windows 10 flash drive on your computer. This should boot to the installation for Windows 10.
-3. In the initial page for Windows Setup, make sure the language and keyboard locals are set correctly and click Next.
+2. Boot to the Windows 10 flash drive on your computer. This should boot to the 
+   installation for Windows 10.
+3. In the initial page for Windows Setup, make sure the language and keyboard 
+   locals are set correctly and click Next.
 4. Click Repair your Computer.
 5. Click Troubleshoot.
-6. Click Command Prompt. This will open up a command prompt that is on the USB disk.
+6. Click Command Prompt. This will open up a command prompt that is on the USB 
+   disk.
 7. Verify that you can see the C: drive/partition using the fsutil command.
 
 ```powershell
@@ -52,7 +73,10 @@ X:\Sources>fsutil fsinfo drives
 Drives: C:\ D:\ X:\
 ```
 
-8. Looks like the C: drive/partition is available for abuse. We will copy the sethc.exe file to the root of the C: drive and then copy ```cmd.exe``` to ```C:\Windows\System32\``` while renaming it to ```sethc.exe```. Once that is done, I’ll exit the command prompt.
+8. Looks like the C: drive/partition is available for abuse. We will copy the 
+   sethc.exe file to the root of the C: drive and then copy ```cmd.exe``` to 
+   ```C:\Windows\System32\``` while renaming it to ```sethc.exe```. Once that 
+   is done, I’ll exit the command prompt.
 
 ```powershell
 X:\Sources>copy C:\Windows\System32\sethc.exe C:\sethc.exe
@@ -61,7 +85,11 @@ X:\Sources>exit
 ```
 
 9. Click Continue.
-10. Spam your Shift key about five times and a black Command Prompt will appear. You should have Administrator access to the workstation. Should also be able to enter any command that you see fit. In my case, I needed to access a workstation, so I just typed the following commands to create a local administrator account for myself. Then I exited the command prompt.
+10. Spam your Shift key about five times and a black Command Prompt will appear. 
+    You should have Administrator access to the workstation. Should also be able 
+    to enter any command that you see fit. In my case, I needed to access a 
+    workstation, so I just typed the following commands to create a local 
+    administrator account for myself. Then I exited the command prompt.
 
 ```powershell
 C:\WINDOWS\System32>net user timbo password /add

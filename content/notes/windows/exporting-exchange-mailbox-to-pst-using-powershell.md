@@ -1,6 +1,7 @@
 ---
-title: "Exporting Mailbox to PST File In Microsoft Exchange"
+title: "Exporting Exchange Mailbox to PST File Using PowerShell"
 date: 2021-08-03T16:37:56-05:00
+lastmod: 2025-10-08
 description: "Notes for exporting an Exchange mailbox to a PST file."
 tags: ["windows", "powershell", "exchange"]
 type: post

@@ -1,16 +1,10 @@
 ---
 title: "When Printing Freezes Google Chrome"
 date: 2021-04-07T13:54:43-06:00
+lastmod: 2025-10-08
 summary: "Notes for troubleshooting Google Chrome when printing causes it to freeze."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-tags: ["sysadmin"]
+tags: ["sysadmin", "windows"]
 ---
 
 ## Overview

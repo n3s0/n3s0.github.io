@@ -1,16 +1,10 @@
 ---
-title: "qBittorrent: Log Files Reference"
+title: "qBittorrent: Log Files Reference On Windows 10"
 date: 2021-07-06T08:57:51-06:00
+lastmod: 2025-10-08
 summary: "Notes regarding the file path of qBittorrent log files on different OS."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-tags: ["sysadmin"]
+tags: ["sysadmin", "windows"]
 ---
 
 ## Summary

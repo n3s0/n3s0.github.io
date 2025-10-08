@@ -1,11 +1,10 @@
 ---
 title: "Some Fun With Date and Get-Date For File Generation"
 date: 2021-07-26T11:04:10-05:00
+lastmod: 2025-10-08
 draft: false
 description: "Describes the standard for filenames in this blog."
-tags: ["shell","powershell","hugo"]
-type: post
-showTableOfContents: true
+tags: ["powershell","windows"]
 ---
 
 ## Overview

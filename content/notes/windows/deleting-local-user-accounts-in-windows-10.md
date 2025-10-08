@@ -1,11 +1,10 @@
 ---
-title: "Deleting User Accounts In Windows"
+title: "Deleting Local User Accounts In Windows 10"
 date: 2021-07-27T10:17:09-05:00
+lastmod: 2025-10-08
+draft: false
 description: "Notes on how to delete a user account in Windows. Includes account, home directory, and registry keys."
 tags: ["windows"]
-type: post
-draft: false
-showTableOfContents: true
 ---
 
 ## Overview

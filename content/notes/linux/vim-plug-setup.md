@@ -1,11 +1,10 @@
 ---
 title: "How I Setup vim-plug"
 date: 2021-07-25T00:51:33-05:00
+lastmod: 2025-10-08
 description: "Notes for setting up vim-plug developed by junegunn. Notes on configuration."
 tags: ["linux", "vim"]
-type: post
 draft: false
-showTableOfContents: true
 ---
 
 ## Overview

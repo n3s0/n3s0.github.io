@@ -1,5 +1,5 @@
 ---
-title: "Exchange: Troubleshooting Mailbox with BadItemsLimit Errors (Unrecommended)"
+title: "Troubleshooting Mailbox with BadItemsLimit Errors In Exchange (Unrecommended)"
 date: "2021-08-03T16:48:37-05:00"
 description: "Troubleshooting BadItemLimit errors on Exchange mailboxes during a PST export." 
 draft: false
