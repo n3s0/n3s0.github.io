@@ -28,7 +28,7 @@ pagination.pagerSize = 5
     copyright = "© 2025 Timothy Loftus (n3s0)"
 
     [languages.en.params]
-      subtitle = "Do not be sorry. Be better."
+      subtitle = "Where I put my thoughts, ideas, and project updates."
       owner = "Timothy Loftus (n3s0)"
       keywords = "journal notes networking tech"
       menuMore = "Show more"
