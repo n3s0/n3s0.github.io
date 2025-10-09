@@ -1,11 +1,11 @@
 ---
-title: "PowerShell: Basic USB Media Operations (Clearing, Partitioning, and Formatting)"
+title: "Basic USB Media Operations (Clearing, Partitioning, and Formatting) In PowerShell"
 date: "2022-04-11T10:39:32-05:00"
+lastmod: 2025-10-09
+author: "Timothy Loftus (n3s0)"
 description: "Notes for clearing, partitioning, and formatting USB media using PowerShell."
-tags: [ "PowerShell", "Windows" ]
+tags: [ "PowerShell", "windows" ]
 draft: false
-type: post
-showTableOfContents: true
 ---
 
 ## Summary

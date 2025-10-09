@@ -183,6 +183,7 @@ select option {
   background: var(--background);
 }
 
+
 input[type="checkbox"],
 input[type="radio"] {
   vertical-align: middle;
@@ -421,4 +422,3 @@ button {
 #searchResults { visibility: inherit; display: inline-block; width: 320px; }
 #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; }
   #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
-

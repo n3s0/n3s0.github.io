@@ -1,11 +1,11 @@
 ---
 title: "Bash FTW: Scripting For Blog Draft Templating"
 date: "2022-05-25T20:42:41-05:00"
+lastmod: 2025-10-09
+author: "Timothy Loftus (n3s0)"
 description: "Simple script I wrote for this blog to make creating new drafts easier for this blog."
 tags: [ "bash", "linux" ]
 draft: false
-type: post
-showTableOfContents: true
 ---
 
 This will be a short post. I wrote a little Bash script to assist with

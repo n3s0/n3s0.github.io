@@ -1,11 +1,11 @@
 ---
-title: "CAN-Bus Protocol Notes: ISO 15765-2 (ISO-TP)"
+title: "ISO 15765-2 (ISO-TP) Notes"
 date: "2022-04-15T23:58:00-05:00"
+lastmod: 2025-10-09
+author: "Timothy Loftus (n3s0)"
 description: "Some of my notes on the CAN-Bus protocol ISO-TP (ISO 15765-2)."
 tags: [ "CAN Protocols", "Automotive" ]
 draft: false
-type: post
-showTableOfContents: true
 ---
 
 These are just some notes from reading about the ISO 15765-2 or ISO

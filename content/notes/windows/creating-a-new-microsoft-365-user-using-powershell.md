@@ -1,11 +1,11 @@
 ---
-title: "Creating New User Using PowerShell On Microsoft 365"
+title: "Creating New User On Microsoft 365 Using PowerShell"
 date: "2022-03-14T13:21:44-05:00"
+lastmod: 2025-10-09
+author: "Timothy Loftus (n3s0)"
 description: "Felt I needed to add notes for adding users to Microsoft 365."
 tags: [ "powershell", "Microsoft 365" ]
 draft: false
-type: post
-showTableOfContents: true
 ---
 
 ## Overview

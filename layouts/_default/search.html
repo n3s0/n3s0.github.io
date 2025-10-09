@@ -1,8 +1,25 @@
+{{ define "footerfiles" }}
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0/dist/fuse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script>
+<script src="{{ "js/search.js" | absURL }}"></script>
+{{ end }}
 {{ define "main" }}
- <div id="fastSearch">
-   <input id="searchInput" tabindex="0">
-   <ul id="searchResults">
-   </ul>
- </div>
- <script src="/js/fastsearch.js"></script>
+<section class="resume-section p-3 p-lg-5 d-flex flex-column">
+  <div class="my-auto" >
+    <form action="{{ "search" | absURL }}">
+      <input id="search-query" name="s"/>
+    </form>
+    <div id="search-results">
+     <h3>Matching pages</h3>
+    </div>
+  </div>
+</section>
+<script id="search-result-template" type="text/x-js-template">
+    <div id="summary-${key}">
+      <h4><a href="${link}">${title}</a></h4>
+      <p>${snippet}</p>
+      ${ isset tags }<p>Tags: ${tags}</p>${ end }
+    </div>
+</script>
 {{ end }}

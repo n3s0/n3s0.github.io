@@ -1,11 +1,11 @@
 ---
 title: "Sysadmin Pain: When Percona and MySQL Community Repos aren't Synced"
+author: "Timothy Loftus (n3s0)"
+lastmod: 2025-10-09
 date: "2022-06-03T11:31:14-05:00"
 description: "Discussing some sysadmin pain when you update MySQL Community server and Percona Xtrabackup packages."
 tags: [ "MySQL", "Sysadmin Pain" ]
 draft: false
-type: post
-showTableOfContents: true
 ---
 
 Just thought I'd talk a little bit about some Sysadmin pain that I've

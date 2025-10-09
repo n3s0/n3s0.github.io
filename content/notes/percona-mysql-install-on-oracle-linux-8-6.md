@@ -1,11 +1,11 @@
 ---
 title: "Percona MySQL: Installing on Oracle Linux 8.6"
 date: "2022-05-25T21:10:14-05:00"
+lastmod: 2025-10-09
+author: "Timothy Loftus (n3s0)"
 description: "Some notes for installing Percona MySQL on Oracle Linux 8.6."
 tags: [ "MySQL", "Oracle Linux 8" ]
 draft: false
-type: post
-showTableOfContents: true
 ---
 
 ## Summary

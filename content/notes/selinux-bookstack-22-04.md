@@ -1,11 +1,11 @@
 ---
 title: "SELinux: BookStack v22.04"
 date: "2022-05-25T00:40:53-05:00"
+lastmod: 2025-10-09
+author: "Timothy Loftus (n3s0)"
 description: "First post in the SELinux Series where I show file permissions and SELinux configuration for BookStack on Nginx."
 tags: [ "selinux", "SELinux Series", "BookStack" ]
 draft: false
-type: post
-showTableOfContents: true
 ---
 
 ## Summary

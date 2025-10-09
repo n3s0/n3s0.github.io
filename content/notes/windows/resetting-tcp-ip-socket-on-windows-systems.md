@@ -1,11 +1,11 @@
 ---
 title: "Resetting the TCP/IP and WinSock Stacks on Windows Systems"
 date: "2022-04-11T11:03:02-05:00"
+lastmod: 2025-10-09
+author: "Timothy Loftus (n3s0)"
 description: "Notes for resetting the TCP/IP and WinSock stacks on Windows Systems."
 tags: [ "PowerShell", "Windows" ]
 draft: false
-type: post
-showTableOfContents: true
 ---
 
 ## Summary

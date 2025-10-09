@@ -1,5 +1,5 @@
 ---
-title: "Deleting User Using PowerShell On Microsoft 365"
+title: "Deleting User On Microsoft 365 Using PowerShell"
 date: "2022-03-17T11:01:22-05:00"
 description: "Notes for deleting a Microsoft 365 user using the MSOnline PowerShell Module."
 tags: [ "powershell", "Microsoft 365" ]

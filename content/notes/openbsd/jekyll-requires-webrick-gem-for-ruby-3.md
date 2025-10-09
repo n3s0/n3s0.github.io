@@ -1,11 +1,11 @@
 ---
 title: "Jekyll Requires Webrick Gem on Ruby 3.0"
 date: "2022-03-10T14:32:30-05:00"
+lastmod: 2025-10-09
+author: "Timothy Loftus (n3s0)"
 description: "Notes on troubleshooting an issue where Jekyll wont start post-installation."
 tags: [ "jekyll", "troubleshoot" ]
 draft: false
-type: post
-showTableOfContents: true
 ---
 
 ## Overview

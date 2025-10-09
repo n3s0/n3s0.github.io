@@ -1,15 +1,10 @@
 ---
-title: "Microsoft Outlook: Adding Shared Calendars"
+title: "Adding Shared Calendars to Microsoft Outlook"
 date: 2021-02-18T09:01:05-06:00
-summary: "Notes for adding Shared Calendars to Microsoft Outlook."
+lastmod: 2025-10-09
+author: "Timothy Loftus (n3s0)"
+description: "Notes for adding Shared Calendars to Microsoft Outlook."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["sysadmin"]
 ---
 

@@ -1,11 +1,11 @@
 ---
-title: "My Setup For Swaywm on Fedora"
+title: "Setup For Swaywm on Fedora"
 date: 2022-03-04T12:11:20-05:00
+lastmod: 2025-10-08
 description: "Giving the Sway Tiling Window Manager for Wayland another try and documenting the setup on my personal laptop."
+author: "Timothy Loftus (n3s0)"
 draft: false
 tags: ["sway", "wayland", "linux"]
-type: post
-showTableOfContents: false
 ---
 
 ## Overview

@@ -1,11 +1,11 @@
 ---
 title: "Getting the Default Execution Policy In PowerShell"
 date: "2022-03-17T11:11:32-05:00"
+lastmod: 2025-10-09
+author: "Timothy Loftus (n3s0)"
 description: "Notes on how to set the Default Execution Policy in PowerShell."
 tags: [ "powershell" ]
 draft: false
-type: post
-showTableOfContents: true
 ---
 
 ## Overview

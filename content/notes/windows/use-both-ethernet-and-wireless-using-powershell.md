@@ -1,15 +1,10 @@
 ---
-title: 'Updating Interface Metric On Windows'
-date: 2025-09-22T10:08:01+06:00
+title: 'Use Both Ethernet & Wirless Using Windows PowerShell'
 summary: "Changing the interface metric on Windows so you can use wireless and Ethernet."
+date: 2025-09-22T10:08:01+06:00
+lastmod: 2025-09-30
+author: "Timothy Loftus (n3s0)"
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["windows", "netadmin"]
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: "Creating, Migrating, and Resetting Migrations on Laravel Framework"
 date: "2022-03-06T15:29:50-05:00"
+lastmod: 2025-10-09
+author: "Timothy Loftus (n3s0)"
 description: "Notes for creating, migrating, and resetting migrations in the Laravel Framework."
 tags: [ "laravel", "php", "devel" ]
 draft: false
-type: post
-showTableOfContents: true
 ---
 
 ## Overview
