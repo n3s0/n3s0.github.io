@@ -1,11 +1,10 @@
 ---
-title: "Remove All AD User Group Memberships Except One Using PowerShell"
+title: "Remove All AD Group Memberships Except One Using PowerShell"
 date: "2021-08-05T14:14:49-05:00"
+lastmod: 2025-10-08
 description: "Notes for a PowerShell script for removing AD user from all groups except one."
 draft: false
-tags: ["powershell", "windows", "active directory"]
-type: post
-showTableOfContents: false
+tags: ["powershell", "windows"]
 ---
 
 ## Overview

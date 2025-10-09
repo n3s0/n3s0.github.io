@@ -6,7 +6,6 @@ draft: false
 
 # Projects
 
-This page provides the projects I work on with documentation to 
-deliverables. This could include sysadmin, network admin, and coding 
-projects. But, it will also be used to talk about other things I've 
-been working on.
+A list of my projects I have developed or have contributed to. Not all are 
+particularly notable. But, they do solve the problem I've built them for. So, 
+it works out in the end.

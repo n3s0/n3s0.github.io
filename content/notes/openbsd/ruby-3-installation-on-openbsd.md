@@ -1,11 +1,10 @@
 ---
 title: "Ruby 3.0 Installation On OpenBSD" 
 date: "2021-12-17T00:23:26-05:00"
+lastmod: "2025-10-08"
 description: "Notes for installing Ruby 3.0 on OpenBSD 7.0."
 draft: false
-tags: ["openbsd", "ruby", "install"]
-type: post
-showTableOfContents: false
+tags: ["openbsd", "ruby"]
 ---
 
 ## Overview

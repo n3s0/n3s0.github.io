@@ -1,11 +1,11 @@
 ---
 title: "Install and Configure Jekyll on OpenBSD"
 date: "2021-12-19T11:04:50-05:00"
+lastmod: "2025-10-08"
+author: "Timothy Loftus (n3s0)"
 description: "Notes for installing Jekyll on OpenBSD 7.0."
 draft: false
-tags: ["openbsd", "jekyll", "install"]
-type: post
-showTableOfContents: false
+tags: ["openbsd", "jekyll"]
 ---
 
 ## Overview

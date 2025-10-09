@@ -1,11 +1,11 @@
 ---
 title: "MySQL Server Connection Refusal"
 date: "2022-01-24T11:04:50-05:00"
+lastmod: "2025-10-08"
+author: "Timothy Loftus (n3s0)"
 description: "Troubleshooting a MySQL server connection refusal. Broken host_cache table entry."
 draft: false
-tags: ["troubleshooting", "mysql"]
-type: post
-showTableOfContents: false
+tags: ["linux", "mysql"]
 ---
 
 ## Overview

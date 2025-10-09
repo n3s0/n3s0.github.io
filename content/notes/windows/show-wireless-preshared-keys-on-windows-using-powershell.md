@@ -1,11 +1,11 @@
 ---
 title: "Showing Wireless Profile Keys In Plain Text Through CLI/PowerShell"
 date: "2022-02-23T16:18:30-05:00"
+lastmod: "2025-10-08"
+author: "Timothy Loftus (n3s0)"
 description: "Notes for displaying wireless profiles and their keys in plain text."
 draft: false
 tags: [ "windows" ]
-type: post
-showTableOfContents: true
 ---
 
 ## Summary
