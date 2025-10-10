@@ -1,16 +1,29 @@
 ---
 title: 'Bookmarks'
 date: 2024-09-16T15:12:45+06:00
+lastmod: 2025-10-09
 draft: false
-showComments: false
-showHeadingAnchors: false
 ---
 
-This is a humble part of the Internet where I put my bookmarks. Catagorization
-is definately a work in progress. But, as time goes on it will be well catered
-to what I need.
+# Bookmarks
+
+For things I don't mind hosting on the Internet. Whether that be a frequented
+blog or website. I put them in this bucket. Just a collection of bookmarks
+catered to subjects I'm interested in.
+
+Although this isn't the extent of my bookmarks. It is a great ever changing list
+of different interests. Above all. This saves me a Duck Duck Go or Google
+search.
+
+{{< image src="/img/bookmarks.jpeg" alt="cluttered desk" position="center" style="border-radius: 8px; border-width: thin" >}}
+
+> *I rather think that archives exist to keep things safe - but not secret.* <br>
+> --**Kevin Young**
 
 ## People
+
+Notable people whos work has gained my respect or attention. Check out their
+work. 
 
 - [Ted Unangst](https://www.tedunangst.com/)
 - [Jack Rhysider](https://www.tunnelsup.com/)
@@ -39,7 +52,6 @@ to what I need.
 
 
 ## Networking
----
 
 - [OPNsense Documentation](https://docs.opnsense.org/)
 - [Netgate Documentation](https://docs.netgate.com/)
@@ -63,7 +75,6 @@ to what I need.
 - [Network Engineering Stack Exchange](https://networkengineering.stackexchange.com/)
 
 ## Tools
----
 
 - [Github](https://github.com)
 - [GitLab](https://gitlab.com)
@@ -101,8 +112,14 @@ to what I need.
 - [Science.gov](https://www.science.gov/)
 - [Google Dataset Search](https://datasetsearch.research.google.com/)
 
+## AI
+
+I never thought I would be adding an AI section to this. But... Behold... my
+currated list of AI bookmarks. Where I give you all of the AI tools I play on.
+
+- [Perchance AI Image Generator](perchance.org/ai-text-to-image-generator)
+
 ## Feeds
----
 
 - [https://lobste.rs/](https://lobste.rs/)
 - [Hacker News](https://news.ycombinator.com/news)
@@ -116,7 +133,6 @@ to what I need.
 - [Phrack Magazine](http://phrack.org)
 
 ## Cloud Providers
----
 
 - [Vultr](https://www.vultr.com/)
 - [Azure](https://azure.microsoft.com/en-us)
@@ -124,10 +140,8 @@ to what I need.
 - [Google Cloud Platform (GCP)](https://console.cloud.google.com/)
 
 ## Documentation
----
 
 ### Software Languages
----
 
 - [PHP](https://www.php.net/docs.php)
 - [Laravel - PHP Web Framework](https://laravel.com/docs/)
@@ -155,7 +169,6 @@ to what I need.
 - [LaTeX](https://www.latex-project.org/)
 
 ### Linux/Unix
----
 
 - [Linux Handbook](https://linuxhandbook.com/)
 - [Linux Upskill Challenge](https://linuxupskillchallenge.org/)
@@ -182,7 +195,6 @@ to what I need.
 
 
 ### Software
----
 
 - [Bind 9 Documentation](https://bind9.readthedocs.io/en/v9_18_2/)
 - [NSD Documentation](https://nsd.docs.nlnetlabs.nl/en/latest/)
@@ -230,7 +242,6 @@ to what I need.
 - [QCAD](https://qcad.org/)
 
 ## Windows
----
 
 Provides resources related to the Windows Operating System.
 
@@ -250,7 +261,6 @@ Provides resources related to the Windows Operating System.
 - [Microsoft Exchange Documentation](https://docs.microsoft.com/en-us/Exchange/)
 
 ## InfoSec
----
 
 - [PCI Security Standards Council](https://www.pcisecuritystandards.org/)
 - [National Institute of Standards and Technology](https://www.nist.gov/)
@@ -265,12 +275,10 @@ Provides resources related to the Windows Operating System.
 - [Picker of Locks](https://pickeroflocks.com/)
 
 ## Online Dashboards
----
 
 - [Patch Tuesday Dashboard](https://patchtuesdaydashboard.com/)
 
 ## Internet Curated Lists
----
 
 - [sindresorhus/awesome](https://github.com/sindresorhus/awesome)
 - [kahun/awesome-sysadmin](https://github.com/kahun/awesome-sysadmin)
@@ -282,7 +290,6 @@ Provides resources related to the Windows Operating System.
 
 
 ## Online Challenges & Hackathons
----
 
 - [SadServers](https://sadservers.com/)
 - [The Python Challenge](http://www.pythonchallenge.com/)
@@ -297,7 +304,6 @@ Provides resources related to the Windows Operating System.
 - [Embedded Security CTF](https://microcorruption.com/login)
 
 ## Learning
----
 
 - [CBTnuggets](https://www.cbtnuggets.com/login)
 - [Open Courseware Standford](https://online.stanford.edu/free-courses)
@@ -316,7 +322,6 @@ Provides resources related to the Windows Operating System.
 - [boot.dev](https://www.boot.dev/)
 
 ## Automotive
----
 
 - [How A Car Works](https://www.howacarworks.com/)
 - [Autozine Technical School](https://www.autozine.org/technical_school/tech_index.html)
@@ -325,7 +330,6 @@ Provides resources related to the Windows Operating System.
 - [Auto Blog](https://www.autoblog.com/)
 
 ## Engineering
----
 
 - [Access Engineering](https://www.accessengineeringlibrary.com/front)
 - [MatWeb Material Property Data](http://www.matweb.com/)
@@ -335,7 +339,6 @@ Provides resources related to the Windows Operating System.
 - [UW Electrical Engineering - Research](https://labs.ece.uw.edu/)
 
 ## Music Streaming
----
 
 - [Spotify](https://open.spotify.com/)
 - [musictheory.net](https://www.musictheory.net/)
@@ -344,7 +347,6 @@ Provides resources related to the Windows Operating System.
 - [ultimateguitar.com](https://www.ultimate-guitar.com/)
 
 ## Video Streaming
----
 
 - [Netflix](https://netflix.com)
 - [YouTube](https://youtube.com)
