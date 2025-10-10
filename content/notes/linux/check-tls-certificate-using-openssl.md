@@ -1,16 +1,10 @@
 ---
 title: "Checking Certificate Using OpenSSL"
 date: 2025-01-12T10:25:01-06:00
+lastmod: 2025-10-10
+author: "Timothy Loftus (n3s0)"
 summary: "Notes for installing and setting up swaylock-effects on Ubuntu."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showComments: true
-showPagination: true
 tags: ["sysadmin"]
 ---
 

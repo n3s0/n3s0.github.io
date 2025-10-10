@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting Nautobot As A Docker Container Docker Compose Not Found"
+title: "Troubleshooting Nautobot As A Docker Container -- Compose Not Found"
 summary: "Some notes on troubleshooting a nautobot install on Ubuntu 24.04 LTS as a docker container."
 date: 2025-03-02T00:33:01-06:00
 lastmod: 2025-10-09

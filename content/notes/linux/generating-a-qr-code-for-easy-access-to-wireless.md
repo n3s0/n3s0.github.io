@@ -1,16 +1,10 @@
 ---
 title: "Generating A QR Code For Easy Access To Wireless"
 date: 2024-11-03T21:13:01-06:00
+lastmod: 2025-10-10
+author: "Timothy Loftus (n3s0)"
 summary: "Notes for adding wireless networks using QR codes."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showComments: true
-showPagination: true
 tags: ["netadmin"]
 ---
 

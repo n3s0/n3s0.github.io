@@ -1,16 +1,10 @@
 ---
 title: "Install And Setup swaylock-effects On Ubuntu"
+description: "Notes for installing and setting up swaylock-effects on Ubuntu."
 date: 2024-11-04T10:25:01-06:00
-summary: "Notes for installing and setting up swaylock-effects on Ubuntu."
+lastmod: 2025-10-10
+author: "Timothy Loftus (n3s0)"
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showComments: true
-showPagination: true
 tags: ["sysadmin"]
 ---
 

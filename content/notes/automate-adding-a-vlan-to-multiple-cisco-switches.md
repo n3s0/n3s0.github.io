@@ -1,15 +1,10 @@
 ---
 title: "Automate Adding A VLAN To Multiple Cisco Switches"
 date: 2024-04-01T11:28:01+06:00
+lastmod: 2025-10-10
+author: "Timothy Loftus (n3s0)"
 summary: "More notes and code while I play with the Python Netmiko library."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["netadmin", "code"]
 ---
 

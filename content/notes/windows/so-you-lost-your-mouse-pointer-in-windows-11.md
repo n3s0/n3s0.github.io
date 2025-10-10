@@ -1,16 +1,10 @@
 ---
-title: "You Lost Your Mouse Pointer In Windows 11"
+title: "So, You Lost Your Mouse Pointer In Windows 11?"
 date: 2024-09-19T14:40:01+06:00
+lastmod: 2025-10-10
+author: "Timothy Loftus (n3s0)"
 summary: "Some fun troubleshooting why someone's mouse pointer magically disapeared in Windows 11."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showComments: true
-showPagination: true
 tags: ["sysadmin", "windows 11"]
 ---
 

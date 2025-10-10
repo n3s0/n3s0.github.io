@@ -1,15 +1,10 @@
 ---
 title: "Viewing A Users MySQL Permissions (GRANTS)"
 date: 2024-04-03T09:44:02+06:00
+lastmod: 2025-10-10
+author: "Timothy Loftus (n3s0)"
 summary: "Notes for viewing MySQL grants from MySQL Client."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["dbadmin"]
 ---
 

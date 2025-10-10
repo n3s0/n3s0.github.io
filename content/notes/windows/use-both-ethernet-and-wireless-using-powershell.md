@@ -1,5 +1,5 @@
 ---
-title: 'Use Both Ethernet & Wirless Using Windows PowerShell'
+title: 'Edit Interface Metrics Using Windows PowerShell'
 summary: "Changing the interface metric on Windows so you can use wireless and Ethernet."
 date: 2025-09-22T10:08:01+06:00
 lastmod: 2025-09-30

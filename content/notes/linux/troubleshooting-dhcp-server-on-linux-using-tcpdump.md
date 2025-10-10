@@ -1,15 +1,10 @@
 ---
-title: "Troubleshooting DHCP Server On Linux With Tcpdump"
+title: "Troubleshooting DHCP Server On Linux Using Tcpdump"
 date: 2024-04-09T14:40:01+06:00
+lastmod: 2025-10-10
+author: "Timothy Loftus (n3s0)"
 summary: "Some fun with TCP Dump."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["netadmin"]
 ---
 
