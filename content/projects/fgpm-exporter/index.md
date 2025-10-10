@@ -10,14 +10,13 @@ tags: ["fgpm-exporter"]
 ## What is FortiSwitch Port Map Exporter (fgpm-exporter)?
 
 Command line application written in Go developed to generate CSV or spreadsheets
-of FortiSwitch port configuration using APIs.
+of FortiSwitch port configuration using the FortiGate APIs.
 
-Currently there is support for firewalls that utilize the FortiGate as the
-switch-controller.
+Some backstory for this. I noticed from the FortiGate you cannot export an
+existing port mapping for the switches. Exporting in a CSV format is useful when
+you're running cable or need to replace the switch.
 
-One thing that I would like to note is this is not a Prometheus exporter.
-
-## Dir Structure
+## Project Layout
 
 You can find the directory structure with explainations below.
 
@@ -83,7 +82,7 @@ sudo mv ./fgpm-exporter /usr/local/bin
 
 ### "Package manager?"
 
-Someday. Perhaps when it has matured a little more.
+Someday. Perhaps when it has matured a little more. 
 
 ## Prerequisites
 
@@ -238,3 +237,9 @@ TEST-SW01,port2,up,enable,0,RJ45,,,,,Data,Voice,enabled,disabled,disabled,enable
 TEST-SW01,port3,up,enable,0,RJ45,,,,,Management,,enabled,disabled,disabled,enable,enabled,default
 ```
 
+If anyone would like to follow the progress of this project. For updates and
+submitting issues. Here are some links.
+
+<a href="https://github.com/n3s0/fgpm-exporter"><button style="border-radius: 8px;">Github</button></a>
+<a href="https://github.com/n3s0/fgpm-exporter/issues"><button style="border-radius: 8px;">Issues</button></a>
+<a href="/tags/fgpm-exporter"><button style="border-radius: 8px;">Updates</button></a>

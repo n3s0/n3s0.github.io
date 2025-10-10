@@ -208,6 +208,7 @@ img {
   max-width: 100%;
   border: 8px solid var(--accent);
   border-radius: var(--radius);
+  border-width: thin;
   padding: 8px;
   overflow: hidden;
 }

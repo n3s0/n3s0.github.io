@@ -14,7 +14,7 @@ pagination.pagerSize = 5
 
 [params]
   contentTypeName = "notes"
-  showMenuItems = 8
+  showMenuItems = 10
   fullWidthTheme = false
   centerTheme = false
   showLastUpdated = true
@@ -77,6 +77,11 @@ pagination.pagerSize = 5
         url = "/projects"
         weight = 31
       [[languages.en.menu.main]]
+        identifier = "writeups"
+        name = "Writeups"
+        url = "/construction"
+        weight = 32
+      [[languages.en.menu.main]]
         identifier = "bookmarks"
         name = "Bookmarks"
         url = "/bookmarks"
@@ -92,7 +97,12 @@ pagination.pagerSize = 5
         url = "/construction"
         weight = 42
       [[languages.en.menu.main]]
-        identifier = "writeups"
-        name = "Writeups"
-        url = "/construction"
-        weight = 32
+        identifier = "github"
+        name = "Github"
+        url = "https://github.com/n3s0"
+        weight = 43
+      [[languages.en.menu.main]]
+        identifier = "rss"
+        name = "RSS"
+        url = "/index.xml"
+        weight = 44

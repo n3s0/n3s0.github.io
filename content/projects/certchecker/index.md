@@ -103,4 +103,5 @@ If anyone would like to follow the progress of this project. For updates and
 submitting issues. Here are some links.
 
 <a href="https://github.com/n3s0/certchecker"><button style="border-radius: 8px;">Github</button></a>
+<a href="https://github.com/n3s0/certchecker/issues"><button style="border-radius: 8px;">Issues</button></a>
 <a href="/tags/certchecker"><button style="border-radius: 8px;">Updates</button></a>

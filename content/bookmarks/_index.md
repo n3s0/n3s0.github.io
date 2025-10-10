@@ -117,7 +117,11 @@ work.
 I never thought I would be adding an AI section to this. But... Behold... my
 currated list of AI bookmarks. Where I give you all of the AI tools I play on.
 
-- [Perchance AI Image Generator](perchance.org/ai-text-to-image-generator)
+- [Perchance AI Image Generator](https://perchance.org/ai-text-to-image-generator)
+
+## Online Image Manipulation
+
+- [image-upscaling.net](https://image-upscaling.net/upscaling/en.html)
 
 ## Feeds
 
