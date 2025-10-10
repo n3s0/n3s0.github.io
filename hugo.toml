@@ -14,7 +14,7 @@ pagination.pagerSize = 5
 
 [params]
   contentTypeName = "notes"
-  showMenuItems = 10
+  showMenuItems = 9
   fullWidthTheme = false
   centerTheme = false
   showLastUpdated = true
@@ -44,8 +44,8 @@ pagination.pagerSize = 5
       menuMore = "Show more"
       readMore = "Read more"
       readOtherPosts = "Read other Posts"
-      newerPosts = "Newer posts"
-      olderPosts = "Older posts"
+      newerPosts = "Newer"
+      olderPosts = "Older"
       missingContentMessage = "Page not found..."
       missingBackButtonLabel = "Back to home page"
       minuteReadingTime = "min read"
@@ -77,11 +77,6 @@ pagination.pagerSize = 5
         url = "/projects"
         weight = 31
       [[languages.en.menu.main]]
-        identifier = "writeups"
-        name = "Writeups"
-        url = "/construction"
-        weight = 32
-      [[languages.en.menu.main]]
         identifier = "bookmarks"
         name = "Bookmarks"
         url = "/bookmarks"
@@ -106,3 +101,28 @@ pagination.pagerSize = 5
         name = "RSS"
         url = "/index.xml"
         weight = 44
+      [[languages.en.menu.main]]
+        identifier = "computer"
+        name = "Computer"
+        url = "/construction"
+        weight = 60
+      [[languages.en.menu.main]]
+        identifier = "infrastructure"
+        name = "Infrastructure"
+        url = "/construction"
+        weight = 61
+      [[languages.en.menu.main]]
+        identifier = "edc"
+        name = "EDC"
+        url = "/construction"
+        weight = 62
+      [[languages.en.menu.main]]
+        identifier = "library"
+        name = "Library"
+        url = "/construction"
+        weight = 63
+      [[languages.en.menu.main]]
+        identifier = "travel"
+        name = "Travel"
+        url = "/construction"
+        weight = 68

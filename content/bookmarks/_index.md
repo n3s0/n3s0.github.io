@@ -15,7 +15,7 @@ Although this isn't the extent of my bookmarks. It is a great ever changing list
 of different interests. Above all. This saves me a Duck Duck Go or Google
 search.
 
-{{< image src="/img/bookmarks.jpeg" alt="cluttered desk" position="center" style="border-radius: 8px; border-width: thin" >}}
+{{< image src="/img/bookmarks.png" alt="bookshelves" position="center" style="border-radius: 8px; border-width: thin" >}}
 
 > *I rather think that archives exist to keep things safe - but not secret.* <br>
 > --**Kevin Young**

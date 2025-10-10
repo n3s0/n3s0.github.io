@@ -1,0 +1,212 @@
+---
+title: "Troubleshooting MongoDB & My Failure to Read Documentation"
+date: 2022-11-21T00:27:24-06:00
+lastmod: 2025-10-10
+author: "Timothy Loftus (n3s0)"
+description: "Notes for troubleshooting an issue where AVX isn't enabled on a VM with MongoDB installed on Proxmox."
+draft: false
+tags: ["linux"]
+---
+
+I recently experienced an issue with MongoDB where I failed to read
+documentation. This also provides some of the notes related to
+troubleshooting what was actually wrong. So, I decided to include the
+things needed to help troubleshoot it.
+
+The short answer to this. MongoDB requires the use of the AVX
+instruction set. Stands for Advanced Vector Extensions. AVX are
+extensions to the x86 instruction set architecture for microprocessors
+from Intel and AMD.
+
+One thing to note is this is within a VM that is being hosted using
+Proxmox Virtual Environment.
+
+I attempted to start the mongod service. But, it didn't start.
+
+```sh
+systemctl status mondgod
+```
+
+The service failed to start and there was a core dump.
+
+```sh
+× mongod.service - MongoDB Database Server
+     Loaded: loaded (/lib/systemd/system/mongod.service; enabled; vendor preset: enabled)
+     Active: failed (Result: core-dump) since Tue 2022-11-22 06:56:40 UTC; 5s ago
+       Docs: https://docs.mongodb.org/manual
+    Process: 1426 ExecStart=/usr/bin/mongod --config /etc/mongod.conf (code=dumped, signal=ILL)
+   Main PID: 1426 (code=dumped, signal=ILL)
+        CPU: 6ms
+
+Nov 22 06:56:40 sux1-log-01 systemd[1]: Started MongoDB Database Server.
+Nov 22 06:56:40 sux1-log-01 systemd[1]: mongod.service: Main process exited, code=dumped, status=4/ILL
+Nov 22 06:56:40 sux1-log-01 systemd[1]: mongod.service: Failed with result 'core-dump'.
+```
+
+Attempted to start the mongod service using the mongod command and there
+were issues again.
+
+```sh
+sudo mongod --repair --dbpath /var/lib/mongodb
+```
+
+There was an error stating that there was an Illegal instruction.
+
+```sh
+Illegal instruction
+```
+
+Decided to install the systemd-coredump package so I could take a look
+at core dumps on the systems.
+
+```sh
+sudo apt install systemd-coredump
+```
+
+Typed a random command; like checking the usage and it didn't provide
+any output.
+
+```sh
+sudo mongod --help
+```
+
+Checked the core dumps using the following command.
+
+```sh
+coredumpctl info
+```
+
+Hmmm... Yes. A core dump.
+
+```
+          PID: 1752 (mongod)
+           UID: 0 (root)
+           GID: 0 (root)
+        Signal: 4 (ILL)
+     Timestamp: Tue 2022-11-22 06:59:40 UTC (9s ago)
+  Command Line: mongod --help
+    Executable: /usr/bin/mongod
+ Control Group: /user.slice/user-1000.slice/session-1.scope
+          Unit: session-1.scope
+         Slice: user-1000.slice
+       Session: 1
+     Owner UID: 1000 (tloftus)
+       Boot ID: c057d2759a714728b0188dbd8b1d84df
+    Machine ID: 5b9dfe75f93347b0affe5658fe8c1a09
+      Hostname: lab-log-01
+       Storage: /var/lib/systemd/coredump/core.mongod.0.c057d2759a714728b0188dbd8b1d84df.1752.1669100380>
+     Disk Size: 779.1K
+       Message: Process 1752 (mongod) of user 0 dumped core.
+                
+                Found module linux-vdso.so.1 with build-id: 0217e95cdd5172617b053d3772efce4317a55898
+                Found module libffi.so.8 with build-id: 59c2a6b204f74f358ca7711d2dfd349d88711f6a
+                Found module libkeyutils.so.1 with build-id: ff27227afa5eeddccab180dd29bd7fcff94aea7c
+                Found module libtasn1.so.6 with build-id: 2fde6ecb43c586fe4077118f771077aa1298e7ea
+                Found module libp11-kit.so.0 with build-id: a0ffe1d002de5812dc718186172efb78604ddf2c
+                Found module libbrotlicommon.so.1 with build-id: 43a72967cf84155914c8b3e915926733d1e57c11
+                Found module libsasl2.so.2 with build-id: 562c038e4a5a2196c9c085cd1f9276e3641399a6
+                Found module libkrb5support.so.0 with build-id: f9dcbdef069078853fc0d3d7fbfc9bbb923cfe3c
+                Found module libcom_err.so.2 with build-id: ce0901f10854b3c9276066b98d9a72303206e0d5
+                Found module libk5crypto.so.3 with build-id: 1b22be74b69ba5fcd325664ba47bf9e87bf7d530
+                Found module libkrb5.so.3 with build-id: c840d413c769ab9bcbcd12740eca61e5a969cce3
+                Found module libgmp.so.10 with build-id: f110719303ddbea25a5e89ff730fec520eed67b0
+                Found module libnettle.so.8 with build-id: 3d9c6bf106ef53d625b7b1c8bb1300e84598a74a
+                Found module libhogweed.so.6 with build-id: 3cc4a3474de72db89e9dcc93bfb95fe377f48c37
+                Found module libgnutls.so.30 with build-id: b9fa7b6d0c47adb8a3f03b2452c3df3eb2c93715
+                Found module libunistring.so.2 with build-id: ca5149da8d5a298b8f286ffca3d6e2402ec0fe01
+                Found module libz.so.1 with build-id: 30840b79ac329ecbf1dec0bb60180eed256d319f
+                Found module libbrotlidec.so.1 with build-id: 4b1f390dd6e24d49684db8b2443d082379e8e977
+                Found module libzstd.so.1 with build-id: 5d9d0d946a3154a748e87e17af9d14764519237b
+                Found module liblber-2.5.so.0 with build-id: 825836c4cd2ce3c7b6369bfe2812511529112f6a
+                Found module libldap-2.5.so.0 with build-id: 111d8323d815e64f2f486e4a3ce0085c92f1d2b8
+                Found module libgssapi_krb5.so.2 with build-id: cfb0a0611861784ae85210cca6e5cc729e554c23
+                Found module libpsl.so.5 with build-id: 2b1afc1a3bc8bdb016e432c50db058632e7895b9
+                Found module libssh.so.4 with build-id: f6a2eb7d2d6c5a8e3b7a9b2dcb3fa9ab394cf2b5
+                Found module librtmp.so.1 with build-id: 9517ef375cd71ea3da824b4118f1599735093d66
+                Found module libidn2.so.0 with build-id: 45b73e0e1c46a76be22f572ee98c60af5768bf8f
+                Found module libnghttp2.so.14 with build-id: 90a67111383c58bfff9fac96da818cc62e5b68c9
+                Found module ld-linux-x86-64.so.2 with build-id: 61ef896a699bb1c2e4e231642b2e1688b2f1a61e
+                Found module libc.so.6 with build-id: 69389d485a9793dbe873f0ea2c93e02efaa9aa3d
+                Found module libgcc_s.so.1 with build-id: 09c4935b79388431a1248f6a98e00d7dc81b8513
+                Found module libm.so.6 with build-id: 27e82301dba6c3f644404d504e1bb1c97894b433
+                Found module libssl.so.3 with build-id: e2cc2e6cff81fe9dc26f9d03e9865a0d1964ed95
+                Found module libcrypto.so.3 with build-id: 0c369eae63403647fb36564ae61733900d651702
+                Found module libresolv.so.2 with build-id: 7fd7253c61aa6fce2b7e13851c15afa14a5ab160
+                Found module liblzma.so.5 with build-id: b85da6c48eb60a646615392559483b93617ef265
+                Found module libcurl.so.4 with build-id: 80b7b8bd1eee0cf5f46067c9e48534e4f33d8778
+                Found module mongod with build-id: a246db797908e821dead0a705dbdc13e9b679c74
+                Stack trace of thread 1752:
+                #0  0x000055629293808a _ZN8tcmalloc7SizeMap4InitEv (mongod + 0x4f3d08a)
+                #1  0x0000556292940c67 _ZN8tcmalloc6Static14InitStaticVarsEv (mongod + 0x4f45c67)
+                #2  0x0000556292942717 _ZN8tcmalloc11ThreadCache10InitModuleEv (mongod + 0x4f47717)
+                #3  0x00005562929428ad _ZN8tcmalloc11ThreadCache22CreateCacheIfNecessaryEv (mongod + 0x4>
+                #4  0x00005562929ec435 _ZN8tcmalloc24allocate_full_malloc_oomEm (mongod + 0x4ff1435)
+                #5  0x00007f12e82dd120 __newlocale (libc.so.6 + 0x39120)
+                #6  0x00007f12e78f1ce8 n/a (libp11-kit.so.0 + 0x29ce8)
+                #7  0x00007f12e8bae47e n/a (ld-linux-x86-64.so.2 + 0x647e)
+                #8  0x00007f12e8bae568 n/a (ld-linux-x86-64.so.2 + 0x6568)
+                #9  0x00007f12e8bc82ea n/a (ld-linux-x86-64.so.2 + 0x202ea)
+
+```
+
+One option to fix this is to reconfigure the VM so it uses the host CPU.
+This can be set in Proxmox. I don't like it necessarily. But, it works
+and acts as a good test.
+
+Needed to add the following to the /etc/pve/virtual-guest/cpu-models.conf
+file. This is to prevent the VM from using the host virtual CPU type.
+
+To unpack this a little. Specifically the flags portion of the
+configuration.
+
+- +avx: Add Advanced Vector Extensions (AVX) support to the CPU.
+- +avx2: Added Advanced Vector Extensions 2 (AVX2) support to the CPU.
+- +save: Coming soon.
+
+```sh
+cpu-model: avx
+    flags +avx;+avx2;+xsave
+    phys-bits host
+    hidden 0
+    hv-vendor-id proxmox
+    reported-model kvm64
+```
+
+Once that's configured. The VM needs to be turned off, switched to the
+avx CPU model, and powered the VM back on.
+
+Connected to the VM that's hosting MongoDB and checked the status of
+the mongod service.
+
+```sh
+systemctl status mongod.service
+```
+
+Looks like it started with no issue.
+
+```sh
+● mongod.service - MongoDB Database Server
+     Loaded: loaded (/lib/systemd/system/mongod.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2022-11-23 02:46:37 UTC; 1min 14s ago
+       Docs: https://docs.mongodb.org/manual
+   Main PID: 641 (mongod)
+     Memory: 233.0M
+        CPU: 976ms
+     CGroup: /system.slice/mongod.service
+             └─641 /usr/bin/mongod --config /etc/mongod.conf
+
+Nov 23 02:46:37 sux1-log-01 systemd[1]: Started MongoDB Database Server.
+```
+
+Lesson learned. That has been learned many times in the past. Read the
+documentation for all dependencies of an application and to not blindly
+follow the installation guide for an application.
+
+Another method for resolving this. I switched the CPU to use the hosts
+CPU in the CPU configuration for the VM.
+
+## References
+
+- [MongoDB - Production Notes - Platform Support](https://www.mongodb.com/docs/manual/administration/production-notes/#x86_64)
+- [pve-docs -
+  cpumodels.conf.5](https://pve.proxmox.com/pve-docs/cpu-models.conf.5.html)

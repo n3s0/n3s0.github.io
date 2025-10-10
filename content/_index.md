@@ -6,7 +6,7 @@ draft: false
 ---
 
 
-{{< image src="/img/warm-desk-setup.jpeg" alt="Hello Friend" position="center" style="border-radius: 8px; border-width: thin;" >}}
+{{< image src="/img/warm-desk-setup.png" alt="Warm desk setup" position="center" style="border-radius: 8px; border-width: thin;" >}}
 
 > *Do not be sorry. Be better.* <br>
 > -- **Kratos**; God of War

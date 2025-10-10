@@ -5,11 +5,12 @@ draft: false
 ---
 
 # This Page Is Under Construction!
----
 
 Hello, the page you're attempting to reach is currently under constuction. If
 you're curious about when this will be done. Send me an email and I will provide
 you with a status.
+
+{{< image src="/img/construction.png" alt="construction site" position="center" style="border-radius: 8px; border-width: thin" >}}
 
 If you'd rather not navigate using the navbar; for whatever reason. You can 
 make your way back to the home page by clicking the button below.
