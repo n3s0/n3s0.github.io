@@ -84,7 +84,7 @@ pagination.pagerSize = 5
       [[languages.en.menu.main]]
         identifier = "contact"
         name = "Contact"
-        url = "/construction"
+        url = "/contact"
         weight = 41
       [[languages.en.menu.main]]
         identifier = "support"
