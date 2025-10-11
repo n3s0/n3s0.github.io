@@ -89,7 +89,7 @@ pagination.pagerSize = 5
       [[languages.en.menu.main]]
         identifier = "support"
         name = "Support"
-        url = "/construction"
+        url = "/support"
         weight = 42
       [[languages.en.menu.main]]
         identifier = "github"

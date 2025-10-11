@@ -1,0 +1,67 @@
+---
+title: "Updating NTP Servers on Cisco Switches"
+date: 2023-07-14T16:03:14-06:00
+lastmod: 2025-10-11
+author: "Timothy Loftus (n3s0)"
+description: "Notes for updating the NTP servers on Cisco Switches."
+draft: false
+tags: ["netadmin"]
+---
+
+Wanted to briefly write a note for updating the NTP server on a Cisco
+switch. This is generally good if moving to on premise NTP servers is
+something I'd like to do someday.
+
+Currently this is the configuration for the NTP server in the
+configuration.
+
+```
+!
+ntp server 192.168.0.200
+!
+```
+
+Login to the switch and go into the configuration prompt.
+
+```sh
+configure terminal
+```
+
+Remove the NTP server configuration from the switch. In this case it's
+pointing to the IP address 192.168.0.200. This will need to be removed
+so the switch doesn't have any old configuration.
+
+```sh
+no ntp server 192.168.0.200
+```
+
+Then configure the NTP server to point to the new one.
+
+```sh
+ntp server 192.168.1.200
+```
+
+One good way to know that this works is by checking the NTP associations using
+the appropriate show command.
+
+```sh
+show ntp associations
+```
+
+Below we should see the available configuration and the delay of the
+time server. If there is a ref clock available and the time is correct.
+There is a good chance the time is synced.
+
+```sh
+
+  address           ref clock        st   when   poll reach  delay offset  disp
+*~192.168.1.200     10.50.38.170     2    973   1024   377  0.846   0.624 0.050
+ * sys.peer, # selected, + candidate, - outlyer, x falseticker, ~configured
+```
+
+Another method to test is using the show ntp status command. This will
+for sure tell you if the clock is synced.
+
+```sh
+show ntp status
+```

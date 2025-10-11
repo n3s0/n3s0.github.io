@@ -1,0 +1,69 @@
+---
+title: "Appending An Address To An Address Group CLI On FortiOS"
+date: 2023-07-27T11:11:14-06:00
+lastmod: 2025-10-11
+author: "Timothy Loftus (n3s0)"
+summary: "Appending addresses to address groups in FortiOS CLI."
+draft: false
+tags: ["netadmin"]
+---
+
+In another post I went over how to create an address group in FortiOS
+using the CLI. Now I'm going to go through adding or appending antoher
+address to an address group.
+
+I mentioned this in the previous post. But, before you add more address
+group members. The address you're adding needs to be created.
+
+First I'll look at the lab servers address group configuration so I know
+the current configuration. This is a good way to make sure you're not
+replicating any previous work.
+
+```sh
+show firewall addrgrp "lab servers"
+```
+
+Below is the output of the command above. As shown there are two members
+in the address group.
+
+```sh
+config firewall addrgrp
+    edit "lab servers"
+        set uuid af519380-2094-51e9-391c-b78e8edbddfc
+        set member "tl-db-01" "tl-app-01"
+    next
+end
+```
+
+Go into the addrgrp configuration prompt by typing in the following
+command.
+
+```sh
+config firewall addrgrp
+```
+
+Edit the "lab servers" address group using the following command.
+
+```sh
+edit "lab servers"
+```
+
+The following command will append the new server tl-app-02 to the list
+of members in the lab servers address group. Make sure when this is
+finihsed. Enter the "next" and "end" commands.
+
+```sh
+append member "tl-app-02"
+```
+
+After checking the configuration again. The new configuration includes
+the new server in the members list.
+
+```sh
+config firewall addrgrp
+    edit "lab servers"
+        set uuid af519380-2094-51e9-391c-b78e8edbddfc
+        set member "tl-db-01" "tl-app-01" "tl-app-02"
+    next
+end
+```

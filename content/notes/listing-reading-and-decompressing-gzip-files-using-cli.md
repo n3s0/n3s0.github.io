@@ -1,0 +1,84 @@
+---
+title: "Listing, Reading, & Decompressing GZip (GNU zip) Files"
+date: 2023-10-03T09:48:55-05:00
+
+description: "Some Notes for unzipping or decompressing gzip files."
+draft: false
+tags: ["sysadmin"]
+---
+
+For a little background on GNU zip. GNU zip is a file format and
+application commonly used for compression and decompression. This is
+generally the default compression method for logging archives in GNU
+based Linux distributions. The initial release of GNU zip was October
+31, 1992 and created by Jean-loup Gailly and Mark Adler. 
+
+Below are some ways to get help with GNU zip. The first one is to view
+the man page for gzip.
+
+```sh
+man gzip
+```
+
+This command shows the usage for gzip.
+
+```sh
+gzip -h
+```
+
+These are some notes for decompressing/opening Gzip files. I generally
+utilize these commands mostly for decompressing old log files stored in
+the /var/log/ directory. But, this can also be used for other scenarios.
+
+I'll provide some commands for listing items within the compressed
+files because it's generally useful to see the files compressed in these
+```.gz``` files.
+
+List the files within the Gzip file.
+
+```sh
+gzip -l /path/to/file.gz
+```
+
+If you were to run this command on a file like
+```/var/log/auth.log.2.gz``` this would be the output we could expect.
+
+```sh
+         compressed        uncompressed  ratio uncompressed_name
+              13572              120446  88.7% auth.log.2
+
+```
+
+This command will take the standard output of the file and display it in
+the terminal.
+
+```sh
+gunzip -c /path/to/file.gz
+```
+
+The following command will do the same.
+
+```sh
+zcat /path/to/file.gz
+```
+
+Decompress the files and delete the Gzip file.
+
+```sh
+gzip -d /path/to/file.gz
+```
+
+Decompress the files from the archive and keep the existing Gzip file.
+
+```sh
+gzip -dk /path/to/file.gz
+```
+
+The gunzip command will decompress ```.gz``` files as well. This will
+effectively decompress the file. Then it will vomit the file. While in
+the reverse. It will compress the file and add the ```.gz``` extension
+to it.
+
+```sh
+gunzip /path/to/file.gz
+```
