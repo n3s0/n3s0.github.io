@@ -1,15 +1,10 @@
 ---
 title: "Obtaining Support Data For HPE (Brocade) Fiber Channel Switches"
+author: "Timothy Loftus (n3s0)"
 date: 2023-11-01T11:17:40-05:00
-summary: "Notes for obtaining support data for HPE (Brocade) Fiber Channel switches."
+lastmod: 2025-10-11
+description: "Notes for obtaining support data for HPE (Brocade) Fiber Channel switches."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["netadmin"]
 ---
 

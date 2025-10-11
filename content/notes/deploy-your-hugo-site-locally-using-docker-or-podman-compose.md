@@ -1,15 +1,10 @@
 ---
 title: "Deploying Your Hugo Blog Development Server Using Podman/Docker Compose"
+author: "Timothy Loftus (n3s0)"
 date: 2023-10-13T11:05:44-05:00
+lastmod: 2025-10-11
 summary: "Some workflow updates for the blog. A simple Hugo Podman/Docker container for writting content with docker/podman-compose."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["devops", "containers"]
 ---
 

@@ -1,15 +1,10 @@
 ---
 title: "Starting A New Jekyll Site Using The Jekyll Container Image"
+author: "Timothy Loftus (n3s0)"
 date: 2023-10-17T11:31:35-05:00
+lastmod: 2025-10-11
 summary: "Some workflow updates for the blog. A simple Hugo Podman/Docker container for writting content with docker/podman-compose."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["devops", "containers"]
 ---
 
