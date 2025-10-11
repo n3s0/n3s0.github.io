@@ -9,7 +9,7 @@ draft: false
 Please reach out if you have any questions about the site or just want to say 
 hello!
 
-{{< image src="/img/contact.png" alt="construction site" position="center" style="border-radius: 8px; border-width: thin" >}}
+{{< image src="/img/radio.png" alt="construction site" position="center" style="border-radius: 8px; border-width: thin" >}}
 
 You can reach me using any of the following messaging platforms or methods. Just
 note that I have notifications turned off on a lot of them. So if I miss you or
