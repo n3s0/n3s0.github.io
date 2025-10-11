@@ -23,4 +23,8 @@ if I don't respond right away. That is why.
 
 ## SimpleX
 
-[SimpleX Chat - n3s0](https://smp11.simplex.im/a\#ymhBWsSH8IOeQ7v3AZHD4Qtf2uAK_59VTsML00s9q54)
+If you should like to reach out to me directly. Message me on SimpleX.
+
+{{< image src="/img/contact/simplex-qr.png" alt="simplex qr code" position="left" style="border-radius: 8px; border-width: thin" >}}
+
+[SimpleX Chat - n3s0](https://smp11.simplex.im/a#ymhBWsSH8IOeQ7v3AZHD4Qtf2uAK_59VTsML00s9q54)
