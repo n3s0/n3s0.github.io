@@ -1,15 +1,10 @@
 ---
 title: "Using Netmiko To Automate VLAN Configuration On A Cisco Switch"
+author: "Timothy Loftus (n3s0)"
 date: 2024-03-28T12:18:01+06:00
-summary: "Notes and code for playing with the Python Netmiko library."
+lastmod: 2025-10-12
+description: "Notes and code for playing with the Python Netmiko library."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["netadmin", "code"]
 ---
 

@@ -1,15 +1,9 @@
 ---
-title: "MySQL: Showing Databases"
+title: "Showing Databases In MySQL"
+author: "Timothy Loftus (n3s0)"
 date: 2024-04-03T09:44:02+06:00
-summary: "Notes for showing and finding databse information in MySQL."
-draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
+lastmod: 2025-10-12
+description: "Notes for showing and finding databse information in MySQL."
 tags: ["dbadmin"]
 ---
 

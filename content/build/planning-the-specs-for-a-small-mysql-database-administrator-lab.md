@@ -1,15 +1,10 @@
 ---
 title: "Planning The Specs For A Small MySQL Database Administrator Lab"
+author: "Timothy Loftus (n3s0)"
 date: 2024-03-08T11:11:00-05:00
+lastmod: 2025-10-12
 description: "Notes for planning out the specifications for a small MySQL Database Administrator lab."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["dbadmin"]
 ---
 

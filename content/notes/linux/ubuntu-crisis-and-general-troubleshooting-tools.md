@@ -1,15 +1,10 @@
 ---
 title: "Ubuntu Linux Crisis & General Troubleshooting Tools"
+author: "Timothy Loftus (n3s0)"
 date: 2024-03-28T12:20:02-05:00
+lastmod: 2025-10-12
 summary: "List of tools used for troubleshooting."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["netadmin", "code"]
 ---
 

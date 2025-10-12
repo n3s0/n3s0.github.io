@@ -1,15 +1,10 @@
 ---
 title: "Migrating Sticky Notes To Another Windows 10 Workstation"
+author: "Timothy Loftus (n3s0)"
 date: 2024-03-09T10:33:00-06:00
-summary: "Notes for migrating Sticky Notes to another workstation in Windows 10 22H2."
+lastmod: 2025-10-12
+description: "Notes for migrating Sticky Notes to another workstation in Windows 10 22H2."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["sysadmin", "windows 10"]
 ---
 
