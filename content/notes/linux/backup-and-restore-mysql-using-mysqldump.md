@@ -1,15 +1,10 @@
 ---
 title: "Backup & Restore MySQL Using MySQL Dump"
+author: "Timothy Loftus (n3s0)"
 date: 2023-11-13T14:43:22-05:00
-summary: "Notes for doing a backup and restore with the mysqldump command."
+lastmod: 2025-10-12
+description: "Notes for doing a backup and restore with the mysqldump command."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["sysadmin"]
 ---
 

@@ -1,15 +1,10 @@
 ---
 title: "Obtaining A Cisco Devices Hostname Using The Netmiko Python Library"
+author: "Timothy Loftus (n3s0)"
 date: 2024-03-07T08:36:08+06:00
-summary: "Little script for obtaining cisco device hostnames for later use."
+lastmod: 2025-10-12
+description: "Little script for obtaining cisco device hostnames for later use."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["netadmin", "code"]
 ---
 

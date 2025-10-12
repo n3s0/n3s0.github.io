@@ -1,15 +1,10 @@
 ---
 title: "Using A SQL Script For Initial MySQL Database Setup"
+author: "Timothy Loftus (n3s0)"
 date: 2024-03-06T15:25:01+06:00
+lastmod: 2025-10-12
 summary: "Simple MySQL script I wrote for the initial setup of application databases."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["dbadmin"]
 ---
 

@@ -1,15 +1,10 @@
 ---
 title: "Install & Setup MySQL on Ubuntu Server 24.04 LTS"
+author: "Timothy Loftus (n3s0)"
 date: 2024-02-28T14:54:09+06:00
+lastmod: 2025-10-12
 summary: "Notes for installing and setting up MySQL on Ubuntu Server"
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["sysadmin"]
 ---
 

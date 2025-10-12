@@ -1,15 +1,10 @@
 ---
 title: "Creating A VLAN Trunk Interface Using CLI On FortiGate"
+author: "Timothy Loftus (n3s0)"
 date: 2023-12-13T10:58:56+06:00
+lastmod: 2025-10-12
 summary: "Notes for creating a VLAN interface on a FortiGate firewall using cli."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["netadmin"]
 ---
 

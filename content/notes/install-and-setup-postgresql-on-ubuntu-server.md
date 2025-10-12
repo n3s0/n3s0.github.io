@@ -1,15 +1,10 @@
 ---
 title: "Install & Setup PostgresSQL on Ubuntu Server"
+author: "Timothy Loftus (n3s0)"
 date: 2024-02-28T09:34:05-05:00
-summary: "Notes for installing and setting up PostgreSQL on Ubuntu Server"
+lastmod: 2025-10-12
+description: "Notes for installing and setting up PostgreSQL on Ubuntu Server"
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["sysadmin"]
 ---
 

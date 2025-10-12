@@ -1,16 +1,11 @@
 ---
 title: "Moving MySQL Server To A Custom Directory On Ubuntu Linux"
+author: "Timothy Loftus (n3s0)"
 date: 2024-02-26T09:12:09-05:00
+lastmod: 2025-10-12
 summary: "Notes for moving MySQL to a different directory on Ubuntu."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-tags: ["dbadmin"]
+tags: ["dbadmin", "mysql"]
 ---
 
 Here we will discuss the process of moving MySQL to another directory on

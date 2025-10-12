@@ -1,15 +1,10 @@
 ---
 title: "Installing Zabbix Agent 2 on Ubuntu 22.04"
+author: "Timothy Loftus (n3s0)"
 date: 2023-11-13T16:03:17-05:00
+lastmod: 2025-10-12
 summary: "Notes for installing the Zabbix Agent 2 agent for Zabbix 6.4."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["sysadmin"]
 ---
 

@@ -1,15 +1,10 @@
 ---
 title: "Simple Veeam Backup & Replication License Usage Reporting Using PowerShell"
+author: "Timothy Loftus (n3s0)"
 date: 2023-11-29T11:34:45+06:00
-summary: "Notes for reporting license usage for Veeam B&R using PowerShell"
+lastmod: 2025-10-12
+description: "Notes for reporting license usage for Veeam B&R using PowerShell"
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["sysadmin", "code"]
 ---
 

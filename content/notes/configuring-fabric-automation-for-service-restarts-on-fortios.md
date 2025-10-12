@@ -1,15 +1,10 @@
 ---
-title: "FortiGate: Configuring Fabric Automation For Service Restarts"
+title: "Configuring Fabric Automation For Service Restarts On FortiOS"
+author: "Timothy Loftus (n3s0)"
 date: 2024-02-26T09:12:09-05:00
-summary: "Some notes on Fabric Automation for restarting services on Fortigate Firewalls."
+lastmod: 2025-10-12
+description: "Some notes on Fabric Automation for restarting services on Fortigate Firewalls."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["netadmin"]
 ---
 

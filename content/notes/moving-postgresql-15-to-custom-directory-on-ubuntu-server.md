@@ -1,15 +1,10 @@
 ---
 title: "Moving PostgresSQL 15 To Custom Directory On Ubuntu Server"
+author: "Timothy Loftus (n3s0)"
 date: 2024-02-28T09:34:05-05:00
+lastmod: 2025-10-12
 summary: "Notes for moving PostgresSQL 15 on Ubuntu Server to a custom directory."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["sysadmin"]
 ---
 
