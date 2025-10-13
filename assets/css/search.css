@@ -1,0 +1,32 @@
+#search-input {
+  width: 100%;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+}
+
+.search-title {
+  position: relative;
+  color: var(--accent);
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+  padding-bottom: 15px;
+  border-bottom: 3px dotted var(--accent);
+  text-decoration: none !important;
+}
+
+.search-title::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  display: block;
+  width: 100%;
+  border-bottom: 3px dotted var(--accent);
+}
+
+.search-content {
+  margin-bottom: 10px;
+}
+
+.search-result-item {
+  list-style-type: none;
+}
