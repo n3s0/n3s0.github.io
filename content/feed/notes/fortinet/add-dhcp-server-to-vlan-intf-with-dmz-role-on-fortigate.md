@@ -1,15 +1,10 @@
 ---
-title: "Fortinet: Add DHCP Server To VLAN Interface With DMZ Role On FortiGate"
+title: "Add DHCP Server To VLAN Interface With DMZ Role On FortiGate"
+author: "Timothy Loftus (n3s0)"
 date: 2023-07-17T15:25:27-06:00
-summary: "Notes for adding a DHCP server to a FortiGate firewall VLAN interface with the DMZ role through cli."
+lastmod: 2025-10-13
+description: "Notes for adding a DHCP server to a FortiGate firewall VLAN interface with the DMZ role through cli."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["netadmin"]
 ---
 
