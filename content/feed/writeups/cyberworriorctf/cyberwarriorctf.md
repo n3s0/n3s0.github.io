@@ -1,11 +1,11 @@
 ---
 title: "CyberWarrior CTF"
+author: "Timothy Loftus (n3s0)"
 date: "2021-03-20T23:40:51-05:00"
-excerpt: "Notes from doing the CyberWarrior CTF challenges."
-tags: ["writeups", "infosec"]
+lastmod: 2025-10-13
+description: "Notes from doing the CyberWarrior CTF challenges."
+tags: ["writeups", "cyberwarriorctf"]
 draft: false
-type: post
-showTableOfContents: true
 ---
 
 ## Summary

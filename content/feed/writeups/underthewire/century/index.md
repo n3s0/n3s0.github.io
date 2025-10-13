@@ -2,19 +2,7 @@
 title: "Under The Wire: Century"
 date: 2019-04-20T08:08:05-06:00
 summary: "Solutions for Under The Wire Century"
-draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: false
-showHeadingAnchors: true
+draft: true
 ---
 
 Going to be trying my hand at Under the Wire - Century. This is a 

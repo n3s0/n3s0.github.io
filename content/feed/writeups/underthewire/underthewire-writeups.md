@@ -1,5 +1,5 @@
 ---
-title: "Under The Wire"
+title: "Under The Wire Writeups"
 date: 2019-04-20T08:08:05-0600
 summary: "List of solutions for the Under The Wire Wargames."
 draft: false

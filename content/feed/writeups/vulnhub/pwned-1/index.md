@@ -1,20 +1,10 @@
 ---
 title: "Vulnhub - PWNED: 1"
+author: "Timothy Loftus (n3s0)"
 date: 2020-09-04T23:03:30-06:00
-summary: "Writeup for for the PWNED: 1 VM from Vulnhub."
+lastmod: 2025-10-13
+description: "Writeup for for the PWNED: 1 VM from Vulnhub."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: false
-showHeadingAnchors: true
 ---
 
 ## Overview
