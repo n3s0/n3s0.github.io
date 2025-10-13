@@ -1,15 +1,10 @@
 ---
 title: 'Little Note on Ansible Deployments To OpenBSD'
+author: "Timothy Loftus (n3s0)"
 date: 2024-10-21T00:17:01+06:00
+lastmod: 2025-10-13
 summary: "Journal entry 10-21-2024"
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["journal"]
 ---
 
