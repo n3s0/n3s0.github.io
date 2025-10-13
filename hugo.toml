@@ -59,17 +59,17 @@ pagination.pagerSize = 5
       [[languages.en.menu.main]]
         identifier = "journal"
         name = "Journal"
-        url = "/journal"
+        url = "/feed/journal"
         weight = 10
       [[languages.en.menu.main]]
         identifier = "notes"
         name = "Notes"
-        url = "/notes"
+        url = "/feed/notes"
         weight = 11
       [[languages.en.menu.main]]
         identifier = "build"
         name = "Build"
-        url = "/build"
+        url = "/feed/build"
         weight = 30
       [[languages.en.menu.main]]
         identifier = "projects"
