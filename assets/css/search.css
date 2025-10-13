@@ -7,7 +7,7 @@
 .search-title {
   position: relative;
   color: var(--accent);
-  margin-top: 0 !important;
+  margin-top: 10 !important;
   margin-bottom: 10px !important;
   padding-bottom: 15px;
   border-bottom: 3px dotted var(--accent);
