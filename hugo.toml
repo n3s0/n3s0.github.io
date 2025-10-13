@@ -13,8 +13,8 @@ pagination.pagerSize = 5
   home = ["HTML", "RSS", "JSON"]
 
 [params]
-  contentTypeName = "notes"
-  showMenuItems = 9
+  contentTypeName = "feed"
+  showMenuItems = 10
   fullWidthTheme = false
   centerTheme = false
   showLastUpdated = true
@@ -97,10 +97,15 @@ pagination.pagerSize = 5
         url = "https://github.com/n3s0"
         weight = 43
       [[languages.en.menu.main]]
+        identifier = "search"
+        name = "Search"
+        url = "Search"
+        weight = 44
+      [[languages.en.menu.main]]
         identifier = "rss"
         name = "RSS"
         url = "/index.xml"
-        weight = 44
+        weight = 45
       [[languages.en.menu.main]]
         identifier = "computer"
         name = "Computer"
