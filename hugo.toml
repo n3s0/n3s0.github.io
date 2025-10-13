@@ -99,7 +99,7 @@ pagination.pagerSize = 5
       [[languages.en.menu.main]]
         identifier = "search"
         name = "Search"
-        url = "Search"
+        url = "/search"
         weight = 44
       [[languages.en.menu.main]]
         identifier = "rss"
