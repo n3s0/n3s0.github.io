@@ -52,6 +52,7 @@ Websites I browse to frequently.
 
 - [16 Colors](https://16colo.rs/)
 - [68K News](http://68k.news/)
+- [512KB Club](https://512kb.club/)
 - [Alterslash](https://alterslash.org/)
 - [Lobsters](https://lobste.rs/)
 - [Hacker News](https://news.ycombinator.com/news)
@@ -141,6 +142,14 @@ updated their site in a while.
 - [Science.gov](https://www.science.gov/)
 - [Google Dataset Search](https://datasetsearch.research.google.com/)
 
+## Website Tools
+
+List of tools I use to help me with web development stuff.
+
+- [Orca Scan (Open Graph validator)](https://orcascan.com/tools/open-graph-validator)
+- [Debug Bear (Website speed test](https://www.debugbear.com/test/website-speed)
+- [sitespeed.io](https://www.sitespeed.io/)
+
 ## AI
 
 I never thought I would be adding an AI section to this. But... Behold... my
@@ -148,7 +157,10 @@ currated list of AI bookmarks. Where I give you all of the AI tools I play on.
 
 - [Perchance AI Image Generator](https://perchance.org/ai-text-to-image-generator)
 
-## Online Image Manipulation
+## Image Editing
+
+For editing, upscaling, or resizing images. Utilize some of these web
+applications for this site.
 
 - [image-upscaling.net](https://image-upscaling.net/upscaling/en.html)
 
@@ -159,9 +171,7 @@ currated list of AI bookmarks. Where I give you all of the AI tools I play on.
 - [Facebook](https://www.facebook.com/)
 - [Instagram](https://www.instagram.com/)
 - [Twitter/X](https://www.x.com/)
-- [512KB Club](https://512kb.club/)
 - [Research Gate](https://www.researchgate.net/topics)
-- [Phrack Magazine](http://phrack.org)
 
 ## Cloud Providers
 
