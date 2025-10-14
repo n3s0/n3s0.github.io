@@ -25,20 +25,18 @@ search.
 Notable people whos work has gained my respect or attention. Check out their
 work. 
 
-- [Ted Unangst](https://www.tedunangst.com/)
-- [Jack Rhysider](https://www.tunnelsup.com/)
-- [Joshua Stein](https://jcs.org/)
-- [Brandan Gregg](https://www.brendangregg.com/blog/)
-- [Andrei Ciabanu](https://www.andreinc.net/)
+- [Brandan Gregg](https://www.brendangregg.com/blog/) ([feed](https://www.brendangregg.com/blog/rss.xml))
+- [Ted Unangst](https://www.tedunangst.com/) ([feed](https://flak.tedunangst.com/rss))
+- [Joshua Stein](https://jcs.org/) ([feed](https://jcs.org/))
+- [Andrei Ciabanu](https://www.andreinc.net/) 
 - [Justin Meiner](https://justinmeiners.github.io/)
 - [John Gilmore](http://www.toad.com/)
 - [Seth Michael Larson](https://sethmlarson.dev/)
 - [Nick Black](https://nick-black.com/dankwiki/)
 - [Chris Siebenmann)](https://utcc.utoronto.ca/~cks/)
 - [Jes Olson](https://j3s.sh/)
-- [mrusme](https://xn--gckvb8fzb.com)
+- [mrusme](https://xn--gckvb8fzb.com) ([feed](https://xn--gckvb8fzb.com/index.xml))
 - [jasper.la](https://blog.jasper.la)
-- [nox](https://nox.im/)
 - [Mete Balci](https://metebalci.com/)
 - [Aaron Toponce](https://pthree.org/)
 - [Sam Bowne](https://samsclass.info/)
@@ -49,7 +47,39 @@ work.
 - [The Networking Nerd](https://networkingnerd.net/)
 - [Marat Fayzullin](https://fms.komkon.org/)
 
+## Reading
 
+Websites I browse to frequently.
+
+- [16 Colors](https://16colo.rs/)
+- [68K News](http://68k.news/)
+- [Alterslash](https://alterslash.org/)
+- [Lobsters](https://lobste.rs/)
+- [Hacker News](https://news.ycombinator.com/news)
+- [Anna's Archive](https://annas-archive.org/)
+- [Low Tech Magazine](https://solar.lowtechmagazine.com/)
+- [New York Public Library Digital Collections](https://digitalcollections.nypl.org/)
+- [OpenBSD Journal](https://undeadly.org/cgi?action=front)
+- [OpenBSD Webzine](https://webzine.puffy.cafe/)
+- [Paged Out!](https://pagedout.institute/)
+- [Phoronix](https://www.phoronix.com/)
+- [Spike News](https://spike.news/)
+- [Soylent News](https://soylentnews.org/)
+- [Textfiles](http://www.textfiles.com/directory.html)
+- [The Brutalist Report](https://brutalist.report/)
+- [tmp.out](https://tmpout.sh/)
+- [Vellum](https://vellum.tachy.org/)
+- [Phrack Archives](https://archives.phrack.org/)
+- [Poorly Drawn Lines](https://poorlydrawnlines.com/)
+- [VX Underground](https://vx-underground.org/)
+
+## Infrequent Updates
+
+List of people that still provide a lot of value to me. They just haven't
+updated their site in a while.
+
+- [Jack Rhysider](https://www.tunnelsup.com/)
+- [nox](https://nox.im/)
 
 ## Networking
 
@@ -125,8 +155,6 @@ currated list of AI bookmarks. Where I give you all of the AI tools I play on.
 
 ## Feeds
 
-- [https://lobste.rs/](https://lobste.rs/)
-- [Hacker News](https://news.ycombinator.com/news)
 - [LWN.net](https://lwn.net/)
 - [Reddit](https://www.reddit.com/)
 - [Facebook](https://www.facebook.com/)
@@ -196,7 +224,6 @@ currated list of AI bookmarks. Where I give you all of the AI tools I play on.
 - [Ubuntu](https://ubuntu.com/)
 - [Ubuntu Wiki](https://wiki.ubuntu.com/)
 - [Debian](https://www.debian.org/)
-
 
 ### Software
 
