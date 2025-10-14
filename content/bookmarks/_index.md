@@ -36,8 +36,6 @@ work.
 - [mrusme](https://xn--gckvb8fzb.com) ([feed](https://xn--gckvb8fzb.com/index.xml))
 - [Mete Balci](https://metebalci.com/) ([feed](https://metebalci.com/index.xml))
 - [Aaron Toponce](https://pthree.org/)
-- [Adriangia Cometti](https://adriangiacometti.net/)
-- [The Networking Nerd](https://networkingnerd.net/)
 - [Marat Fayzullin](https://fms.komkon.org/)
 - [Drash Smith](https://www.drashsmith.com/) ([feed](https://www.drashsmith.com/index.xml))
 - [Ivan Pepelnjak](https://www.ipspace.net/) ([feed](https://blog.ipspace.net/atom.xml))
