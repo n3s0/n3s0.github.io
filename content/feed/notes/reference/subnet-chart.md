@@ -1,20 +1,9 @@
 ---
 title: "Subnetting Reference"
 date: 2024-09-20T14:26:26-06:00
+lastmod: 2025-10-15
 summary: "Subnetting reference."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: false
-showHeadingAnchors: true
 ---
 
 ## Overview
