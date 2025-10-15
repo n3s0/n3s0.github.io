@@ -1,0 +1,1628 @@
+{
+  "data": {
+    "me": [
+      {
+        "user_books": [
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/41528500/299508f5a4c3d4c93d708b107a45f5573e530804.jpeg"
+              },
+              "title": "The Outsiders",
+              "subtitle": "The Outsiders",
+              "slug": "the-outsiders",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "S. E. Hinton"
+                  }
+                }
+              ],
+              "description": "Ponyboy can count on his brothers. And on his friends. But not on much else besides trouble with the Socs, a vicious gang of rich kids whose idea of a good time is beating up \"greasers\" like Ponyboy. At least he know what to expect - until the night someone takes things too far.\r\n((back cover)"
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/32116905/1efec42d606e7d7f47a17fdd7f07553ead68bd0a.jpeg"
+              },
+              "title": "Eleventh Grade Burns",
+              "subtitle": null,
+              "slug": "eleventh-grade-burns",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Z. Brewer"
+                  }
+                }
+              ],
+              "description": "Another year at Bathory High goes bad for Vlad Tod when his former friend Joss, now a vampire slayer, returns to town, a mysterious and powerful new vampire, Dorian, arrives with a thirst for Vlad's blood, and archenemy D'Ablo brings Vlad's Uncle Otis to trial."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/600859/e5aa91b95280a22686d9cf574890120b35e549bc.jpeg"
+              },
+              "title": "First Kill",
+              "subtitle": null,
+              "slug": "first-kill",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Z. Brewer"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Z. Brewer"
+                  }
+                }
+              ],
+              "description": "The summer before ninth grade, when Joss sets off to meet his uncle and hunt down the beast that murdered his younger sister three years earlier, he learns he is destined to join the Slayer Society."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/59868489/78612c9b6c7de15afcd2cec93fd437477320577a.jpeg"
+              },
+              "title": "Twelfth Grade Kills",
+              "subtitle": null,
+              "slug": "twelfth-grade-kills",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Z. Brewer"
+                  }
+                }
+              ],
+              "description": "Vladimir Tod NORMAL TWELFTH-GRADE STUDENT? OR POWERFUL VAMPIRE? Vlad's running out of time. The Elysian Council has given him only weeks to live, and that's if the Slayer Society doesn't kill him-along with all the citizens of Bathory-first. Then there's the issue of Vlad's father, who may or may not be still alive after all these years. Oh yeah, and that tiny little devil in the Pravus prophecy about Vlad enslaving Vampirekind and the human race. So much for college applications. In this epic finale to Heather Brewer's heart-stopping Chronicles of Vladimir Tod, dark secrets will be revealed, old friends will become new enemies, and warm blood will run cold. Just be careful it isn't yours."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/60253475/4febc2edb37f92d40e484ed37f2ea89b7e41c6b7.jpeg"
+              },
+              "title": "Genghis Khan and the Making of the Modern World",
+              "subtitle": null,
+              "slug": "genghis-khan-and-the-making-of-the-modern-world",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Jack Weatherford"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Jonathan Davis"
+                  }
+                }
+              ],
+              "description": "NEW YORK TIMES BESTSELLER • The startling true history of how one extraordinary man from a remote corner of the world created an empire that led the world into the modern age—by the author featured in Echoes of the Empire: Beyond Genghis Khan. The Mongol army led by Genghis Khan subjugated more lands and people in twenty-five years than the Romans did in four hundred. In nearly every country the Mongols conquered, they brought an unprecedented rise in cultural communication, expanded trade, and a blossoming of civilization. Vastly more progressive than his European or Asian counterparts, Genghis Khan abolished torture, granted universal religious freedom, and smashed feudal systems of aristocratic privilege. From the story of his rise through the tribal culture to the explosion of civilization that the Mongol Empire unleashed, this brilliant work of revisionist history is nothing less than the epic story of how the modern world was made."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/6040483/2714538691147541.jpg"
+              },
+              "title": "The Battle of the Labyrinth",
+              "subtitle": "Battle of the Labyrinth",
+              "slug": "the-battle-of-the-labyrinth",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Rick Riordan"
+                  }
+                }
+              ],
+              "description": "Note for librarians: this needs to be merged into an edition of the version with 990+ readers\n\nWhen demonic cheerleaders invade his high school, Percy Jackson hurries to Camp Half Blood, from whence he and his demigod friends set out on a quest through the Labyrinth, while the war between the Olympians and the evil Titan lord Kronos draws near."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/23235426/a12060cf33fab50fa1e121b1be79ae2f1fa1a88e.jpeg"
+              },
+              "title": "The Icebound Land",
+              "subtitle": "Rangers Apprentice No. 3",
+              "slug": "the-icebound-land",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "John Flanagan"
+                  }
+                }
+              ],
+              "description": "Kidnapped after the fierce battle with Lord Morgarath, Will and Evanlyn are bound for Skandia as captives aboard a fearsome wolfship. Halt has sworn to rescue Will, and he will do anything to keep his promise–even defy his King. Expelled from the Rangers he has served so loyally, Halt is joined by Will's friend Horace as he travels toward Skandia. On their way, they are challenged constantly by freelance knights–but Horace knows a thing or two about combat. Soon he begins to attract the attention of knights and warlords for miles around with his uncanny skill. Even so, will they be in time to rescue Will from a horrific life of slavery?"
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/26128648/3e191fbec96a8ff3d993c21cee2c785cfe0f76ee.jpeg"
+              },
+              "title": "The Ruins of Gorlan",
+              "subtitle": "The Ruins of Gorlan",
+              "slug": "the-ruins-of-gorlan",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "John Flanagan"
+                  }
+                }
+              ],
+              "description": "They have always scared him in the past--the Rangers, with their dark cloaksand shadowy ways. The villagers believe the Rangers practice magic that makes them invisible to ordinary people. And now 15-year-old Will, always small for his age, has been chosen as a Ranger's apprentice. What he doesn't yet realize is that the Rangers are the protectors of the kingdom. Highly trained in the skills of battle and surveillance, they fight the battles before the battles reach the people. And as Will is about to learn, there is a large battle brewing. The exiled Morgarath, Lord of the Mountains of Rain and Night, is gathering his forces for an attack on the kingdom. This time, he will not be denied...\r\n\r\n\r\n----------\r\n**Books in this series**\r\n\r\n 1. The Ruins of Gorlan\r\n 2. [The Burning Bridge][2]\r\n 3. [The Icebound Land][3]\r\n 4. [Oakleaf Bearers][4]\r\n 5. [Sorcerer in the North][5]\r\n 6. [The Siege of Macindaw][6]\r\n 7. [Erak's Ransom][7]\r\n 8. [The Kings of Clonmel][8]\r\n 9. [Halt's Peril][9]\r\n 10. [The Emperor of Nihon-Ja][10]\r\n 11. [The Lost Stories][11]\r\n 12. [A New Beginning][12]\r\n\r\n  [2]: https://openlibrary.org/works/OL7988536W\r\n  [3]: https://openlibrary.org/works/OL5721971W\r\n  [4]: https://openlibrary.org/works/OL7988552W\r\n  [5]: https://openlibrary.org/works/OL15166256W\r\n  [6]: https://openlibrary.org/works/OL5721973W\r\n  [7]: https://openlibrary.org/works/OL5721970W\r\n  [8]: https://openlibrary.org/works/OL15416512W\r\n  [9]: https://openlibrary.org/works/OL15367649W\r\n  [10]: https://openlibrary.org/works/OL19815687W\r\n  [11]: https://openlibrary.org/works/OL18823189W\r\n  [12]: https://openlibrary.org/works/OL17662393W"
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/30407162/f310416f4712114b9ea86b666a03f267d337fc8c.jpeg"
+              },
+              "title": "The Last Wish",
+              "subtitle": "Introducing the Witcher",
+              "slug": "the-last-wish",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Andrzej Sapkowski"
+                  }
+                }
+              ],
+              "description": "Geralt is a Witcher, a man whose magic powers, enhanced by long training and a mysterious elixir, have made him a brilliant fighter and a merciless hunter. Yet he is no ordinary killer. His sole purpose: to destroy the monsters that plague the world.\r\n\r\nBut not everything monstrous-looking is evil and not everything fair is good . . . and in every fairy tale there is a grain of truth."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/30400842/7761dc2d60ce7a4e73f62f8f10f45da44c6e31bb.jpeg"
+              },
+              "title": "The Hidden Oracle",
+              "subtitle": "Trials of Apollo",
+              "slug": "the-hidden-oracle",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Rick Riordan"
+                  }
+                }
+              ],
+              "description": "How do you punish an immortal? By making him human. After angering his father Zeus, the god Apollo is cast down from Olympus. Weak and disoriented, he lands in New York City as a regular teenage boy. Now, without his godly powers, the four-thousand-year-old deity must learn to survive in the modern world until he can somehow find a way to regain Zeus's favor. But Apollo has many enemies—gods, monsters, and mortals who would love to see the former Olympian permanently destroyed. Apollo needs help, and he can think of only one place to go . . . an enclave of modern demigods known as Camp Half-Blood."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/book_mappings/7332979/2b04135b8468dcb0ed5ac57a57ac88ef542b49fc.jpeg"
+              },
+              "title": "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future",
+              "subtitle": "Tesla, SpaceX, and the Quest for a Fantastic Future",
+              "slug": "elon-musk",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Ashlee Vance"
+                  }
+                }
+              ],
+              "description": "In the spirit of Steve Jobs and Moneyball, Elon Musk is both an illuminating and authorized look at the extraordinary life of one of Silicon Valley's most exciting, unpredictable, and ambitious entrepreneurs -- a real-life Tony Stark -- and a fascinating exploration of the renewal of American invention and its new \"makers.\" Elon Musk spotlights the technology and vision of Elon Musk, the renowned entrepreneur and innovator behind SpaceX, Tesla, and SolarCity, who sold one of his Internet companies, PayPal, for $1.5 billion. Ashlee Vance captures the full spectacle and arc of the genius's life and work, from his tumultuous upbringing in South Africa and flight to the United States to his dramatic technical innovations and entrepreneurial pursuits. Vance uses Musk's story to explore one of the pressing questions of our age: can the nation of inventors and creators who led the modern world for a century still compete in an age of fierce global competition? He argues that Musk -- one of the most unusual and striking figures in American business history -- is a contemporary, visionary amalgam of legendary inventors and industrialists including Thomas Edison, Henry Ford, Howard Hughes, and Steve Jobs. More than any other entrepreneur today, Musk has dedicated his energies and his own vast fortune to inventing a future that is as rich and far-reaching as the visionaries of the golden age of science-fiction fantasy. Thorough and insightful, Elon Musk brings to life a technology industry that is rapidly and dramatically changing by examining the life of one of its most powerful and influential titans. - Publisher."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/17728127/9164727475969110.jpg"
+              },
+              "title": "The Lost Boy",
+              "subtitle": "A Foster Child's Search for the Love of a Family",
+              "slug": "the-lost-boy-1997",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Dave Pelzer"
+                  }
+                }
+              ],
+              "description": "Imagine a young boy who has never had a loving home. His only possesions are the old, torn clothes he carries in a paper bag. The only world he knows is one of isolation and fear. Although others had rescued this boy from his abusive alcoholic mother, his real hurt is just begining -- he has no place to call home. \r\nThis is Dave Pelzer's long-awaited sequel to A Child Called \"It\". In The Lost Boy, he answers questions and reveals new adventures through the compelling story of his life as an adolescent. Now considered an F-Child (Foster Child), Dave is moved in and out of five different homes. He suffers shame and experiences resentment from those who feel that all foster kids are trouble and unworthy of being loved just because they are not part of a \"real\" family. \r\nTears, laughter, devastation and hope create the journey of this little lost boy who searches desperately for just one thing -- the love of a family."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/60503416/bc77fa7e47feac62202f92e90251c7dcf089c103.jpeg"
+              },
+              "title": "The Sea of Monsters",
+              "subtitle": "Sea of Monsters",
+              "slug": "the-sea-of-monsters",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Rick Riordan"
+                  }
+                }
+              ],
+              "description": "When Thalia’s tree is mysteriously poisoned, the magical borders of Camp Half-Blood begin to fail. Now Percy and his friends have just days to find the only magic item powerful to save the camp before it is overrun by monsters. The catch: they must sail into the Sea of Monsters to find it. Along the way, Percy must stage a daring rescue operation to save his old friend Grover, and he learns a terrible secret about his own family, which makes him question whether being the son of Poseidon is an honor or a curse."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/10868716/5722886-L.jpg"
+              },
+              "title": "Eighth Grade Bites",
+              "subtitle": null,
+              "slug": "eighth-grade-bites-2007",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Z. Brewer"
+                  }
+                }
+              ],
+              "description": "Vlad has to keep his vampire urges under control while dealing with the pressures of middle school.Thirteen-year-old Vladimir Tod really hates junior high. Bullies harass him, the principal is dogging him, and the girl he likes prefers his best friend. Oh, and Vlad has a secret: His mother was human, but his father was a vampire. With no idea of the extent of his powers, Vlad struggles daily with his blood cravings and his enlarged fangs. When a substitute teacher begins to question him a little too closely, Vlad worries that his cover is about to be blown. But then he faces a much bigger problem: he's being hunted by a vampire killer."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/30729803/f4b46fc9-7790-4e01-87e9-3a13f7629622.jpg"
+              },
+              "title": "The Mark of Athena",
+              "subtitle": "Mark of Athena",
+              "slug": "the-mark-of-athena",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Rick Riordan"
+                  }
+                }
+              ],
+              "description": "Annabeth is terrified. Just when she's about to be reunited with Percy—after six months of being apart, thanks to Hera—it looks like Camp Jupiter is preparing for war. As Annabeth and her friends Jason, Piper, and Leo fly in on the Argo II, she can't blame the Roman demigods for thinking the ship is a Greek weapon. With its steaming bronze dragon figurehead, Leo's fantastical creation doesn't appear friendly. Annabeth hopes that the sight of their praetor Jason on deck will reassure the Romans that the visitors from Camp Half-Blood are coming in peace.\n\nAnd that's only one of her worries. In her pocket, Annabeth carries a gift from her mother that came with an unnerving command: Follow the Mark of Athena. Avenge me. Annabeth already feels weighed down by the prophecy that will send seven demigods on a quest to find—and close—the Doors of Death. What more does Athena want from her?\n\nAnnabeth's biggest fear, though, is that Percy might have changed. What if he's now attached to Roman ways? Does he still need his old friends? As the daughter of the goddess of war and wisdom, Annabeth knows she was born to be a leader—but never again does she want to be without Seaweed Brain by her side\n\nNarrated by four different demigods, The Mark of Athena is an unforgettable journey across land and sea to Rome, where important discoveries, surprising sacrifices, and unspeakable horrors await. Climb aboard the Argo II, if you dare. . . ."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/42441742/f0fe7614243ae255ef797f894e263adeb97cd666.jpeg"
+              },
+              "title": "The Fault in Our Stars",
+              "subtitle": null,
+              "slug": "the-fault-in-our-stars",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "John Green"
+                  }
+                }
+              ],
+              "description": "Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel’s story is about to be completely rewritten.\r\n\r\nInsightful, bold, irreverent, and raw, The Fault in Our Stars is award-winning-author John Green’s most ambitious and heartbreaking work yet, brilliantly exploring the funny, thrilling, and tragic business of being alive and in love."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/28696094/813c6d4061ec9562c4ef995405b2f82f45d558b7.jpeg"
+              },
+              "title": "The Burning Bridge",
+              "subtitle": "Book Two",
+              "slug": "the-burning-bridge",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "John Flanagan"
+                  }
+                }
+              ],
+              "description": "Bracing for a final clash with the evil warlord Morgarath, the Rangers rally the kingdom's allies, and Will is chosen, along with his friend Horace, as special envoys to nearby Celtica. But the simple mission soon takes an unsettling turn - the Celticans have disappeared, their town abandoned. The scheming hand of Morgarath, it seems, has been far from idle. He has found a way to bring his legions over the once impassible eastern mountains and is planning to ambush the king's army in a rout. Now with help many miles away, Will and Horace are the only ones standing in the way of the dark lord's plans. They have shown great skill and courage in their training, but how will they fare in the face of true evil?\n\nWith bigger battles and higher stakes, John Flanagan's epic adventure charges ahead with this rousing follow-up to The Ruins of Gorlan."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/22166512/3e274a6074bcf34e6fd228b8ffef2e59419a1853.jpeg"
+              },
+              "title": "The Battle for Skandia",
+              "subtitle": "Oakleaf Bearers",
+              "slug": "the-battle-for-skandia",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "John Flanagan"
+                  }
+                }
+              ],
+              "description": "Known as *The Battle for Skandia* in the U.S..\r\n\r\nFor Will and Evanlyn, freedom has never felt so fleeing.\r\n\r\nStill far from their homeland after escaping slavery in the icebound land of Skandia, the Ranger's apprentice and the princess's plan to return to Araluen is spoiled when Evanlyn is taken captive by a Temujai warrior. Though still weakened by the warmweed's toxic effects, Will employs his Ranger training to locate his friend, but an enemy scouting party has him fatally outnumbered. Will is certain death is close at hand, until old friends make a daring, last-minute rescue. The reunion is cut short, however, when they make a horrifying discovery: Skandia's borders have been breached by the entire Temujai army. And Araluen is next in their sights.\r\n\r\nIf two kingdoms are to be saved, the unlikeliest of unions must be made. Will it hold long enough to vanquish a ruthless new enemy? Or will past tensions spell doom for all? \r\n\r\n\r\n----------\r\n**Books in this series**\r\n\r\n 1. [The Ruins of Gorlan][1]\r\n 2. [The Burning Bridge][2]\r\n 3. [The Icebound Land][3]\r\n 4. Oakleaf Bearers\r\n 5. [Sorcerer in the North][5]\r\n 6. [The Siege of Macindaw][6]\r\n 7. [Erak's Ransom][7]\r\n 8. [The Kings of Clonmel][8]\r\n 9. [Halt's Peril][9]\r\n 10. [The Emperor of Nihon-Ja][10]\r\n 11. [The Lost Stories][11]\r\n 12. [A New Beginning][12]\r\n\r\n  [1]: https://openlibrary.org/works/OL7988545W\r\n  [2]: https://openlibrary.org/works/OL7988536W\r\n  [3]: https://openlibrary.org/works/OL5721971W\r\n  [5]: https://openlibrary.org/works/OL15166256W\r\n  [6]: https://openlibrary.org/works/OL5721973W\r\n  [7]: https://openlibrary.org/works/OL5721970W\r\n  [8]: https://openlibrary.org/works/OL15416512W\r\n  [9]: https://openlibrary.org/works/OL15367649W\r\n  [10]: https://openlibrary.org/works/OL19815687W\r\n  [11]: https://openlibrary.org/works/OL18823189W\r\n  [12]: https://openlibrary.org/works/OL17662393W"
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/5515484/10214720-L.jpg"
+              },
+              "title": "The Way of the Dragon",
+              "subtitle": null,
+              "slug": "the-way-of-the-dragon",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Chris Bradford"
+                  }
+                }
+              ],
+              "description": "It is June 1613. Japan is threatened with war and Jack is facing his greatest battle yet. Samurai are taking sides and, as the blood begins to flow, Jack's warrior training is put to the ultimate test. His survival - and that of his friends - depends upon him mastering the Two Heavens, the secret sword technique of the legendary samurai Masamoto Takeshi. But first Jack must recover his father's prize possession from the deadly ninja Dragon Eye. Can Jack defeat his ruthless enemy? Or will the ninja complete his mission to kill the young samurai ..."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/11185124/b076b406ccdf683e9fb871f8aa24c041ae354514.jpeg"
+              },
+              "title": "The Lightning Thief",
+              "subtitle": "Percy Jackson and the Olympians",
+              "slug": "the-lightning-thief",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Rick Riordan"
+                  }
+                }
+              ],
+              "description": "After learning that the father he never knew is Poseidon, God of the Sea, Percy Jackson is transferred from boarding school to Camp Half-Blood, a summer camp for demigods, and becomes involved in a quest to prevent a war between the gods."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/20162232/7118067-L.jpg"
+              },
+              "title": "Tenth Grade Bleeds",
+              "subtitle": null,
+              "slug": "tenth-grade-bleeds",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Z. Brewer"
+                  }
+                }
+              ],
+              "description": "As the evil vampire D'Ablo seeks the ritual that would steal half-vampire Vlad's powers, Vlad struggles to resist feeding on the people around him, has a conflict with his best friend Henry, and gives up all hope of a normal year at Bathory High."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/30399292/a3245f04ade5bdaf35f10aa0bd44ef7cbf99466a.jpeg"
+              },
+              "title": "The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life",
+              "subtitle": "A Counterintuitive Approach to Living a Good Life",
+              "slug": "the-subtle-art-of-not-giving-a-f-ck",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Mark Manson"
+                  }
+                }
+              ],
+              "description": "In this generation-defining self-help guide, a superstar blogger cuts through the crap to show us how to stop trying to be \"positive\" all the time so that we can truly become better, happier people.\n\nFor decades, we’ve been told that positive thinking is the key to a happy, rich life. \"F**k positivity,\" Mark Manson says. \"Let’s be honest, shit is f**ked and we have to live with it.\" In his wildly popular Internet blog, Manson doesn’t sugarcoat or equivocate. He tells it like it is—a dose of raw, refreshing, honest truth that is sorely lacking today. The Subtle Art of Not Giving a F**k is his antidote to the coddling, let’s-all-feel-good mindset that has infected modern society and spoiled a generation, rewarding them with gold medals just for showing up.\n\nManson makes the argument, backed both by academic research and well-timed poop jokes, that improving our lives hinges not on our ability to turn lemons into lemonade, but on learning to stomach lemons better. Human beings are flawed and limited—\"not everybody can be extraordinary, there are winners and losers in society, and some of it is not fair or your fault.\" Manson advises us to get to know our limitations and accept them. Once we embrace our fears, faults, and uncertainties, once we stop running and avoiding and start confronting painful truths, we can begin to find the courage, perseverance, honesty, responsibility, curiosity, and forgiveness we seek.\n\nThere are only so many things we can give a f**k about so we need to figure out which ones really matter, Manson makes clear. While money is nice, caring about what you do with your life is better, because true wealth is about experience. A much-needed grab-you-by-the-shoulders-and-look-you-in-the-eye moment of real-talk, filled with entertaining stories and profane, ruthless humor, The Subtle Art of Not Giving a F*ck is a refreshing slap for a generation to help them lead contented, grounded lives."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/book_mappings/7332318/b23de44fadf6eca2f7196c4aa3efbec84b748a35.jpeg"
+              },
+              "title": "The Giver",
+              "subtitle": "Graphic Novel",
+              "slug": "the-giver",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Lois Lowry"
+                  }
+                }
+              ],
+              "description": "In a world with no poverty, no crime, no sickness and no unemployment, and where every family is happy, 12-year-old Jonas is chosen to be the community's Receiver of Memories. Under the tutelage of the Elders and an old man known as the Giver, he discovers the disturbing truth about his utopian world and struggles against the weight of its hypocrisy. With echoes of Brave New World, in this 1994 Newbery Medal winner, Lowry examines the idea that people might freely choose to give up their humanity in order to create a more stable society. Gradually Jonas learns just how costly this ordered and pain-free society can be, and boldly decides he cannot pay the price."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/59945750/d2696adffd997641a65da27e4bb9a1eed20b5d88.jpeg"
+              },
+              "title": "Permanent Record",
+              "subtitle": "How One Man Exposed the Truth about Government Spying and Digital Security",
+              "slug": "permanent-record",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Edward Snowden"
+                  }
+                }
+              ],
+              "description": "Edward Snowden, the man who risked everything to expose the US government’s system of mass surveillance, reveals for the first time the story of his life, including how he helped to build that system and what motivated him to try to bring it down.\r\n\r\nIn 2013, twenty-nine-year-old Edward Snowden shocked the world when he broke with the American intelligence establishment and revealed that the United States government was secretly pursuing the means to collect every single phone call, text message, and email. The result would be an unprecedented system of mass surveillance with the ability to pry into the private lives of every person on earth. Six years later, Snowden reveals for the very first time how he helped to build this system and why he was moved to expose it.\r\n\r\nSpanning the bucolic Beltway suburbs of his childhood and the clandestine CIA and NSA postings of his adulthood, Permanent Record is the extraordinary account of a bright young man who grew up online – a man who became a spy, a whistleblower, and, in exile, the Internet’s conscience. Written with wit, grace, passion, and an unflinching candor, Permanent Record is a crucial memoir of our digital age and destined to be a classic."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/10168062/6fff74a37a18ba59eb69c3071899f0b90ba7ea18.jpeg"
+              },
+              "title": "Thirteen Reasons Why",
+              "subtitle": null,
+              "slug": "thirteen-reasons-why",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Jay Asher"
+                  }
+                }
+              ],
+              "description": "When high school student Clay Jenkins receives a box in the mail containing thirteen cassette tapes recorded by his classmate Hannah, who committed suicide, he spends a bewildering and heartbreaking night crisscrossing their town, listening to Hannah's voice recounting the events leading up to her death."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/21716111/5323176149970177.jpg"
+              },
+              "title": "The Martian",
+              "subtitle": "Stranded on Mars, one astronaut fights to survive",
+              "slug": "the-martian",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Andy Weir"
+                  }
+                }
+              ],
+              "description": "After a dust storm nearly kills him and forces his crew to evacuate the planet while thinking him dead, Mark finds himself stranded on Mars' surface, completely alone. with no way to signal Earth that he's alive. And even if he could get word out, his supplies would be gone years before a rescue could arrive.\n\nChances are, though, Mark won't have time to starve to death. The damaged machinery, unforgiving environment, or plain-old \"human error\" are much more likely to kill him first. But Mark's not ready to quit. Armed with nothing but his ingenuity and his engineering skills—and a gallows sense of humor that proves to be his greatest source of strength—he embarks on a dogged quest to stay alive, using his botany expertise to grow food and even hatch- ing a mad plan to contact NASA back on Earth.\n\nAs he overcomes one seemingly insurmountable obstacle after the next, Mark begins to let himself believe he might make it off the planet alive.\n\nBut Mars has plenty of surprises in store for him yet.\n\nGrounded in real, present-day science from the first page to the last. yet propelled by a brilliantly ingenious plot that surprises the reader again and again, The Martian is a truly remarkable thriller: an impossible-to- put-down suspense novel that manages tc read like a real-life survival tale."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/30399869/8816624490580869-91JrDpvTiML._SL1500_.jpg"
+              },
+              "title": "Eragon",
+              "subtitle": "The Illustrated Edition",
+              "slug": "eragon",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Christopher Paolini"
+                  }
+                }
+              ],
+              "description": "When fifteen-year-old Eragon finds a polished blue stone in the forest, he thinks it is the lucky discovery of a poor farm boy. But when the stone brings a dragon hatchling, Eragon soon realizes he has stumbled upon a legacy nearly as old as the Empire itself.\n\nOvernight his simple life is shattered, and, gifted with only an ancient sword, a loyal dragon, and sage advice from an old storyteller, Eragon is soon swept into a dangerous tapestry of magic, glory, and power. Now his choices could save—or destroy—the Empire."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/3890025/4883525795702759-58613380.jpg"
+              },
+              "title": "Harry Potter and the Sorcerer's Stone",
+              "subtitle": "The Illustrated Edition",
+              "slug": "harry-potter-and-the-sorcerers-stone",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "J.K. Rowling"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Mary GrandPré"
+                  }
+                }
+              ],
+              "description": "Harry Potter has never been the star of a Quidditch team, scoring points while riding a broom far above the ground. He knows no spells, has never helped to hatch a dragon, and has never worn a cloak of invisibility.\n\nAll he knows is a miserable life with the Dursleys, his horrible aunt and uncle, and their abominable son, Dudley - a great big swollen spoiled bully. Harry's room is a tiny closet at the foot of the stairs, and he hasn't had a birthday party in eleven years.\n\nBut all that is about to change when a mysterious letter arrives by owl messenger: a letter with an invitation to an incredible place that Harry - and anyone who reads about him - will find unforgettable.\n\nFor it's there that he finds not only friends, aerial sports, and magic in everything from classes to meals, but a great destiny that's been waiting for him... if Harry can survive the encounter."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/30499883/content.jpeg"
+              },
+              "title": "On the Night You Were Born",
+              "subtitle": null,
+              "slug": "on-the-night-you-were-born",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Nancy Tillman"
+                  }
+                }
+              ],
+              "description": "Nature celebrates the individuality of each child being born."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/23971221/6317e6baf6450aa00d280b9d0e4076f83e07f2ee.jpeg"
+              },
+              "title": "Eclipse",
+              "subtitle": null,
+              "slug": "eclipse",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Stephenie Meyer"
+                  }
+                }
+              ],
+              "description": "A beautifully written book by Stephanie Meyer. This book will take you on an adventure like no other, the epic romance of a 110 year old vampire frozen in the body of a 17 year old, an 18 year old human named Isabella Swan. Join Edward Cullen and Bella Swan on this action packed romance."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/30400844/4230457135207555.jpg"
+              },
+              "title": "The Lost Hero",
+              "subtitle": "Lost Hero",
+              "slug": "the-lost-hero",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Rick Riordan"
+                  }
+                }
+              ],
+              "description": "Jason has a problem. He doesn’t remember anything before waking up on a school bus holding hands with a girl.  Apparently, she’s his girlfriend Piper, his best friend is a kid named Leo, and they’re all students in the Wilderness School, a boarding school for “bad kids.”  What he did to end up here, Jason has no idea—except that everything seems very wrong.\r\n\r\nPiper has a secret.  Her father has been missing for three days, and her vivid nightmares reveal that he’s in terrible danger.  Now, her boyfriend doesn’t recognize her, and when a freak storm and strange creatures attack during a school field trip, she, Jason, and Leo are whisked away to someplace called Camp Half-Blood.  What is going on?\r\n\r\nLeo has a way with tools.  His new cabin at Camp Half-Blood is filled with them.  Seriously, the place beats the Wilderness School hands down, with its weapons, training, monsters, and fine-looking girls.  What’s troubling is the \"curse\" everyone keeps talking about, and that a camper’s gone missing.  Weirdest of all, his bunkmates insist they are all—including Leo—related to a god."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/22819899/6306310531049300.jpg"
+              },
+              "title": "Looking for Alaska",
+              "subtitle": "An Abundance of Katherines",
+              "slug": "looking-for-alaska",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "John Green"
+                  }
+                }
+              ],
+              "description": "Before. Miles “Pudge” Halter is done with his safe life at home. His whole life has been one big non-event, and his obsession with famous last words has only made him crave “the Great Perhaps” even more (Francois Rabelais, poet). He heads off to the sometimes crazy and anything-but-boring world of Culver Creek Boarding School, and his life becomes the opposite of safe. Because down the hall is Alaska Young. The gorgeous, clever, funny, sexy, self-destructive, screwed up, and utterly fascinating Alaska Young. She is an event unto herself. She pulls Pudge into her world, launches him into the Great Perhaps, and steals his heart. Then. . . . \r\nAfter. Nothing is ever the same"
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/59628647/92a603fe4a9514b1cc4375fcc546ae18b1c0f1e5.jpeg"
+              },
+              "title": "The Call of the Wild",
+              "subtitle": "The Original Classic Novel Featuring Photos from the Film",
+              "slug": "the-call-of-the-wild",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Jack London"
+                  }
+                }
+              ],
+              "description": "The Call of the Wild is a short adventure novel by Jack London published in 1903 and set in Yukon, Canada during the 1890s Klondike Gold Rush, when strong sled dogs were in high demand.\n\nThe central character of the novel is a dog named Buck.\n\nThe story opens at a ranch in Santa Clara Valley, California, when Buck is stolen from his home and sold into service as a sled dog in Alaska. He becomes progressively feral in the harsh environment, where he is forced to fight to survive and dominate other dogs. By the end, he sheds the veneer of civilization, and relies on primordial instinct and learned experience to emerge as a leader in the wild.\n\nJack London spent almost a year in the Yukon collecting material for the book.\n\nThe story was serialized in the Saturday Evening Post in the summer of 1903 and was published a month later in book form. The book’s great popularity and success made a reputation for London; much of its appeal derives from its simplicity as a tale of survival."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/30403099/efdde53db25fe86d121667a63e8b433846f2a2ea.jpeg"
+              },
+              "title": "The Snowden Files : The Inside Story of the World's Most Wanted Man",
+              "subtitle": "The Inside Story of the World's Most Wanted Man",
+              "slug": "the-snowden-files",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Luke Harding"
+                  }
+                }
+              ],
+              "description": "\"IT BEGAN WITH A TANTALIZING, ANONYMOUS EMAIL: \"I AM A SENIOR MEMBER OF THE INTELLIGENCE COMMUNITY.\" What followed was the most spectacular intelligence breach ever, brought about by one extraordinary man. Edward Snowden was a 29-year-old computer genius working for the National Security Agency when he shocked the world by exposing the near-universal mass surveillance programs of the United States government. His whistleblowing has shaken the leaders of nations worldwide, and generated a passionate public debate on the dangers of global monitoring and the threat to individual privacy. In a tour de force of investigative journalism that reads like a spy novel, award-winning Guardian reporter Luke Harding tells Snowden's astonishing story--from the day he left his glamorous girlfriend in Honolulu carrying a hard drive full of secrets, to the weeks of his secret-spilling in Hong Kong, to his battle for asylum and his exile in Moscow. For the first time, Harding brings together the many sources and strands of the story--touching on everything from concerns about domestic spying to the complicity of the tech sector--while also placing us in the room with Edward Snowden himself. The result is a gripping insider narrative--and a necessary and timely account of what is at stake for all of us in the new digital age\"--\n\n\"The story of Edward Snowden and his shocking surveillance revelations\"--"
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/29858357/2484661554595800.jpg"
+              },
+              "title": "Harry Potter and the Prisoner of Azkaban",
+              "subtitle": "Ravenclaw Edition",
+              "slug": "harry-potter-and-the-prisoner-of-azkaban",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "J.K. Rowling"
+                  }
+                }
+              ],
+              "description": "For twelve long years, the dread fortress of Azkaban held an infamous prisoner named Sirius Black. Convicted of killing thirteen people with a single curse, he was said to be the heir apparent to the Dark Lord, Voldemort.\n\nNow he has escaped, leaving only two clues as to where he might be headed: Harry Potter's defeat of You-Know-Who was Black's downfall as well. And the Azkaban guards heard Black muttering in his sleep, \"He's at Hogwarts . . . he's at Hogwarts.\"\n\nHarry Potter isn't safe, not even within the walls of his magical school, surrounded by his friends. Because on top of it all, there may well be a traitor in their midst."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/30400859/009dfef5d4047459368207b84ee126ad4fed0da3.jpeg"
+              },
+              "title": "The Son of Neptune",
+              "subtitle": null,
+              "slug": "the-son-of-neptune",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Rick Riordan"
+                  }
+                }
+              ],
+              "description": "Percy is confused. When he awoke from his long sleep, he didn't know much more than his name. His brain fuzz is lingering, even after the wolf Lupa told him he is a demigod and trained him to fight with the pen/sword in his pocket. Somehow Percy manages to make it to a camp for half-bloods, despite the fact that he has to keep killing monsters along the way. But the camp doesn't ring any bells with him. The only thing he can recall from his past is another name: Annabeth.\r\n\r\nHazel is supposed to be dead. When she lived before, she didn't do a very good job of it. Sure, she was an obedient daughter, even when her mother was possessed by greed. But that was the problem-when the Voice took over her mother and commanded Hazel to use her \"gift\" for an evil purpose, Hazel couldn't say no. Now, because of her mistake, the future of the world is at risk. Hazel wishes she could ride away from it all on the stallion that appears in her dreams.\r\n\r\nFrank is a klutz. His grandmother says he is descended from heroes and can be anything he wants to be, but he doesn't see it. He doesn't even know who his father is. He keeps hoping Apollo will claim him, because the only thing he is good at is archery-although not good enough to win camp war games. His bulky physique makes him feel like an ox, especially in front of Hazel, his closest friend at camp. He trusts her completely-enough to share his secret he holds close to his heart.\r\n\r\nBeginning at the \"other\" camp for half-bloods and extending as far as the land beyond the gods, this breathtaking second installment in the Heroes of Olympus series introduces new demigods, revives fearsome monsters, and features other remarkable creatures, all destined to play a part in the Prophecy of Seven."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/24941757/4d9af8fb0c1b636330a64e645cf026e287f72fab.jpeg"
+              },
+              "title": "Speak",
+              "subtitle": null,
+              "slug": "speak",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Laurie Halse Anderson"
+                  }
+                }
+              ],
+              "description": "Freshman year at Merryweather High is not going well for Melinda Sordino. She busted an end-of-summer party by calling the cops, and now her friends—and even strangers—all hate her. So she stops trying, stops talking. She retreats into her head, and all the lies and hypocrisies of high school become magnified, leaving her with no desire to talk to anyone anyway. But it’s not so comfortable in her head, either—there’s something banging around in there that she doesn’t want to think about. She can’t just go on like this forever. Eventually, she’s going to have to confront the thing she’s avoiding, the thing that happened at the party, the thing that nobody but her knows. She’s going to have to speak the truth."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/30399637/208697025088793-Of_Mice_and_Men_(1937_1st_ed_dust_jacket).jpg"
+              },
+              "title": "Of Mice and Men",
+              "subtitle": "Teacher's Deluxe Edition",
+              "slug": "of-mice-and-men",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "John Steinbeck"
+                  }
+                }
+              ],
+              "description": "The tragic story of George and Lennie, who move from one farm to another, looking for work. George is clever but Lennie's size and slowness is always getting him into trouble. One day the two men get a job on a farm. Things are going well until they meet Curley, the farm foreman and his unhappy wife. "
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/14019917/7017379795452299-58613224.jpg"
+              },
+              "title": "Harry Potter and the Deathly Hallows",
+              "subtitle": "Harry Potter y las reliquias de la muerte",
+              "slug": "harry-potter-and-the-deathly-hallows",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "J.K. Rowling"
+                  }
+                }
+              ],
+              "description": "As he climbs into the sidecar of Hagrid’s motorbike and takes to the skies, leaving Privet Drive for the last time, Harry Potter knows that Lord Voldemort and the Death Eaters are not far behind. The protective charm that has kept Harry safe until now is now broken, but he cannot keep hiding. The Dark Lord is breathing fear into everything Harry loves, and to stop him Harry will have to find and destroy the remaining Horcruxes. The final battle must begin – Harry must stand and face his enemy."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/8548995/27d187cb1a0bec4b21ebfc53658388bc8b071256.jpeg"
+              },
+              "title": "The Hobbit",
+              "subtitle": "Graphic Novel",
+              "slug": "the-hobbit",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "J.R.R. Tolkien"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Christopher Tolkien"
+                  }
+                }
+              ],
+              "description": "Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely traveling any farther than his pantry or cellar. But his contentment is disturbed when the wizard Gandalf and a company of dwarves arrive on his doorstep one day to whisk him away on an adventure. They have launched a plot to raid the treasure hoard guarded by Smaug the Magnificent, a large and very dangerous dragon. Bilbo reluctantly joins their quest, unaware that on his journey to the Lonely Mountain he will encounter both a magic ring and a frightening creature known as Gollum."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/16055859/5358972612351229-49130.jpg"
+              },
+              "title": "Harry Potter and the Goblet of Fire",
+              "subtitle": "Harry Potter y el cáliz de fuego",
+              "slug": "harry-potter-and-the-goblet-of-fire",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "J.K. Rowling"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Mary GrandPré"
+                  }
+                }
+              ],
+              "description": "Harry Potter is midway through his training as a wizard and his coming of age. Harry wants to get away from the pernicious Dursleys and go to the International Quidditch Cup. He wants to find out about the mysterious event that's supposed to take place at Hogwarts this year, an event involving two other rival schools of magic, and a competition that hasn't happened for a hundred years. He wants to be a normal, fourteen-year-old wizard. But unfortunately for Harry Potter, he's not normal - even by wizarding standards. And in his case, different can be deadly.\n\nPaperback edition of the fourth Harry Potter novel."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/649019/78518169543484c45ffb395c3e0209c29976d3f9.jpeg"
+              },
+              "title": "Ghost in the Wires: My Adventures as the World's Most Wanted Hacker",
+              "subtitle": "My Adventures as the World's Most Wanted Hacker",
+              "slug": "ghost-in-the-wires",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Kevin D. Mitnick"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Steve Wozniak"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "William L. Simon"
+                  }
+                }
+              ],
+              "description": "Kevin Mitnick's long-awaited memoir of computer hacking and FBI skirting, revealed now after seven years of government-mandated silence."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/7407969/101d1db40717bb170589895f6a3323f2a0c8008c.jpeg"
+              },
+              "title": "The Courage to Be Disliked",
+              "subtitle": "The Japanese Phenomenon That Shows You How to Change Your Life and Achieve Real Happiness",
+              "slug": "the-courage-to-be-disliked",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Ichiro Kishimi"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Fumitake Koga"
+                  }
+                }
+              ],
+              "description": "The Japanese phenomenon that teaches us the simple yet profound lessons required to liberate our real selves and find lasting happiness. The Courage to be Disliked shows you how to unlock the power within yourself to become your best and truest self, change your future and find lasting happiness. Using the theories of Alfred Adler, one of the three giants of 19th century psychology alongside Freud and Jung, the authors explain how we are all free to determine our own future free of the shackles of past experiences, doubts and the expectations of others. It's a philosophy that's profoundly liberating, allowing us to develop the courage to change, and to ignore the limitations that we and those around us can place on ourselves. The result is a book that is both highly accessible and profound in its importance. Millions have already read and benefited from its wisdom. Now that The Courage to be Disliked has been published for the first time in English, so can you."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/30400296/214994214060325.jpg"
+              },
+              "title": "Atomic Habits: An Easy and Proven Way to Build Good Habits and Break Bad Ones",
+              "subtitle": "An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+              "slug": "atomic-habits",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "James Clear"
+                  }
+                }
+              ],
+              "description": "No matter your goals, Atomic Habits offers a proven framework for improving—every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.\n\nIf you're having trouble changing your habits, the problem isn't you. The problem is your system. Bad habits repeat themselves again and again not because you don't want to change, but because you have the wrong system for change. You do not rise to the level of your goals. You fall to the level of your systems. Here, you'll get a proven system that can take you to new heights.\n\nClear is known for his ability to distill complex topics into simple behaviors that can be easily applied to daily life and work. Here, he draws on the most proven ideas from biology, psychology, and neuroscience to create an easy-to-understand guide for making good habits inevitable and bad habits impossible. Along the way, readers will be inspired and entertained with true stories from Olympic gold medalists, award-winning artists, business leaders, life-saving physicians, and star comedians who have used the science of small habits to master their craft and vault to the top of their field.\n\nLearn how to:\n- Make time for new habits (even when life gets crazy);\n- Overcome a lack of motivation and willpower;\n- Design your environment to make success easier;\n- Get back on track when you fall off course;\n...and much more.\n\nAtomic Habits will reshape the way you think about progress and success, and give you the tools and strategies you need to transform your habits--whether you are a team looking to win a championship, an organization hoping to redefine an industry, or simply an individual who wishes to quit smoking, lose weight, reduce stress, or achieve any other goal."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/27599647/a7e4c34149071bee70a437d0d9cee1bc56eacf47.jpeg"
+              },
+              "title": "A Court of Thorns and Roses",
+              "subtitle": null,
+              "slug": "a-court-of-thorns-and-roses",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Sarah J. Maas"
+                  }
+                }
+              ],
+              "description": "When nineteen-year-old huntress Feyre kills a wolf in the woods, a beast-like creature arrives to demand retribution. Dragged to a treacherous magical land she only knows about from legends, Feyre discovers that her captor is not truly a beast, but one of the lethal, immortal faeries who once ruled their world.\n\nAs she dwells on his estate, her feelings for the faerie, Tamlin, transform from icy hostility into a fiery passion that burns through every lie and warning she’s been told about the beautiful, dangerous world of the Fae. But an ancient, wicked shadow over the faerie lands is growing, and Feyre must find a way to stop it . . . or doom Tamlin—and his world—forever."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/29262698/2170450621507933-58613451.jpg"
+              },
+              "title": "Harry Potter and the Order of the Phoenix",
+              "subtitle": "The Illustrated Edition",
+              "slug": "harry-potter-and-the-order-of-the-phoenix",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "J.K. Rowling"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Mary GrandPré"
+                  }
+                }
+              ],
+              "description": "The book that took the world by storm.... In his fifth year at Hogwart's, Harry faces challenges at every turn, from the dark threat of He-Who-Must-Not-Be- Named and the unreliability of the government of the magical world to the rise of Ron Weasley as the keeper of the Gryffindor Quidditch Team. Along the way he learns about the strength of his friends, the fierceness of his enemies, and the meaning of sacrifice."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/19724535/8038369521613846-58613345.jpg"
+              },
+              "title": "Harry Potter and the Half-Blood Prince",
+              "subtitle": "Movie Poster Book",
+              "slug": "harry-potter-and-the-half-blood-prince",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "J.K. Rowling"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Mary GrandPré"
+                  }
+                }
+              ],
+              "description": "The war against Voldemort is not going well; even the Muggles have been affected. Dumbledore is absent from Hogwarts for long stretches of time, and the Order of the Phoenix has already suffered losses.\n\nAnd yet . . . As with all wars, life goes on. Sixth-year students learn to Apparate. Teenagers flirt and fight and fall in love. Harry receives some extraordinary help in Potions from the mysterious Half-Blood Prince. And with Dumbledore's guidance, he seeks out the full, complex story of the boy who became Lord Voldemort -- and thus finds what may be his only vulnerability."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/25614271/4833571895209920-lf.jpeg"
+              },
+              "title": "Harry Potter and the Chamber of Secrets",
+              "subtitle": "Ilustrované vydání",
+              "slug": "harry-potter-and-the-chamber-of-secrets",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "J.K. Rowling"
+                  }
+                }
+              ],
+              "description": "The Dursleys were so mean and hideous that summer that all Harry Potter wanted was to get back to the Hogwarts School for Witchcraft and Wizardry. But just as he's packing his bags, Harry receives a warning from a strange, impish creature named Dobby who says that if Harry Potter returns to Hogwarts, disaster will strike.\n\nAnd strike it does. For in Harry's second year at Hogwarts, fresh torments and horrors arise, including an outrageously stuck-up new professor, Gilderoy Lockhart, a spirit named Moaning Myrtle who haunts the girls' bathroom, and the unwanted attentions of Ron Weasley's younger sister, Ginny. But each of these seem minor annoyances when the real trouble begins, and someone, or something, starts turning Hogwarts students to stone. Could it be Draco Malfoy, a more poisonous rival than ever? Could it possibly be Hagrid, whose mysterious past is finally told? Or could it be the one everyone at Hogwarts most suspects: Harry Potter himself?"
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/4568921/f2d10d2b2e76adbd13477c6ed2a462505375d2f0.jpeg"
+              },
+              "title": "Extreme Ownership: How U.S. Navy SEALs Lead and Win",
+              "subtitle": "How U.S. Navy SEALs Lead and Win",
+              "slug": "extreme-ownership",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Jocko Willink"
+                  }
+                }
+              ],
+              "description": "Two highly decorated Navy SEALs, now successful businessmen, demonstrate how to lead and win in business and in life with principles learned on the battlefield, in a revised edition that includes a new foreword, photo insert and Q-and-A section."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/12189775/33c23b45601b0b1177d944ac993a810370a9d101.jpeg"
+              },
+              "title": "The Titan's Curse",
+              "subtitle": "Book Three",
+              "slug": "the-titans-curse",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Rick Riordan"
+                  }
+                }
+              ],
+              "description": "When Percy Jackson gets an urgent distress call from his friend Grover, he immediately prepares for battle. He knows he will need his powerful demigod allies at his side, his trusty bronze sword Riptide, and… a ride from his mom.\n\nThe demigods rush to the rescue to find that Grover has made an important discovery: two powerful half-bloods whose parentage is unknown. But that’s not all that awaits them. The titan lord Kronos has devised his most treacherous plot yet, and the young heroes have just fallen prey.\n\nThey’re not the only ones in danger. An ancient monster has arisen — one rumored to be so powerful it could destroy Olympus — and Artemis, the only goddess who might know how to track it, is missing. Now Percy and his friends, along with the Hunters of Artemis, have only a week to find the kidnapped goddess and solve the mystery of the monster she was hunting. Along the way, they must face their most dangerous challenge yet: the chilling prophecy of the titan’s curse."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/28784756/910d64bcf94482aa675ffeb72ed1053c4e661f10.jpeg"
+              },
+              "title": "The Last Olympian",
+              "subtitle": "The Last Olympian",
+              "slug": "the-last-olympian",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Rick Riordan"
+                  }
+                }
+              ],
+              "description": "The long-awaited prophecy surrounding Percy Jackson's sixteenth birthday unfolds as he leads an army of young demigods to stop Kronos in his advance on New York City, while the Olympians struggle to contain the rampaging monster, Typhon."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/60021278/6c8b964336422acf4911e6ac90403f5afb87a6b7.jpeg"
+              },
+              "title": "Rich Dad Poor Dad: Was die Reichen ihren Kindern über Geld beibringen",
+              "subtitle": "Was die Reichen ihren Kindern über Geld beibringen",
+              "slug": "rich-dad-poor-dad-was-die-reichen-ihren-kindern-uber-geld-beibringen",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Robert T. Kiyosaki"
+                  }
+                }
+              ],
+              "description": "Personal finance author and lecturer Robert T. Kiyosaki developed his unique economic perspective from two very different influences - his two fathers. This text lays out Kiyosaki's philosophy and his relationship with money."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/1189734/58ebce30f7d6cd256d0e9e3eb7b2cd2434995149.jpeg"
+              },
+              "title": "Gender Queer: A Memoir",
+              "subtitle": "A Memoir",
+              "slug": "gender-queer",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Maia Kobabe"
+                  }
+                }
+              ],
+              "description": "In 2014, Maia Kobabe, who uses e/em/eir pronouns, thought that a comic of reading statistics would be the last autobiographical comic e would ever write. At the time, it was the only thing e felt comfortable with strangers knowing about em. Now, Gender Queer is here. Maia's intensely cathartic autobiography charts eir journey of self-identity, which includes the mortification and confusion of adolescent crushes, grappling with how to come out to family and society, bonding with friends over erotic gay fanfiction, and facing the trauma and fundamental violation of pap smears. \r\n\r\nStarted as a way to explain to eir family what it means to be nonbinary and asexual, Gender Queer is more than a personal story: it is a useful and touching guide on gender identity―what it means and how to think about it―for advocates, friends, and humans everywhere."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/39830110/4a97d3e9677e2a2a1191a2db2e0f5fd20e62ba5a.jpeg"
+              },
+              "title": "The House of Hades",
+              "subtitle": "The House of Hades",
+              "slug": "the-house-of-hades",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Rick Riordan"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Nick Chamian"
+                  }
+                }
+              ],
+              "description": "Hazel stands at a crossroads. She and the remaining crew of the Argo II could return home with the Athena Parthenos statue and try to stop Camp Half-Blood and Camp Jupiter from going to war. Or they could continue their quest to find the House of Hades, where they might be able to open the Doors of Death, rescue their friends Percy and Annabeth from Tartarus, and prevent monsters from being reincarnated in the mortal world. Whichever road they decide to take, they have to hurry, because time is running out. Gaea, the bloodthirsty Earth Mother, has set the date of August 1 for her rise to power.\n\nAnnabeth and Percy are overwhelmed. How will the two of them make it through Tartarus? Starving, thirsty, and in pain, they are barely able to stumble on in the dark and poisonous landscape that holds new horrors at every turn. They have no way of locating the Doors of Death. Even if they did, a legion of Gaea's strongest monsters guards the Doors on the Tartarus side. Annabeth and Percy can't exactly launch a frontal assault.\n\nDespite the terrible odds, Hazel, Annabeth, Percy, and the other demigods of the prophecy know that there is only one choice: to attempt the impossible. Not just for themselves, but for everyone they love. Even though love can be the riskiest choice of all.\n\nJoin the demigods as they face their biggest challenges yet in The House of Hades, the hair-raising penultimate book in the best-selling Heroes of Olympus series."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/2923550/a24f25e8f8188ff8a569341c0ba983f9ba55c54a.jpeg"
+              },
+              "title": "New Moon",
+              "subtitle": "The Graphic Novel",
+              "slug": "new-moon",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Stephenie Meyer"
+                  }
+                }
+              ],
+              "description": "Love stories. Horror fiction. Now in a Special Trade Demy Paperback Edition. The dramatic sequel to TWILIGHT, following the tale of Bella, a teenage girl whose love for a vampire gets her into trouble. I stuck my finger under the edge of the paper and jerked it under the tape. 'Shoot, ' I muttered when the paper sliced my finger. A single drop of blood oozed from the tiny cut. It all happened very quickly then. 'No!' Edward roared ... Dazed and disorientated, I looked up from the bright red blood pulsing out of my arm - and into the fevered eyes of the six suddenly ravenous vampires. For Bella Swan, there is one thing more important than life itself: Edward Cullen. But being in love with a vampire is more dangerous than Bella ever could have imagined. Edward has already rescued Bella from the clutches of an evil vampire but now, as their daring relationship threatens all that is near and dear to them, they realise their troubles may just be beginning."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/14892533/513564-L.jpg"
+              },
+              "title": "No More Mr. Nice Guy",
+              "subtitle": null,
+              "slug": "no-more-mr-nice-guy",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Robert A. Glover"
+                  }
+                }
+              ],
+              "description": null
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/30441853/024e55dff6614408ef9a3a5a8e0dece7f860d26a.jpeg"
+              },
+              "title": "The Boy in the Striped Pyjamas",
+              "subtitle": null,
+              "slug": "the-boy-in-the-striped-pyjamas",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "John Boyne"
+                  }
+                }
+              ],
+              "description": "Nine year old Bruno knows nothing of the Final Solution and the Holocaust.\n\nHe’s oblivious to the appalling cruelties being inflicted on the people of Europe by his country.\n\nAll he knows is that he has moved from Berlin to a desolate area where he has no one to play with.\n\nUntil he meets Shmuel.\n\nShmuel lives in a strange parallel existence on the other side of the adjoining wire fence, where everyone wears a uniform of striped pyjamas.\n\nDespite the wire fence separating them, the two boys become best friends.\n\nAs they grow closer, Bruno starts to learn the terrible truth that lies beyond the fence, and what life is like for his friend.\n\nJohn Boyne’s classic novel explores the friendship and loss of innocence of Bruno and Shmuel, during one of the worst points in history."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/30503723/6448918f3e43a99a182b4f1504693b5cb0e0c1c9.jpeg"
+              },
+              "title": "The Way of Men",
+              "subtitle": null,
+              "slug": "the-way-of-men",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Jack   Donovan"
+                  }
+                }
+              ],
+              "description": "\"What is masculinity? Ask ten men and you'll get ten vague, conflicting answers. Unlike any book of its kind, The Way of Men offers a simple, straightforward answer-without getting bogged down in religion, morality, or politics. It's a guide for understanding who men have been and the challenges men face today. The Way of Men captures the silent, stifling rage of men everywhere who find themselves at odds with the over-regulated, over-civilized, politically correct modern world. If you've ever closed your eyes and wished for one day as a lion, this book is for you.\"--Publisher description."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/book_mappings/7336052/d2861306c11c2dac82d366d310771beaa45718b5.jpeg"
+              },
+              "title": "Python Crash Course, 1st Edition",
+              "subtitle": "A Hands-On, Project-Based Introduction to Programming",
+              "slug": "python-crash-course-1st-edition",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Eric Matthes"
+                  }
+                }
+              ],
+              "description": "Learn Python—Fast! Python Crash Course is a fast-paced, thorough introduction to Python that will have you writing programs, solving problems, and making things that work in no time. In the first half of the book, you’ll learn about basic programming concepts, such as lists, dictionaries, classes, and loops, and practice writing clean and readable code with exercises for each topic. You’ll also learn how to make your programs interactive and how to test your code safely before adding it to a project. In the second half of the book, you’ll put your new knowledge into practice with three substantial projects: a Space Invaders–inspired arcade game, data visualizations with Python’s super-handy libraries, and a simple web app you can deploy online. As you work through Python Crash Course you’ll learn how to: *Use powerful Python libraries and tools, including matplotlib, NumPy, and Pygal *Make 2D games that respond to keypresses and mouse clicks, and that grow more difficult as the game progresses *Work with data to generate interactive visualizations *Create and customize Web apps and deploy them safely online *Deal with mistakes and errors so you can solve your own programming problems If you’ve been thinking seriously about digging into programming, Python Crash Course will get you up to speed and have you writing real programs fast. Why wait any longer? Start your engines and code! Uses Python 2 and 3"
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/30530267/content.jpeg"
+              },
+              "title": "Young Samurai",
+              "subtitle": null,
+              "slug": "young-samurai-2010",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Chris Bradford"
+                  }
+                }
+              ],
+              "description": "On the run with no sensei to guide him, Jack Fletcher journeys along the treacherous road to the port of Nagasaki, where he hopes to find a ship home to England."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/30506422/f658b36ab8ce2786bf757c82cb3573f354d656ed.jpeg"
+              },
+              "title": "The Way of the Sword",
+              "subtitle": null,
+              "slug": "the-way-of-the-sword",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Chris Bradford"
+                  }
+                }
+              ],
+              "description": "One year of training in samurai school and Jack Fletcher is in real trouble . . . Not only is he struggling to prepare for the Circle of Three, an ancient ritual that tests a samurai’s courage, skill and spirit to the limit, he’s caught in a running battle with fellow student Kazuki and his gang. But these are the least of Jack’s problems. He knows his deadly rival – the ninja Dragon Eye - could strike at any moment. Jack possesses the very thing he will kill for. Can Jack master the Way of the Sword in time to survive a fight to the death?"
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/30575029/29570801._SX98_.jpg"
+              },
+              "title": "Becoming a Barbarian",
+              "subtitle": null,
+              "slug": "becoming-a-barbarian",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Jack   Donovan"
+                  }
+                }
+              ],
+              "description": null
+            }
+          },
+          {
+            "book": {
+              "image": null,
+              "title": "SSH Mastery",
+              "subtitle": "OpenSSH, PuTTY, Tunnels and Keys",
+              "slug": "ssh-mastery",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Michael W. Lucas"
+                  }
+                }
+              ],
+              "description": null
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/30608949/7294471-L.jpg"
+              },
+              "title": "HIGGS - The Invention and Discovery of the ‘God Particle’",
+              "subtitle": null,
+              "slug": "higgs-the-invention-and-discovery-of-the-god-particle",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Jim Baggott"
+                  }
+                }
+              ],
+              "description": "The hunt for the Higgs particle has involved the biggest, most expensive experiment ever. So exactly what is this particle? Why does it matter so much? What does it tell us about the Universe? Did the discovery announced on 4 July 2012 finish the search? And was finding it really worth all the effort? The short answer is yes. The Higgs field is proposed as the way in which particles gain mass - a fundamental property of matter. It's the strongest indicator yet that the Standard Model of physics really does reflect the basic building blocks of our Universe. Little wonder the hunt and discovery of this new particle produced such intense media interest. Here, Jim Baggott explains the science behind the discovery, looking at how the concept of a Higgs field was invented, how the vast experiment was carried out, and its implications on our understanding of all mass in the Universe."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/59729065/a317633c1967bd50b647d5417a78058f79364727.jpeg"
+              },
+              "title": "The United States Constitution",
+              "subtitle": null,
+              "slug": "the-united-states-constitution-1787",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Founding Fathers"
+                  }
+                }
+              ],
+              "description": "Collected here in one affordable volume are the most important documents of the United States of America: The Constitution of the United States of America, with the Bill of Rights and all of the Amendments; The Declaration of Independence; and the Articles of Confederation. These three documents are the basis for our entire way of life. Every citizen should have a copy. Published by Textbook Classics Printed in the United States of America"
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/30707731/3559167047761380.jpeg"
+              },
+              "title": "Fourth Wing",
+              "subtitle": null,
+              "slug": "fourth-wing",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Rebecca Yarros"
+                  }
+                }
+              ],
+              "description": "\"Twenty-year-old Violet Sorrengail was supposed to enter the Scribe Quadrant, living a quiet life among books and history. Now, the commanding general―also known as her tough-as-talons mother―has ordered Violet to join the hundreds of candidates striving to become the elite of Navarre: dragon riders.\n\nBut when you’re smaller than everyone else and your body is brittle, death is only a heartbeat away...because dragons don’t bond to “fragile” humans. They incinerate them.\n\nWith fewer dragons willing to bond than cadets, most would kill Violet to better their own chances of success. The rest would kill her just for being her mother’s daughter―like Xaden Riorson, the most powerful and ruthless wingleader in the Riders Quadrant.\n\nShe’ll need every edge her wits can give her just to see the next sunrise.\n\nYet, with every day that passes, the war outside grows more deadly, the kingdom's protective wards are failing, and the death toll continues to rise. Even worse, Violet begins to suspect leadership is hiding a terrible secret.\"-- Provided by Amazon"
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/editions/31328682/144173754927410.jpg"
+              },
+              "title": "A Child Called It: One Child's Courage to Survive",
+              "subtitle": "One Child's Courage to Survive",
+              "slug": "a-child-called-it",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Dave Pelzer"
+                  }
+                }
+              ],
+              "description": "This book chronicles the unforgettable account of one of the most severe child abuse cases in California history. It is the story of Dave Pelzer, who was brutally beaten and starved by his emotionally unstable, alcoholic mother: a mother who played tortuous, unpredictable games--games that left him nearly dead. He had to learn how to play his mother's games in order to survive because she no longer considered him a son, but a slave; and no longer a boy, but an \"it.\"\n\nDave's bed was an old army cot in the basement, and his clothes were torn and raunchy. When his mother allowed him the luxury of food, it was nothing more than spoiled scraps that even the dogs refused to eat. The outside world knew nothing of his living nightmare. He had nothing or no one to turn to, but his dreams kept him alive--dreams of someone taking care of him, loving him and calling him their son."
+            }
+          },
+          {
+            "book": {
+              "image": null,
+              "title": "The Perfect Day Formula: How to Own the Day and Control Your Life",
+              "subtitle": "How to Own the Day and Control Your Life",
+              "slug": "the-perfect-day-formula-how-to-own-the-day-and-control-your-life",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Craig Ballantyne"
+                  }
+                }
+              ],
+              "description": null
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/60110234/46b055fba41b577647f72d6ed69239629689c958.jpeg"
+              },
+              "title": "Way of the Warrior, The",
+              "subtitle": null,
+              "slug": "way-of-the-warrior-the",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Chris Bradford"
+                  }
+                }
+              ],
+              "description": "Shipwrecked on the shore of Japan, twelve-year-old Jack Fletcher is wounded and alone. His father and the entire crew have been slaughtered by ninja pirates. Jack's last remaining possession is his father's rudder, an invaluable book of maps and notes about the world's uncharted oceans. Masamoto-sama, one of Japan's greatest samurai, rescues Jack, adopts him, and sends him to samurai school, where Jack will be trained in the Way of the Warrior. Will it be enough to help Jack defeat Dragon Eye, the ruthless ninja who is intent on stealing the rudder at any cost?"
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/60341570/ce1f2c1221ce05565a545afd6b9fa36e3437e68d.jpeg"
+              },
+              "title": "The Wisdom of Insecurity",
+              "subtitle": "A Message for an Age of Anxiety",
+              "slug": "the-wisdom-of-insecurity-197",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Alan Watts"
+                  }
+                }
+              ],
+              "description": null
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/60164953/46a5924e2f2e0f06bdad2f9455805b5a811e94ac.jpeg"
+              },
+              "title": "Blue Team Handbook: Incident Response Edition",
+              "subtitle": "Incident Response Edition",
+              "slug": "blue-team-handbook",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "D. W. Murdoch"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Don Murdoch Gse"
+                  }
+                }
+              ],
+              "description": "BTHb:INRE - Version 2.2 now available.Voted #3 of the 100 Best Cyber Security Books of All Time by Vinod Khosla, Tim O'Reilly andMarcus Spoons Stevens on BookAuthority.com as of 06/09/2018!The Blue Team Handbook is a \"zero fluff\" reference guide for cyber security incident responders, security engineers, and InfoSec pros alike. The BTHb includes essential information in a condensed handbook format. Main topics include the incident response process, how attackers work, common tools for incident response, a methodology for network analysis, common indicators of compromise, Windows and Linux analysis processes, tcpdump usage examples, Snort IDS usage, packet headers, and numerous other quick reference topics. The book is designed specifically to share \"real life experience\", so it is peppered with practical techniques from the authors' extensive career in handling incidents. Whether you are writing up your cases notes, analyzing potentially suspicious traffic, or called in to look over a misbehaving server - this book should help you handle the case and teach you some new techniques along the way. Version 2.2 updates: - *** A new chapter on Indicators of Compromise added. - Table format slightly revised throughout book to improve readability. - Dozens of paragraphs updated and expanded for readability and completeness. - 15 pages of new content since version 2.0."
+            }
+          },
+          {
+            "book": {
+              "image": null,
+              "title": "Man Up: How to Cut the Bullsh!t and Kick @ss in Business",
+              "subtitle": "How to Cut the Bullsh!t and Kick @ss in Business",
+              "slug": "man-up-how-to-cut-the-bullsh-t-and-kick-ss-in-business",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Bedros Keuilian"
+                  }
+                }
+              ],
+              "description": null
+            }
+          },
+          {
+            "book": {
+              "image": null,
+              "title": "Offensive Countermeasures: The Art of Active Defense",
+              "subtitle": "The Art of Active Defense",
+              "slug": "offensive-countermeasures",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "John Strand"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Paul Asadoorian"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Ethan Robish"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Benjamin Donnelly"
+                  }
+                }
+              ],
+              "description": null
+            }
+          },
+          {
+            "book": {
+              "image": null,
+              "title": "How You Bear It: Triumph and Resiliency in Life",
+              "subtitle": "Triumph and Resiliency in Life",
+              "slug": "how-you-bear-it",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Tom DeBlass"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Louis Martin"
+                  }
+                }
+              ],
+              "description": null
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/6205525/8c3a7c27ba02822d3083c1cca67081c35d702c18.jpeg"
+              },
+              "title": "The Perks of Being a Wallflower",
+              "subtitle": null,
+              "slug": "the-perks-of-being-a-wallflower",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Stephen Chbosky"
+                  }
+                }
+              ],
+              "description": "Standing on the fringes of life...\noffers a unique perspective. But there comes a time to see\nwhat it looks like from the dance floor.\n\nThis haunting novel about the dilemma of passivity vs. passion marks the stunning debut of a provocative new voice in contemporary fiction: The Perks of Being A WALLFLOWER\n\nThis is the story of what it's like to grow up in high school. More intimate than a diary, Charlie's letters are singular and unique, hilarious and devastating. We may not know where he lives. We may not know to whom he is writing. All we know is the world he shares. Caught between trying to live his life and trying to run from it puts him on a strange course through uncharted territory. The world of first dates and mixed tapes, family dramas and new friends. The world of sex, drugs, and The Rocky Horror Picture Show, when all one requires is that the perfect song on that perfect drive to feel infinite.\n\nThrough Charlie, Stephen Chbosky has created a deeply affecting coming-of-age story, a powerful novel that will spirit you back to those wild and poignant roller coaster days known as growing up."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/60377189/d4f1529d98553d34cbf550d7e0e78cee7bf1a0ee.jpeg"
+              },
+              "title": "Prepared: A Manual for Surviving Worst-Case Scenarios",
+              "subtitle": "A Manual for Surviving Worst-Case Scenarios",
+              "slug": "prepared-a-manual-for-surviving-worst-case-scenarios",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Mike Glover"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Jack Carr"
+                  }
+                }
+              ],
+              "description": "NATIONAL BESTSELLER A former Green Beret’s indispensable course in preparedness, teaching the keys to building a resilient and fearless life Most people think that being prepared for catastrophe means stocking up on MREs and building a bunker in their backyard, but this approach leaves you vulnerable in the real world of car accidents, natural disasters, grid failures, and global pandemics. Prepared overturns today’s paranoid survival wisdom and teaches the foundational skills of preparedness that will not only help you build situational awareness and achieve greater mobility but that will also help you build resilient mental habits. After 20 years in the US Army, Special Forces, and as a government contractor for the CIA, Mike Glover has trained thousands of men, women, and families in the art and science of survival. In this book, he shows you how to: • Harness your brain chemistry to eliminate the freeze response and increase your stress tolerance during a crisis • Fortify your home by learning how to use and store essential foods, water, supplies, first aid, and ammunition in your everyday life • Equip your vehicle with sufficient first aid, so you can respond to injuries even before an ambulance arrives—dramatically increasing your chance of survival in an accident Drawing on Glover’s most dire experiences in combat and in the real world, this book shows you how almost no disaster is more powerful than someone who is truly prepared. For Glover, surviving catastrophe is not about fearing crisis, but creating more resilient habits so that you can be ready for whatever comes your way."
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/31723415/9a2243fb8d02052372849a1c5952b6c56bd5ba7d.jpeg"
+              },
+              "title": "Make Your Own Lunch: How to Live an Epically Epic Life through Work, Travel, Wonder, and (Maybe) College",
+              "subtitle": "How to Live an Epically Epic Life through Work, Travel, Wonder, and (Maybe) College",
+              "slug": "make-your-own-lunch-how-to-live-an-epically-epic-life-through-work-travel-wonder-and-maybe-college",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Ryan Porter"
+                  }
+                }
+              ],
+              "description": "214 pages ; 23 cm"
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/1105432/fcf50cad6950b8c5eb3c1702134313c2421a89dc.jpeg"
+              },
+              "title": "The Book of PF, 3rd Edition: A No-Nonsense Guide to the OpenBSD Firewall",
+              "subtitle": "A No-Nonsense Guide to the OpenBSD Firewall",
+              "slug": "the-book-of-pf-3rd-edition",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Peter N.M. Hansteen"
+                  }
+                }
+              ],
+              "description": "OpenBSD’s stateful packet filter, PF, is the heart of the OpenBSD firewall. With more and more services placing high demands on bandwidth and an increasingly hostile Internet environment, no sysadmin can afford to be without PF expertise. The third edition of The Book of PF covers the most up-to-date developments in PF, including new content on IPv6, dual stack configurations, the \"queues and priorities\" traffic-shaping system, NAT and redirection, wireless networking, spam fighting, failover provision ing, logging, and more. You’ll also learn how to: –Create rule sets for all kinds of network traffic, whether crossing a simple LAN, hiding behind NAT, traversing DMZs, or spanning bridges or wider networks –Set up wireless networks with access points, and lock them down using authpf and special access restrictions –Maximize flexibility and service availability via CARP, relayd, and redirection –Build adaptive firewalls to proactively defend against attackers and spammers –Harness OpenBSD’s latest traffic-shaping system to keep your network responsive, and convert your existing ALTQ configurations to the new system –Stay in control of your traffic with monitoring and visualization tools (including NetFlow) The Book of PF is the essential guide to building a secure network with PF. With a little effort and this book, you’ll be well prepared to unlock PF’s full potential."
+            }
+          },
+          {
+            "book": {
+              "image": null,
+              "title": "A More Complete Beast",
+              "subtitle": null,
+              "slug": "a-more-complete-beast-2018",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Jack   Donovan"
+                  }
+                }
+              ],
+              "description": null
+            }
+          },
+          {
+            "book": {
+              "image": null,
+              "title": "Service Provider Networks: Design and Architecture Perspective",
+              "subtitle": "Design and Architecture Perspective",
+              "slug": "service-provider-networks",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Orhan Ergun"
+                  }
+                }
+              ],
+              "description": null
+            }
+          },
+          {
+            "book": {
+              "image": null,
+              "title": "Big Little Book On BGP: BGP Refresh In Minutes",
+              "subtitle": "BGP Refresh In Minutes",
+              "slug": "big-little-book-on-bgp",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "U V Omos"
+                  }
+                }
+              ],
+              "description": null
+            }
+          },
+          {
+            "book": {
+              "image": null,
+              "title": "The Art Of Being Ruthless: How To Be Bold, Find Your Spine And Take Control Of Your Life",
+              "subtitle": "How To Be Bold, Find Your Spine And Take Control Of Your Life",
+              "slug": "the-art-of-being-ruthless",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Michael Sloan"
+                  }
+                }
+              ],
+              "description": null
+            }
+          },
+          {
+            "book": {
+              "image": null,
+              "title": "How to Start a Locks and Locksmithing Business, The Best of Locksmith Books: Start with Crowd Funding, Get Grants & Get the Right Locksmithing Tools & Locksmith Training",
+              "subtitle": "Start with Crowd Funding, Get Grants & Get the Right Locksmithing Tools & Locksmith Training",
+              "slug": "how-to-start-a-locks-and-locksmithing-business-the-best-of-locksmith-books",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Brian  Mahoney"
+                  }
+                }
+              ],
+              "description": null
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/32304330/52ace6fdeb79adc3f9cd0c2a184b5cb822743f06.jpeg"
+              },
+              "title": "Professional Penetration Testing: Creating and Learning in a Hacking Lab",
+              "subtitle": "Creating and Learning in a Hacking Lab",
+              "slug": "professional-penetration-testing-creating-and-learning-in-a-hacking-lab",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Thomas Wilhelm ISSMP  CISSP  SCSECA  and SCNA"
+                  }
+                },
+                {
+                  "author": {
+                    "name": "Matthew Neely"
+                  }
+                }
+              ],
+              "description": "Professional Penetration Testing walks you through the entire process of setting up and running a pen test lab. Penetration testing-the act of testing a computer network to find security vulnerabilities before they are maliciously exploited-is a crucial component of information security in any organization. With this book, you will find out how to turn hacking skills into a professional career. Chapters cover planning, metrics, and methodologies; the details of running a pen test, including identifying and verifying vulnerabilities; and archiving, reporting and management practices. Author Thomas Wilhelm has delivered penetration testing training to countless security professionals, and now through the pages of this book you can benefit from his years of experience as a professional penetration tester and educator. After reading this book, you will be able to create a personal penetration test lab that can deal with real-world vulnerability scenarios. All disc-based content for this title is now available on the Web. Find out how to turn hacking and pen testing skills into a professional career Understand how to conduct controlled attacks on a network through real-world examples of vulnerable and exploitable servers Master project management skills necessary for running a formal penetration test and setting up a professional ethical hacking business Discover metrics and reporting methodologies that provide experience crucial to a professional penetration tester"
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/external_data/1387272/4fb5f998d1fe888026ed38119cebeca13a45e27a.jpeg"
+              },
+              "title": "Kelly Hill",
+              "subtitle": null,
+              "slug": "kelly-hill",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "Laura  Gibson"
+                  }
+                }
+              ],
+              "description": null
+            }
+          },
+          {
+            "book": {
+              "image": {
+                "url": "https://assets.hardcover.app/edition/32304365/b6adbb61bce375a01a9dacde3eab9376381dcdda.jpeg"
+              },
+              "title": "Men - The Gods of Love: Manhoods Journey to Love",
+              "subtitle": "Manhoods Journey to Love",
+              "slug": "men-the-gods-of-love",
+              "contributions": [
+                {
+                  "author": {
+                    "name": "David G. Eigen"
+                  }
+                }
+              ],
+              "description": "Men - The Gods of Love gives men easy-to-understand guidelines and illustrates their inherent and necessary birthright to feel. It simply frees men from the chains that bind them and allows them to be powerful, loving men. Dr. Eigen's book courageously addresses the conflict between the present patriarchal model and men's heart-centered heritage, which is to be The Gods of Love. This is Manhood's Journey that must be undertaken, but is blocked by the patriarchal dictates. Men must connect to their hearts to feel fulfilled. Men unsuccessfully seek fulfillment for their inner emptiness, externally, by accumulating."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
