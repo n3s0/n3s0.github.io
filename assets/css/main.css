@@ -22,7 +22,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Fira Code", Monaco, Consolas, "Ubuntu Mono", monospace;
-  font-size: var(--font-size);
+  font-size: calc(var(--font-size) * 1.15);
   line-height: var(--line-height);
   background-color: var(--background);
   color: var(--foreground);
@@ -33,24 +33,24 @@ body {
 }
 
 h1 {
-  font-size: calc(var(--font-size) * 1.45);
+  font-size: calc(var(--font-size) * 1.75);
   letter-spacing: 0;
 }
 
 h2 {
-  font-size: calc(var(--font-size) * 1.35);
+  font-size: calc(var(--font-size) * 1.55);
   letter-spacing: 0;
 }
 
 h3 {
-  font-size: calc(var(--font-size) * 1.15);
+  font-size: calc(var(--font-size) * 1.30);
   letter-spacing: 0;
 }
 
 h4,
 h5,
 h6 {
-  font-size: calc(var(--font-size) * 1);
+  font-size: calc(var(--font-size) * 8);
   letter-spacing: 0;
 }
 

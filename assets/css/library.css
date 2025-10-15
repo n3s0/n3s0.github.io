@@ -8,39 +8,39 @@
   border-radius: 8px;
 }
 
-.card_container_link {
+.card-container-link {
   text-decoration: none;
   color: var(--foreground);
 }
 
-.content_container_wrapper {
+.content-container-wrapper {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   padding: 15px;
 }
 
-.content_container_flex {
-  flex: 1;
+.content-container-flex {
+  flex: 3;
   align-self: center;
   margin-right: 20px;
-  padding: 10px 0px 0px 0px;
+  padding-top: 10px;
 }
 
-.book_cover_container_flex {
+.book-cover-container-flex {
   flex: 1;
   margin-top: auto;
   margin-bottom: 10px;
   padding: 10px;
 }
 
-.book_cover {
+.book-cover {
   border-radius: 8px;
-  width: 50%;
+  width: 80%;
   height: 100%;
 }
 
-.card_title {
+.card-title {
   position: relative;
   color: var(--foreground);
   margin-top: 10 !important;
@@ -52,17 +52,17 @@
   letter-spacing: 0;
 }
 
-.card_description {
+.card-description {
   padding-bottom: 10px;
   font-size: calc(var(--font-size) * 1.15);
 }
 
-.card_author {
+.card-author {
   padding-top: 5px;
   font-weight: bold;
   font-size: calc(var(--font-size) * 1.25);
 }
 
-.card_author::before {
+.card-author::before {
   content: "-- ";
 }
