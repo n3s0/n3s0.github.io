@@ -1,15 +1,10 @@
 ---
-title: "Fortinet: Negate Rules on ForiGate Policies."
+title: "Negate Rules on ForiGate Policies."
+author: "Timtohy Loftus (n3s0)"
 date: 2025-01-31T16:25:27-06:00
+lastmod: 2025-10-15
 summary: "Notes for setting up negate rules on FortiGate policies."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["netadmin"]
 ---
 
