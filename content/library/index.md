@@ -11,7 +11,7 @@ making recommendations or providing my reviews on this page.
 
 This list is divided into two sections. Currently Reading or Read. Links are 
 provided for each books individual card go to [Hardcover](https://hardcover.app/) 
-slugs/pages for them
+slugs/pages for them.
 
 I will explain how I compile this list in a later post. So stay tuned; for those
 playing along at home. I make no commissions through these links so purchase 
