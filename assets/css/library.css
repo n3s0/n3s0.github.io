@@ -1,0 +1,68 @@
+.library-post-content {
+  margin-top: 10px;  
+}
+
+.card {
+  transition: 0.3s ease-out, box-shadow 0.3s ease-out;
+  box-shadow: 0 4px 8px 0 var(--accent);
+  border-radius: 8px;
+}
+
+.card_container_link {
+  text-decoration: none;
+  color: var(--foreground);
+}
+
+.content_container_wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.content_container_flex {
+  flex: 2;
+  align-self: center;
+  margin-right: 20px;
+  padding: 10px 0px 0px 0px;
+}
+
+.book_cover_container_flex {
+  flex: 1;
+  margin-top: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.book_cover {
+  border-radius: 8px;
+  width: 70%;
+  height: 100%;
+}
+
+.card_title {
+  position: relative;
+  color: var(--foreground);
+  margin-top: 10 !important;
+  margin-bottom: 10px !important;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: calc(var(--font-size) * 1.40);
+  font-weight: bold;
+  letter-spacing: 0;
+}
+
+.card_description {
+  padding-bottom: 10px;
+  font-size: calc(var(--font-size) * 1.15);
+}
+
+.card_author {
+  padding-top: 5px;
+  font-weight: bold;
+  font-size: calc(var(--font-size) * 1.25);
+}
+
+.card_author::before {
+  content: "-- ";
+}

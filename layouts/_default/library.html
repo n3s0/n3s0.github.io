@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <div class="library-post-content">
+    {{- with .Content -}}
+      <div>
+        {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">#</a> ${3}` | safeHTML }}
+      </div>
+    {{- end -}}
+</div>
+
+
+<div class="library-post-content">
+  <h2>Currently Reading</h2>
+  <p>
+    List of books I'm currently reading. These will change over time as I finish them or send them to the depth of my DNF.
+  </p>
+</div>
+
+{{ partial "books_reading.html" . }}
+
+<div class="library-post-content">
+  <h2>Finished Reading</h2>
+  <p>
+    List of books I finished.
+  </p>
+  <br>
+  <p>Wow... Such empty...</p>
+</div>
+
+{{ end }}

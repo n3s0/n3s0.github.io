@@ -114,7 +114,7 @@ pagination.pagerSize = 5
       [[languages.en.menu.main]]
         identifier = "library"
         name = "Library"
-        url = "/construction"
+        url = "/library"
         weight = 63
       [[languages.en.menu.main]]
         identifier = "writeups"
