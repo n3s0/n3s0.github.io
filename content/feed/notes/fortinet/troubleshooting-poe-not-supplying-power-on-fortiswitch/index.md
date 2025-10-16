@@ -6,7 +6,7 @@ date: 2025-10-15T15:25:27-06:00
 lastmod: 2025-10-15
 cover: short-circuit.png
 draft: false
-tags: ["netadmin"]
+tags: ["fortinet"]
 ---
 
 ## Summary

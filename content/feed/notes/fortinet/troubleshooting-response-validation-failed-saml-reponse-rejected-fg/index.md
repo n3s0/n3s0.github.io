@@ -5,7 +5,7 @@ lastmod: 2025-10-08
 summary: "Notes for troubleshooting some SAML errors Response Validation Failed."
 draft: false
 author: "Timothy Loftus (n3s0)"
-tags: ["netadmin"]
+tags: ["fortinet"]
 ---
 
 ## Overview

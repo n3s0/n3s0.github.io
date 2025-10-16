@@ -50,7 +50,7 @@ h3 {
 h4,
 h5,
 h6 {
-  font-size: calc(var(--font-size) * 8);
+  font-size: calc(var(--font-size) * 1.08);
   letter-spacing: 0;
 }
 
@@ -197,7 +197,7 @@ img {
   border: 8px solid var(--accent);
   border-radius: 8px;
   border-width: thin;
-  padding: 8px;
+  padding: 2px;
   overflow: hidden;
 }
 

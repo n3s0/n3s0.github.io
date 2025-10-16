@@ -17,7 +17,7 @@ if I don't respond right away. That is why.
 
 ## E-Mail
 
-{{< image src="/img/contact/email-qr.png" alt="email qr code" position="left" style="border-radius: 8px; border-width: thin" >}}
+{{< qr text="mailto:tloftus@protonmail.com" />}}
 
 [tloftus@protonmail.com](mailto:tloftus@protonmail.com)
 
@@ -25,6 +25,6 @@ if I don't respond right away. That is why.
 
 If you should like to reach out to me directly. Message me on SimpleX.
 
-{{< image src="/img/contact/simplex-qr.png" alt="simplex qr code" position="left" style="border-radius: 8px; border-width: thin" >}}
+{{< qr text="https://smp11.simplex.im/a#ymhBWsSH8IOeQ7v3AZHD4Qtf2uAK_59VTsML00s9q54" />}}
 
 [SimpleX Chat - n3s0](https://smp11.simplex.im/a#ymhBWsSH8IOeQ7v3AZHD4Qtf2uAK_59VTsML00s9q54)

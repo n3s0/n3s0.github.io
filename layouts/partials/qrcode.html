@@ -1,0 +1,17 @@
+<div class="qr">
+  <div class="qr-text">Share this post:<div>
+    {{ $opts := dict 
+        "level" "high" 
+        "scale" 3
+        "targetDir" "img/qr"
+    }}
+    {{ with images.QR .Permalink $opts}}
+        <img
+            src="{{ .RelPermalink }}"
+            width="{{ .Width }}"
+            height="{{ .Height }}"
+            alt="QR code linking to {{ $.Permalink }}"
+            loading="lazy"
+        />
+{{ end }}
+</div>

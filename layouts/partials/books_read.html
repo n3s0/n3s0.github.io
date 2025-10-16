@@ -1,0 +1,38 @@
+{{ $data := dict }}
+{{ $path := "books_read.json" }}
+{{ with .Resources.Get $path }}
+    {{ with . | transform.Unmarshal }}
+        {{ $data = . }}
+    {{ end }}
+{{ else }}
+    {{ errorf "Unable to get page resource %q" $path }}
+{{ end }}
+
+{{ range $key, $value := $data }}
+    {{ range $key, $value := $value.me }}
+        {{ range $key, $value := $value.user_books }}
+            <a class="card-container-link" href="https://hardcover.app/books/{{ $value.book.slug }}">
+            <figure class="card">
+                <div class="content-container-wrapper">
+                    <div class="content-container-flex">
+                      <div class="card-title">{{ $value.book.title }}</div>
+
+                      <div class="card-description">
+                        {{ $value.book.description | truncate 100 }}
+                      </div>
+
+                      {{ range $key, $value := $value.book.contributions | first 1}}
+                        <div class="card-author">
+                            {{ $value.author.name }}
+                        </div>
+                      {{ end }}
+                    </div>
+                    <div class="book-cover-container-flex">
+                      <img class="book-cover" src="{{ $value.book.image.url }}" alt="{{$value.book.title }} cover" />
+                    </div>
+                  </div>
+              </figure>
+              </a>
+          {{ end }}
+    {{ end }}
+{{ end }}
