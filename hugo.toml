@@ -25,7 +25,7 @@ pagination.pagerSize = 5
   [languages.en]
     languageName = "English"
     title = "n3s0 || journal"
-    copyright = "© 2019-2025 n3s0.tech"
+    copyright = "© 2014-2025 n3s0.tech"
 
     [languages.en.params]
       subtitle = "Where I put my thoughts, ideas, and project updates."
