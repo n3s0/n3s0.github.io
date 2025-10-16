@@ -47,7 +47,7 @@
 }
 
 .qr img {
-  max-width: 100%
+  max-width: 100%;
   border: 8px solid var(--accent); 
   border-radius: 8px;
   border-width: thin;

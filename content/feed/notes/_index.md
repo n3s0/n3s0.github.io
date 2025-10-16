@@ -15,7 +15,7 @@ from an article)
 If I've had to search something multiple times. It will find its way into my
 notes.
 
-{{< image src="/img/cluttered-desk.png" alt="cluttered desk" style="border-radius: 8px; border-width: thin" >}}
+{{< image src="/img/cluttered-desk.png" alt="cluttered desk with computer  and notebook on it." >}}
 
 > *Be not afraid of growing slowly; be afraid only of standing still.* <br>
 > -- **Chinese Proverb**

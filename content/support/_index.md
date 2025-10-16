@@ -24,6 +24,6 @@ future I will focus on adding cryptocurrency options.
 
 ### Buy Me A Coffee
 
-{{< image src="/img/support/buymeacoffee-qr.png" alt="buy me a coffee" position="left" style="border-radius: 8px; border-width: thin;" >}}
+{{< qr text="https://buymeacoffee.com/n3s0" scale=6 alt="QR code for n3s0 buymeacoffee.com page" />}}
 
 [Buy Me A Coffee](https://buymeacoffee.com/n3s0)
