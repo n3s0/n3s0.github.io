@@ -6,38 +6,28 @@
   transition: 0.3s ease-out, box-shadow 0.3s ease-out;
   box-shadow: 0 4px 8px 0 var(--accent);
   border-radius: 8px;
+  width: 100%;
 }
 
-.card-container-link {
+.card-link {
   text-decoration: none;
   color: var(--foreground);
 }
 
-.content-container-wrapper {
+.card-wrapper {
   display: flex;
+  width: 100%;
+  align-items: stretch;
   flex-direction: row-reverse;
   justify-content: space-between;
   padding: 15px;
 }
 
-.content-container-flex {
+.content-container {
   flex: 3;
   align-self: center;
   margin-right: 20px;
   padding-top: 10px;
-}
-
-.book-cover-container-flex {
-  flex: 1;
-  margin-top: auto;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-.book-cover {
-  border-radius: 8px;
-  width: 80%;
-  height: 100%;
 }
 
 .card-title {
@@ -65,4 +55,17 @@
 
 .card-author::before {
   content: "-- ";
+}
+
+.book-cover-container {
+  flex: 1;
+  margin-top: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.book-cover {
+  border-radius: 8px;
+  height: 271px;
+  width: 180px;
 }
