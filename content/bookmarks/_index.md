@@ -33,7 +33,7 @@ work.
 - [Stephan Miller](https://www.stephanmiller.com/) ([feed](https://www.stephanmiller.com/feed.xml))
 - [Seth Michael Larson](https://sethmlarson.dev/) ([feed](https://sethmlarson.dev/feed))
 - [Jes Olson](https://j3s.sh/) ([feed](https://j3s.sh/feed.atom))
-- [mrusme](https://xn--gckvb8fzb.com) ([feed](https://xn--gckvb8fzb.com/index.xml))
+- [Marius](https://xn--gckvb8fzb.com) ([feed](https://xn--gckvb8fzb.com/index.xml))
 - [Mete Balci](https://metebalci.com/) ([feed](https://metebalci.com/index.xml))
 - [Aaron Toponce](https://pthree.org/)
 - [Marat Fayzullin](https://fms.komkon.org/)

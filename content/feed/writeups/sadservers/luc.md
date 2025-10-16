@@ -1,20 +1,11 @@
 ---
 title: "Resumable Server: Linux Upskill Challenge"
+author: "Timothy Loftus (n3s0)"
 date: 2024-03-09T09:56:01-05:00
+lastmod: 2025-10-16
 summary: "Write up for the Linux Upskill Challenge."
 draft: true
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: false
-showHeadingAnchors: true
+
 ---
 
 ## Summary

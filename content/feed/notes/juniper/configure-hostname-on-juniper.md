@@ -3,14 +3,7 @@ title: 'Configure Hostname On Juniper'
 date: 2024-10-05T16:49:01-06:00
 summary: "Configuring The hostname on Juniper."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-tags: ["netadmin"]
+tags: ["juniper"]
 ---
 
 ## Summary

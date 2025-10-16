@@ -1,16 +1,10 @@
 ---
-title: 'Juniper: Boot To Single-User Mode'
+title: 'Boot To Single-User Mode On A Juniper SRX'
+author: "Timothy Loftus (n3s0)"
 date: 2024-10-14T12:30:01-06:00
-summary: "Notes for booting to Single User Mode to enter recovery mode."
-draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-tags: ["netadmin"]
+lastmod: 2025-10-16
+summary: "Notes for booting to Single User Mode to enter recovery mode on a Juniper SRX."
+tags: ["juniper"]
 ---
 
 ## Summary
