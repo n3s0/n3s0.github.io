@@ -1,20 +1,11 @@
 ---
-title: "SadServers: Saint John: what is writing to this log file?"
+title: "Saint John: what is writing to this log file?"
+author: "Timothy Loftus (n3s0)"
 date: 2023-11-13T18:40:47-06:00
-summary: "Notes from running through the Saint John scenario from SadServers."
+lastmod: 2025-10-15
+summary: "Notes from running through the Saint John scenario from SadServers. Where you troubleshoot why a rouge program made by a developer is filling up disk space and terminating it."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: false
-showHeadingAnchors: true
+tags: ["sadserver", "linux"]
 ---
 
 ## Scenario
@@ -29,11 +20,16 @@ Level: Easy
 
 Type: Fix
 
-Description: A developer created a testing program that is continuously writing to a log file /var/log/bad.log and filling up disk. You can check for example with tail -f /var/log/bad.log. This program is no longer needed. Find it and terminate it.
+Description: A developer created a testing program that is continuously writing 
+to a log file /var/log/bad.log and filling up disk. You can check for example 
+with tail -f /var/log/bad.log. This program is no longer needed. Find it and 
+terminate it.
 
-Test: The log file size doesn’t change (within a time interval bigger than the rate of change of the log file).
+Test: The log file size doesn’t change (within a time interval bigger than the 
+rate of change of the log file).
 
-The “Check My Solution” button runs the script /home/admin/agent/check.sh, which you can see and execute.
+The “Check My Solution” button runs the script /home/admin/agent/check.sh, 
+which you can see and execute.
 
 Time to Solve: 10 minutes.
 

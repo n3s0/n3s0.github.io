@@ -1,20 +1,11 @@
 ---
-title: "SadServers: Bucharest: Connecting to Postgres"
+title: "Bucharest: Connecting to Postgres"
+author: "Timothy Loftus (n3s0)"
 date: 2024-03-09T18:40:47-06:00
-summary: "Notes from running through the Bucharest scenario from SadServers."
+lastmod: 2025-10-15
+summary: "Notes from running through the Bucharest scenario from SadServers. Where you troubleshoot and fix a PostgresSQL server."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: true
-showHeadingAnchors: true
+tags: ["sadservers", "postgresql"]
 ---
 
 ## Scenario
@@ -29,16 +20,18 @@ Level: Easy
 
 Type: Fix
 
-Description: A web application relies on the PostgreSQL 13 database 
-present on this server. However, the connection to the database is not 
-working. Your task is to identify and resolve the issue causing this 
-connection failure. The application connects to a database named app1 
-with the user app1user and the password app1user.
+Description: A web application relies on the PostgreSQL 13 database present on 
+this server. However, the connection to the database is not working. Your task 
+is to identify and resolve the issue causing this connection failure. The 
+application connects to a database named app1 with the user app1user and the 
+password app1user.
 
 Credit PykPyky
 
-```
-Test: Running PGPASSWORD=app1user psql -h 127.0.0.1 -d app1 -U app1user -c ‘\q’ succeeds (does not return an error).
+Test is running the following command.
+
+```sh
+PGPASSWORD=app1user psql -h 127.0.0.1 -d app1 -U app1user -c ‘\q’ succeeds (does not return an error).
 ```
 
 Time to Solve: 10 minutes.
@@ -46,10 +39,10 @@ Time to Solve: 10 minutes.
 ## Solution
 ---
 
-OK. Checked the account using the test command provided by the 
-challenge. The output suggests that the user isn’t allowed to connect 
-on the postgres server. We’re going to need to check the pg_hba.conf 
-file to see if there are any errors.
+OK. Checked the account using the test command provided by the challenge. The 
+output suggests that the user isn’t allowed to connect on the postgres server. 
+We’re going to need to check the pg_hba.conf file to see if there are any 
+errors.
 
 ```sh
 PGPASSWORD=app1user psql -h 127.0.0.1 -d app1 -U app1user -c '\q'

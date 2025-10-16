@@ -1,20 +1,11 @@
 ---
-title: "Sad Servers: Abaokoro: Restore MySQL Databases Spooked by a Ghost"
-date: 2023-02-27T13:40:06-05:00
-summary: ""
+title: "Abaokoro: Restore MySQL Databases Spooked by a Ghost"
+author: "Timothy Loftus (n3s0)"
+date: 2025-10-13T13:40:06-05:00
+lastmod: 2025-10-15
+summary: "My writeup for SadServers Aboakoro challenge."
 draft: true
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: false
-showHeadingAnchors: true
+tags: ["sadservers", "mysql"]
 ---
 
 ## Summary

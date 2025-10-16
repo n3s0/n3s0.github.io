@@ -1,20 +1,11 @@
 ---
-title: "SadServers: Geneva: Renew an SSL Certificate"
+title: "Geneva: Renew an SSL Certificate"
+author: "Timothy Loftus (n3s0)"
 date: 2024-09-23T09:56:47-06:00
-summary: "Notes from running through the Geneva scenario from SadServers."
+lastmod: 2025-10-15
+summary: "Notes from running through the Geneva scenario from SadServers. Need to regenerate a TLS certificate for an Nginx server."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: false
-showHeadingAnchors: true
+tags: ["sadservers", "tls"]
 ---
 
 ## Overview
@@ -33,11 +24,16 @@ Little more information about the challenge.
 ## Description
 ---
 
-There's an Nginx web server running on this machine, configured to serve a simple "Hello, World!" page over HTTPS. However, the SSL certificate is expired.
+There's an Nginx web server running on this machine, configured to serve a 
+simple "Hello, World!" page over HTTPS. However, the SSL certificate is expired.
 
-Create a new SSL certificate for the Nginx web server with the same Issuer and Subject (same domain and company information).
+Create a new SSL certificate for the Nginx web server with the same Issuer and 
+Subject (same domain and company information).
 
-Test: Certificate should not be expired: echo | openssl s_client -connect localhost:443 2>/dev/null | openssl x509 -noout -dates and the subject of the certificate should be the same as the original one: echo | openssl s_client -connect localhost
+Test: Certificate should not be expired: echo | openssl s_client -connect 
+localhost:443 2>/dev/null | openssl x509 -noout -dates and the subject of the 
+certificate should be the same as the original one: echo | openssl s_client 
+-connect localhost
 
 So, here is all of that. But, simpler.
 

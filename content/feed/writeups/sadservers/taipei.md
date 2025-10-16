@@ -1,20 +1,11 @@
 ---
 title: "Taipei: Come a-knocking"
+author: "Timothy Loftus (n3s0)"
 date: 2024-10-12T12:56:01-06:00
-summary: "Write up for the Taipei challenge."
+lastmod: 2025-10-15
+summary: "Write up for the Taipei challenge. A scenario that goes through how to port knock on a firewall."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: false
-showHeadingAnchors: true
+tags: ["sadservers", "infosec"]
 ---
 
 ## Summary

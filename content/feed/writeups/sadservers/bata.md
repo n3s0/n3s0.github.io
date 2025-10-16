@@ -1,20 +1,11 @@
 ---
 title: "Bata: Find in /proc"
+author: "Timothy Loftus (n3s0)"
 date: 2024-10-11T20:56:01-05:00
-summary: "Write up for the Bata: Find in /proc."
+lastmod: 2025-10-15
+summary: "Write up for the Bata: Find in /proc. Where you need to find a file that contains the string 'secret'."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: false
-showHeadingAnchors: true
+tags: ["sadservers", "linux"]
 ---
 
 ## Summary

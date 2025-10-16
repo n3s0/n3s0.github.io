@@ -1,20 +1,11 @@
 ---
-title: "SadServers: Bilbao: Basic Kubernetes Problems"
+title: "Bilbao: Basic Kubernetes Problems"
+author: "Timothy Loftus (n3s0)"
 date: 2024-10-15T00:07:47-06:00
-summary: "Notes from running through the Bilbao scenario from SadServers."
+lastmod: 2025-10-15
+summary: "Notes from running through the Bilbao scenario from SadServers. Where you fix basic Kubernetes problems."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: false
-showHeadingAnchors: true
+tags: ["sadservers", "kubernetes"]
 ---
 
 ## Summary
