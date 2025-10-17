@@ -50,7 +50,6 @@ Websites I browse to frequently.
 
 - [16 Colors](https://16colo.rs/)
 - [68K News](http://68k.news/)
-- [512KB Club](https://512kb.club/)
 - [Alterslash](https://alterslash.org/)
 - [Lobsters](https://lobste.rs/)
 - [Hacker News](https://news.ycombinator.com/news)
@@ -78,6 +77,41 @@ updated their site in a while.
 
 - [Jack Rhysider](https://www.tunnelsup.com/)
 - [nox](https://nox.im/)
+
+## Feeds/Link Aggregators
+
+- [IndieBlog](https://indieblog.page/all)
+- [personalsit.es](https://personalsit.es/)
+- [LWN.net](https://lwn.net/)
+- [Research Gate](https://www.researchgate.net/topics)
+- [Uses](https://uses.tech/)
+- [blogs.hn](https://blogs.hn/)
+- [ooh.directory](https://ooh.directory/)
+- [BlogDB](https://blogdb.org/)
+- [Bring Back Blogging](https://bringback.blog/)
+- [The Useless Web](https://theuselessweb.com/)
+- [The Forest](https://theforest.link/)
+- [BUKMARK.CLUB](https://bukmark.club/directory/)
+- [Ye Olde Blogroll](https://blogroll.org/)
+- [nownownow](https://nownownow.com/)
+- [/uses](https://uses.tech/)
+- [linkhut](https://ln.ht/)
+- [href.cool](https://href.cool/)
+- [The Geocities Gallery](https://geocities.restorativland.org/)
+
+## Forums
+
+- [32-Bit Cafe](https://discourse.32bit.cafe/)
+- [KeebTalk](https://www.keebtalk.com/tag/interest-check)
+- [LINES](https://llllllll.co/)
+- [LowEndTalk](https://lowendtalk.com/)
+
+## Clubs
+
+- [1MB Club](https://1mb.club/)
+- [512KB Club](https://512kb.club/)
+- [250KB Club](https://250kb.club/)
+- [NO-JS Club](https://no-js.club/)
 
 ## Networking
 
@@ -162,14 +196,6 @@ applications for this site.
 
 - [image-upscaling.net](https://image-upscaling.net/upscaling/en.html)
 
-## Feeds
-
-- [LWN.net](https://lwn.net/)
-- [Reddit](https://www.reddit.com/)
-- [Facebook](https://www.facebook.com/)
-- [Instagram](https://www.instagram.com/)
-- [Twitter/X](https://www.x.com/)
-- [Research Gate](https://www.researchgate.net/topics)
 
 ## Cloud Providers
 
@@ -390,6 +416,13 @@ Provides resources related to the Windows Operating System.
 - [YouTube](https://youtube.com)
 - [Disney+](https://www.disneyplus.com/)
 - [Hulu](https://www.hulu.com/)
+
+## Social Media
+
+- [Reddit](https://www.reddit.com/)
+- [Facebook](https://www.facebook.com/)
+- [Instagram](https://www.instagram.com/)
+- [Twitter/X](https://www.x.com/)
 
 ## Misc
 
