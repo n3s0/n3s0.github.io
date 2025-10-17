@@ -147,7 +147,6 @@ updated their site in a while.
 - [Verisin Labs - DNSSEC Debugger](https://dnssec-debugger.verisignlabs.com/)
 - [Verisin Labs - DNS Vizualizer](https://dnsviz.net/)
 - [Verisin Labs - Transitive Trust Checker](https://trans-trust.verisignlabs.com/)
-- [URL Scan](https://urlscan.io/)
 - [Virus Total](https://www.virustotal.com/)
 - [Shodan](https://www.shodan.io/)
 - [wigle.net](https://wigle.net/)
@@ -156,22 +155,38 @@ updated their site in a while.
 - [QR Code Image Reader](https://qrcodedynamic.com/qr-reader)
 - [roadmap.sh](https://roadmap.sh/)
 - [Bountify](https://bountify.co)
+- [FBI - Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/pages/home)
+- [World Health Organization - Global Health Observatory Data Repository](https://apps.who.int/gho/data/node.home)
+- [PubMed Central Labs](https://www.ncbi.nlm.nih.gov/labs/pmc/)
+- [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc/)
+- [Educational Resources Information Center](https://eric.ed.gov/)
+- [Science.gov](https://www.science.gov/)
+
+## Scanners
+
+- [URL Scan](https://urlscan.io/)
+
+## Search
+
+I'm search engine agnostic. Although I don't like Google and prefer to utilize
+other options. It still comes in handy when in a pinch.
+
+- [Wibly](https://wiby.me/)
+- [Search My Site](https://searchmysite.net/)
+- [Marginalia Search](https://marginalia-search.com/)
+- [Duck Duck Go](https://duckduckgo.com/)
+- [Infotopia](http://www.infotopia.info/)
+- [Bing](https://www.bing.com/)
+- [Base Search](https://www.base-search.net/)
+- [Google](https://www.google.com)
+
+## Datatroves
+
 - [Kaggle](https://www.kaggle.com/)
 - [Data.gov](https://www.data.gov/)
 - [Datahub](https://datahub.io/collections)
 - [NASA Earth Data](https://earthdata.nasa.gov/)
 - [CERN OpenData](http://opendata.cern.ch/)
-- [FBI - Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/pages/home)
-- [World Health Organization - Global Health Observatory Data Repository](https://apps.who.int/gho/data/node.home)
-- [Google](https://www.google.com)
-- [Duck Duck Go](https://duckduckgo.com/)
-- [Bing](https://www.bing.com/)
-- [Base Search](https://www.base-search.net/)
-- [PubMed Central Labs](https://www.ncbi.nlm.nih.gov/labs/pmc/)
-- [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc/)
-- [Infotopia](http://www.infotopia.info/)
-- [Educational Resources Information Center](https://eric.ed.gov/)
-- [Science.gov](https://www.science.gov/)
 - [Google Dataset Search](https://datasetsearch.research.google.com/)
 
 ## Website Tools
