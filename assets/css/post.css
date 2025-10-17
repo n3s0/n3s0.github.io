@@ -81,8 +81,6 @@
 
 .post-cover {
   margin: 25px 0;
-  border-radius: 8px;
-  border-width: thin;
 }
 
 .post ul {
@@ -137,7 +135,7 @@ h6:hover .hanchor {
 
 @media (max-width: 684px) {
   .post-cover {
-    padding: 10px;
-    border-width: 10px;
+    padding: 4px;
+    border-width: thin;
   }
 }
