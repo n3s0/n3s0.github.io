@@ -84,7 +84,6 @@ updated their site in a while.
 - [personalsit.es](https://personalsit.es/)
 - [LWN.net](https://lwn.net/)
 - [Research Gate](https://www.researchgate.net/topics)
-- [Uses](https://uses.tech/)
 - [blogs.hn](https://blogs.hn/)
 - [ooh.directory](https://ooh.directory/)
 - [BlogDB](https://blogdb.org/)
