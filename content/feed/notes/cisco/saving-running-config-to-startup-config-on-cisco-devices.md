@@ -4,7 +4,7 @@ author: "Timothy Loftus (n3s0)"
 date: "2022-07-06T14:37:15-05:00"
 lastmod: 2025-10-10
 description: "Notes on copying running config to startup config on Cisco devices."
-tags: [ "Cisco" ]
+tags: [ "cisco" ]
 draft: false
 ---
 

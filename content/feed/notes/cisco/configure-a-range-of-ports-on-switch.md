@@ -1,15 +1,10 @@
 ---
-title: 'Cisco: Configure A Range Of Interfaces On A Switch'
+title: 'Configure A Range Of Interfaces On A Cisco Switch'
+author: "Timothy Loftus (n3s0)"
 date: 2022-02-22T16:49:01+06:00
+lastmod: 2025-10-21
 summary: "Discuss how to configure multiple Cisco IOS ports with the interface range command."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["netadmin"]
 ---
 

@@ -4,10 +4,8 @@ author: "Timothy Loftus (n3s0)"
 date: "2022-07-06T14:37:18-05:00"
 lastmod: 2025-10-10
 description: "Notes for configuring DNS servers and search domains for name resolution on Cisco switches."
-tags: [ "Cisco Networking", "Cisco", "IOS" ]
+tags: [ "cisco" ]
 draft: false
-type: post
-showTableOfContents: true
 ---
 
 ## Summary
