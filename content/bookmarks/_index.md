@@ -160,6 +160,10 @@ updated their site in a while.
 - [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc/)
 - [Educational Resources Information Center](https://eric.ed.gov/)
 - [Science.gov](https://www.science.gov/)
+- [Game Server Ping](https://gameserverping.com/)
+- [Ookla Speed Test](https://www.speedtest.net/)
+- [FAST Speed Test](https://fast.com/)
+- [Bike Index](https://bikeindex.org/)
 
 ## Scanners
 
