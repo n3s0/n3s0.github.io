@@ -124,5 +124,5 @@ pagination.pagerSize = 5
       [[languages.en.menu.main]]
         identifier = "travel"
         name = "Travel"
-        url = "/construction"
+        url = "/travel"
         weight = 68

@@ -1,0 +1,22 @@
+#gallery {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: flex-start;
+align-items: center;
+padding: 4px;
+}
+
+#gallery a {}
+
+#gallery img {
+width: 375px;
+height: auto;
+object-fit: cover;
+margin: 5px;
+padding: 0;
+border-radius: 8px;
+}
+
+@media (max-width: 800px) #gallery image{width: 50%;}
+
