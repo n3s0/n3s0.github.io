@@ -1,20 +1,10 @@
 ---
 title: "SANs Holiday Hack Challenge - KringleCon 3: French Hens!"
+author: "Timothy Loftus (n3s0)"
 date: 2020-12-20T00:38:40-06:00
+lastmod: 2025-10-26
 summary: "Notes from doing SANs Holiday Hack Challenge - KringleCon 3: French Hens."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: false
-showHeadingAnchors: true
 ---
 
 ### Overview
