@@ -47,10 +47,14 @@ h3 {
   letter-spacing: 0;
 }
 
-h4,
+h4 {
+  font-size: calc(var(--font-size) * 1.20);
+  letter-spacing: 0;
+}
+
 h5,
 h6 {
-  font-size: calc(var(--font-size) * 1.08);
+  font-size: calc(var(--font-size) * 1.10);
   letter-spacing: 0;
 }
 

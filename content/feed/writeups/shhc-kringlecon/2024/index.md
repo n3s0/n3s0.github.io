@@ -1,8 +1,9 @@
 ---
-title: "SANs Holiday Hack Challenge 2024: Snow-maggedon"
+title: "SANs Holiday Hack Challenge 2024: Snow-maggeddon"
 author: "Timothy Loftus (n3s0)"
 date: 2025-10-25T00:38:40-06:00
 lastmod: 2025-10-28
+cover: shhc2024.jpg
 summary: "Writeup from what I've completed for SANs Holiday Hack Challenge 2024: Snow-maggedon."
 draft: false
 ---
@@ -20,6 +21,10 @@ This is my writeup for the SANs Holiday Hack Challenge that finished up in 2024.
 SANs Holiday Hack Challenge is an annual; gamified, challenge provided by SANs
 Institute and Counter Hack to educate all walks of life on information security.
 
+If anyone would like a link to the 2024 challenge. I've provided a link below.
+
+- [SANs Holiday Hack Challenge 2024: Snow-maggeddon](https://account.counterhack.com/?ref=hhc24)
+
 With every challenge I'll provide the initial dialog from the elf next to it,
 discuss the problem, and provide the solution or even some of the twists and
 turns taken to come to a solution.
@@ -32,6 +37,9 @@ challenge will be provided under the header for the challenge.
 > see how far I get.
 
 ## SANs Introduction
+
+Before logging in. SANs has a little introduction of what's available to us for
+participating in the challange. Their introduction can be found below.
 
 > Welcome to the 2024 SANS Holiday Hack Challenge: Snow-maggeddon!
 > 
@@ -98,7 +106,7 @@ This challenge is simple. When you click on the terminal named "First Terminal"
 it prompts you to type and answer in the answer prompt. Something of an
 initiation into the Cranberry Pi challenges.
 
-### Solution
+#### Solution
 
 Solution is to type the word ```answer``` into the answer prompt.
 
@@ -154,10 +162,18 @@ do. Almost.
 >
 > -- **Angel Candysalt**
 
+Below is the initial screen for the **Elf Connect** game. From the looks of it.
+There is a High Score of 50,000. Which doesn't quite add up given that each
+round adds up to 400 points (100 points for each set) for 4 rounds. Which is
+about 1,600 points for each round.
+
+Going to recircle back to that math at some point. But, my case here is a high
+score of 50,000 points is impossible.
+
 {{< image src="elf_connect.png" alt="Elf connect initial screen" position="center" caption="Elf Connect" style="border-radius: 8px;" >}}
 
 This is a category matching game named Elf Connect and Angel Candysalt is
-suspicuious about ```randomElf``` and their high score in Elf Connect.
+suspicious about `randomElf` and their high score in Elf Connect.
 
 Something that I found while I was browsing the code was a link to the Elf
 Connect game. It was useful to have this without the small Cranberry Pi terminal
@@ -167,9 +183,11 @@ screen.
 
 With all that being said. Time to get started with this challenge.
 
-### Solution (Silver)
+#### Solution (Silver)
 
-Some hints that are provided related to this challenge.
+Provided is one of the hints related to this challenge. Stating this is similar
+to the New York Times Connections game. Which I personally have never played.
+But, it provides a good introduction for the game. 
 
 > Elf Connect Easy
 >
@@ -187,14 +205,16 @@ I completed the game initially by matchng the correct cards to their respective
 categories. This provides a "silver" acheivemnt when the challenge has been
 completed
 
-There is actually a better approach to this. There is a ```<script>``` element that
+There is actually a better approach to this. There is a `<script>` element that
 contains client-side JavaScript for the game.
 
 Initially I attempted to change the value for the updated score to see if I
 could beat the high score. But, that did not work. It just added 100 points. So
 that's out.
 
-Below is the non-working update. Originally it was 100.
+Below is the non-working update. Originally it was 100. Either due to my own
+flawed log or inexperience with JavaScript. I even tried to do this in the
+WebDev console. But, that didn't work either.
 
 ```js
 score += 50000;
@@ -212,7 +232,10 @@ const wordSets = {
 };
 ```
 
-There is a nested array of indexes for each set in a round.
+There is a nested array of indexes for each set in a round. This array; named
+`correctSets` provides the correct set for each round. So, you can cross
+reference this to the `wordSets` and figure out the correct answers for each
+round.
 
 ```js
 let correctSets = [
@@ -224,7 +247,8 @@ let correctSets = [
 ```
 
 When you connect the dots for each set in each round it looks like you get the
-answers for each round.
+answers for each round. You just need to look in the `<script>` element within
+the page source. 
 
 - **Round 1:** 
     - 0: Tinsel, 5: Garland, 10: Star, and 14: Lights
@@ -248,8 +272,9 @@ answers for each round.
     - 4: HTTP, 8: FTP, 13: SMTP, and 15: DNS
 
 I played the game using the lists above and completed the game with no issue.
+Apart from selecting something in the wrong category by mistake.
 
-### Solution (Gold)
+#### Solution (Gold)
 
 After finishing the Elf Connect game. Angel Candysalt provides this dialog. I
 wasn't so sure as to what it was hinting at.
@@ -424,15 +449,18 @@ the following response.
 >
 > -- **Angel Candysalt**
 
-## The Goose of Christmas Island
+### The Goose of Christmas Island
 
-This part of Frosty's Beach was ammusing.
+This part of Frosty's Beach where there is just a random cobra chicken provided
+the comedic relief I needed.
 
 > HONK! HONK!
 >
 > -- **Goose of Christmas Island**
 
-## Elf Minder 9000
+### Elf Minder 9000
+
+This game took me a while to complete. 
 
 > Center your mind, and become one with the island!
 >
@@ -452,7 +480,12 @@ This part of Frosty's Beach was ammusing.
 >
 > -- **Poinsettia McMittens**
 
-I haven't completed this challenge yet. Stay tuned for some more...
+#### Solution (Silver)
+
+#### Solution (Gold)
+
+I haven't completed this challenge yet. Need to obtain more images of what is
+completed yet. So, stay tuned for more content on this.
 
 ## Act I
 
@@ -490,12 +523,16 @@ I haven't completed this challenge yet. Stay tuned for some more...
 > So, are you ready to curl those web requests like a pro? Let’s see your magic 
 > unfold!
 >
-> -- **Bow Ninecanle**
+> -- **Bow Ninecandle**
 
 Provided are the hints provided by Bow Ninecandle related to the cURLing
 challenge.
 
-This one discusses taking a look at the `--path-as-is` option in curl(1).
+This one discusses taking a look at the `--path-as-is`[^1] option in curl(1).
+Reading the curl(1) manual and it says it tells curl(1) not to handle `/../` or
+`/./` in the URL path.
+
+Sounds like foreshadowing to me.
 
 > cURL: Don't squash
 >
@@ -506,7 +543,8 @@ This one discusses taking a look at the `--path-as-is` option in curl(1).
 > Take a look at cURL's "--path-as-is" option; it controls a default behavior 
 > that you may not expect!
 
-This one provides a link to the curl(1) manual page.
+This one provides a link to the curl(1) manual page. Which I was probably going
+to dive into for this anyway. So I definately appreciated this.
 
 > cURL Manual
 >
@@ -517,7 +555,7 @@ This one provides a link to the curl(1) manual page.
 > The official [cURL man page](https://curl.se/docs/manpage.html) has tons of 
 > useful information on how to use cURL.
 
-### Solution (Silver)
+#### Solution (Silver)
 
 ```sh
 Welcome to Curling Fun!  We will learn some basic curl commands while playing a round of curling.
@@ -684,7 +722,9 @@ Once HHC grants your achievement, you may close this terminal.
 > 
 > -- **Bow Ninecandle**
 
-### Solution (Gold)
+#### Solution (Gold)
+
+So it looks like 
 
 > You know... rumor has it you can breeze through this with just three commands. 
 > Why don’t you give it a whirl?
@@ -741,7 +781,7 @@ Excellent work, you have solved hard mode!  You may close this terminal once HHC
 >
 > -- **Bow Ninecandle**
 
-## Frosty Keypad
+### Frosty Keypad
 
 > Hello again! I'm Morcel Nougat, dashing around like a reindeer on a sugar 
 > rush! We've got a bit of a dilemma, and I could really use your expertise.
@@ -808,7 +848,11 @@ Found the frosty book. URL is below.
 
 - [The Frosty Book](https://frost-y-book.com/)
 
-## Hardware Hacking 101 Part 1
+#### Solution (Silver)
+
+#### Solution (Gold)
+
+### Hardware Hacking 101: Part 1
 
 > Hello there! I’m Jewel Loggins.
 > 
@@ -846,7 +890,7 @@ Found the frosty book. URL is below.
 > It slices, it dices, it makes the paper practically disintegrate into a thousand 
 > tiny pieces. Perhaps, just perhaps, we could reassemble the pieces?
 
-### Solution (Silver)
+#### Solution (Silver)
 
 Connected the wires
 
@@ -861,7 +905,7 @@ Connected the wires
 >
 > -- **Jewel Loggins (Front Yard (Act I))**
 
-### Solution (Gold)
+#### Solution (Gold)
 
 I loved this challange! It took some time for me to read through the code and
 dust off Burp Suite. But, it was a blast! I normally don't seek the opportunity
@@ -991,7 +1035,7 @@ Decided to start up a proxy in Burp Suite and use the intercept tool to capture
 the requests. I looked through all of them to see if there was anything I could
 send to repeater and I found this.
 
-```
+```http
 GET /?&challenge=termHardwareHacking101A&username=n3s00&id=cd79c2f4-b255-41a6-a9bf-f4df6e09dc4e&area=frontyardact1&location=61,36&tokens=easy,termHardwareHacking101A&dna=ATATATTAATATATATATATGCATATATATATATCGATTAATATATATATATATATATATATATATATATGCATATGCCGATATATATATATTACGATATATATATATATGCATATATGC HTTP/2
 Host: hhc24-hardwarehacking.holidayhackchallenge.com
 Cookie: _ga_F6ZZNPR5E5=GS2.1.s1761618581$o11$g1$t1761623069$j60$l0$h0; _ga=GA1.1.1974479077.1761465328; GCLB="97885844805711ee"
@@ -1012,7 +1056,7 @@ Te: trailers
 Here is the response received from the server. It doesn't provide much. But, I
 thought I'd include it anyway.
 
-```
+```http
 HTTP/2 304 Not Modified
 Last-Modified: Mon, 23 Sep 2024 20:20:53 GMT
 Date: Tue, 28 Oct 2025 06:36:10 GMT
@@ -1035,9 +1079,10 @@ used with the request ID, correct serial array, and the voltage index.
 }
 ```
 
-This is the request used in Burp Suite for this challenge.
+This is the request used in Burp Suite for this challenge. Provided for future
+reference.
 
-```txt
+```http
 POST /api/v2/complete HTTP/2
 Host: hhc24-hardwarehacking.holidayhackchallenge.com
 Cookie: _ga_F6ZZNPR5E5=GS2.1.s1761618581$o11$g1$t1761623069$j60$l0$h0; _ga=GA1.1.1974479077.1761465328; GCLB="97885844805711ee"
@@ -1067,7 +1112,7 @@ Below is the response. It does not provide much either. It just says `true`. So
 I assume that's good. Originally I had one of the numbers off so it kept
 returning `false` in the response. But, updating the wrong value fixed it.
 
-```txt
+```http
 HTTP/2 200 OK
 Content-Type: application/json
 Date: Tue, 28 Oct 2025 05:50:09 GMT
@@ -1082,9 +1127,9 @@ There is no prompt from Jewel Loggins after completing the Gold part of the
 "Hardware Hacking 101: Part 1 challenge. But, I recieved the Gold acheivement
 for the challenge on my badge to confirm.
 
-## Hardware Hacking 101: Part 2
+### Hardware Hacking 101: Part 2
 
-### Solution (Silver)
+#### Solution (Silver)
 
 ```sh
 U-Boot SPL 2024.08 (Dec 24 2023 - 23:59:59 +0000)
@@ -1213,3 +1258,9 @@ slh --passcode CandyCaneCrunch77 --set-access 1 --id 42
 
 Card 42 granted access level 1.
 ```
+
+#### Solution (Gold)
+
+## Act III
+
+
