@@ -557,13 +557,21 @@ to dive into for this anyway. So I definately appreciated this.
 
 #### Solution (Silver)
 
+This challenge starts off with a brief intro noting that you're going to run
+through basic curl commands in a name called `Curling Fun`.
+
 ```sh
 Welcome to Curling Fun!  We will learn some basic curl commands while playing a round of curling.
 ```
 
+Time to say `yes` to the prompt and get started.
+
 ```sh
 Are you ready to begin? [y]es: 
 ```
+
+First question is asking how to access web servers on a non-standard port. In
+this case we're accessing `curlingfun` on port `8080`.
 
 ```sh
 1) Unlike the defined standards of a curling sheet, embedded devices often have web servers 
@@ -571,9 +579,14 @@ on non-standard ports.  Use curl to retrieve the web page on host "curlingfun" p
 If you need help, run the 'hint' command.
 ```
 
+To do this. Issue the curl command to send the request to `curlingfun` and
+use the port; indicated by a colon (`:`) as shown in the command below.
+
 ```sh
 curl "curlingfun:8080"
 ```
+
+Looks like that's correct. We're off to a good start.
 
 ```sh
 You have successfully accessed the site on port 8080!
@@ -581,14 +594,25 @@ You have successfully accessed the site on port 8080!
 If you need help, please remember to run "hint" for a hint!
 ```
 
+Second question we're diving into how to deal with self-signed/insecure
+certificates using curl. It's requesting that we use the URL
+`https://curlingfun:9090/` for this HTTP request.
+ 
 ```sh
 2) Embedded devices often use self-signed certificates, where your browser will not trust the 
 certificate presented.  Use curl to retrieve the TLS-protected web page at https://curlingfun:9090/
 ```
 
+You can send your request using curl regularly to see what it will do. An error
+from curl is expected from this.
+
 ```sh
 curl https://curlingfun:9090
 ```
+
+The curl command will provide this error saying it failed because a self-signed
+or untrusted certificate is being used. Now that I'm done testing that. I will
+do this with the expected command.
 
 ```sh
 curl: (60) SSL certificate problem: self-signed certificate
@@ -599,9 +623,62 @@ establish a secure connection to it. To learn more about this situation and
 how to fix it, please visit the web page mentioned above.
 ```
 
+To let curl know that you know the site is using an insecure or self-signed
+certificate. You can use either the `--insecure` or `-k` flag to let it know
+that it's OK to ignore the insecure certificate. Both will ignore the
+insecure/self-signed certificate and connect anyway.
+
+Below is an excerpt from the curl(1) man page for more information.
+
+> -k, --insecure
+>
+> (TLS SFTP SCP) By default, every secure connection curl makes is verified to 
+> be secure before the transfer takes place. This option makes curl skip the 
+> verification step and proceed without checking.
+> 
+> When this option is not used for protocols using TLS, curl verifies the 
+> server's TLS certificate before it continues: that the certificate contains 
+> the right name which matches the hostname used in the URL and that the 
+> certificate has been signed by a CA certificate present in the cert store. 
+> See this online resource for further details: https://curl.se/docs/sslcerts.html
+>
+> For SFTP and SCP, this option makes curl skip the known_hosts verification. 
+> known_hosts is a file normally stored in the user's home directory in the 
+> ".ssh" subdirectory, which contains hostnames and their public keys.
+>
+> WARNING: using this option makes the transfer insecure.
+> 
+> When curl uses secure protocols it trusts responses and allows for example 
+> HSTS and Alt-Svc information to be stored and used subsequently. Using 
+> --insecure can make curl trust and use such information from malicious servers.
+> 
+> Providing --insecure multiple times has no extra effect. Disable it again with 
+> --no-insecure.
+>
+> Example:
+> 
+> curl --insecure https://example.com
+> See also --proxy-insecure, --cacert and --capath.
+> 
+
+The man pages for commands are usually good places to start if you're unsure of
+a functionality for a specific command.
+
+This is an example of how to do that with the `--insecure` flag.
+
 ```sh
 curl --insecure https://curlingfun:9090
 ```
+
+This is an example of how to do that with `-k`. 
+
+```sh
+curl -k https://curlingfun:9090
+```
+
+When this is ran. You'll see a success message stating the certificate warning
+has been bypassed. The message will also say we'll need to use `--insecure` and
+`-k` for the duration of the challenge.
 
 ```sh
 You have successfully bypassed the self-signed certificate warning!
