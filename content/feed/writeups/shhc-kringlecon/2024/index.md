@@ -2,10 +2,13 @@
 title: "SANs Holiday Hack Challenge 2024: Snow-maggedon"
 author: "Timothy Loftus (n3s0)"
 date: 2025-10-25T00:38:40-06:00
-lastmod: 2025-10-26
+lastmod: 2025-10-28
 summary: "Writeup from what I've completed for SANs Holiday Hack Challenge 2024: Snow-maggedon."
 draft: false
 ---
+
+> Note: This document is incomplete and will be updated periodically as I finish
+> and explain more about the challenges as they're completed. 
 
 ## Overview
 
@@ -450,3 +453,763 @@ This part of Frosty's Beach was ammusing.
 > -- **Poinsettia McMittens**
 
 I haven't completed this challenge yet. Stay tuned for some more...
+
+## Act I
+
+### cURLing
+
+> Well hello there! I'm Bow Ninecandle, bright as a twinkling star! Everyone's 
+> busy unpacking, but I've grown quite bored of that. Care to join me for a 
+> lovely game?
+>
+> Oh Joy! Today, We're diving into something delightful: the curling 
+> challenge—without any ice, but plenty of sparkle!
+>
+> No icy brooms here though! We're all about Curl, sending web requests from the 
+> command line like magic messages.
+>
+> So, have you ever wielded Curl before? If not, no worries at all, my friend!
+>
+> It's this clever little tool that lets you whisper directly to web servers. 
+> Pretty neat, right?
+>
+> Think of it like sending secret scrolls through the interwebs, awaiting a wise 
+> reply!
+> 
+> To begin, you can type something like curl https://example.com. Voilà! The HTML 
+> of the page appears, like conjuring a spell!
+>
+> Simple enough, huh? But oh, there's a whole world of magic you can cast with 
+> Curl!
+> 
+> We're just brushing the surface here, but trust me—it’s a hoot and a half!
+>
+> If you get tangled up or need help, just give me a shout! I’m here to help you 
+> ace this curling spectacle.
+>
+> So, are you ready to curl those web requests like a pro? Let’s see your magic 
+> unfold!
+>
+> -- **Bow Ninecanle**
+
+Provided are the hints provided by Bow Ninecandle related to the cURLing
+challenge.
+
+This one discusses taking a look at the `--path-as-is` option in curl(1).
+
+> cURL: Don't squash
+>
+> From: Bow Ninecandle
+>
+> Terminal: cURLing
+> 
+> Take a look at cURL's "--path-as-is" option; it controls a default behavior 
+> that you may not expect!
+
+This one provides a link to the curl(1) manual page.
+
+> cURL Manual
+>
+> From: Bow Ninecandle
+>
+> Terminal: cURLing
+>
+> The official [cURL man page](https://curl.se/docs/manpage.html) has tons of 
+> useful information on how to use cURL.
+
+### Solution (Silver)
+
+```sh
+Welcome to Curling Fun!  We will learn some basic curl commands while playing a round of curling.
+```
+
+```sh
+Are you ready to begin? [y]es: 
+```
+
+```sh
+1) Unlike the defined standards of a curling sheet, embedded devices often have web servers 
+on non-standard ports.  Use curl to retrieve the web page on host "curlingfun" port 8080.
+If you need help, run the 'hint' command.
+```
+
+```sh
+curl "curlingfun:8080"
+```
+
+```sh
+You have successfully accessed the site on port 8080!
+
+If you need help, please remember to run "hint" for a hint!
+```
+
+```sh
+2) Embedded devices often use self-signed certificates, where your browser will not trust the 
+certificate presented.  Use curl to retrieve the TLS-protected web page at https://curlingfun:9090/
+```
+
+```sh
+curl https://curlingfun:9090
+```
+
+```sh
+curl: (60) SSL certificate problem: self-signed certificate
+More details here: https://curl.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the web page mentioned above.
+```
+
+```sh
+curl --insecure https://curlingfun:9090
+```
+
+```sh
+You have successfully bypassed the self-signed certificate warning!
+Subsequent requests will continue to require "--insecure", or "-k" for short.
+
+If you need help, please remember to run "hint" for a hint!
+```
+
+```sh
+3) Working with APIs and embedded devices often requires making HTTP POST requests. Use curl to 
+send a request to https://curlingfun:9090/ with the parameter "skip" set to the value "alabaster", 
+declaring Alabaster as the team captain.
+```
+
+```sh
+curl -X POST -d "skip=alabaster" -k https://curlingfun:9090/
+```
+
+```sh
+You have successfully made a POST request!
+```
+
+```sh
+4) Working with APIs and embedded devices often requires maintaining session state by passing a 
+cookie.  Use curl to send a request to https://curlingfun:9090/ with a cookie called "end" with the 
+value "3", indicating we're on the third end of the curling match.
+```
+
+```sh
+curl --cookie "end=3" -k https://curlingfun:9090/
+```
+
+```sh
+You have successfully set a cookie!
+```
+
+```sh
+5) Working with APIs and embedded devices sometimes requires working with raw HTTP headers. 
+Use curl to view the HTTP headers returned by a request to https://curlingfun:9090/
+```
+
+```sh
+curl -v -k https://curlingfun:9090
+```
+
+```sh
+> GET / HTTP/1.1
+> Host: curlingfun:9090
+> User-Agent: curl/7.81.0
+> Accept: */*
+> 
+* TLSv1.2 (IN), TLS header, Supplemental data (23):
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* TLSv1.2 (IN), TLS header, Supplemental data (23):
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* old SSL session ID is stale, removing
+* TLSv1.2 (IN), TLS header, Supplemental data (23):
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: nginx/1.18.0 (Ubuntu)
+< Date: Mon, 27 Oct 2025 05:37:27 GMT
+< Content-Type: text/plain;charset=UTF-8
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< Custom-Header: You have found the custom header!
+< 
+```
+
+```sh
+curl -k -I https://curlingfun:9090
+```
+
+```sh
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Mon, 27 Oct 2025 05:49:36 GMT
+Content-Type: text/plain;charset=UTF-8
+Connection: keep-alive
+Custom-Header: You have found the custom header!
+```
+
+```sh
+6) Working with APIs and embedded devices sometimes requires working with custom HTTP headers.  
+Use curl to send a request to https://curlingfun:9090/ with an HTTP header called "Stone" and 
+the value "Granite".
+```
+
+```sh
+curl -X POST -H "Stone: Granite" -k https://curlingfun:9090/
+```
+
+```sh
+You have successfully set a custom HTTP header!
+```
+
+```sh
+7) curl will modify your URL unless you tell it not to.  For example, use curl to retrieve the 
+following URL containing special characters: https://curlingfun:9090/../../etc/hacks
+```
+
+```sh
+curl -k -X GET --path-as-is "https://curlingfun:9090/../../etc/hacks"
+```
+
+```sh
+You have successfully utilized --path-as-is to send a raw path!
+```
+
+```sh
+Great work! 
+ 
+Once HHC grants your achievement, you may close this terminal.
+```
+
+> Bravo! Look at you, curling through that like a true web wizard!
+>
+> You zipped through that challenge faster than a curling stone on enchanted ice!
+> 
+> -- **Bow Ninecandle**
+
+### Solution (Gold)
+
+> You know... rumor has it you can breeze through this with just three commands. 
+> Why don’t you give it a whirl?
+>
+> -- **Bow Ninecandle**
+
+```sh
+ls
+```
+
+```sh
+HARD-MODE.txt  HELP
+```
+
+```sh
+cat HARD-MODE.txt 
+```
+
+```sh
+Prefer to skip ahead without guidance?  Use curl to craft a request meeting these requirements:
+
+- HTTP POST request to https://curlingfun:9090/
+- Parameter "skip" set to "bow"
+- Cookie "end" set to "10"
+- Header "Hack" set to "12ft"
+```
+```sh
+curl -X POST -k -d "skip=bow" --cookie "end=10" -H "Hack: 12ft" https://curlingfun:9090
+```
+
+```sh
+Excellent!  Now, use curl to access this URL: https://curlingfun:9090/../../etc/button
+```
+
+```sh
+curl -k --path-as-is "https://curlingfun:9090/../../etc/button"
+```
+
+
+```sh
+Great!  Finally, use curl to access the page that this URL redirects to: https://curlingfun:9090/GoodSportsmanship
+```
+
+```sh
+curl -k -L https://curlingfun:9090/GoodSportsmanship
+```
+
+```sh
+Excellent work, you have solved hard mode!  You may close this terminal once HHC grants your achievement.
+```
+
+> Wait... did you just slice and dice it all into three commands? My stars, 
+> you're a Curling conjurer!
+>
+> -- **Bow Ninecandle**
+
+## Frosty Keypad
+
+> Hello again! I'm Morcel Nougat, dashing around like a reindeer on a sugar 
+> rush! We've got a bit of a dilemma, and I could really use your expertise.
+>
+> Wombley and Alabaster have taken charge now that Santa’s gone missing, and 
+> We're scrambling to get the Wish List secured. But... one of the elves in the 
+> Data Management Team got overzealous, and the Shredder McShreddin 9000 
+> gobbled up a crucial document we need to access Santa's chest!
+> 
+> It’s our golden ticket to getting Santa’s Little Helper tool working properly. 
+> Without it, the hardware hack we're planning is as empty as Santa’s sleigh in 
+> January.
+> 
+> Think you can help? I can get you into the Shredder McShreddin 9000’s inner 
+> workings to retrieve the pieces, but there are two access codes involved. One 
+> of the elves left a hint, but it’s all a blur to me!
+> 
+> I've noticed that some elves keep referring to a certain book when they walk 
+> by. I bet it has the answers we need to crack the code and recover the 
+> document!
+> 
+> You know, some of the elves always have their noses in the same book when 
+> they pass by here. Maybe it’s got the clues we need to crack the code?
+> 
+> -- **Morcel Nougat**
+
+When you look through dev tools you can see the URL. I've provided the Frosty
+Keypad game below so it's easier to sift through.
+
+- [Frosty Keypad](https://hhc24-frostykeypad.holidayhackchallenge.com/?&challenge=termFrostyKeypad)
+
+**Hints:**
+
+> Shine Some Light on It
+> 
+> From: Morcel Nougat
+> 
+> Terminal: Frosty Keypad
+>
+> Well this is puzzling. I wonder if Santa has a seperate code. Bet that would 
+> cast some light on the problem. I know this is a stretch...but...what if you 
+> had one of those fancy UV lights to look at the fingerprints on the keypad? 
+> That might at least limit the possible digits being used...
+
+> Just Some Light Reading
+> 
+> From: Morcel Nougat
+> 
+> Terminal: Frosty Keypad
+
+> See if you can find a copy of that book everyone seems to be reading these 
+> days. I thought I saw somebody drop one close by...
+
+> Who Are You Calling a Dorf?
+> 
+> From: Morcel Nougat
+> 
+> Terminal: Frosty Keypad
+> 
+> Hmmmm. I know I have seen Santa and the other elves use this keypad. I wonder 
+> what it contains. I bet whatever is in there is a National Treasure!
+
+Found the frosty book. URL is below.
+
+- [The Frosty Book](https://frost-y-book.com/)
+
+## Hardware Hacking 101 Part 1
+
+> Hello there! I’m Jewel Loggins.
+> 
+> I hate to trouble you, but I really need some help. Santa’s Little Helper tool 
+> isn’t working, and normally, Santa takes care of this… but with him missing, 
+> it’s all on me.
+> 
+> I need to connect to the UART interface to get things running, but it’s like 
+> the device just refuses to respond every time I try.
+> 
+> I've got all the right tools, but I must be overlooking something important. 
+> I've seen a few elves with similar setups, but everyone’s so busy preparing 
+> for Santa’s absence.
+> 
+> If you could guide me through the connection process, I’d be beyond grateful. 
+> It’s critical because this interface controls access to our North Pole access 
+> cards!
+> 
+> We used to have a note with the serial settings, but apparently, one of 
+> Wombley’s elves shredded it! You might want to check with Morcel Nougat—he 
+> might have a way to recover it.
+>
+> -- **Jewel Loggins (Front Yard (Act I))**
+
+**Hints:**
+
+> Shredded to Pieces
+>
+> From: Jewel Loggins
+> 
+> Terminal: Hardware Part 1
+> 
+> Have you ever wondered how elves manage to dispose of their sensitive documents? 
+> Turns out, they use this fancy shredder that is quite the marvel of engineering. 
+> It slices, it dices, it makes the paper practically disintegrate into a thousand 
+> tiny pieces. Perhaps, just perhaps, we could reassemble the pieces?
+
+### Solution (Silver)
+
+Connected the wires
+
+- Baud: 115200
+- Parity: EVEN
+- Data (bits): 7
+- Stop Bits: 1
+- Flow Control: RTS
+
+> Fantastic! You managed to connect to the UART interface—great work with those 
+> tricky wires! I couldn't figure it out myself…
+>
+> -- **Jewel Loggins (Front Yard (Act I))**
+
+### Solution (Gold)
+
+I loved this challange! It took some time for me to read through the code and
+dust off Burp Suite. But, it was a blast! I normally don't seek the opportunity
+to read through client-side JavaScript. So connecting the dots made it a rather
+run puzzle to solve.
+
+> Rumor has it you might be able to bypass the hardware altogether for the gold 
+> medal. Why not see if you can find that shortcut?
+>
+> -- **Jewel Loggins (Front Yard (Act I))**
+
+I read the code for the `main.js` file and found a few tidbits that seemed
+useful. There are some constants that contain arrays of the information needed
+to solve the challenge.
+
+```js
+// PDA Screen Text Stuff
+const baudRates = [300, 1200, 2400, 4800, 9600, 14400, 19200, 38400, 57600, 115200];
+const dataBits = [5, 6, 7, 8];
+const parityOptions = ["None", "odd", "even"];
+const stopBits = [1, 2];
+const flowControlOptions = ["None", "RTS/CTS", "Xon/Xoff", "RTS"];
+const ports = ["COM1", "COM2", "COM3", "USB0"];
+```
+
+Reading through the `checkCondtions` method helped me understand how the
+`checkit` function expects the *serial* array to be constructed. When the
+settings are correct in the UART it starts up. But, if the voltage is at 5 it
+creates too much heat.
+
+```js
+// Method to check the conditions
+async checkConditions() {
+
+    if (this.uV === 3 && this.allConnectedUp && !this.usbIsAtOriginalPosition || this.dev) {
+        // console.log("PARTY TIME");
+        let checkIt = await checkit([this.currentPortIndex, this.currentBaudIndex, this.currentParityIndex, this.currentDataIndex, this.currentStopBitsIndex, this.currentFlowControlIndex], this.uV)
+        if (checkIt) {
+            this.popup("success! loading bootloader...\nGo speak with Jewel Loggins for the next step!");
+            this.yippee.play();
+        } else {
+            this.merp.play();
+            this.popup("Serial connection couldn't be established...\nPlease check your settings and try again.");
+        }
+
+        // window.open('https://www.anotherexample.com', '_blank'); // Replace with your desired URL
+        return true;
+    } else {
+        if (this.uV === 5 && this.allConnectedUp && !this.usbIsAtOriginalPosition) {
+            const smoked = this.children.getByName('smoked');
+            smoked.start();
+            this.playAudioForDuration(this.smokey, 3000);
+            this.time.delayedCall(3000, () => smoked.stop(), [], this);
+        }
+        // Power on fail phrases
+        const tryagainphrases = [
+            "Level incomplete! Keep playing!",
+            "Insert coin to continue your quest!",
+            "Continue? Time's running out!",
+            "You haven't beaten the high score yet!",
+            "Mission not accomplished! Retry?",
+            "Game over? Not yet, give it another shot!",
+            "The Force is not yet strong with this one.",
+            ...
+        ];
+        const tryagain = tryagainphrases[Math.floor(Math.random() * tryagainphrases.length)]
+        console.log(`The Machine: "${tryagain}"`);
+
+        // const voltage = vtoggle ? vtoggle.vol : "vtoggle not found";
+        console.log(`Voltage: ${this.uV}, Wires Connected: ${this.allConnectedUp}, Power: False`);
+        return false;
+    }
+}
+```
+
+The `checkit` function sends a post request with the user's request ID, the
+index array for the serial config, and the voltage needed for powering
+everything up.
+
+There are some comments for the API discussing some issues where some elves
+deviced to brute-force through v1 of the API. So they updated it to v2 and v1
+**should** no longer be in production.
+
+
+```js
+async function checkit(serial, uV) {
+  // Retrieve the request ID from the URL query parameters
+  const requestID = getResourceID(); // Replace 'paramName' with the actual parameter name you want to retrieve
+
+  if (!requestID) {
+    requestID = "00000000-0000-0000-0000-000000000000";
+  }
+
+  // Build the URL with the request ID as a query parameter
+  // Word on the wire is that some resourceful elves managed to brute-force their way in through the v1 API.
+  // We have since updated the API to v2 and v1 "should" be removed by now.
+  // const url = new URL(`${window.location.protocol}//${window.location.hostname}:${window.location.port}/api/v1/complete`);
+  const url = new URL(`${window.location.protocol}//${window.location.hostname}:${window.location.port}/api/v2/complete`);
+
+  try {
+    // Make the request to the server
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ requestID: requestID, serial: serial, voltage: uV })
+    });
+
+    // Check if the request was successful
+    if (!response.ok) {
+      throw new Error('Network response was not ok: ' + response.statusText);
+    }
+
+    const data = await response.json();
+    console.log("Data", data)
+    // Return true if the response is true
+    return data === true;
+  } catch (error) {
+    console.error('There has been a problem with your fetch operation:', error);
+    return false;
+  }
+}
+```
+
+Decided to start up a proxy in Burp Suite and use the intercept tool to capture
+the requests. I looked through all of them to see if there was anything I could
+send to repeater and I found this.
+
+```
+GET /?&challenge=termHardwareHacking101A&username=n3s00&id=cd79c2f4-b255-41a6-a9bf-f4df6e09dc4e&area=frontyardact1&location=61,36&tokens=easy,termHardwareHacking101A&dna=ATATATTAATATATATATATGCATATATATATATCGATTAATATATATATATATATATATATATATATATGCATATGCCGATATATATATATTACGATATATATATATATGCATATATGC HTTP/2
+Host: hhc24-hardwarehacking.holidayhackchallenge.com
+Cookie: _ga_F6ZZNPR5E5=GS2.1.s1761618581$o11$g1$t1761623069$j60$l0$h0; _ga=GA1.1.1974479077.1761465328; GCLB="97885844805711ee"
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+If-Modified-Since: Mon, 23 Sep 2024 20:20:53 GMT
+Priority: u=0, i
+Te: trailers
+```
+
+Here is the response received from the server. It doesn't provide much. But, I
+thought I'd include it anyway.
+
+```
+HTTP/2 304 Not Modified
+Last-Modified: Mon, 23 Sep 2024 20:20:53 GMT
+Date: Tue, 28 Oct 2025 06:36:10 GMT
+Via: 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+```
+
+After sending the request to repeater. I updated it to the `POST` method with
+the URL being `/api/v2/complete`. I tried it in `/api/v1/complete` as well.
+
+I added the JSON payload to the body of the request after updating the
+`Content-Type` and added the `Accept` headers to the request. Below is the JSON
+used with the request ID, correct serial array, and the voltage index.
+
+```json
+{
+"requestID":"cd79c2f4-b255-41a6-a9bf-f4df6e09dc4e",  
+"serial": [3, 9, 2, 2, 0, 3], 
+"voltage": 3
+}
+```
+
+This is the request used in Burp Suite for this challenge.
+
+```txt
+POST /api/v2/complete HTTP/2
+Host: hhc24-hardwarehacking.holidayhackchallenge.com
+Cookie: _ga_F6ZZNPR5E5=GS2.1.s1761618581$o11$g1$t1761623069$j60$l0$h0; _ga=GA1.1.1974479077.1761465328; GCLB="97885844805711ee"
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0
+Content-Type: application/json
+Accept: application/json
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+If-Modified-Since: Mon, 23 Sep 2024 20:20:53 GMT
+Priority: u=0, i
+Te: trailers
+Content-Length: 105
+
+{
+"requestID":"cd79c2f4-b255-41a6-a9bf-f4df6e09dc4e",  
+"serial": [3, 9, 2, 2, 0, 3], 
+"voltage": 3
+}
+```
+
+Below is the response. It does not provide much either. It just says `true`. So
+I assume that's good. Originally I had one of the numbers off so it kept
+returning `false` in the response. But, updating the wrong value fixed it.
+
+```txt
+HTTP/2 200 OK
+Content-Type: application/json
+Date: Tue, 28 Oct 2025 05:50:09 GMT
+Content-Length: 5
+Via: 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+true
+```
+
+There is no prompt from Jewel Loggins after completing the Gold part of the
+"Hardware Hacking 101: Part 1 challenge. But, I recieved the Gold acheivement
+for the challenge on my badge to confirm.
+
+## Hardware Hacking 101: Part 2
+
+### Solution (Silver)
+
+```sh
+U-Boot SPL 2024.08 (Dec 24 2023 - 23:59:59 +0000)
+Preparing sleigh for takeoff...
+
+
+U-Boot 2024.08-g1234567-jolly (Dec 25 2023 - 00:00:01 +0000)
+
+CPU:   North Pole CandyCane v1.0, eco 5
+Clocks: CPU: 1000MHz, DDR: 1600MHz, Bus: 400MHz, XTAL: 50MHz
+Model: Santa's Magic Access Control Board
+DRAM:  256 MiB of Magic Memory
+Loading Environment from SPI Flash... SF: Detected elf32magic with page size 512 Bytes, erase size 128 KiB, total 32 MiB
+*** Warning - bad CRC, using default enchanted environment
+
+In:    elvenconsole@1e000c00
+Out:   elvenconsole@1e000c00
+Err:   elvenconsole@1e000c00
+Net:   
+Warning: eth@1e100000 (eth0) using random MAC address - 5e:69:c8:f8:cf:5b
+eth0: eth@1e100000
+Hit any key to stop autoboot:  0 
+Reindeer_PCIE_SET: gpio[19]=1
+Using eth@1e100000 device
+TFTP from server 192.168.54.25; our IP address is 192.168.54.5
+Filename 'magic_firmware.bin'.
+Load address: 0x80010000
+Loading: *
+North Pole Retry count exceeded; starting again
+bash: cannot set terminal process group (9): Inappropriate ioctl for device
+bash: no job control in this shell
+```
+
+```sh
+--------------------------------------------------------
+                   ___     _      _  _   
+                  / __|   | |    | || |  
+                  \__ \   | |__  | __ |  
+                  |___/   |____| |_||_|  
+                _|"""""|_|"""""|_|"""""| 
+                "`-0-0-'"`-0-0-'"`-0-0-' 
+--------------------------------------------------------
+  Santa's Little Helper - Access Card Maintenance Tool
+
+          Tool Name: slh
+
+options:
+  -h, --help            show this help message and exit
+  --view-config         View current configuration.
+  --view-cards          View current values of all access cards.
+  --view-card ID        View a single access card by ID.
+  --set-access ACCESS_LEVEL
+                        Set access level of access card. Must be 0 (No Access) or 1 (Full Access).
+  --id ID               ID of card to modify.
+  --passcode PASSCODE   Passcode to make changes.
+  --new-card            Generate a new card ID.
+--------------------------------------------------------
+```
+
+```sh
+ls -lah
+```
+
+```sh
+total 156K
+drwxrwxr-t 1 slh  slh  4.0K Oct 28 02:41 .
+drwxr-xr-x 1 root root 4.0K Nov 13  2024 ..
+-r--r--r-- 1 slh  slh   518 Oct 16  2024 .bash_history
+-r--r--r-- 1 slh  slh  3.9K Sep 23  2024 .bashrc
+-r--r--r-- 1 slh  slh   807 Sep 23  2024 .profile
+-rw-r--r-- 1 root root 128K Oct 28 02:41 access_cards
+```
+
+```sh
+file access_cards 
+```
+
+```sh
+access_cards: SQLite 3.x database, last written using SQLite version 3040001, 
+file counter 5, database pages 32, cookie 0x2, schema 4, UTF-8, version-valid-for 5
+```
+
+```sh
+history
+```
+
+```sh
+    8  ping 1.1.1.1
+    9  slh --help
+   10  slg --config
+   11  slh --passcode CandyCaneCrunch77 --set-access 1 --id 143
+   12  df -h
+   13  top
+   14  ps aux | grep apache
+```
+
+```sh
+slh --passcode CandyCaneCrunch77 --set-access 1 --id 42
+```
+
+```sh
+
+       *   *   *   *   *   *   *   *   *   *   *
+   *                                             *
+*      ❄  ❄  ❄  ❄  ❄  ❄  ❄  ❄  ❄  ❄  ❄  ❄  ❄     *
+ *  $$$$$$\   $$$$$$\   $$$$$$\  $$$$$$$$\  $$$$$$\   $$$$$$\  * 
+  * $$  __$$\ $$  __$$\ $$  __$$\ $$  _____|$$  __$$\ $$  __$$\ *
+   *$$ /  $$ |$$ /  \__|$$ /  \__|$$ |      $$ /  \__|$$ /  \__| *
+    $$$$$$$$ |$$ |      $$ |      $$$$$\    \$$$$$$\  \$$$$$$\   
+   *$$  __$$ |$$ |      $$ |      $$  __|    \____$$\  \____$$\  *
+  * $$ |  $$ |$$ |  $$\ $$ |  $$\ $$ |      $$\   $$ |$$\   $$ | *
+*   $$ |  $$ |\$$$$$$  |\$$$$$$  |$$$$$$$$\ \$$$$$$  |\$$$$$$  |   *
+ *  \__|  \__| \______/  \______/ \________| \______/  \______/  *
+*         *    ❄             ❄           *        ❄    ❄    ❄   *
+   *        *     *     *      *     *      *    *      *      *
+   *  $$$$$$\  $$$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$$$\ $$$$$$$\  $$\  *
+   * $$  __$$\ $$  __$$\ $$  __$$\ $$$\  $$ |\__$$  __|$$  _____|$$  __$$\ $$ | *
+  *  $$ /  \__|$$ |  $$ |$$ /  $$ |$$$$\ $$ |   $$ |   $$ |      $$ |  $$ |$$ |*
+  *  $$ |$$$$\ $$$$$$$  |$$$$$$$$ |$$ $$\$$ |   $$ |   $$$$$\    $$ |  $$ |$$ | *
+ *   $$ |\_$$ |$$  __$$< $$  __$$ |$$ \$$$$ |   $$ |   $$  __|   $$ |  $$ |\__|*
+  *  $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |\$$$ |   $$ |   $$ |      $$ |  $$ |   *
+*    \$$$$$$  |$$ |  $$ |$$ |  $$ |$$ | \$$ |   $$ |   $$$$$$$$\ $$$$$$$  |$$\ *
+ *    \______/ \__|  \__|\__|  \__|\__|  \__|   \__|   \________|\_______/ \__|  *
+  *                                                            ❄    ❄    ❄   *
+   *      *    *    *    *    *    *    *    *    *    *    *    *    *    *                                                                                                                                        
+
+Card 42 granted access level 1.
+```
