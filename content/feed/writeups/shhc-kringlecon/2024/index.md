@@ -170,7 +170,7 @@ about 1,600 points for each round.
 Going to recircle back to that math at some point. But, my case here is a high
 score of 50,000 points is impossible.
 
-{{< image src="elf_connect.png" alt="Elf connect initial screen" position="center" caption="Elf Connect" style="border-radius: 8px;" >}}
+{{< image src="elf_connect/elf_connect.png" alt="Elf connect initial screen" position="center" caption="Elf Connect" style="border-radius: 8px;" >}}
 
 This is a category matching game named Elf Connect and Angel Candysalt is
 suspicious about `randomElf` and their high score in Elf Connect.
@@ -986,7 +986,7 @@ Found the frosty book. URL is below.
 Based on the image. This already looks like a great challenge. The visuals are
 great and I get to play with some simulated hardware. Not sure I can beat that!
 
-{{< image src="hardware_part1.png" alt="Image of hardware hacking 101 part 1" position="center" style="border-radius: 8px;" >}}
+{{< image src="hardware_hacking/hardware_part1.png" alt="Image of hardware hacking 101 part 1" position="center" style="border-radius: 8px;" >}}
 
 We start this off by talking to Jewel Loggins who is having issues accesing
 something called Santa's Little Helper Tool and is wondering if we can help
@@ -1563,7 +1563,7 @@ for the challenge on my badge to confirm.
 
 ### Hardware Hacking 101: Part 2
 
-{{< image src="hardware_part2.png" alt="Image of hardware hacking 101 part 2" position="center" style="border-radius: 8px;" >}}
+{{< image src="hardware_hacking/hardware_part2.png" alt="Image of hardware hacking 101 part 2" position="center" style="border-radius: 8px;" >}}
 
 The objective of this challenge is to grant access to card number 42 by
 modifying the card database. This can be done using the `Santa's Little Helper 
