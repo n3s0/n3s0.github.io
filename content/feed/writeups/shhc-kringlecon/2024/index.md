@@ -100,7 +100,7 @@ the challenges. These challenges are located on ```Frosty's Beach```.
 > Before you head out any further onto the island, you need to accomplish two 
 > simple tasks.
 >
-> -- **Jingle Ringford**
+> -- **Jingle Ringford (Frosty's Beach (Prologue))**
 
 This challenge is simple. When you click on the terminal named "First Terminal"
 it prompts you to type and answer in the answer prompt. Something of an
@@ -135,7 +135,7 @@ completed.
 > We'll let you know when the boat leaves, but for now relax, enjoy the sun, and 
 > most importantly, have FUN!
 >
-> -- **Jingle Ringford**
+> -- **Jingle Ringford (Frosty's Beach (Prologue))**
 
 ### Elf Connect
 
@@ -160,7 +160,7 @@ do. Almost.
 > 
 > Think they might have tampered with the game? Just a hunch!
 >
-> -- **Angel Candysalt**
+> -- **Angel Candysalt (Frosty's Beach (Prologue))**
 
 Below is the initial screen for the **Elf Connect** game. From the looks of it.
 There is a High Score of 50,000. Which doesn't quite add up given that each
@@ -188,6 +188,8 @@ With all that being said. Time to get started with this challenge.
 Provided is one of the hints related to this challenge. Stating this is similar
 to the New York Times Connections game. Which I personally have never played.
 But, it provides a good introduction for the game. 
+
+**Hints:**
 
 > Elf Connect Easy
 >
@@ -281,12 +283,14 @@ wasn't so sure as to what it was hinting at.
 
 > If you want a more difficult challenge, try beating randomElf's score.
 > 
-> -- **Angel Candysalt**
+> -- **Angel Candysalt (Frosty's Beach (Prologue))**
 
 There is also a hint provided by Angel Candysalt related to the Gold/Hard part
 of the Elf Connect challenge. It's hinting that we should look at the HTML and
 client-side JavaScript for the Elf Connect game using our browser's developer
 tools console.
+
+**Hints:**
 
 > Elf Connect Hard
 >
@@ -447,7 +451,7 @@ the following response.
 
 > Amazing! You really connected all the dots like a pro.
 >
-> -- **Angel Candysalt**
+> -- **Angel Candysalt (Frosty's Beach (Prologue))**
 
 ### The Goose of Christmas Island
 
@@ -456,7 +460,7 @@ the comedic relief I needed.
 
 > HONK! HONK!
 >
-> -- **Goose of Christmas Island**
+> -- **Goose of Christmas Island (Frosty's Beach (Prologue))**
 
 ### Elf Minder 9000
 
@@ -478,7 +482,7 @@ This game took me a while to complete.
 > game it would've been a lot more stable, but I won't comment on that any 
 > further.
 >
-> -- **Poinsettia McMittens**
+> -- **Poinsettia McMittens (Frosty's Beach (Prologue))**
 
 #### Solution (Silver)
 
@@ -487,7 +491,23 @@ This game took me a while to complete.
 I haven't completed this challenge yet. Need to obtain more images of what is
 completed yet. So, stay tuned for more content on this.
 
+After solving the `Silver` challenges the story was updated.
+
+> With challenges solved, we're ready to head to the North Pole! Let's hope 
+> Santa is back already to direct operations.
+
 ## Act I
+
+Off to Act I. Where we need to help a few more elves solve some challenges.
+Sounds like there is some tension in the North Pole because Santa is out.
+
+> With Santa away, Wombley Cube and Alabaster Snowball have each tried to lead. 
+> Surely they won't mess up the naughty and nice list...
+> 
+> Help Bow, Morcel, and Jewell solve their challenges.
+
+It seems like there is some foreshadowing related to Wombley Cube and Alabaster
+Snowball potentially messing up the naughty and nice list.
 
 ### cURLing
 
@@ -523,7 +543,7 @@ completed yet. So, stay tuned for more content on this.
 > So, are you ready to curl those web requests like a pro? Let’s see your magic 
 > unfold!
 >
-> -- **Bow Ninecandle**
+> -- **Bow Ninecandle (Front Yard (Act I))**
 
 Provided are the hints provided by Bow Ninecandle related to the cURLing
 challenge.
@@ -533,6 +553,8 @@ Reading the curl(1) manual and it says it tells curl(1) not to handle `/../` or
 `/./` in the URL path.
 
 Sounds like foreshadowing to me.
+
+**Hints:**
 
 > cURL: Don't squash
 >
@@ -797,28 +819,37 @@ Once HHC grants your achievement, you may close this terminal.
 >
 > You zipped through that challenge faster than a curling stone on enchanted ice!
 > 
-> -- **Bow Ninecandle**
+> -- **Bow Ninecandle (Front Yard (Act I))**
 
 #### Solution (Gold)
 
-So it looks like 
+So three commands for the gold star? Sounds like a party to me. There isn't much
+else provided for this. But, I'm sure the hints will come in handy.
 
 > You know... rumor has it you can breeze through this with just three commands. 
 > Why don’t you give it a whirl?
 >
-> -- **Bow Ninecandle**
+> -- **Bow Ninecandle (Front Yard (Act I))**
+
+Decided to start off with listing the contents of the directory.
 
 ```sh
 ls
 ```
 
+Looks like there is a `HARD-MODE.txt` file in here so I assume that's the
+file.
+
 ```sh
 HARD-MODE.txt  HELP
 ```
 
-```sh
-cat HARD-MODE.txt 
-```
+Looking at the contents of the file using the `cat(1)` command shows the
+following output.
+
+The instructions are to send a post request to `https://curlingfun:9090/` with
+the paramethers `skip=bow`, a cookie set as `end=10`, and a header set as `Hack:
+12ft`. Sounds simple enough.
 
 ```sh
 Prefer to skip ahead without guidance?  Use curl to craft a request meeting these requirements:
@@ -828,35 +859,55 @@ Prefer to skip ahead without guidance?  Use curl to craft a request meeting thes
 - Cookie "end" set to "10"
 - Header "Hack" set to "12ft"
 ```
+
+Used the following command to send a POST request with the following data.
+
 ```sh
 curl -X POST -k -d "skip=bow" --cookie "end=10" -H "Hack: 12ft" https://curlingfun:9090
 ```
+
+Looks like that worked. Now for the next command which requires we send a get
+request to the URL `https://curlingfun:9090/../../etc/button`.
 
 ```sh
 Excellent!  Now, use curl to access this URL: https://curlingfun:9090/../../etc/button
 ```
 
+For this command I needed to use the `--path-as-is` flag so I could use `/../`
+in the URL. This will prevent the curl(1) command from correcting the URL to
+make it safer.
+
 ```sh
 curl -k --path-as-is "https://curlingfun:9090/../../etc/button"
 ```
 
+Looks like that worked too. So the last command is to allow redirects while
+going to the `https://curlingfun:9090/GoodSportsmanship` URL.
 
 ```sh
 Great!  Finally, use curl to access the page that this URL redirects to: https://curlingfun:9090/GoodSportsmanship
 ```
 
+Used to `-L` flag to follow the redirects to the URL.
+
 ```sh
 curl -k -L https://curlingfun:9090/GoodSportsmanship
 ```
+
+Which worked. The promt indicated that I can close the terminal once HHC grants
+the gold achievement. 
 
 ```sh
 Excellent work, you have solved hard mode!  You may close this terminal once HHC grants your achievement.
 ```
 
+Some noew dialog from Bow Ninecandle related to completing the hard part of the
+challenge.
+
 > Wait... did you just slice and dice it all into three commands? My stars, 
 > you're a Curling conjurer!
 >
-> -- **Bow Ninecandle**
+> -- **Bow Ninecandle (Front Yard (Act I))**
 
 ### Frosty Keypad
 
@@ -883,7 +934,7 @@ Excellent work, you have solved hard mode!  You may close this terminal once HHC
 > You know, some of the elves always have their noses in the same book when 
 > they pass by here. Maybe it’s got the clues we need to crack the code?
 > 
-> -- **Morcel Nougat**
+> -- **Morcel Nougat (Front Yard (Act I))**
 
 When you look through dev tools you can see the URL. I've provided the Frosty
 Keypad game below so it's easier to sift through.
@@ -908,7 +959,7 @@ Keypad game below so it's easier to sift through.
 > From: Morcel Nougat
 > 
 > Terminal: Frosty Keypad
-
+>
 > See if you can find a copy of that book everyone seems to be reading these 
 > days. I thought I saw somebody drop one close by...
 
@@ -927,9 +978,27 @@ Found the frosty book. URL is below.
 
 #### Solution (Silver)
 
+
 #### Solution (Gold)
 
 ### Hardware Hacking 101: Part 1
+
+Based on the image. This already looks like a great challenge. The visuals are
+great and I get to play with some simulated hardware. Not sure I can beat that!
+
+{{< image src="hardware_part1.png" alt="Image of hardware hacking 101 part 1" position="center" style="border-radius: 8px;" >}}
+
+We start this off by talking to Jewel Loggins who is having issues accesing
+something called Santa's Little Helper Tool and is wondering if we can help
+them. They need to connect to the UART interface and start things up. But, it's 
+not responding. With all of he right tools in place. They believe this is due 
+to some incorrect settings.
+
+The problem is. I don't have the correct settings either. But, Jewel Loggins
+hints within the dialog that a note containing the serial settings exists. But,
+one of Wombley's elves shredded it. So we're going to have to talk to Morcel
+Nougate-he about a method of recovery for it. So, it's a good idea that we
+decided to sol
 
 > Hello there! I’m Jewel Loggins.
 > 
@@ -954,7 +1023,15 @@ Found the frosty book. URL is below.
 >
 > -- **Jewel Loggins (Front Yard (Act I))**
 
+Some links to the web page for the Hardware Hacker 101: Part 1 challenge.
+
+- [Hardware Hacking 101: Part 1](https://hhc24-hardwarehacking.holidayhackchallenge.com/)
+
 **Hints:**
+
+This discusses a shredder that the elves developed to shred documents into a
+thousand pieces and it hints that we may need to reassemble a document for this
+challenge.
 
 > Shredded to Pieces
 >
@@ -969,7 +1046,48 @@ Found the frosty book. URL is below.
 
 #### Solution (Silver)
 
-Connected the wires
+A little image of the manual provided was useful for this challenge.
+
+{{< image src="hardware_hacking/uart_slh_manual.png" alt="Image of hardware hacking 101 part 1 UART manual" position="center" style="border-radius: 8px;" >}}
+
+To connect the wires we need to connect them like this on the UART. The voltage
+pins (VCC and V) can be connected. As can the ground pins (GND and G). But, with
+the Transmit/Recieve pins we want to connect Tx (transmit) on the UART to R
+(recieve) on the device and the Rx (recieve) pin on the UART to the T (transmit)
+pin on the device.
+
+**NT2103 UART-Bridge:** PIN VCC -> **Santa's Little Helper (SLH):** PIN V
+**NT2103 UART-Bridge:** PIN Tx  -> **Santa's Little Helper (SLH):** PIN R
+**NT2103 UART-Bridge:** PIN Rx  -> **Santa's Little Helper (SLH):** PIN T
+**NT2103 UART-Bridge:** PIN GND -> **Santa's Little Helper (SLH):** PIN G
+
+This might also be best depicted in a picture as well. So, here it is.
+
+{{< image src="hardware_hacking/hh_pinout.png" alt="Image of hardware hacking 101 part 1 with connected pins" position="center" style="border-radius: 8px;" >}}
+
+With the wires connected. We'll want to make sure the toggle switch for the UART
+device is set to 3V because the device we're connected to only supports 3V. If
+it's toggled to 5V it will fry the device which is no fun. 
+
+To power it on the UART device. You can do so using the `P` (power) button.
+
+> Note: Before being able to solve this challenge. There is some information
+> needed. We could attempt to brute force the settings using the code or we can
+> go to the [Frosty Keypad](#frosty-keypad) challenge. I went to the Frosty
+> Keypad Challenge before this one so I had what I needed. 
+>
+> When we solve that it gives us access to the shredded document. Which I 
+> download and pieced together in the 
+> [One Thousand Little Teeny Tiny Shredded Pieces of Paper](#one-thousand-little-teeny-tiny-shredded-pieces-of-paper)
+> challenge. So that shold be referenced to provide more context as to how I
+> recieved the settings for the serial connection.
+
+Here is an image of the page that provides the settings for the serial
+connection if no one wants to go back to the Frosty Keypad challenge.
+
+{{< image src="#" alt="A note containing the settings for the serial connection." position="center" style="border-radius: 8px;" >}}
+
+Below are the serial connection settings needed to start the connection.
 
 - Baud: 115200
 - Parity: EVEN
@@ -977,10 +1095,249 @@ Connected the wires
 - Stop Bits: 1
 - Flow Control: RTS
 
+In case anyone needs a picture. There is one below with the correct serial
+configuration.
+
+{{< image src="hardware_hacking/serial_settings.png" alt="Image of hardware hacking 101 part 1 with correct serial config in UART" position="center" style="border-radius: 8px;" >}}
+
+Once we have all of this information entered. We just press the `S` (serial)
+button on the UART interface and if everything is correct. It will tell us we're
+successful.
+
+```txt
+success! loading bootloader...
+Go speak to Jewel Loggins for the next step!
+```
+
+For those who would like an image of this. I've provided one below.
+
+{{< image src="hardware_hacking/successful_serial_connection.png" alt="Image of hardware hacking 101 part 1 successul serial connection" position="center" style="border-radius: 8px;" >}}
+
+Jewel Loggins gives us some more dialog to confirm we're on the right track.
+
 > Fantastic! You managed to connect to the UART interface—great work with those 
 > tricky wires! I couldn't figure it out myself…
 >
 > -- **Jewel Loggins (Front Yard (Act I))**
+
+#### One Thousand Little Teeny Tiny Shredded Pieces of Paper
+
+> Incredible work! You pieced together the code like a true sleuth and retrieved 
+> the shreds we need. I’m not quite sure how you’ll put them all together, but if 
+> anyone can, it’s you!
+> 
+> Your help has been absolutely essential, especially now with Santa missing. 
+> Wombley and Alabaster will want to hear all about it—go share the news with 
+> Jewel Loggins!
+>
+> -- **Morcel Nougat**
+
+**Hints:**
+
+This hint provides a script that gives us the opportunity to piece the shredded
+document back together from the looks of it.
+
+> On the Cutting Edge
+>
+> From: Morcel Nougat
+> 
+> Terminal: Hardware Part 1
+>
+> Hey, I just caught wind of this neat way to piece back shredded paper! It's a 
+> fancy heuristic detection technique—sharp as an elf’s wit, I tell ya! Got a 
+> sample Python script right here, courtesy of Arnydo. Check it out when you 
+> have a sec: [heuristic_edge_detection.py](https://gist.github.com/arnydo/5dc85343eca9b8eb98a0f157b9d4d719)."
+
+**Items:**
+
+After completing the silver part of the Frosty Keypad challenge. You are given
+the following item to continue the journey. This is a link to to a zip file
+containing one thousand parts of an image. 
+
+> **One Thousand Little Teeny Tiny Shredded Pieces of Paper**
+>
+> A mountain of one thousand little tiny 
+> [shredded pieces of paper](https://holidayhackchallenge.com/2024/shreds.zip)—each 
+> scrap whispering a secret, waiting for the right hardware hacker to piece the 
+> puzzle back together.
+
+After downloading this zip file you can decompress and view its contents. It
+looks like there is a `slices` directory conaining the pieces of the shredded
+image.
+
+```sh
+total 2.6M
+drwxr-xr-x 1 n3s0 n3s0  162 Oct 29 00:08 .
+drwxr-xr-x 1 n3s0 n3s0  166 Oct 27 20:50 ..
+-rw-r--r-- 1 n3s0 n3s0 1.6M Oct 27 16:51 shreds.zip
+drwxrwxr-x 1 n3s0 n3s0  79K Oct 16  2024 slices
+```
+
+A look in this directory and you can see all of the image files. This isn't even
+half of them. There are plenty more. Running `ls -l | wc -l` in the `slices`
+directory counts to approximately 1001 files.
+
+```sh
+total 4.0M
+drwxrwxr-x 1 n3s0 n3s0  79K Oct 16  2024 .
+drwxr-xr-x 1 n3s0 n3s0  162 Oct 29 00:08 ..
+-rw-rw-r-- 1 n3s0 n3s0 1.8K Oct 16  2024 002cc27c-a406-4b9c-97e3-e08d9db14571.jpg
+-rw-rw-r-- 1 n3s0 n3s0 1.7K Oct 16  2024 0067d477-9f3a-4b46-b426-22868128fda9.jpg
+-rw-rw-r-- 1 n3s0 n3s0 1.8K Oct 16  2024 00823d9b-2499-4f04-a8a8-b45776662bab.jpg
+-rw-rw-r-- 1 n3s0 n3s0 1.6K Oct 16  2024 00b82e45-bd70-423b-b66b-f188f383635a.jpg
+-rw-rw-r-- 1 n3s0 n3s0  980 Oct 16  2024 00d444a3-d1a1-4f06-85fe-e367c1264c16.jpg
+-rw-rw-r-- 1 n3s0 n3s0 1.5K Oct 16  2024 012e2053-f8f0-497c-bd0b-0fc0ccfc28a0.jpg
+-rw-rw-r-- 1 n3s0 n3s0 1.9K Oct 16  2024 01847bc9-cdbf-406c-9645-bde73407bf31.jpg
+-rw-rw-r-- 1 n3s0 n3s0 1.8K Oct 16  2024 01e9c35a-3ebc-4552-a1ec-ed47bc8ab84f.jpg
+-rw-rw-r-- 1 n3s0 n3s0 1.6K Oct 16  2024 01f14c4c-f7fc-4c64-b3c7-9f61c23f3fa6.jpg
+-rw-rw-r-- 1 n3s0 n3s0 1.5K Oct 16  2024 022be568-6621-42b8-9938-b27b26fb9335.jpg
+-rw-rw-r-- 1 n3s0 n3s0 1.7K Oct 16  2024 028aa098-4f96-4e21-8239-a38cf9b71944.jpg
+-rw-rw-r-- 1 n3s0 n3s0 1.4K Oct 16  2024 02d9aeed-bb1f-4710-96c5-b7769e97af72.jpg
+-rw-rw-r-- 1 n3s0 n3s0 2.0K Oct 16  2024 031979f7-f15a-4c22-8f52-9b46bcf393fe.jpg
+-rw-rw-r-- 1 n3s0 n3s0 1.7K Oct 16  2024 037285db-85ca-46c5-b2f7-18783e16c580.jpg
+-rw-rw-r-- 1 n3s0 n3s0 1012 Oct 16  2024 039153ad-fdba-4002-bb85-28b42b38e5f5.jpg
+-rw-rw-r-- 1 n3s0 n3s0  980 Oct 16  2024 03b77db7-50a4-4e83-8005-a2d7c3f6f64e.jpg
+-rw-rw-r-- 1 n3s0 n3s0 1.6K Oct 16  2024 03c4fa75-cde4-44a5-b554-9f1073f74979.jpg
+-rw-rw-r-- 1 n3s0 n3s0 1.7K Oct 16  2024 042ccd6d-00ac-430a-9964-8d5d8ffcb674.jpg
+...
+```
+
+To use the script provided to reassemble the image. I setup a virtual
+environment for python using `venv`, activated the environment and proceeded to 
+intall numpy and pillow. 
+
+```sh
+numpy==2.3.4
+pillow==12.0.0
+```
+
+To run the script. I used python while the `venv` was activated. The script will
+take each slice of the image can compare the edges to determine they match up.
+Then it will save the image as `assembled_image.png` after it's iterated through 
+the loop and put it all together.
+
+```sh
+python heuristic_edge_detection.py
+```
+
+I ran this initially and the image was backwards and it cuts off a lot of the
+text. Making the settings hard to see.
+
+{{< image src="thousand_tiny_pieces/jumbled_assembled_image.png" alt="Jumbled assembled image of serial configuration." position="center" style="border-radius: 8px;" >}}
+
+After looking through the code sample I noticed the `slices[0]` array starts at
+the first index in the array. Just because it's starting from the beginning of
+the array doesn't mean that it's starting at the beginning of the image.
+
+```python
+def find_best_match(slices):
+    n = len(slices)
+    matched_slices = [slices[0]]
+    slices.pop(0)
+
+    while slices:
+        last_slice = matched_slices[-1]
+        differences = [calculate_difference(last_slice, s) for s in slices]
+        best_match_index = np.argmin(differences)
+        matched_slices.append(slices.pop(best_match_index))
+
+    return matched_slices
+
+```
+
+After some trial and error I got a much cleaner image by updating this to
+`slices[-8]`. Which would start roughly at index `991` if my math is right. 
+
+```python
+def find_best_match(slices):
+    n = len(slices)
+    matched_slices = [slices[-8]]
+    slices.pop(0)
+
+    while slices:
+        last_slice = matched_slices[-1]
+        differences = [calculate_difference(last_slice, s) for s in slices]
+        best_match_index = np.argmin(differences)
+        matched_slices.append(slices.pop(best_match_index))
+
+    return matched_slices
+```
+
+Here is what the image looks like now that the code sample has been tuned. The
+image is much easier to read after taking some time to figure that out.
+
+{{< image src="thousand_tiny_pieces/assembled_image.png" alt="Assembled image of the serial configuration." position="center" style="border-radius: 8px;" >}}
+
+If you read the image it will provide the information in the list below. This
+information has also been added to the information in Hardware Hacking 101: Part
+1 silver solution.
+
+- **BAUD:** 115200
+- **PARITY:** EVEN
+- **DATA:** 7 BITS
+- **STOP BITS:** 1 BIT
+- **FLOW CONTROL:** RTS
+
+Below is the full updated code sample of what worked for me on this challenge.
+
+```python
+import os
+import numpy as np
+from PIL import Image
+
+def load_images(folder):
+    images = []
+    filenames = sorted(os.listdir(folder))
+    for filename in filenames:
+        if filename.endswith('.png') or filename.endswith('.jpg'):
+            img = Image.open(os.path.join(folder, filename)).convert('RGB')
+            images.append(np.array(img))
+    return images
+
+def calculate_difference(slice1, slice2):
+    # Calculate the sum of squared differences between the right edge of slice1 and the left edge of slice2
+    return np.sum((slice1[:, -1] - slice2[:, 0]) ** 2)
+
+def find_best_match(slices):
+    n = len(slices)
+    matched_slices = [slices[-8]]
+    slices.pop(0)
+
+    while slices:
+        last_slice = matched_slices[-1]
+        differences = [calculate_difference(last_slice, s) for s in slices]
+        best_match_index = np.argmin(differences)
+        matched_slices.append(slices.pop(best_match_index))
+
+    return matched_slices
+
+def save_image(images, output_path):
+    heights, widths, _ = zip(*(i.shape for i in images))
+
+    total_width = sum(widths)
+    max_height = max(heights)
+
+    new_image = Image.new('RGB', (total_width, max_height))
+
+    x_offset = 0
+    for img in images:
+        pil_img = Image.fromarray(img)
+        new_image.paste(pil_img, (x_offset, 0))
+        x_offset += pil_img.width
+
+    new_image.save(output_path)
+
+def main():
+    input_folder = './slices'
+    output_path = './assembled_image.png'
+
+    slices = load_images(input_folder)
+    matched_slices = find_best_match(slices)
+    save_image(matched_slices, output_path)
+
+if __name__ == '__main__':
+    main()
+```
 
 #### Solution (Gold)
 
@@ -1046,7 +1403,7 @@ async checkConditions() {
             "Mission not accomplished! Retry?",
             "Game over? Not yet, give it another shot!",
             "The Force is not yet strong with this one.",
-            ...
+            "...",
         ];
         const tryagain = tryagainphrases[Math.floor(Math.random() * tryagainphrases.length)]
         console.log(`The Machine: "${tryagain}"`);
@@ -1206,8 +1563,32 @@ for the challenge on my badge to confirm.
 
 ### Hardware Hacking 101: Part 2
 
+{{< image src="hardware_part2.png" alt="Image of hardware hacking 101 part 2" position="center" style="border-radius: 8px;" >}}
+
+The objective of this challenge is to grant access to card number 42 by
+modifying the card database. This can be done using the `Santa's Little Helper 
+(SLH)` tool. But, it's password protected. Once we've found the password we'll
+be able to modify the card and move forward to the next challenge.
+
+> Next, we need to access the terminal and modify the access database. We're 
+> looking to grant access to card number 42.
+>
+> Start by using the slh application—that’s the key to getting into the access 
+> database. Problem is, the ‘slh’ tool is password-protected, so we need to find 
+> it first.
+>
+> Search the terminal thoroughly; passwords sometimes get left out in the open.
+> 
+> Once you've found it, modify the entry for card number 42 to grant access. 
+> Sounds simple, right? Let’s get to it!
+>
+> -- **Jewel Loggins (Front Yard (Act I))**
+
 #### Solution (Silver)
 
+Connected to the Hardware Hacking 101: Part 2 terminal and it went through its
+post process to startup the `slhconsole`.
+ 
 ```sh
 U-Boot SPL 2024.08 (Dec 24 2023 - 23:59:59 +0000)
 Preparing sleigh for takeoff...
@@ -1240,6 +1621,29 @@ bash: cannot set terminal process group (9): Inappropriate ioctl for device
 bash: no job control in this shell
 ```
 
+After it's done booting up there are two options available.
+
+1. Startup system (Default)
+2. U-Boot console
+
+For this challenge I went with the `Startup system` option. But, I might explore
+the U-Boot console later. It might be useful during the "Gold" part of the
+challenge.
+
+```sh
+*** U-Boot Boot Menu ***
+> 1. Startup system (Default)
+  2. U-Boot console
+Press UP/DOWN to move, ENTER to select
+```
+
+Selecting the `Startup system` option displays the usage for the `Santa's Little
+Helper - Access Card Maintenance Tool` and displays a terminal.
+
+Based on the help. There are two options for granting card access. 0 for no
+access and 1 for full access. I'll want to use 1 for the `--set-access` flag
+when I finally have the password.
+
 ```sh
 --------------------------------------------------------
                    ___     _      _  _   
@@ -1266,9 +1670,16 @@ options:
 --------------------------------------------------------
 ```
 
+I listed the contents of the directory and I assumed I would see the
+script/binary being used witin the home directory.
+
 ```sh
 ls -lah
 ```
+
+But, I was wrong. Looks like there is a file name `access_cards` sitting in
+there owned by root. But, is read-only to anyone. So, it's possible that this is
+the database file that contains the cards. Probably SQLite.
 
 ```sh
 total 156K
@@ -1280,18 +1691,51 @@ drwxr-xr-x 1 root root 4.0K Nov 13  2024 ..
 -rw-r--r-- 1 root root 128K Oct 28 02:41 access_cards
 ```
 
+Used the `file(1)` command to check the file.
+
 ```sh
 file access_cards 
 ```
+
+It looks like I was right. This is a SQLite 3 database. I opened it in a text
+editor and it had long strings that didn't seem to have a whole lot of meaning.
+Unless they were cards and I'm not used to looking at badges in a terminal.
 
 ```sh
 access_cards: SQLite 3.x database, last written using SQLite version 3040001, 
 file counter 5, database pages 32, cookie 0x2, schema 4, UTF-8, version-valid-for 5
 ```
 
+Upon further investigation, there is a schema. Although I can't pick it out from
+the output further down. There is an access_cards table schema that I'm assuming
+holds the data for the cards. But, we shall see.
+
+```sh
+?qGq��tableconfigconfigCREATE TABLE config (
+            id INTEGER PRIMARY KEY,
+            config_key TEXT UNIQUE,
+            config_value TEXT
+        )+?indexsqlite_autoindex_config_1confi�6%%�/tableaccess_cardsaccess_cardsCREATE TABLE access_cards (
+            id INTEGER PRIMARY KEY,
+            uuid TEXT,
+            access INTEGER,
+            sig TEXT
+        ) ���������������������ysmga�O�+��c?�w�S�/�
+�G    
+```
+
+At this point I'm just poking around to see what I can find. I noticed in the
+directory listing there was a `.bash_history` file. So, I decided to run the
+`history(1)` command to try my luck there.
+
 ```sh
 history
 ```
+
+Would you look at that! The history wasn't cleared for this. Someone already
+created a card with the id of `143` with full permissions. The passcode
+`CandyCaneCrunch77` seems like it could be used to setup the new badge for Jewel
+Loggins.
 
 ```sh
     8  ping 1.1.1.1
@@ -1303,9 +1747,17 @@ history
    14  ps aux | grep apache
 ```
 
+I use the passcode I discovered to add a new card id of `42` with full
+permissions. Let's see how we do.
+
+I tip my hat to the Hitch Hikers Guide To The Galaxy reference.
+
 ```sh
 slh --passcode CandyCaneCrunch77 --set-access 1 --id 42
 ```
+
+Bingo! After setting the access to badge 42 we get a great display of ACII art 
+in the terminal telling us that card 42 has been granted level 1 access.
 
 ```sh
 
@@ -1336,8 +1788,27 @@ slh --passcode CandyCaneCrunch77 --set-access 1 --id 42
 Card 42 granted access level 1.
 ```
 
+With that done. Jewel Loggins new dialog for us related to us adding the badge 
+id to the system.
+
+> Wow! You're amazing at this! Clever move finding the password in the command 
+> history. It’s a good reminder about keeping sensitive information secure…
+>
+> -- **Jewel Loggins (Front Yard (Act I))**
+
 #### Solution (Gold)
 
-## Act III
 
+With at least the `Silver` challenges being completed. It looks like there is a
+pretty suspencful outro for Act II.
 
+> This division among the elves can't be good. Surely it won't get any worse.
+
+## Act II
+
+> Wombley's getting desparate. Out-elved by Alabaster's faction, he's planning a 
+> gruesome snowball fight to take over present delivery!
+>
+> Piney, Chimney, and Eve each need your help.
+
+I will update this part of the challenge as I finish it.
