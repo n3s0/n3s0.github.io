@@ -592,14 +592,14 @@ Time to say `yes` to the prompt and get started.
 Are you ready to begin? [y]es: 
 ```
 
+> **Question 1**
+> 
+> Unlike the defined standards of a curling sheet, embedded devices often have 
+> web servers on non-standard ports.  Use curl to retrieve the web page on host 
+> "curlingfun" port 8080. If you need help, run the 'hint' command.
+
 First question is asking how to access web servers on a non-standard port. In
 this case we're accessing `curlingfun` on port `8080`.
-
-```sh
-1) Unlike the defined standards of a curling sheet, embedded devices often have web servers 
-on non-standard ports.  Use curl to retrieve the web page on host "curlingfun" port 8080.
-If you need help, run the 'hint' command.
-```
 
 To do this. Issue the curl command to send the request to `curlingfun` and
 use the port; indicated by a colon (`:`) as shown in the command below.
@@ -615,15 +615,16 @@ You have successfully accessed the site on port 8080!
 
 If you need help, please remember to run "hint" for a hint!
 ```
+ 
+> **Question 2**
+>
+> Embedded devices often use self-signed certificates, where your browser will 
+> not trust the certificate presented.  Use curl to retrieve the TLS-protected 
+> web page at https://curlingfun:9090/
 
 Second question we're diving into how to deal with self-signed/insecure
 certificates using curl. It's requesting that we use the URL
 `https://curlingfun:9090/` for this HTTP request.
- 
-```sh
-2) Embedded devices often use self-signed certificates, where your browser will not trust the 
-certificate presented.  Use curl to retrieve the TLS-protected web page at https://curlingfun:9090/
-```
 
 You can send your request using curl regularly to see what it will do. An error
 from curl is expected from this.
@@ -649,39 +650,6 @@ To let curl know that you know the site is using an insecure or self-signed
 certificate. You can use either the `--insecure` or `-k` flag to let it know
 that it's OK to ignore the insecure certificate. Both will ignore the
 insecure/self-signed certificate and connect anyway.
-
-Below is an excerpt from the curl(1) man page for more information.
-
-> -k, --insecure
->
-> (TLS SFTP SCP) By default, every secure connection curl makes is verified to 
-> be secure before the transfer takes place. This option makes curl skip the 
-> verification step and proceed without checking.
-> 
-> When this option is not used for protocols using TLS, curl verifies the 
-> server's TLS certificate before it continues: that the certificate contains 
-> the right name which matches the hostname used in the URL and that the 
-> certificate has been signed by a CA certificate present in the cert store. 
-> See this online resource for further details: https://curl.se/docs/sslcerts.html
->
-> For SFTP and SCP, this option makes curl skip the known_hosts verification. 
-> known_hosts is a file normally stored in the user's home directory in the 
-> ".ssh" subdirectory, which contains hostnames and their public keys.
->
-> WARNING: using this option makes the transfer insecure.
-> 
-> When curl uses secure protocols it trusts responses and allows for example 
-> HSTS and Alt-Svc information to be stored and used subsequently. Using 
-> --insecure can make curl trust and use such information from malicious servers.
-> 
-> Providing --insecure multiple times has no extra effect. Disable it again with 
-> --no-insecure.
->
-> Example:
-> 
-> curl --insecure https://example.com
-> See also --proxy-insecure, --cacert and --capath.
-> 
 
 The man pages for commands are usually good places to start if you're unsure of
 a functionality for a specific command.
@@ -709,42 +677,75 @@ Subsequent requests will continue to require "--insecure", or "-k" for short.
 If you need help, please remember to run "hint" for a hint!
 ```
 
-```sh
-3) Working with APIs and embedded devices often requires making HTTP POST requests. Use curl to 
-send a request to https://curlingfun:9090/ with the parameter "skip" set to the value "alabaster", 
-declaring Alabaster as the team captain.
-```
+> **Question 3**
+>
+> Working with APIs and embedded devices often requires making HTTP POST requests. 
+> Use curl to send a request to https://curlingfun:9090/ with the parameter "skip" 
+> set to the value "alabaster", declaring Alabaster as the team captain.
+
+In question 3 we go into working with APIs and the use of parameters with
+requests. Specifically how to send one. In this question they are asking us to
+send a `POST` request to `https://curlingfun:9090` with the `skip` (skipper)
+parameter set to the value `alabaster`.
+
+To achieve this I sent a post request with the `-d` (data) flag; longform being
+`--data`. This will send a post request with the `skip=alabaster` parameter.
 
 ```sh
 curl -X POST -d "skip=alabaster" -k https://curlingfun:9090/
 ```
 
+Once this is done. The game will indicate that the POST request was sent
+succesfully.
+
 ```sh
 You have successfully made a POST request!
 ```
 
-```sh
-4) Working with APIs and embedded devices often requires maintaining session state by passing a 
-cookie.  Use curl to send a request to https://curlingfun:9090/ with a cookie called "end" with the 
-value "3", indicating we're on the third end of the curling match.
-```
+> **Question 4**
+> 
+> Working with APIs and embedded devices often requires maintaining session 
+> state by passing a cookie.  Use curl to send a request to 
+> https://curlingfun:9090/ with a cookie called "end" with the value "3", 
+> indicating we're on the third end of the curling match.
+
+This question discusses sending a cookie to `https://curlingfun:9090/` named
+`end` with the value of `3`. This is intended to indicate that we're on the
+third end of the curing match.
+
+With that being said. I used the `-b` (cookie) flag; long form being `--cookie`
+to the `curlingfun` URL.
 
 ```sh
-curl --cookie "end=3" -k https://curlingfun:9090/
+curl -b "end=3" -k https://curlingfun:9090/
 ```
+
+After sending this we get the following output stating we have successfully set
+a cookie.
 
 ```sh
 You have successfully set a cookie!
 ```
 
-```sh
-5) Working with APIs and embedded devices sometimes requires working with raw HTTP headers. 
-Use curl to view the HTTP headers returned by a request to https://curlingfun:9090/
-```
+> **Question 5**
+> 
+> Working with APIs and embedded devices sometimes requires working with raw 
+> HTTP headers. Use curl to view the HTTP headers returned by a request to 
+> https://curlingfun:9090/
+
+The objective for question 5 is to send a request that will output the raw HTTP
+headers to `https://curlingfun:9090`.
+
+To accomplish this I used the `-v` or verbose flag; `--verbose`. Although this
+is unecessary tend to use it to trace the flow of http requests.
 
 ```sh
 curl -v -k https://curlingfun:9090
 ```
+
+Below is the data it spit out. There are some TLS headers grouped with some
+regular HTTP headers. I have removed some of the output to prevent information
+overload for this section of the challenge.
 
 ```sh
 > GET / HTTP/1.1
@@ -769,9 +770,16 @@ curl -v -k https://curlingfun:9090
 < 
 ```
 
+Before we move on. Another way to do this is to use the `-I` flag; `--head`, to
+fetch the headers from `curlingfun`.
+
 ```sh
 curl -k -I https://curlingfun:9090
 ```
+
+This will provide a refined output without the stuff from the `-v` flag. Like
+shown below. Can see there is a header by the name of `Custom-Header` in this
+one also.
 
 ```sh
 HTTP/1.1 200 OK
@@ -782,38 +790,64 @@ Connection: keep-alive
 Custom-Header: You have found the custom header!
 ```
 
-```sh
-6) Working with APIs and embedded devices sometimes requires working with custom HTTP headers.  
-Use curl to send a request to https://curlingfun:9090/ with an HTTP header called "Stone" and 
-the value "Granite".
-```
+> **Question 6**
+>
+> Working with APIs and embedded devices sometimes requires working with custom 
+> HTTP headers. Use curl to send a request to https://curlingfun:9090/ with an 
+> HTTP header called "Stone" and the value "Granite".
+
+This one discusses working with APIs again. Question 6 has an objective to send
+a custom HTTP header using curl to `https://curlingfun:9090/` with the header
+named `Stone` and the value `Granite`.
+
+To do this I used the header or `-H` paramether; longform `--header`, to set the
+header. This command sends a post request with the custom header `Sone: Granite`
+to the curlingfun URL.
 
 ```sh
 curl -X POST -H "Stone: Granite" -k https://curlingfun:9090/
 ```
 
+Looks like that was successful. We have set our custom header in the POST
+request.
+
 ```sh
 You have successfully set a custom HTTP header!
 ```
 
-```sh
-7) curl will modify your URL unless you tell it not to.  For example, use curl to retrieve the 
-following URL containing special characters: https://curlingfun:9090/../../etc/hacks
-```
+> **Question 7**
+> 
+> curl will modify your URL unless you tell it not to.  For example, use curl 
+> to retrieve the ollowing URL containing special characters: 
+> https://curlingfun:9090/../../etc/hacks
+
+In question 7 our objective is to send a `GET` request to `curlingfun` with the
+path `/../../etc/hacks`. We need to find the option that doesn't mess with these
+special charaters too.
+
+To complete this challenge. I sent a `GET` request with the `--path-as-is` flag
+to make sure curl doesn't do anything to `/../`. This was provided from one of
+the hints.
 
 ```sh
 curl -k -X GET --path-as-is "https://curlingfun:9090/../../etc/hacks"
 ```
 
+Looks like that was a success. 
+
 ```sh
 You have successfully utilized --path-as-is to send a raw path!
 ```
+
+Sweet! Another achievement for completing this challenge!
 
 ```sh
 Great work! 
  
 Once HHC grants your achievement, you may close this terminal.
 ```
+
+Bow Ninecandle provides some feedback on our progress.
 
 > Bravo! Look at you, curling through that like a true web wizard!
 >
@@ -978,7 +1012,6 @@ Found the frosty book. URL is below.
 
 #### Solution (Silver)
 
-
 #### Solution (Gold)
 
 ### Hardware Hacking 101: Part 1
@@ -1089,11 +1122,11 @@ connection if no one wants to go back to the Frosty Keypad challenge.
 
 Below are the serial connection settings needed to start the connection.
 
-- Baud: 115200
-- Parity: EVEN
-- Data (bits): 7
-- Stop Bits: 1
-- Flow Control: RTS
+- **BAUD:** 115200
+- **PARITY:** EVEN
+- **DATA:** 7 BITS
+- **STOP BITS:** 1 BIT
+- **FLOW CONTROL:** RTS
 
 In case anyone needs a picture. There is one below with the correct serial
 configuration.
@@ -1798,9 +1831,10 @@ id to the system.
 
 #### Solution (Gold)
 
+### Act I Conclusion
 
 With at least the `Silver` challenges being completed. It looks like there is a
-pretty suspencful outro for Act II.
+pretty suspencful outro for Act I.
 
 > This division among the elves can't be good. Surely it won't get any worse.
 
@@ -1811,4 +1845,34 @@ pretty suspencful outro for Act II.
 >
 > Piney, Chimney, and Eve each need your help.
 
-I will update this part of the challenge as I finish it.
+### Mobile Analysis
+
+### Drone Path
+
+### PowerShell
+
+### Showball Showdown
+
+### Microsoft KC7 (The Elf Conflict)
+
+[Answer](http://kc7cyber.com/go/hhc24) two sections for silver, all four 
+sections for gold.
+
+{{< image src="microsoft_kc7/microsoftkc7.png" alt="intial page for microsoft kc7" position="center" caption="Elf Connect" style="border-radius: 8px;" >}}
+
+### KQL 101
+
+{{< image src="microsoft_kc7/section1.png" alt="KQL 101 section" position="center" caption="Elf Connect" style="border-radius: 8px;" >}}
+
+### Operation Surrender
+
+{{< image src="microsoft_kc7/section2.png" alt="operation surrender section" position="center" caption="Elf Connect" style="border-radius: 8px;" >}}
+
+### Operation Snowfall
+
+{{< image src="microsoft_kc7/section3.png" alt="operation snowfall section" position="center" caption="Elf Connect" style="border-radius: 8px;" >}}
+
+### Echos in the Frost
+
+{{< image src="microsoft_kc7/section4.png" alt="echos in the frost section" position="center" caption="Elf Connect" style="border-radius: 8px;" >}}
+
