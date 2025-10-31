@@ -11,7 +11,7 @@ draft: false
 > Note: This document is incomplete and will be updated periodically as I finish
 > and explain more about the challenges as they're completed. 
 
-## Overview
+# Overview
 
 I've always enjoyed playing these. But, I never get around to playing them when
 they're in progress. I wish I started this one sooner. But, there is no time
@@ -36,7 +36,7 @@ challenge will be provided under the header for the challenge.
 > of months. I decided to work through SANs Holiday Hack Challenge 2024 to 
 > see how far I get.
 
-## SANs Introduction
+# SANs Introduction
 
 Before logging in. SANs has a little introduction of what's available to us for
 participating in the challange. Their introduction can be found below.
@@ -68,7 +68,7 @@ participating in the challange. Their introduction can be found below.
 > 
 > — **The Counter Hack Crew and SANS Institute**
 
-## Prologue
+# Prologue
 
 The prologue goes through a few Cranberry Pi terminals to get us warmed up to
 the challenges. These challenges are located on ```Frosty's Beach```.
@@ -78,7 +78,7 @@ the challenges. These challenges are located on ```Frosty's Beach```.
 > 
 > Talk to Jingle, Angel, and Poinsettia about their challenges.
 
-### Holiday Hack Orientation (First Terminal)
+## Holiday Hack Orientation (First Terminal)
 
 > Welcome to the Geese Islands and the 2023 SANS Holiday Hack Challenge!
 >
@@ -106,7 +106,7 @@ This challenge is simple. When you click on the terminal named "First Terminal"
 it prompts you to type and answer in the answer prompt. Something of an
 initiation into the Cranberry Pi challenges.
 
-#### Solution
+### Solution
 
 Solution is to type the word ```answer``` into the answer prompt.
 
@@ -137,7 +137,7 @@ completed.
 >
 > -- **Jingle Ringford (Frosty's Beach (Prologue))**
 
-### Elf Connect
+## Elf Connect
 
 There are two phases of this terminal. One is beating the Elf Connect game and
 the other is finding a way to beat the high score. Which is almost impossible to
@@ -170,7 +170,7 @@ about 1,600 points for each round.
 Going to recircle back to that math at some point. But, my case here is a high
 score of 50,000 points is impossible.
 
-{{< image src="elf_connect/elf_connect.png" alt="Elf connect initial screen" position="center" caption="Elf Connect" style="border-radius: 8px;" >}}
+{{< image src="elf_connect/elf_connect.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
 
 This is a category matching game named Elf Connect and Angel Candysalt is
 suspicious about `randomElf` and their high score in Elf Connect.
@@ -183,7 +183,7 @@ screen.
 
 With all that being said. Time to get started with this challenge.
 
-#### Solution (Silver)
+### Solution (Silver)
 
 Provided is one of the hints related to this challenge. Stating this is similar
 to the New York Times Connections game. Which I personally have never played.
@@ -276,7 +276,7 @@ the page source.
 I played the game using the lists above and completed the game with no issue.
 Apart from selecting something in the wrong category by mistake.
 
-#### Solution (Gold)
+### Solution (Gold)
 
 After finishing the Elf Connect game. Angel Candysalt provides this dialog. I
 wasn't so sure as to what it was hinting at.
@@ -453,7 +453,7 @@ the following response.
 >
 > -- **Angel Candysalt (Frosty's Beach (Prologue))**
 
-### The Goose of Christmas Island
+## The Goose of Christmas Island
 
 This part of Frosty's Beach where there is just a random cobra chicken provided
 the comedic relief I needed.
@@ -462,7 +462,7 @@ the comedic relief I needed.
 >
 > -- **Goose of Christmas Island (Frosty's Beach (Prologue))**
 
-### Elf Minder 9000
+## Elf Minder 9000
 
 This game took me a while to complete. 
 
@@ -484,9 +484,9 @@ This game took me a while to complete.
 >
 > -- **Poinsettia McMittens (Frosty's Beach (Prologue))**
 
-#### Solution (Silver)
+### Solution (Silver)
 
-#### Solution (Gold)
+### Solution (Gold)
 
 I haven't completed this challenge yet. Need to obtain more images of what is
 completed yet. So, stay tuned for more content on this.
@@ -496,7 +496,7 @@ After solving the `Silver` challenges the story was updated.
 > With challenges solved, we're ready to head to the North Pole! Let's hope 
 > Santa is back already to direct operations.
 
-## Act I
+# Act I
 
 Off to Act I. Where we need to help a few more elves solve some challenges.
 Sounds like there is some tension in the North Pole because Santa is out.
@@ -509,7 +509,7 @@ Sounds like there is some tension in the North Pole because Santa is out.
 It seems like there is some foreshadowing related to Wombley Cube and Alabaster
 Snowball potentially messing up the naughty and nice list.
 
-### cURLing
+## cURLing
 
 > Well hello there! I'm Bow Ninecandle, bright as a twinkling star! Everyone's 
 > busy unpacking, but I've grown quite bored of that. Care to join me for a 
@@ -577,7 +577,7 @@ to dive into for this anyway. So I definately appreciated this.
 > The official [cURL man page](https://curl.se/docs/manpage.html) has tons of 
 > useful information on how to use cURL.
 
-#### Solution (Silver)
+### Solution (Silver)
 
 This challenge starts off with a brief intro noting that you're going to run
 through basic curl commands in a name called `Curling Fun`.
@@ -855,7 +855,7 @@ Bow Ninecandle provides some feedback on our progress.
 > 
 > -- **Bow Ninecandle (Front Yard (Act I))**
 
-#### Solution (Gold)
+### Solution (Gold)
 
 So three commands for the gold star? Sounds like a party to me. There isn't much
 else provided for this. But, I'm sure the hints will come in handy.
@@ -943,7 +943,7 @@ challenge.
 >
 > -- **Bow Ninecandle (Front Yard (Act I))**
 
-### Frosty Keypad
+## Frosty Keypad
 
 > Hello again! I'm Morcel Nougat, dashing around like a reindeer on a sugar 
 > rush! We've got a bit of a dilemma, and I could really use your expertise.
@@ -1010,16 +1010,20 @@ Found the frosty book. URL is below.
 
 - [The Frosty Book](https://frost-y-book.com/)
 
-#### Solution (Silver)
+### Solution (Silver)
 
-#### Solution (Gold)
+i have not finished writting this section yet.
 
-### Hardware Hacking 101: Part 1
+### Solution (Gold)
+
+I have not finished this section yet.
+
+## Hardware Hacking 101: Part 1
 
 Based on the image. This already looks like a great challenge. The visuals are
 great and I get to play with some simulated hardware. Not sure I can beat that!
 
-{{< image src="hardware_hacking/hardware_part1.png" alt="Image of hardware hacking 101 part 1" position="center" style="border-radius: 8px;" >}}
+{{< image src="hardware-hacking/hardware-part1.png" alt="Image of hardware hacking 101 part 1" position="center" style="border-radius: 8px;" >}}
 
 We start this off by talking to Jewel Loggins who is having issues accesing
 something called Santa's Little Helper Tool and is wondering if we can help
@@ -1077,11 +1081,11 @@ challenge.
 > It slices, it dices, it makes the paper practically disintegrate into a thousand 
 > tiny pieces. Perhaps, just perhaps, we could reassemble the pieces?
 
-#### Solution (Silver)
+### Solution (Silver)
 
 A little image of the manual provided was useful for this challenge.
 
-{{< image src="hardware_hacking/uart_slh_manual.png" alt="Image of hardware hacking 101 part 1 UART manual" position="center" style="border-radius: 8px;" >}}
+{{< image src="hardware-hacking/uart-slh-manual.png" alt="Image of hardware hacking 101 part 1 UART manual" position="center" style="border-radius: 8px;" >}}
 
 To connect the wires we need to connect them like this on the UART. The voltage
 pins (VCC and V) can be connected. As can the ground pins (GND and G). But, with
@@ -1096,7 +1100,7 @@ pin on the device.
 
 This might also be best depicted in a picture as well. So, here it is.
 
-{{< image src="hardware_hacking/hh_pinout.png" alt="Image of hardware hacking 101 part 1 with connected pins" position="center" style="border-radius: 8px;" >}}
+{{< image src="hardware-hacking/hh-pinout.png" alt="Image of hardware hacking 101 part 1 with connected pins" position="center" style="border-radius: 8px;" >}}
 
 With the wires connected. We'll want to make sure the toggle switch for the UART
 device is set to 3V because the device we're connected to only supports 3V. If
@@ -1118,7 +1122,7 @@ To power it on the UART device. You can do so using the `P` (power) button.
 Here is an image of the page that provides the settings for the serial
 connection if no one wants to go back to the Frosty Keypad challenge.
 
-{{< image src="#" alt="A note containing the settings for the serial connection." position="center" style="border-radius: 8px;" >}}
+{{< image src="thousand-tiny-pieces/assembled-image.png" alt="A note containing the settings for the serial connection." position="center" style="border-radius: 8px;" >}}
 
 Below are the serial connection settings needed to start the connection.
 
@@ -1131,7 +1135,7 @@ Below are the serial connection settings needed to start the connection.
 In case anyone needs a picture. There is one below with the correct serial
 configuration.
 
-{{< image src="hardware_hacking/serial_settings.png" alt="Image of hardware hacking 101 part 1 with correct serial config in UART" position="center" style="border-radius: 8px;" >}}
+{{< image src="hardware-hacking/serial-settings.png" alt="Image of hardware hacking 101 part 1 with correct serial config in UART" position="center" style="border-radius: 8px;" >}}
 
 Once we have all of this information entered. We just press the `S` (serial)
 button on the UART interface and if everything is correct. It will tell us we're
@@ -1144,7 +1148,7 @@ Go speak to Jewel Loggins for the next step!
 
 For those who would like an image of this. I've provided one below.
 
-{{< image src="hardware_hacking/successful_serial_connection.png" alt="Image of hardware hacking 101 part 1 successul serial connection" position="center" style="border-radius: 8px;" >}}
+{{< image src="hardware-hacking/successful-serial-connection.png" alt="Image of hardware hacking 101 part 1 successul serial connection" position="center" style="border-radius: 8px;" >}}
 
 Jewel Loggins gives us some more dialog to confirm we're on the right track.
 
@@ -1153,7 +1157,7 @@ Jewel Loggins gives us some more dialog to confirm we're on the right track.
 >
 > -- **Jewel Loggins (Front Yard (Act I))**
 
-#### One Thousand Little Teeny Tiny Shredded Pieces of Paper
+### One Thousand Little Teeny Tiny Shredded Pieces of Paper
 
 > Incredible work! You pieced together the code like a true sleuth and retrieved 
 > the shreds we need. I’m not quite sure how you’ll put them all together, but if 
@@ -1256,7 +1260,7 @@ python heuristic_edge_detection.py
 I ran this initially and the image was backwards and it cuts off a lot of the
 text. Making the settings hard to see.
 
-{{< image src="thousand_tiny_pieces/jumbled_assembled_image.png" alt="Jumbled assembled image of serial configuration." position="center" style="border-radius: 8px;" >}}
+{{< image src="thousand-tiny-pieces/jumbled-assembled-image.png" alt="Jumbled assembled image of serial configuration." position="center" style="border-radius: 8px;" >}}
 
 After looking through the code sample I noticed the `slices[0]` array starts at
 the first index in the array. Just because it's starting from the beginning of
@@ -1299,7 +1303,7 @@ def find_best_match(slices):
 Here is what the image looks like now that the code sample has been tuned. The
 image is much easier to read after taking some time to figure that out.
 
-{{< image src="thousand_tiny_pieces/assembled_image.png" alt="Assembled image of the serial configuration." position="center" style="border-radius: 8px;" >}}
+{{< image src="thousand-tiny-pieces/assembled-image.png" alt="Assembled image of the serial configuration." position="center" style="border-radius: 8px;" >}}
 
 If you read the image it will provide the information in the list below. This
 information has also been added to the information in Hardware Hacking 101: Part
@@ -1372,7 +1376,7 @@ if __name__ == '__main__':
     main()
 ```
 
-#### Solution (Gold)
+### Solution (Gold)
 
 I loved this challange! It took some time for me to read through the code and
 dust off Burp Suite. But, it was a blast! I normally don't seek the opportunity
@@ -1594,9 +1598,9 @@ There is no prompt from Jewel Loggins after completing the Gold part of the
 "Hardware Hacking 101: Part 1 challenge. But, I recieved the Gold acheivement
 for the challenge on my badge to confirm.
 
-### Hardware Hacking 101: Part 2
+## Hardware Hacking 101: Part 2
 
-{{< image src="hardware_hacking/hardware_part2.png" alt="Image of hardware hacking 101 part 2" position="center" style="border-radius: 8px;" >}}
+{{< image src="hardware-hacking/hardware-part2.png" alt="Image of hardware hacking 101 part 2" position="center" style="border-radius: 8px;" >}}
 
 The objective of this challenge is to grant access to card number 42 by
 modifying the card database. This can be done using the `Santa's Little Helper 
@@ -1617,7 +1621,7 @@ be able to modify the card and move forward to the next challenge.
 >
 > -- **Jewel Loggins (Front Yard (Act I))**
 
-#### Solution (Silver)
+### Solution (Silver)
 
 Connected to the Hardware Hacking 101: Part 2 terminal and it went through its
 post process to startup the `slhconsole`.
@@ -1829,50 +1833,568 @@ id to the system.
 >
 > -- **Jewel Loggins (Front Yard (Act I))**
 
-#### Solution (Gold)
+### Solution (Gold)
 
-### Act I Conclusion
+I have not completed this challenge yet.
+
+## Act I: Conclusion
+
+> This division among the elves can't be good. Surely it won't get any worse.
 
 With at least the `Silver` challenges being completed. It looks like there is a
 pretty suspencful outro for Act I.
 
-> This division among the elves can't be good. Surely it won't get any worse.
-
-## Act II
+# Act II
 
 > Wombley's getting desparate. Out-elved by Alabaster's faction, he's planning a 
 > gruesome snowball fight to take over present delivery!
 >
 > Piney, Chimney, and Eve each need your help.
 
-### Mobile Analysis
+Here is a map of Act II 
 
-### Drone Path
+## Mobile Analysis
 
-### PowerShell
+## Drone Path
 
-### Showball Showdown
+> Help the elf defecting from Team Wombley get invaluable, top secret intel to 
+> Team Alabaster. Find Chimney Scissorsticks, who is hiding inside the DMZ.
 
-### Microsoft KC7 (The Elf Conflict)
+In the DMZ past the two elves there is Chimeny Scissorsticks. Who provides some
+dialog saying he's trying to exfiltrate data to Alabaster's side. Noting that
+Wombley is planning something with an armada of drones.
+
+{{< image src="drone-path/drone-path-terminal.png" alt="chimeny scissorsticks and the drone path terminal in dmz" position="center" style="border-radius: 8px;" >}}
+
+In this challenge we'll be working with KML files, tracking drone flight paths,
+and potentially obtaining the admin password for a website from within the drone
+flight logs. So with that in mind. Let's get to it!
+
+> Hey. Psst, over here. Hey, I'm Chimney Scissorsticks.
+> 
+> I'm not liking all the tension brewing between the factions, so even though 
+> I agreed with how Wombley was handling things, I get the feeling this is going 
+> to end poorly for everyone. So I'm trying to get this data to Alabaster's 
+> side. Can you help?
+>
+> Wombley's planning something BIG in that toy factory. He's not really making 
+> toys in there. He's building an armada of drones!
+> 
+> They're packed with valuable data from the elves working on the project. I 
+> think they hide the admin password in the drone flight logs. We need to crack 
+> this to prevent this escalating snowball showdown.
+>
+> You'll be working with KML files, tracking drone flight paths. Intriguing, 
+> right? We need every detail to prepare for what’s ahead!
+>
+> Use tools like Google Earth and some Python scripting to decode the hidden 
+> passwords and codewords locked in those files.
+> 
+> Ready to give it a go? It’s going to be a wild ride, and your skills might 
+> just turn the tide of this conflict!
+> 
+> -- **Chimney Scissorsticks (Front Yard (Act II))**
+
+Clicking on the Cranberry Pi terminal takes you to a website named the `Elf
+Drone Workshop`. This seems to be where you can administer drones and upload/view 
+logs for them too..
+
+{{< image src="drone-path/elf-drone-workshop.png" alt="home page for drone path web app" position="center" style="border-radius: 8px;" >}}
+
+I provided the link to the Elf Drone Workshop below. Which came in handy for
+reviewing the code for the site.
+
+- [Elf Drone Workshop](https://hhc24-dronepath.holidayhackchallenge.com/)
+
+After some poking around I found a file named `fritjolf-Path.kml` in the `Menu >
+FileShare path. This file is available without authentication. So I downloaded
+it. 
+
+{{< image src="drone-path/fritjolf-Path.png" alt="download page for fritjolf-path.kml file" position="center" style="border-radius: 8px;" >}}
+
+Here is a link to the `fritjolf-Path.kml` file for download.
+
+- [fritjolf-Path.kml](https://hhc24-dronepath.holidayhackchallenge.com/files/fritjolf-Path.kml)
+
+After downloading the file I decided to take a look at it. I'm not entirely
+familiar with KML files. But, from what I've read Keyhole Markup Language is an
+XML formatted file that contains geographical data. One use case is the
+visualization of that geographical data.
+
+While looking through the file. I notice this is must have been downloaded from
+Google Earth due to URLs. There is an initial longitude/latitude and then there
+is a `<coordinates>` tag. Which has a slew of coordinates to look at.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+        <name>fritjolf-Path</name>
+        <gx:CascadingStyle kml:id="__managed_style_2398E937F13251C4AAA6">
+                <Style>
+                        <IconStyle>
+                                <scale>1.2</scale>
+                                <Icon>
+                                        <href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+                                </Icon>
+                                <hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+                        </IconStyle>
+                        <LabelStyle>
+                        </LabelStyle>
+                        <LineStyle>
+                                <color>ff2dc0fb</color>
+                                <width>6</width>
+                        </LineStyle>
+                        <PolyStyle>
+                                <color>40ffffff</color>
+                        </PolyStyle>
+                        <BalloonStyle>
+                                <displayMode>hide</displayMode>
+                        </BalloonStyle>
+                </Style>
+        </gx:CascadingStyle>
+        <gx:CascadingStyle kml:id="__managed_style_177256F1433251C4AAA6">
+                <Style>
+                        <IconStyle>
+                                <Icon>
+                                        <href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+                                </Icon>
+                                <hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+                        </IconStyle>
+                        <LabelStyle>
+                        </LabelStyle>
+                        <LineStyle>
+                                <color>ff2dc0fb</color>
+                                <width>4</width>
+                        </LineStyle>
+                        <PolyStyle>
+                                <color>40ffffff</color>
+                        </PolyStyle>
+                        <BalloonStyle>
+                                <displayMode>hide</displayMode>
+                        </BalloonStyle>
+                </Style>
+        </gx:CascadingStyle>
+        <StyleMap id="__managed_style_08C7CAFB983251C4AAA6">
+                <Pair>
+                        <key>normal</key>
+                        <styleUrl>#__managed_style_177256F1433251C4AAA6</styleUrl>
+                </Pair>
+                <Pair>
+                        <key>highlight</key>
+                        <styleUrl>#__managed_style_2398E937F13251C4AAA6</styleUrl>
+                </Pair>
+        </StyleMap>
+        <Placemark id="06AEB73AFD323DB38AEB">
+                <name>fritjolf-Path</name>
+                <LookAt>
+                        <longitude>98.45958448116764</longitude>
+                        <latitude>-86.34782448283728</latitude>
+                        <altitude>3933.282925076723</altitude>
+                        <heading>266.5424437916514</heading>
+                        <tilt>0</tilt>
+                        <gx:fovy>35</gx:fovy>
+                        <range>5615503.459923863</range>
+                        <altitudeMode>absolute</altitudeMode>
+                </LookAt>
+                <styleUrl>#__managed_style_08C7CAFB983251C4AAA6</styleUrl>
+                <LineString>
+                        <coordinates>
+                                -58.52967255925983,-81.96544152531006,0 -59.10774876930002,-80.28840427318642,0 -65.72254600105737,-77.9766682035318,0 -73.9875914587532,-77.76516666863455,0 -91.05394381429868,-77.90731001637202,0 -98.06339305755023,-78.99146253042231,0 -102.2303792314312,-81.20027229790867,0 -95.98077310873283,-83.25371393186903,0 -82.07101780164206,-83.29776912973317,0 -83.23520661371359,-81.00695945931643,0 -81.76235789483795,-83.29564134262864,0 -102.9965062974018,-83.14550260567364,0 -95.62041991622014,-83.22291342789609,0 -102.1576732322808,-81.16235281786211,0 -105.371495686142,-81.14693579622997,0 -119.1775433233275,-84.6554672500059,0 -118.3365602745079,-85.19567610400406,0 -110.4807824668064,-85.02562921664807,0 -45.22997899179316,-83.84077683330376,0 -111.7741500227319,-85.01005790395843,0 -119.2870869746066,-85.18624435024202,0 -152.8585963679403,-87.09203473086252,0 -162.5595989415154,-87.57012771908882,0 -3.726793882402935,-86.23611509627816,0 -161.9207235736839,-87.5272473521057,0 -150.2115949088656,-86.95314754908782,0 -159.3099601915958,-86.71852238363812,0 -177.0766975722902,-86.7367419242987,0 173.7151297792575,-87.18547243111809,0 13.02259087562083,-86.35966840156898,0 81.14488471250218,-87.88725244348642,0 50.62372871710384,-85.00577019678271,0 134.1005995420435,-85.62578789244232,0 137.342191367733,-85.21676094023435,0 134.9537968910206,-84.64727679011044,0 127.6095180832093,-84.28631500383617,0 58.72032095841844,-84.02924664080631,0 69.24724000830224,-82.75905747160817,0 82.27748263459516,-82.18217648194808,0 108.70378146308,-82.0756881880763,0 121.3204479152008,-82.96479276521346,0 128.0163452471495,-84.21779248389772,0 130.9249400328774,-83.83708739655414,0 129.4862643314059,-83.03807799142992,0 120.0269792779775,-80.46073786972374,0 116.028157000968,-80.04805367238716,0 74.66016612343657,-80.04881520846486,0 76.58239878266386,-79.0147782543424,0 80.59712390383287,-78.02846935544838,0 84.5712177922487,-77.72567627367928,0 92.0366753623111,-77.81036795375149,0 96.5335107064988,-78.45333936851821,0 97.98631294834743,-80.63738936076138,0 112.3800952456466,-77.96774240343886,0 114.5011540638103,-77.92822424478162,0 116.2956667667648,-77.3795734132369,0 114.7094924003757,-76.23836998004056,0 113.1311311020671,-75.13750522487116,0 109.9150311628908,-75.14941507282282,0 107.7013516817338,-76.01297373166031,0 83.81960392270727,-76.20478639958809,0 80.09399884038001,-75.42368631757148,0 81.86994293555027,-72.73059693677384,0 85.22137131545966,-71.5456478562091,0 103.4553005020279,-71.63670628943898,0 108.0046455747879,-72.62077305088222,0 110.0517139866059,-75.13908735896457,0 108.2704197255246,-72.64340876726493,0 110.8553546404679,-71.78974676100401,0 109.701610675061,-70.35468748483157,0 106.3092673916705,-69.21731265441203,0 84.05815002043883,-69.14128519421742,0 84.88285233456445,-67.31150573597776,0 88.03663677582541,-65.63565443719087,0 91.85465663878774,-65.56009670518412,0 94.80368518661909,-66.65542819322968,0 95.75917876720081,-69.5635583764721,0 106.474730023292,-69.11575939503609,0 108.4024824568454,-68.53848249213826,0 108.3684998628056,-66.63044275706439,0 107.3367418630979,-64.11134623064217,0 105.7734258806231,-64.29573721591257,0 104.2042104672492,-57.23846958726585,0 104.9516284615436,-61.14482627417831,0 86.4451260112604,-61.184398378331,0 88.92189067013281,-63.32388143429478,0
+                        </coordinates>
+                </LineString>
+        </Placemark>
+</Document>
+</kml>
+```
+
+I decided to go to Google Earth and upload the KML file. After opening it Google
+Earth spins to the coordinates and it looks like the flight path is showing us a
+word. 
+
+- `GUMDROP1`
+
+I'm assuming this is a password for something. Maybe for one of the profiles on
+the site. So, I try it out.
+
+{{< image src="drone-path/drone-flight-path.png" alt="drone flight path revealing the password to the web app" position="center" style="border-radius: 8px;" >}}
+
+I went to the login page for the site and after a little trial and error I typed
+in these credentials.
+
+- **Username:** ```fritjolf```
+- **Password:** ```GUMDROP1```
+
+Hit enter and a I got a pop up that said ```Login successful!```. Looks like
+we're in! Well, to that account anyway. Decided to navigate to `Menu > Profile`
+and I'm met by the following screen.
+
+What's interesting to me is the Bio. It talks about a secret project that's
+underway (making the drone armada) and it says, *"Note to self, remember drone
+name, it is the same location as secret snowball warehouses
+[Preparations-drone-name.csv](https://hhc24-dronepath.holidayhackchallenge.com/files/secret/Preparations-drone-name.csv)"*
+Then it provides a CSV file named `Preparations-drone-name.csv`. 
+
+{{< image src="drone-path/fritjolf-profile.png" alt="fritjolf drone path profile" position="center" style="border-radius: 8px;" >}}
+
+## PowerShell
+
+{{< image src="powershell/powershell-terminal.png" alt="Piney Sappington and the PowerShell terminal" position="center" style="border-radius: 8px;" >}}
+
+> Hey there, friend! Piney Sappington here.
+>
+> You've probably heard the latest—things are getting tense around here with all 
+> the faction business between Wombley and Alabaster. But, let’s focus on this 
+> PowerShell Terminal for now.
+>
+> This is the remote access for our snowball weaponry. We programmed some defense 
+> mechanisms to deter intruders, but the system is in a faulty lockdown state.
+>
+> I certainly wasn't the one that programmed the mechanism. Nope not me. But can 
+> you help me find a way through it so I can regain access?
+>
+> There's two functions I need access to. The snow cannon terminal, which should 
+> be easier. And the snow cannon production and deployment plans. That one's 
+> better defended.
+> 
+> Still, I've got faith in you. We need every advantage we can get right now, 
+> and you might be just the one to tip the balance.
+>
+> So, think you can do it? Are you ready to show what you've got?
+> 
+> -- **Piney Sappington (Front Yard (Act II))**
+
+> **Question 1**
+>
+> There is a file in the current directory called 'welcome.txt'. Read the 
+> contents of this file
+
+```powershell
+Get-Content -Path ./welcome.txt
+```
+
+```txt
+System Overview
+The Elf Weaponry Multi-Factor Authentication (MFA) system safeguards access to 
+a classified armory containing elf weapons. This high-security system is equipped 
+with advanced defense mechanisms, including canaries, retinal scanner and 
+keystroke analyzing, to prevent unauthorized access. In the event of suspicious 
+activity, the system automatically initiates a lockdown, restricting all access 
+until manual override by authorized personnel.
+
+Lockdown Protocols
+When the system enters lockdown mode, all access to the armory is frozen. This 
+includes both entry to and interaction with the weaponry storage. The defense 
+mechanisms become active, deploying logical barriers to prohibit unauthorized 
+access. During this state, users cannot disable the system without the 
+intervention of an authorized administrator. The system logs all access attempts 
+and alerts central command when lockdown is triggered.
+
+Access and System Restoration
+To restore access to the system, users must follow strict procedures. First, 
+authorized personnel must identify the scrambled endpoint. Next, they must 
+deactivate the defense mechanisms by entering the override code and presenting 
+the required token. After verification, the system will resume standard 
+operation, and access to weaponry is reactivated.
+```
+
+> **Question 2**
+>
+> Geez that sounds ominous, I'm sure we can get past the defense mechanisms. 
+> We should warm up our PowerShell skills. 
+> How many words are there in the file? 
+
+```powershell 
+Get-Content -Path ./welcome.txt | Measure-Object -Word 
+```
+
+```powershell
+
+Lines Words Characters Property
+----- ----- ---------- --------
+        180            
+
+```
+
+> **Question 3**
+> 
+> There is a server listening for incoming connections on this machine, that 
+> must be the weapons terminal. What port is it listening on?
+
+```
+PS /home/user> netstat -a 
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 localhost:1225          0.0.0.0:*               LISTEN     
+tcp6       0      0 172.17.0.2:40448        52.188.247.147:443      ESTABLISHED
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ACC ]     STREAM     LISTENING     1591508065 /tmp/tmux-1050/default
+unix  2      [ ACC ]     STREAM     LISTENING     1591508466 /tmp/dotnet-diagnostic-163-2907725379-socket
+unix  2      [ ACC ]     STREAM     LISTENING     1591508510 /tmp/CoreFxPipe_PSHost.DC4A2E33.163.None.pwsh
+unix  3      [ ]         STREAM     CONNECTED     1591508166 /tmp/tmux-1050/default
+unix  3      [ ]         STREAM     CONNECTED     1591506936 
+PS /home/user> 
+```
+
+> 4) You should enumerate that webserver. Communicate with the server using HTTP, what status code do you get?
+
+```powershell
+Invoke-WebRequest -Uri http://localhost:1225
+Invoke-WebRequest: Response status code does not indicate success: 401 (UNAUTHORIZED).
+```
+
+> 5) It looks like defensive measures are in place, it is protected by basic authentication. 
+> Try authenticating with a standard admin username and password.
+
+```powershell
+Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225 -Credential $(Get-Credential)
+```
+
+```powershell
+PowerShell credential request
+Enter your credentials.
+User: admin
+Password for user admin: *****
+```
+
+```powershell                                                                                                                   
+StatusCode        : 200
+StatusDescription : OK
+Content           : <html>
+                    <body>
+                    <pre>
+                    ----------------------------------------------------
+                    🪖 Elf MFA webserver🪖
+                    ⚔️ Grab your tokens for access to weaponry ⚔️
+                    ⚔️ Warning! Sensitive information on the server, protect a…
+RawContent        : HTTP/1.1 200 OK
+                    Server: Werkzeug/3.0.6
+                    Server: Python/3.10.12
+                    Date: Fri, 31 Oct 2025 04:36:55 GMT
+                    Connection: close
+                    Content-Type: text/html; charset=utf-8
+                    Content-Length: 3475
+                    
+                    <html>
+                    <body>
+                    <pre>
+                    ---…
+Headers           : {[Server, System.String[]], [Date, System.String[]], [Connection, System.String[]], [Content-T
+                    ype, System.String[]]…}
+Images            : {}
+InputFields       : {}
+Links             : {@{outerHTML=<a href="http://localhost:1225/endpoints/1">Endpoint 1</a>; tagName=A; href=http:
+                    //localhost:1225/endpoints/1}, @{outerHTML=<a href="http://localhost:1225/endpoints/2">Endpoin
+                    t 2</a>; tagName=A; href=http://localhost:1225/endpoints/2}, @{outerHTML=<a href="http://local
+                    host:1225/endpoints/3">Endpoint 3</a>; tagName=A; href=http://localhost:1225/endpoints/3}, @{o
+                    uterHTML=<a href="http://localhost:1225/endpoints/4">Endpoint 4</a>; tagName=A; href=http://lo
+                    calhost:1225/endpoints/4}…}
+RawContentLength  : 3475
+RelationLink      : {}
+```
+
+> 6) There are too many endpoints here. 
+Use a loop to download the contents of each page. What page has 138 words? 
+When you find it, communicate with the URL and print the contents to the terminal.
+
+```
+PS /home/user> foreach ($link in $links) {                                                                         >> $req = Invoke-WebRequest -AllowUnencryptedAuthentication -Uri $link -Credential $cred; $req.Link 
+>> if (($req.Content | Measure-Object -Word).Count -le 138) { 
+>> $req.Content
+>> }
+>> } 
+```
+
+```powershell
+$links = (Invoke-WebRequest -Uri http://localhost:1225 -Credential $credential -AllowUnencryptedAuthentication).Links
+foreach ($link in $links.href) {
+    $request = Invoke-WebRequest -Uri $link -Credential $credential -AllowUnencryptedAuthentication
+    $count = $request.Content | Measure-Object -Word
+    if ($count.words -eq 138) {
+        $request.Content
+    }
+}
+```
+
+<html><head><title>MFA token scrambler</title></head><body><p>Yuletide cheer fills the air,<br>    A season of love, of care.<br>    The world is bright, full of light,<br>    As we celebrate this special night.<br>    The tree is trimmed, the stockings hung,<br>    Carols are sung, bells are rung.<br>    Families gather, friends unite,<br>    In the glow of the fire’s light.<br>    The air is filled with joy and peace,<br>    As worries and cares find release.<br>    Yuletide cheer, a gift so dear,<br>    Brings warmth and love to all near.<br>    May we carry it in our hearts,<br>    As the season ends, as it starts.<br>    Yuletide cheer, a time to share,<br>    The love, the joy, the care.<br>    May it guide us through the year,<br>    In every laugh, in every tear.<br>    Yuletide cheer, a beacon bright,<br>    Guides us through the winter night </p><p> Note to self, remember to remove temp csvfile at http://127.0.0.1:1225/token_overview.csv</p></body></html>
+
+> 7) There seems to be a csv file in the comments of that page.  That could be valuable, read the contents of that csv-file!
+
+```
+Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/token_overview.csv -Credential $credential -OutFile token_overview.csv
+```
+
+get-content 
+
+```
+89f3ec1275407c9526a645602d56e799,REDACTED
+33539252b40b5c244b09aee8a57adbc9,REDACTED
+152899789a191d9e9150a1e3a5513b7f,REDACTED
+7cd48566f118a02f300cdfa75dee7863,REDACTED
+d798a55fca64118cea2df3c120f67569,REDACTED
+6ef5570cd43a3ec9f43c57f662201e55,REDACTED
+bf189d47c3175ada98af398669e3cac3,REDACTED
+743ac25389a0b430dd9f8e72b2ec9d7f,REDACTED
+270aabd5feaaf40185f2effa9fa2cd6e,REDACTED
+8b58850ee66bd2ab7dd2f5f850c855f8,REDACTED
+6fd00cbda10079b1d55283a88680d075,REDACTED
+612001dd92369a7750c763963bc327f0,REDACTED
+010f2cc580f74521c86215b7374eead6,REDACTED
+29860c67296d808bc6506175a8cbb422,REDACTED
+7b7f6891b6b6ab46fe2e85651db8205f,REDACTED
+45ffb41c4e458d08a8b08beeec2b4652,REDACTED
+d0e6bfb6a4e6531a0c71225f0a3d908d,REDACTED
+bd7efda0cb3c6d15dd896755003c635c,REDACTED
+5be8911ced448dbb6f0bd5a24cc36935,REDACTED
+1acbfea6a2dad66eb074b17459f8c5b6,REDACTED
+0f262d0003bd696550744fd43cd5b520,REDACTED
+8cac896f624576d825564bb30c7250eb,REDACTED
+8ef6d2e12a58d7ec521a56f25e624b80,REDACTED
+b4959370a4c484c10a1ecc53b1b56a7d,REDACTED
+38bdd7748a70529e9beb04b95c09195d,REDACTED
+8d4366f08c013f5c0c587b8508b48b15,REDACTED
+67566692ca644ddf9c1344415972fba8,REDACTED
+8fbf4152f89b7e309e89b9f7080c7230,REDACTED
+936f4db24a290032c954073b3913f444,REDACTED
+c44d8d6b03dcd4b6bf7cb53db4afdca6,REDACTED
+cb722d0b55805cd6feffc22a9f68177d,REDACTED
+724d494386f8ef9141da991926b14f9b,REDACTED
+67c7aef0d5d3e97ad2488babd2f4c749,REDACTED
+5f8dd236f862f4507835b0e418907ffc,4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C
+# [*] SYSTEMLOG
+# [*] Defence mechanisms activated, REDACTING endpoints, starting with sensitive endpoints
+# [-] ERROR, memory corruption, not all endpoints have been REDACTED
+# [*] Verification endpoint still active
+# [*] http://127.0.0.1:1225/tokens/<sha256sum>
+# [*] Contact system administrator to unlock panic mode
+# [*] Site functionality at minimum to keep weapons active
+``
+
+PS /home/user> get-content ./token_overview.csv | Select-String -Pattern "REDACTED" -NotMatch
+
+file_MD5hash,Sha256(file_MD5hash)
+5f8dd236f862f4507835b0e418907ffc,4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C
+# [*] SYSTEMLOG
+# [*] Defence mechanisms activated, REDACTING endpoints, starting with sensitive endpoints
+# [*] Verification endpoint still active
+# [*] http://127.0.0.1:1225/tokens/<sha256sum>
+# [*] Contact system administrator to unlock panic mode
+# [*] Site functionality at minimum to keep weapons active
+
+8) Luckily the defense mechanisms were faulty! There seems to be one api-endpoint that still isn't redacted! Communicate with that endpoint!
+
+```
+Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/tokens/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C -Credential $credential                                                                                                                                                              
+StatusCode        : 200
+StatusDescription : OK
+Content           : <h1>[!] ERROR: Missing Cookie 'token'</h1>
+RawContent        : HTTP/1.1 200 OK
+                    Server: Werkzeug/3.0.6
+                    Server: Python/3.10.12
+                    Date: Fri, 31 Oct 2025 05:59:32 GMT
+                    Connection: close
+                    Content-Type: text/html; charset=utf-8
+                    Content-Length: 42
+                    
+                    <h1>[!] ERROR: Missing Co…
+Headers           : {[Server, System.String[]], [Date, System.String[]], [Connection, System.String[]], [Content-T
+                    ype, System.String[]]…}
+Images            : {}
+InputFields       : {}
+Links             : {}
+RawContentLength  : 42
+RelationLink      : {}
+
+
+```
+
+9) It looks like it requires a cookie token, set the cookie and try again.
+
+```
+/home/user> $cookie = New-Object System.Net.Cookie
+PS /home/user> $cookie.Name = "token"
+PS /home/user> $cookie.value = "5f8dd236f862f4507835b0e418907ffc"
+PS /home/user> $session = new-object Microsoft.PowerShell.Commands.WebRequestSession
+PS /home/user> $session.cookies.Add($cookie);
+MethodInvocationException: Exception calling "Add" with "1" argument(s): "The parameter 'cookie.Domain' cannot be an empty string. (Parameter 'cookie')"
+PS /home/user> $cookie.domain = localhost
+localhost: The term 'localhost' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS /home/user> $cookie.domain = "localhost"
+PS /home/user> $session.cookies.Add($cookie);
+PS /home/user> Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/tokens/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C -Credential $credential -WebSession $session                                                                                                                                         
+StatusCode        : 200
+StatusDescription : OK
+Content           : <h1>Cookie 'mfa_code', use it at <a href='1761890946.026579'>/mfa_validate/4216B4FAF4391EE4D3E
+                    0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C</a></h1>
+RawContent        : HTTP/1.1 200 OK
+                    Server: Werkzeug/3.0.6
+                    Server: Python/3.10.12
+                    Date: Fri, 31 Oct 2025 06:09:06 GMT
+                    Connection: close
+                    Content-Type: text/html; charset=utf-8
+                    Content-Length: 148
+                    
+                    <h1>Cookie 'mfa_code', u…
+Headers           : {[Server, System.String[]], [Date, System.String[]], [Connection, System.String[]], [Content-T
+                    ype, System.String[]]…}
+Images            : {}
+InputFields       : {}
+Links             : {@{outerHTML=<a href='1761890946.026579'>/mfa_validate/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5
+                    D124FE08E227F84D687A7E06C</a>; tagName=A; href=1761890946.026579}}
+RawContentLength  : 148
+RelationLink      : {}
+```
+
+```
+Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/tokens/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C -Credential $credential -Headers @{Cookie="token=5f8dd236f862f4507835b0e418907ffc"}                     
+                                                                                                                   
+StatusCode        : 200
+StatusDescription : OK
+Content           : <h1>Cookie 'mfa_code', use it at <a href='1761891443.3204877'>/mfa_validate/4216B4FAF4391EE4D3
+                    E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C</a></h1>
+RawContent        : HTTP/1.1 200 OK
+                    Server: Werkzeug/3.0.6
+                    Server: Python/3.10.12
+                    Date: Fri, 31 Oct 2025 06:17:23 GMT
+                    Connection: close
+                    Content-Type: text/html; charset=utf-8
+                    Content-Length: 149
+                    
+                    <h1>Cookie 'mfa_code', u…
+Headers           : {[Server, System.String[]], [Date, System.String[]], [Connection, System.String[]], [Content-T
+                    ype, System.String[]]…}
+Images            : {}
+InputFields       : {}
+Links             : {@{outerHTML=<a href='1761891443.3204877'>/mfa_validate/4216B4FAF4391EE4D3E0EC53A372B2F24876ED
+                    5D124FE08E227F84D687A7E06C</a>; tagName=A; href=1761891443.3204877}}
+RawContentLength  : 149
+RelationLink      : {}
+```
+
+## Showball Showdown
+
+## Microsoft KC7 (The Great Elf Conflict)
 
 [Answer](http://kc7cyber.com/go/hhc24) two sections for silver, all four 
 sections for gold.
 
-{{< image src="microsoft_kc7/microsoftkc7.png" alt="intial page for microsoft kc7" position="center" caption="Elf Connect" style="border-radius: 8px;" >}}
+{{< image src="microsoft-kc7/microsoftkc7.png" alt="intial page for microsoft kc7" position="center"  style="border-radius: 8px;" >}}
 
-### KQL 101
+## KQL 101
 
-{{< image src="microsoft_kc7/section1.png" alt="KQL 101 section" position="center" caption="Elf Connect" style="border-radius: 8px;" >}}
+{{< image src="microsoft-kc7/section1.png" alt="KQL 101 section" position="center"  style="border-radius: 8px;" >}}
 
-### Operation Surrender
+## Operation Surrender
 
-{{< image src="microsoft_kc7/section2.png" alt="operation surrender section" position="center" caption="Elf Connect" style="border-radius: 8px;" >}}
+{{< image src="microsoft-kc7/section2.png" alt="operation surrender section" position="center"  style="border-radius: 8px;" >}}
 
-### Operation Snowfall
+## Operation Snowfall
 
-{{< image src="microsoft_kc7/section3.png" alt="operation snowfall section" position="center" caption="Elf Connect" style="border-radius: 8px;" >}}
+{{< image src="microsoft-kc7/section3.png" alt="operation snowfall section" position="center"  style="border-radius: 8px;" >}}
 
-### Echos in the Frost
+## Echos in the Frost
 
-{{< image src="microsoft_kc7/section4.png" alt="echos in the frost section" position="center" caption="Elf Connect" style="border-radius: 8px;" >}}
+{{< image src="microsoft-kc7/section4.png" alt="echos in the frost section" position="center"  style="border-radius: 8px;" >}}
 
