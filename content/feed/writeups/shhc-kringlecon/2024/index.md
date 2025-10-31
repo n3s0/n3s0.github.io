@@ -2041,6 +2041,10 @@ Then it provides a CSV file named `Preparations-drone-name.csv`.
 
 {{< image src="powershell/powershell-terminal.png" alt="Piney Sappington and the PowerShell terminal" position="center" style="border-radius: 8px;" >}}
 
+> Team Wombley is developing snow weapons in preparation for conflict, but 
+> they've been locked out by their own defenses. Help Piney with regaining 
+> access to the weapon operations terminal.
+
 > Hey there, friend! Piney Sappington here.
 >
 > You've probably heard the latest—things are getting tense around here with all 
@@ -2064,14 +2068,33 @@ Then it provides a CSV file named `Preparations-drone-name.csv`.
 > 
 > -- **Piney Sappington (Front Yard (Act II))**
 
-> **Question 1**
->
-> There is a file in the current directory called 'welcome.txt'. Read the 
-> contents of this file
+There is a link to this challenge that I've provided below. Just in case a
+larger screen is needed. This can be found in the HTML when the terminal is
+opened.
+
+- [PowerShell](https://hhc24-wetty.holidayhackchallenge.com/?&challenge=termPowershell)
+
+### Solution (Silver)
+
+1. There is a file in the current directory called 'welcome.txt'. Read the 
+   contents of this file
+
+Looks like they're getting started with something simple. We need to read the
+contents of the `welcome.txt` file in the current directory or home directory.
+
+For this I used the `Get-Content` Cmdlet. This will read the file and output the
+file to the terminal.
 
 ```powershell
 Get-Content -Path ./welcome.txt
 ```
+
+The text file contains some information about `The Elf Weaponry Multi-Factor
+Authentication (MFA)` system and it's safeguards. I am assuming that's what
+we're on right now.
+
+Looks like it provides a method for deactivating or restoring the system as
+well.
 
 ```txt
 System Overview
@@ -2098,58 +2121,98 @@ the required token. After verification, the system will resume standard
 operation, and access to weaponry is reactivated.
 ```
 
-> **Question 2**
->
-> Geez that sounds ominous, I'm sure we can get past the defense mechanisms. 
-> We should warm up our PowerShell skills. 
-> How many words are there in the file? 
+2. Geez that sounds ominous, I'm sure we can get past the defense mechanisms. 
+   We should warm up our PowerShell skills. How many words are there in the file? 
+
+"Ain't that the truth." Looks like we're going through another warmup. This is
+asking how many words there are in the `welcome.txt` file.
+
+So, I decide to use the same command. Only pipe it to `Measure-Object` Cmdlet
+with the `-Word` flag. This will count the total words within the file.
 
 ```powershell 
 Get-Content -Path ./welcome.txt | Measure-Object -Word 
 ```
+
+Based on the output. It looks like there is `180` words in this file. We could
+hone that by wrapping the command in paranthasis with `().Words`. But, I'll
+leave this one as is.
 
 ```powershell
 
 Lines Words Characters Property
 ----- ----- ---------- --------
         180            
-
 ```
 
-> **Question 3**
-> 
-> There is a server listening for incoming connections on this machine, that 
-> must be the weapons terminal. What port is it listening on?
+3. There is a server listening for incoming connections on this machine, that 
+must be the weapons terminal. What port is it listening on?
 
+So, for this one we need to see if we can find what port a server is listening
+on. For this I broke out `netcat` with the `-a` flag to see what I could find.
+
+```powershell
+netstat -a 
 ```
-PS /home/user> netstat -a 
+
+Based on the output. It looks like `localhost` is listening on TCP port `1225`.
+
+```powershell
 Active Internet connections (servers and established)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State      
 tcp        0      0 localhost:1225          0.0.0.0:*               LISTEN     
-tcp6       0      0 172.17.0.2:40448        52.188.247.147:443      ESTABLISHED
+tcp6       0      0 172.17.0.2:40896        52.188.247.149:443      ESTABLISHED
 Active UNIX domain sockets (servers and established)
 Proto RefCnt Flags       Type       State         I-Node   Path
-unix  2      [ ACC ]     STREAM     LISTENING     1591508065 /tmp/tmux-1050/default
-unix  2      [ ACC ]     STREAM     LISTENING     1591508466 /tmp/dotnet-diagnostic-163-2907725379-socket
-unix  2      [ ACC ]     STREAM     LISTENING     1591508510 /tmp/CoreFxPipe_PSHost.DC4A2E33.163.None.pwsh
-unix  3      [ ]         STREAM     CONNECTED     1591508166 /tmp/tmux-1050/default
-unix  3      [ ]         STREAM     CONNECTED     1591506936 
-PS /home/user> 
+unix  2      [ ACC ]     STREAM     LISTENING     1591969753 /tmp/tmux-1050/default
+unix  2      [ ACC ]     STREAM     LISTENING     1591978055 /tmp/dotnet-diagnostic-523-2911700906-socket
+unix  2      [ ACC ]     STREAM     LISTENING     1591978100 /tmp/CoreFxPipe_PSHost.DC4A8AC3.523.None.pwsh
+unix  3      [ ]         STREAM     CONNECTED     1591971106 
+unix  3      [ ]         STREAM     CONNECTED     1591972913 /tmp/tmux-1050/default
 ```
 
-> 4) You should enumerate that webserver. Communicate with the server using HTTP, what status code do you get?
+4. You should enumerate that webserver. Communicate with the server using HTTP, 
+   what status code do you get?
+
+Our next step is to enumperate the web server. This can be done with the
+`Invoke-WebRequest` Cmdlet to `http://localhost:1225`.
 
 ```powershell
 Invoke-WebRequest -Uri http://localhost:1225
+```
+
+Looks like we got a response. Although it's a `401` or `unauthorized` response
+code. But, we're making progress.
+
+```powerhshell
 Invoke-WebRequest: Response status code does not indicate success: 401 (UNAUTHORIZED).
 ```
 
-> 5) It looks like defensive measures are in place, it is protected by basic authentication. 
-> Try authenticating with a standard admin username and password.
+5. It looks like defensive measures are in place, it is protected by basic authentication. 
+   Try authenticating with a standard admin username and password.
+
+Looks like I am on the right track. Basic authentication is set in place to
+prevent access to the web server. This question is telling us to try logging in
+with a standard admin username/password.
+
+So, I try it again with the `-AllowUnencryptedAuthentication` and the
+`-Credential` flag. I store the username and password in a variable named
+`$credential` using the `Get-Credentail` Cmdlet before hand so it's a little
+cleaner and I'm not using `$()` variables.
 
 ```powershell
-Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225 -Credential $(Get-Credential)
+$credential = Get-Credential
+Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225 -Credential $credential
 ```
+
+When we go to store the username and password in `Get-Credential` it will prompt
+for the username and password we want to use. We're on an interactive system.
+So, I don't need to really worry about housing it in one command without the
+prompt. Though I have run into that and there are ways to encode the credentials
+without this prompt. But, for now. This seems to be doing the job.
+
+At the promt, I decided to use a common default `admin:admin` for the username
+and password.
 
 ```powershell
 PowerShell credential request
@@ -2157,6 +2220,9 @@ Enter your credentials.
 User: admin
 Password for user admin: *****
 ```
+
+After that runs. It looks like I get a `200` status code. This is coupled with a
+body and other links. So, I think we're ready to move on to the next section.
 
 ```powershell                                                                                                                   
 StatusCode        : 200
@@ -2194,19 +2260,30 @@ RawContentLength  : 3475
 RelationLink      : {}
 ```
 
-> 6) There are too many endpoints here. 
-Use a loop to download the contents of each page. What page has 138 words? 
-When you find it, communicate with the URL and print the contents to the terminal.
+6. There are too many endpoints here. Use a loop to download the contents of each 
+   page. What page has 138 words? When you find it, communicate with the URL and 
+   print the contents to the terminal.
 
-```
-PS /home/user> foreach ($link in $links) {                                                                         >> $req = Invoke-WebRequest -AllowUnencryptedAuthentication -Uri $link -Credential $cred; $req.Link 
->> if (($req.Content | Measure-Object -Word).Count -le 138) { 
->> $req.Content
->> }
->> } 
-```
+Looks like I'm going to need to whip out some scripting for this. So, there are
+too many endpoints in the `Links` portion of the request. So we're going to need
+to something in them. We're looking for a page that has `138` words in the
+`Content` property. Then we need to communicate with the URL that has `138`
+words and output the `Content` property to the terminal.
+
+So, I do just that. Save a `credential` variable because we still need to
+authenticate for this. Then obtain a list of the `Links` parameter output for
+each `href`. Then we need to iterate over the `$links.href` list; which will
+clean the `Links` output and look at the URL solely.
+
+For every URL there will be a request made using the credentials saved. Then I
+use `Measure-Object` with the `-Word` parameter to get a count of the words.
+Assigning it to the `$count` variable.
+
+Then I check the `$count.words` to only output the `Content` for the count that
+is `138` words. 
 
 ```powershell
+$credential = Get-Credential
 $links = (Invoke-WebRequest -Uri http://localhost:1225 -Credential $credential -AllowUnencryptedAuthentication).Links
 foreach ($link in $links.href) {
     $request = Invoke-WebRequest -Uri $link -Credential $credential -AllowUnencryptedAuthentication
@@ -2217,17 +2294,85 @@ foreach ($link in $links.href) {
 }
 ```
 
-<html><head><title>MFA token scrambler</title></head><body><p>Yuletide cheer fills the air,<br>    A season of love, of care.<br>    The world is bright, full of light,<br>    As we celebrate this special night.<br>    The tree is trimmed, the stockings hung,<br>    Carols are sung, bells are rung.<br>    Families gather, friends unite,<br>    In the glow of the fire’s light.<br>    The air is filled with joy and peace,<br>    As worries and cares find release.<br>    Yuletide cheer, a gift so dear,<br>    Brings warmth and love to all near.<br>    May we carry it in our hearts,<br>    As the season ends, as it starts.<br>    Yuletide cheer, a time to share,<br>    The love, the joy, the care.<br>    May it guide us through the year,<br>    In every laugh, in every tear.<br>    Yuletide cheer, a beacon bright,<br>    Guides us through the winter night </p><p> Note to self, remember to remove temp csvfile at http://127.0.0.1:1225/token_overview.csv</p></body></html>
+Eventually it outputs the following content. This seems to have a URL to a csv
+file named `token_overview.csv`.
 
-> 7) There seems to be a csv file in the comments of that page.  That could be valuable, read the contents of that csv-file!
+The URL can be found below.
 
+- http://127.0.0.1:1225/token_overview.csv
+
+There is not much else apart from the poem/song in the body of the content.
+Which doesn't seem to provide any clues.
+
+```html
+<html>
+    <head>
+        <title>MFA token scrambler</title>
+    </head>
+    <body>
+        <p>Yuletide cheer fills the air,<br>    A season of love, of care.<br>    The world is bright, full of light,<br>    As we celebrate this special night.<br>    The tree is trimmed, the stockings hung,<br>    Carols are sung, bells are rung.<br>    Families gather, friends unite,<br>    In the glow of the fire’s light.<br>    The air is filled with joy and peace,<br>    As worries and cares find release.<br>    Yuletide cheer, a gift so dear,<br>    Brings warmth and love to all near.<br>    May we carry it in our hearts,<br>    As the season ends, as it starts.<br>    Yuletide cheer, a time to share,<br>    The love, the joy, the care.<br>    May it guide us through the year,<br>    In every laugh, in every tear.<br>    Yuletide cheer, a beacon bright,<br>    Guides us through the winter night </p>
+        <p> Note to self, remember to remove temp csvfile at http://127.0.0.1:1225/token_overview.csv</p>
+    </body>
+</html>
 ```
+
+7. There seems to be a csv file in the comments of that page.  That could be 
+   valuable, read the contents of that csv-file!
+
+In this question the objective is to download the CSV file found in the content
+of the previous request.
+
+- `token_overview.csv`
+
+To accomplish this I used the `-OutFile` command with authentication. This will
+obtain the content of the file and output it to the current directory.
+
+```powershell
+$credential = Get-Credential
+
 Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/token_overview.csv -Credential $credential -OutFile token_overview.csv
 ```
 
-get-content 
+With that, I need to view the file so I use the `Get-Content` Cmdlet to read the
+file.
 
+```powershell
+Get-Content -Path ./token_overview.csv
 ```
+
+The output shows the contents of the CSV file. This has MD5 and SHA256 pairs in
+the rows. One was still active when they were sanitizing the file. So it quit.
+
+A lot of informaiton can be taken from this file. First we know all of the MD5
+hashes. But, those could be useless without the SHA256 hash. Granted... now that
+I look at it. The SHA256 hash might be generated using the output of the MD5
+hash. So that might come in use later if those endpoints are up by then.
+
+We do have more data in this file too.
+
+- **MD5 Hash:** `5f8dd236f862f4507835b0e418907ffc`
+- **SHA256 Hash:** `4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C`
+- **URL Format:** `http://127.0.0.1:1225/tokens/<sha256sum>`
+
+That looks to be the gist of everythign that I can see. 
+
+```csv
+file_MD5hash,Sha256(file_MD5hash)
+04886164e5140175bafe599b7f1cacc8,REDACTED
+664f52463ef97bcd1729d6de1028e41e,REDACTED
+3e03cd0f3d335c6fb50122553f63ef78,REDACTED
+f2aeb18f5b3f08420eed9b548b6058c3,REDACTED
+32b9401a6d972f8c1a98de145629ea9d,REDACTED
+3a79238df0a92ab0afa44a85f914fc3b,REDACTED
+49c2a68b21b9982aa9fd64cf0fd79f72,REDACTED
+f8142c1304efb9b7e9a7f57363c2d286,REDACTED
+706457f6dd78729a8bed5bae1efaeb50,REDACTED
+bb0564aa5785045937a35a9fa3fbbc73,REDACTED
+4173a7bc22aee35c5fc48261b041d064,REDACTED
+198b8bf2cd30a7c7fed464cca1720a88,REDACTED
+3a7c8ecffeeadb164c31559f8f24a1e7,REDACTED
+288e60e318d9ad7d70d743a614442ffc,REDACTED
+87ab4cb29649807fdb716ac85cf560ea,REDACTED
 89f3ec1275407c9526a645602d56e799,REDACTED
 33539252b40b5c244b09aee8a57adbc9,REDACTED
 152899789a191d9e9150a1e3a5513b7f,REDACTED
@@ -2269,10 +2414,19 @@ cb722d0b55805cd6feffc22a9f68177d,REDACTED
 # [*] http://127.0.0.1:1225/tokens/<sha256sum>
 # [*] Contact system administrator to unlock panic mode
 # [*] Site functionality at minimum to keep weapons active
-``
+```
 
-PS /home/user> get-content ./token_overview.csv | Select-String -Pattern "REDACTED" -NotMatch
+Here is a command I used to filter out the pattern `REDACTED` from the output so
+we could just see what we need.
 
+```powershell
+$credential = Get-Credential
+Get-Content -Path ./token_overview.csv | Select-String -Pattern "REDACTED" -NotMatch
+```
+
+Ah yes. Much better.
+
+```csv
 file_MD5hash,Sha256(file_MD5hash)
 5f8dd236f862f4507835b0e418907ffc,4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C
 # [*] SYSTEMLOG
@@ -2281,11 +2435,25 @@ file_MD5hash,Sha256(file_MD5hash)
 # [*] http://127.0.0.1:1225/tokens/<sha256sum>
 # [*] Contact system administrator to unlock panic mode
 # [*] Site functionality at minimum to keep weapons active
-
-8) Luckily the defense mechanisms were faulty! There seems to be one api-endpoint that still isn't redacted! Communicate with that endpoint!
-
 ```
-Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/tokens/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C -Credential $credential                                                                                                                                                              
+
+8. Luckily the defense mechanisms were faulty! There seems to be one api-endpoint 
+   that still isn't redacted! Communicate with that endpoint!
+
+In this question they're asking us to utilize the api-endpoint that wasn't
+redacted from the CSV file provided in the previous question.
+
+```powershell
+$credential = Get-Credential
+
+$response = Invoke-WebRequest -Uri http://localhost:1225/tokens/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C -AllowUnencryptedAuthentication -Credential $credential
+$response
+```
+
+The request was successful to a degree. But, it looks like we're missing some
+information related to the `token` cookie.
+
+```powershell
 StatusCode        : 200
 StatusDescription : OK
 Content           : <h1>[!] ERROR: Missing Cookie 'token'</h1>
@@ -2311,67 +2479,283 @@ RelationLink      : {}
 
 9) It looks like it requires a cookie token, set the cookie and try again.
 
+In this question the objective is to add the `token` cookie and attempt the
+request again.
+ 
+I will be showing two ways to do this. There is one where you utilize the
+`-Headers` flag and the other is where you script out adding the cookie to a
+web session.
+
+In this one I just put the `token` cookie in the headers with the `-Headers`
+flag.
+
+```powershell
+$credential = Get-Credential
+
+$response = Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/tokens/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C -Credential $credential -Headers @{Cookie="token=5f8dd236f862f4507835b0e418907ffc"}
+$response.Content
 ```
-/home/user> $cookie = New-Object System.Net.Cookie
-PS /home/user> $cookie.Name = "token"
-PS /home/user> $cookie.value = "5f8dd236f862f4507835b0e418907ffc"
-PS /home/user> $session = new-object Microsoft.PowerShell.Commands.WebRequestSession
-PS /home/user> $session.cookies.Add($cookie);
-MethodInvocationException: Exception calling "Add" with "1" argument(s): "The parameter 'cookie.Domain' cannot be an empty string. (Parameter 'cookie')"
-PS /home/user> $cookie.domain = localhost
-localhost: The term 'localhost' is not recognized as a name of a cmdlet, function, script file, or executable program.
-Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
-PS /home/user> $cookie.domain = "localhost"
-PS /home/user> $session.cookies.Add($cookie);
-PS /home/user> Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/tokens/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C -Credential $credential -WebSession $session                                                                                                                                         
+
+This one seems to have more flexability then the previous one. Not entirely sure
+if there is a limit to it. But, This will build a session with a new cookie
+where we can configure the name, value, and domain before adding it. Finally, I
+store the response in the `$response` variable and output the `Content` for that
+variable.
+
+```powershell
+$credential = Get-Credential
+
+$session = new-object Microsoft.PowerShell.Commands.WebRequestSession
+$cookie = New-Object System.Net.Cookie
+$cookie.Name = "token"
+$cookie.value = "5f8dd236f862f4507835b0e418907ffc"
+$cookie.domain = "localhost"
+$session.cookies.Add($cookie);
+
+$response = Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/tokens/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C -Credential $credential -WebSession $session
+$response.Content
+```
+
+The HTML output needs to be provided in the terminal to move on to the next
+step. Based ont he output from `$response.Content` we are seeing an MFA code
+with a relative URL that we may be able to use to validate the MFA code.
+
+```html
+<h1>
+    Cookie 'mfa_code', use it at <a href='1761939274.215384'>/mfa_validate/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C</a>
+</h1>
+```
+
+Here is the response without parsing out the `Content` property in the data.
+This is useful for future scripting. It has a `Links` property available that we
+can pull the MFA code from at the very least.
+
+```powershell
+
 StatusCode        : 200
 StatusDescription : OK
-Content           : <h1>Cookie 'mfa_code', use it at <a href='1761890946.026579'>/mfa_validate/4216B4FAF4391EE4D3E
-                    0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C</a></h1>
+Content           : <h1>Cookie 'mfa_code', use it at <a href='1761939274.215384'>/mfa_validate/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C</a></h1>
 RawContent        : HTTP/1.1 200 OK
                     Server: Werkzeug/3.0.6
                     Server: Python/3.10.12
-                    Date: Fri, 31 Oct 2025 06:09:06 GMT
+                    Date: Fri, 31 Oct 2025 19:34:34 GMT
                     Connection: close
                     Content-Type: text/html; charset=utf-8
                     Content-Length: 148
                     
                     <h1>Cookie 'mfa_code', u…
-Headers           : {[Server, System.String[]], [Date, System.String[]], [Connection, System.String[]], [Content-T
-                    ype, System.String[]]…}
+Headers           : {[Server, System.String[]], [Date, System.String[]], [Connection, System.String[]], [Content-Type, System.String[]]…}
 Images            : {}
 InputFields       : {}
-Links             : {@{outerHTML=<a href='1761890946.026579'>/mfa_validate/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5
-                    D124FE08E227F84D687A7E06C</a>; tagName=A; href=1761890946.026579}}
+Links             : {@{outerHTML=<a href='1761939274.215384'>/mfa_validate/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C</a>; tagName=A; href=1761939274.215384}}
 RawContentLength  : 148
 RelationLink      : {}
-```
+
 
 ```
-Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/tokens/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C -Credential $credential -Headers @{Cookie="token=5f8dd236f862f4507835b0e418907ffc"}                     
-                                                                                                                   
+
+One thing I'd like to note about this challenge is the MFA code updates with
+every request. So, when the code is sent. It's probably best stored in a
+variable for easy scripting.
+
+10) Sweet we got a MFA token! We might be able to get access to the system.
+ Validate that token at the endpoint!
+
+In this question the objective is to use the MFA token to gain access to the
+endpoint.
+
+I will be showing two ways to do this. There is one where you utilize the
+`-Headers` flag and the other is where you script out adding the cookies to a
+web session.
+
+Typically, the output for each command is the same.
+
+There are people on the Internet that think multiple cookies within the
+`-Headers` flag isn't supported by PowerShell. This is not the case with this
+version of PowerShell. You can use the first method with multiple cookies.
+
+In this one I store the cookies in the `-Headers` flag. I obtain the data for
+the MFA Code and put it in the `$mfa_code_request` variable. Clean it up down
+to the `href` and put the MFA code/token in the `$mfa_code` variable. Then I
+make the request to authenticate using everything needed.
+
+This will take the credentials, token, mfa_token after pulling it from the
+server and authenticate with it. All wihtin the 2 second timout for the MFA
+token.
+
+Finally, I output the content to the terminal.
+
+```powershell
+$credential = Get-Credential
+
+$mfa_code_request = Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/tokens/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C -Credential $credential -Headers @{Cookie="token=5f8dd236f862f4507835b0e418907ffc"}
+
+$mfa_code = $mfa_code_request.Links.href
+
+$response = Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/mfa_validate/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C  -Credential $credential -Headers @{Cookie="token=5f8dd236f862f4507835b0e418907ffc; mfa_token=$mfa_code"}
+$response.Content
+```
+
+In this one I use another way. I craft the initial connection to obtain the MFA
+token by building the `token` cookie for the initial authentication. I obtain
+the MFA token using the request with the `-WebSession`. Storing it in the
+`$mfa_req` variable. I use this later to build the `mfa_token` cookie.
+
+The `mfa_token` cookie is build after parsing through the `href` data and add it
+to the session cookies.
+
+Finally, I make the full request to the `/mfa_validate` URL with the MFA Token
+and output the response content with `$response.Content`.
+
+```powershell
+$credential = Get-Credential
+
+$session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
+$token_cookie = New-Object System.Net.Cookie
+$token_cookie.Name = "token"
+$token_cookie.Value = "5f8dd236f862f4507835b0e418907ffc"
+$token_cookie.Domain = "localhost"
+$session.cookies.Add($token_cookie);
+
+$mfa_req = Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/tokens/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C -Credential $credential -WebSession $session
+
+$mfa_cookie = New-Object System.Net.Cookie
+$mfa_cookie.Name = "mfa_token"
+$mfa_cookie.Value = $mfa_req.Links.href
+$mfa_cookie.Domain = "localhost"
+$session.cookies.Add($mfa_cookie);
+
+$response = Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/mfa_validate/4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C -Credential $credential -WebSession $session
+$response.Content
+```
+
+The output below is the `$response.Content`. It looks to be a Base64 string that
+I'll probably shed more light on in the next question.
+
+```html
+<h1>[+] Success</h1><br>
+<p>Q29ycmVjdCBUb2tlbiBzdXBwbGllZCwgeW91IGFyZSBncmFudGVkIGFjY2VzcyB0byB0aGUgc25vdyBjYW5ub24gdGVybWluYWwuIEhlcmUgaXMgeW91ciBwZXJzb25hbCBwYXNzd29yZCBmb3IgYWNjZXNzOiBTbm93TGVvcGFyZDJSZWFkeUZvckFjdGlvbg==</p>
+```
+
+With just the `$response` we get the following output when not parsing the
+output.
+
+```powershell
+
 StatusCode        : 200
 StatusDescription : OK
-Content           : <h1>Cookie 'mfa_code', use it at <a href='1761891443.3204877'>/mfa_validate/4216B4FAF4391EE4D3
-                    E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C</a></h1>
+Content           : <h1>[+] Success</h1><br><p>Q29ycmVjdCBUb2tlbiBzdXBwbGllZCwgeW91IGFyZSBncmFudGVkIGFjY2VzcyB0byB0aGUgc25vdyBjYW5ub24gdGVybWluYWwuIEhlcmUga
+                    XMgeW91ciBwZXJzb25hbCBwYXNzd29yZCBmb3IgYWNjZXNzOiBTbm93TGVvcGFyZ…
 RawContent        : HTTP/1.1 200 OK
                     Server: Werkzeug/3.0.6
                     Server: Python/3.10.12
-                    Date: Fri, 31 Oct 2025 06:17:23 GMT
+                    Date: Fri, 31 Oct 2025 18:05:02 GMT
                     Connection: close
                     Content-Type: text/html; charset=utf-8
-                    Content-Length: 149
+                    Content-Length: 227
                     
-                    <h1>Cookie 'mfa_code', u…
-Headers           : {[Server, System.String[]], [Date, System.String[]], [Connection, System.String[]], [Content-T
-                    ype, System.String[]]…}
+                    <h1>[+] Success</h1><br>…
+Headers           : {[Server, System.String[]], [Date, System.String[]], [Connection, System.String[]], [Content-Type, System.String[]]…}
 Images            : {}
 InputFields       : {}
-Links             : {@{outerHTML=<a href='1761891443.3204877'>/mfa_validate/4216B4FAF4391EE4D3E0EC53A372B2F24876ED
-                    5D124FE08E227F84D687A7E06C</a>; tagName=A; href=1761891443.3204877}}
-RawContentLength  : 149
+Links             : {}
+RawContentLength  : 227
 RelationLink      : {}
+
+
 ```
+
+Initially I was attempting to do this manually. But, it looks like the timeout
+for this is 2s. So, I wrote the script above. Basically, I didn't paste the
+command to perform the authentication within the 2 second period so the token
+expired.
+
+```                                                                                                                     
+StatusCode        : 200
+StatusDescription : OK
+Content           : <h1>[!] System currently in lock down</h1><br><h1>[!] Failure, token has expired. [*] Default timeout set to 2s for security reasons</h1
+                    >
+RawContent        : HTTP/1.1 200 OK
+                    Server: Werkzeug/3.0.6
+                    Server: Python/3.10.12
+                    Date: Fri, 31 Oct 2025 17:55:30 GMT
+                    Connection: close
+                    Content-Type: text/html; charset=utf-8
+                    Content-Length: 137
+                    
+                    <h1>[!] System currently…
+Headers           : {[Server, System.String[]], [Date, System.String[]], [Connection, System.String[]], [Content-Type, System.String[]]…}
+Images            : {}
+InputFields       : {}
+Links             : {}
+RawContentLength  : 137
+RelationLink      : {}
+
+```
+
+11) That looks like base64! Decode it so we can get the final secret!
+
+Looks like we're in the end game for the silver challenge now! Need to decode
+the following base64 string to finish this up.
+
+```txt
+Q29ycmVjdCBUb2tlbiBzdXBwbGllZCwgeW91IGFyZSBncmFudGVkIGFjY2VzcyB0byB0aGUgc25vdyBjYW5ub24gdGVybWluYWwuIEhlcmUgaXMgeW91ciBwZXJzb25hbCBwYXNzd29yZCBmb3IgYWNjZXNzOiBTbm93TGVvcGFyZDJSZWFkeUZvckFjdGlvbg==
+```
+
+I scripted this with a few variables. One with the Base64 string named
+`$base64_string` and another `$decoded_base64` with some .NET code to use 
+`System.Text.Convert` to convert the Base64 string to text. Then I wrote the
+output of the variable to the console using `Write-Output`.
+
+```powershell
+$base64_string = "Q29ycmVjdCBUb2tlbiBzdXBwbGllZCwgeW91IGFyZSBncmFudGVkIGFjY2VzcyB0byB0aGUgc25vdyBjYW5ub24gdGVybWluYWwuIEhlcmUgaXMgeW91ciBwZXJzb25hbCBwYXNzd29yZCBmb3IgYWNjZXNzOiBTbm93TGVvcGFyZDJSZWFkeUZvckFjdGlvbg=="
+
+$decoded_base64 = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($base64_string))
+
+Write-Output $decoded_base64
+```
+
+After decoding. It showed the following output. Stating we were granted access
+to the show cannon terminal. We have also been granted a personal password.
+Which I have provided below.
+
+- SnowLeopard2ReadyForAction
+
+This may be useful later on in the challenge. Either this one or another one. At
+this point I'm not so sure.
+
+```powershell
+Correct Token supplied, you are granted access to the snow cannon terminal. 
+
+Here is your personal password for access: SnowLeopard2ReadyForAction
+```
+
+After that output comes. I'm greeded by a message saying I've solved the
+challenge.
+
+```powershell
+Hurray! You have thwarted their defenses!
+Alabaster can now access their weaponry and put a stop to it.
+Once HHC grants your achievement, you can close this terminal.
+```
+
+### Solution (Gold)
+
+> PowerShell Admin Access - Fakeout EDR Threshold
+>
+> From:
+>
+> Terminal: PowerShell
+>
+>They also mentioned this lazy elf who programmed the security settings in the weapons terminal. He created a fakeout protocol that he dubbed Elf Detection and Response "EDR". The whole system is literally that you set a threshold and after that many attempts, the response is passed through... I can't believe it. He supposedly implemented it wrong so the threshold cookie is highly likely shared between endpoints!
+
+> PowerShell Admin Access - Total Control
+>
+> From:
+>
+> Terminal: PowerShell
+> 
+> I overheard some of the other elves talking. Even though the endpoints have been redacted, they are still operational. This means that you can probably elevate your access by communicating with them. I suggest working out the hashing scheme to reproduce the redacted endpoints. Luckily one of them is still active and can be tested against. Try hashing the token with SHA256 and see if you can reliably reproduce the endpoint. This might help, pipe the tokens to Get-FileHash -Algorithm SHA256.
 
 ## Showball Showdown
 
