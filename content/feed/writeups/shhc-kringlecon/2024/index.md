@@ -1020,6 +1020,9 @@ I have not finished this section yet.
 
 ## Hardware Hacking 101: Part 1
 
+> Jingle all the wires and connect to Santa's Little Helper to reveal the merry 
+> secrets locked in his chest!
+
 Based on the image. This already looks like a great challenge. The visuals are
 great and I get to play with some simulated hardware. Not sure I can beat that!
 
@@ -1159,6 +1162,10 @@ Jewel Loggins gives us some more dialog to confirm we're on the right track.
 
 ### One Thousand Little Teeny Tiny Shredded Pieces of Paper
 
+After cracking the code at the Frosty Keypad this is the prompt from Morcel
+Nougat. Saying we retrieved the shredded document for what I think is the page
+containing the serial settings that will help us in Hardware Hacking 101.
+
 > Incredible work! You pieced together the code like a true sleuth and retrieved 
 > the shreds we need. I’m not quite sure how you’ll put them all together, but if 
 > anyone can, it’s you!
@@ -1167,7 +1174,7 @@ Jewel Loggins gives us some more dialog to confirm we're on the right track.
 > Wombley and Alabaster will want to hear all about it—go share the news with 
 > Jewel Loggins!
 >
-> -- **Morcel Nougat**
+> -- **Morcel Nougat (Front Yard (Act I))**
 
 **Hints:**
 
@@ -1600,6 +1607,9 @@ for the challenge on my badge to confirm.
 
 ## Hardware Hacking 101: Part 2
 
+> Santa’s gone missing, and the only way to track him is by accessing the Wish 
+> List in his chest—modify the access_cards database to gain entry!
+
 {{< image src="hardware-hacking/hardware-part2.png" alt="Image of hardware hacking 101 part 2" position="center" style="border-radius: 8px;" >}}
 
 The objective of this challenge is to grant access to card number 42 by
@@ -1851,9 +1861,324 @@ pretty suspencful outro for Act I.
 >
 > Piney, Chimney, and Eve each need your help.
 
-Here is a map of Act II 
+Here is a map of Act II for future reference.
+
+{{< image src="frontyardact2.jpg" alt="Act II map of the front yard." position="center" style="width=100%; border-radius: 8px;" >}}
 
 ## Mobile Analysis
+
+> I've been busy creating and testing a modern solution to Santa’s Naughty-Nice 
+> List, and I even built an Android app to streamline things for Alabaster’s 
+> team.
+> 
+> But here’s my tiny reindeer-sized problem: I made a 
+> [debug](https://www.holidayhackchallenge.com/2024/SantaSwipe.apk) version 
+> and a [release](https://www.holidayhackchallenge.com/2024/SantaSwipeSecure.aab) 
+> version of the app.
+> 
+> I accidentally left out a child's name on each version, but for the life of 
+> me, I can't remember who!
+> 
+> Could you start with the debug version first, figure out which child’s name 
+> isn’t shown in the list within the app, then we can move on to release? I’d 
+> be eternally grateful!
+> 
+> -- **Eve Snowshoes (Front Yard (Act II))**
+
+### Solution (Silver)
+
+So for this I decided to decompile the `SantaSwipe.apk` file using `jadx` and
+`apktool` just to see what informaiton both would provide.
+
+I like `jadx` usually because the output files are generally easier to read. I
+use the command below to decompile `SantaSwipe.apk`.
+
+```sh
+jadx -d SantaSwipe SantaSwipe.apk
+```
+
+There isn't much output for this command. I've never used it before so the
+errors count was concerning initially. But, after looking at the contents of the
+`SantaSwipe` directory. It looks like there are files. So, it must be fine.
+
+```sh
+INFO  - loading ...
+INFO  - processing ...
+ERROR - finished with errors, count: 19
+```
+
+For apktool I had an issue with the AUR package. So I decided to decompile using
+one of the containers. This will decompile the `SantaSwipe.apk` to a directory
+named `SantaSwipe`. One thing I like about apktool is the amount of detail it
+can provide. But, in this case I don't use it. Jadx gives me everything I need
+for the silver challenge.
+
+```sh
+podman run --rm -v `pwd`:/app docker.io/theanam/apktool d SantaSwipe.apk
+```
+
+The apktool decompiles to `dex` files and some in the `Smali` format. Which
+isn't always the easiest to read. But, in a pinch it will do.
+
+```sh
+I: Using Apktool 2.4.0 on SantaSwipe.apk
+I: Loading resource table...
+I: Decoding AndroidManifest.xml with resources...
+S: WARNING: Could not write to (/root/.local/share/apktool/framework), using /tmp instead...
+S: Please be aware this is a volatile directory and frameworks could go missing, please utilize --frame-path if the default storage directory is unavailable
+I: Loading resource table from file: /tmp/1.apk
+I: Regular manifest package...
+I: Decoding file-resources...
+I: Decoding values */* XMLs...
+I: Baksmaling classes.dex...
+I: Baksmaling classes4.dex...
+I: Baksmaling classes2.dex...
+I: Baksmaling classes3.dex...
+I: Baksmaling classes5.dex...
+I: Copying assets and libs...
+I: Copying unknown files...
+I: Copying original files...
+```
+
+Checked the `SantaSwipe` folder for any data that might be useful. I decided to
+check for the word `naughty` using `ripgrep`. This didn't come up with a whole
+lot of results. But, this was probably the best start.
+
+```sh
+rg naughty .
+```
+
+It looks like there is a database name called `naughtynicelist.db` in the the 
+`DatabaseHelper.java` file. Courious if there is any data there that might be of
+use.
+
+```sh
+./sources/com/northpole/santaswipe/DatabaseHelper.java
+14:    private static final String DATABASE_NAME = "naughtynicelist.db";
+```
+
+Below is the contents of the `./sources/com/northpole/santaswipe/` folder. Looks
+like there is the `DatabaseHelper.java`, `MainActivity.java`, etc. Which might
+come in use down the road. `DatabaseHelper.java` probably has a lot of
+informaiton on the database schema. The `MainActivity.java` file probably has
+the main operation logic in the file. But, I'll need to read these to see.
+
+```sh
+total 56K
+drwxr-xr-x 1 tloftus tloftus   88 Oct 31 23:38 .
+drwxr-xr-x 1 tloftus tloftus   20 Oct 31 23:38 ..
+-rw-r--r-- 1 tloftus tloftus 6.2K Oct 31 23:38 DatabaseHelper.java
+-rw-r--r-- 1 tloftus tloftus  16K Oct 31 23:38 MainActivity.java
+-rw-r--r-- 1 tloftus tloftus  31K Oct 31 23:38 R.java
+drwxr-xr-x 1 tloftus tloftus   10 Oct 31 23:38 ui
+```
+
+I opened the file and there was function that seems to build the schema and
+write some scaffolding for the web applications database. There are a bunch of
+names that go into the `NormalList` tale. But, there isn't anything that looks
+like it's going into the naughty or nice list.
+
+```java
+    public void onCreate(SQLiteDatabase db) {
+        Intrinsics.checkNotNullParameter(db, "db");
+        db.execSQL("CREATE TABLE IF NOT EXISTS NiceList (Item TEXT);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS NaughtyList (Item TEXT);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS NormalList (Item TEXT);");
+        db.execSQL("DELETE FROM NiceList;");
+        db.execSQL("DELETE FROM NaughtyList;");
+        db.execSQL("DELETE FROM NormalList;");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Carlos, Madrid, Spain');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Aiko, Tokyo, Japan');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Maria, Rio de Janeiro, Brazil');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Liam, Dublin, Ireland');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Emma, New York, USA');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Chen, Beijing, China');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Fatima, Casablanca, Morocco');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Hans, Berlin, Germany');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Olga, Moscow, Russia');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Ravi, Mumbai, India');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Amelia, Sydney, Australia');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Juan, Buenos Aires, Argentina');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Sofia, Rome, Italy');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Ahmed, Cairo, Egypt');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Yuna, Seoul, South Korea');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Ellie, Alabama, USA');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Lucas, Paris, France');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Mia, Toronto, Canada');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Sara, Stockholm, Sweden');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Ali, Tehran, Iran');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Nina, Lima, Peru');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Anna, Vienna, Austria');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Leo, Helsinki, Finland');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Elena, Athens, Greece');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Davi, Sao Paulo, Brazil');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Marta, Warsaw, Poland');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Noah, Zurich, Switzerland');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Ibrahim, Ankara, Turkey');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Emily, Wellington, New Zealand');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Omar, Oslo, Norway');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Fatou, Dakar, Senegal');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Olivia, Vancouver, Canada');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Ethan, Cape Town, South Africa');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Santiago, Bogota, Colombia');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Isabella, Barcelona, Spain');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Ming, Shanghai, China');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Chloe, Singapore, Singapore');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Mohammed, Dubai, UAE');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Ava, Melbourne, Australia');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Luca, Milan, Italy');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Sakura, Kyoto, Japan');");
+        db.execSQL("INSERT INTO NormalList (Item) VALUES ('Edward, New Jersey, USA');");
+    }
+```
+
+So, I decide to look at the `MainActivity.java` file and I found the following
+line. It's sending a SQLite query to the database for all `Items` except for
+`Ellie`. So I have a hunch that this is the name we're looking for. 
+
+```java
+Cursor cursor = sQLiteDatabase.rawQuery("SELECT Item FROM NormalList WHERE Item NOT LIKE '%Ellie%'", null);
+```
+
+Below is the exerpt from the `MainActivity.java` file where I found the line
+above. Thought I would include it in case it was any use down the road.
+
+```java
+
+        @JavascriptInterface
+        public final void getNormalList() {
+            final String jsonItems;
+            try {
+                SQLiteDatabase sQLiteDatabase = MainActivity.this.database;
+                if (sQLiteDatabase == null) {
+                    Intrinsics.throwUninitializedPropertyAccessException("database");
+                    sQLiteDatabase = null;
+                }
+                Cursor cursor = sQLiteDatabase.rawQuery("SELECT Item FROM NormalList WHERE Item NOT LIKE '%Ellie%'", null);
+                List items = new ArrayList();
+                Log.d("WebAppInterface", "Fetching items from NormalList table");
+                while (cursor.moveToNext()) {
+                    String item = cursor.getString(0);
+                    Intrinsics.checkNotNull(item);
+                    items.add(item);
+                    Log.d("WebAppInterface", "Fetched item: " + item);
+                }
+                cursor.close();
+                if (items.isEmpty()) {
+                    jsonItems = "[]";
+                } else {
+                    jsonItems = CollectionsKt.joinToString$default(items, "\",\"", "[\"", "\"]", 0, null, null, 56, null);
+                }
+                MainActivity mainActivity = MainActivity.this;
+                final MainActivity mainActivity2 = MainActivity.this;
+                mainActivity.runOnUiThread(new Runnable() { // from class: com.northpole.santaswipe.MainActivity$WebAppInterface$$ExternalSyntheticLambda1
+                    @Override // java.lang.Runnable
+                    public final void run() {
+                        MainActivity.WebAppInterface.getNormalList$lambda$0(jsonItems, mainActivity2);
+                    }
+                });
+            } catch (Exception e) {
+                Log.e("WebAppInterface", "Error fetching NormalList: " + e.getMessage());
+            }
+        }
+
+```
+
+In the submission box I entered `Ellie` and clicked submit. I got the
+achievement. So now it's time to move on to the next step.
+
+With that finished I talked to Eve Snowshoes and they provided the following
+dialog.
+
+> Aha! Success! You found it!
+> 
+> Thanks for staying on your toes and helping me out—every step forward keeps 
+> Alabaster’s plans on track. You're a real lifesaver!
+> 
+> -- **Eve Snowshoes (Front Yard (Act II))**
+
+### Solution (Gold)
+
+> Nice job completing the debug version—smooth as a sleigh ride on fresh snow!
+> 
+> But now, the real challenge lies in the obfuscated release version. Ready to 
+> dig deeper and show Alabaster’s faction your skills?
+>
+> -- **Eve Snowshoes (Front Yard (Act II))**
+
+**Hints:**
+
+> Mobile Analysis Hard - Format
+> 
+> From: Eve Snowshoes
+>
+> Objective: Mobile Analysis
+>
+> So yeah, have you heard about this new 
+> [Android app](https://developer.android.com/guide/app-bundle/app-bundle-format) 
+> format? Want to convert it to an 
+> [APK file](https://github.com/HackJJ/apk-sherlock/blob/main/aab2apk.md)?
+
+> Mobile Analysis Hard - Encryption and Obfuscation
+> 
+> From: Eve Snowshoes
+> 
+> Objective: Mobile Analysis
+> 
+> Obfuscated and encrypted? Hmph. Shame you can't just run 
+> [strings](https://developer.android.com/guide/topics/resources/string-resource) 
+> on the file.
+
+```sh
+file SantaSwipeSecure.aab
+```
+
+```sh
+SantaSwipeSecure.aab: Zip archive data, at least v0.0 to extract, compression method=deflate
+```
+
+```sh
+podman run --rm -v "$PWD":/work -w /work bundletool:1.18.2 \
+  build-apks --bundle=SantaSwipeSecure.aab --output=SantaSwipeSecure.apks --mode=universal
+WARNING: The APKs won't be signed and thus not installable unless you also pass a keystore via the flag --ks. See the command help for more information.
+[BT:1.18.2] Error: java.nio.file.AccessDeniedException: SantaSwipeSecure.apks
+java.io.UncheckedIOException: java.nio.file.AccessDeniedException: SantaSwipeSecure.apks
+        at com.android.tools.build.bundletool.io.ApkSerializerManager.serializeApkSet(ApkSerializerManager.java:151)
+        at com.android.tools.build.bundletool.commands.BuildApksManager.execute(BuildApksManager.java:227)
+        at com.android.tools.build.bundletool.commands.BuildApksCommand.execute(BuildApksCommand.java:982)
+        at com.android.tools.build.bundletool.BundleToolMain.main(BundleToolMain.java:84)
+        at com.android.tools.build.bundletool.BundleToolMain.main(BundleToolMain.java:56)
+Caused by: java.nio.file.AccessDeniedException: SantaSwipeSecure.apks
+        at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:90)
+        at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+        at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+        at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181)
+        at java.base/java.nio.channels.FileChannel.open(FileChannel.java:298)
+        at java.base/java.nio.channels.FileChannel.open(FileChannel.java:357)
+        at com.android.zipflinger.ZipWriter.ensureOpen(ZipWriter.java:100)
+        at com.android.zipflinger.ZipWriter.position(ZipWriter.java:58)
+        at com.android.zipflinger.ZipArchive.writeSource(ZipArchive.java:300)
+        at com.android.zipflinger.ZipArchive.add(ZipArchive.java:130)
+        at com.android.tools.build.bundletool.io.ApkSetWriter$2.zipApkSet(ApkSetWriter.java:114)
+        at com.android.tools.build.bundletool.io.ApkSetWriter$2.zipApkSet(ApkSetWriter.java:106)
+        at com.android.tools.build.bundletool.io.ApkSetWriter$2.writeApkSet(ApkSetWriter.java:82)
+        at com.android.tools.build.bundletool.io.ApkSerializerManager.serializeApkSet(ApkSerializerManager.java:148)
+        ... 4 more
+        Suppressed: java.nio.file.AccessDeniedException: SantaSwipeSecure.apks
+                at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:90)
+                at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+                at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+                at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181)
+                at java.base/java.nio.channels.FileChannel.open(FileChannel.java:298)
+                at java.base/java.nio.channels.FileChannel.open(FileChannel.java:357)
+                at com.android.zipflinger.ZipWriter.ensureOpen(ZipWriter.java:100)
+                at com.android.zipflinger.ZipWriter.position(ZipWriter.java:58)
+                at com.android.zipflinger.ZipArchive.writeArchive(ZipArchive.java:214)
+                at com.android.zipflinger.ZipArchive.closeWithInfo(ZipArchive.java:183)
+                at com.android.zipflinger.ZipArchive.close(ZipArchive.java:172)
+                at com.android.tools.build.bundletool.io.ApkSetWriter$2.zipApkSet(ApkSetWriter.java:112)
+                ... 7 more
+```
 
 ## Drone Path
 
@@ -2758,6 +3083,38 @@ Once HHC grants your achievement, you can close this terminal.
 > I overheard some of the other elves talking. Even though the endpoints have been redacted, they are still operational. This means that you can probably elevate your access by communicating with them. I suggest working out the hashing scheme to reproduce the redacted endpoints. Luckily one of them is still active and can be tested against. Try hashing the token with SHA256 and see if you can reliably reproduce the endpoint. This might help, pipe the tokens to Get-FileHash -Algorithm SHA256.
 
 ## Showball Showdown
+
+Wombley has recruited many elves to his side for the great snowball fight we 
+are about to wage. Please help us defeat him by hitting him with more snowballs 
+than he does to us. 
+
+> Hi there! I'm Dusty Giftwrap, back from the battlefield! I'm mostly here for 
+> the snowball fights!
+> 
+> But I also don't want Santa angry at us, you wouldn't like him when he's 
+> angry. His face becomes as red as his hat! So I guess I'm rooting for 
+> Alabaster.
+> 
+> Alabaster Snowball seems to be having quite a pickle with Wombley Cube. We 
+> need your wizardry.
+>
+> Take down Wombley the usual way with a friend, or try a different strategy 
+> by tweaking client-side values for an extra edge.
+> 
+> Alternatively, we've got a secret weapon - a giant snow bomb - but we can't 
+> remember where we put it or how to launch it.
+> 
+> Adjust the right elements and victory for Alabaster can be secured with more 
+> subtlety. Intriguing, right?
+> 
+> Raring to go? Terrific! Here's a real brain tickler. Navigator of chaos or 
+> maestro of subtlety, which will you be? Either way, remember our objective: 
+> bring victory to Alabaster.
+>
+> Confidence! Wit! We've got what it takes. Team up with a friend or find a way 
+> to go solo - no matter how, let's end this conflict and take down Wombley!
+>
+> -- **Dusty Giftwrap (Front Yard (Act II))**
 
 ## Microsoft KC7 (The Great Elf Conflict)
 
