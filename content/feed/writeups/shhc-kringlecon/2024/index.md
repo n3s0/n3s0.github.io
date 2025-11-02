@@ -2647,9 +2647,32 @@ What's interesting to me is the Bio. It talks about a secret project that's
 underway (making the drone armada) and it says, *"Note to self, remember drone
 name, it is the same location as secret snowball warehouses
 [Preparations-drone-name.csv](https://hhc24-dronepath.holidayhackchallenge.com/files/secret/Preparations-drone-name.csv)"*
-Then it provides a CSV file named `Preparations-drone-name.csv`. 
+Then it provides a CSV file named `Preparations-drone-name.csv`.
 
 {{< image src="drone-path/fritjolf-profile.png" alt="fritjolf drone path profile" position="center" style="border-radius: 8px;" >}}
+
+I have also provided a table with links to the satallite views in Google maps.
+Contains the Longitude and Latitude and the letter I see.
+
+| Longitude | Latitude | Map Link | Letter |
+|:-----------|:----------|:------------------|:--------|
+| 144.8567879816271 | -37.42277804382341 | [Google Map](https://maps.app.goo.gl/Y1dGKT9rekZxZyvj6) | E |
+| 142.4357677725014 | -38.0569169391843 | [Google Map](https://maps.app.goo.gl/LBhGQrRGzMzBAg5E6) | L |
+| 143.9329094555584 | -37.80217469906655 | [Google Map](https://maps.app.goo.gl/S8JiUx7sfQ1rSFke9) | F |
+| 142.2754454646221 | -38.0682499155867 | [Google Map](https://maps.app.goo.gl/dkdqhnwJ1GhGR5eB9) | - |
+| 141.756352258091  | -34.52324587244343 | [Google Map](https://maps.app.goo.gl/YnwtHEJqLiNGuimK9) | H |
+| 145.513859306511  | -36.74357572393437 | [Google Map](https://maps.app.goo.gl/DxM7mTRNLSMn3QyH6) | A |
+| 144.745994150535  | -37.89721189352699 | [Google Map](https://maps.app.goo.gl/dkU8NCeoV9fsraKn9) | W |
+| 145.8966329539992 | -37.00702150480869 | [Google Map](https://maps.app.goo.gl/xBbQRMYcHNa8eaTx5) | K |
+
+Looks like the answer to this is `ELF-HAWK`. After referencing all of the 
+
+After going to the Elf Drone Workshop page. I enter `ELF-HAWK` and it shows the
+following screen. 
+
+{{< image src="#" alt="Elf drone workshop page with drone name entered" position="center" style="border-radius: 8px;" >}}
+
+
 
 ## PowerShell
 
