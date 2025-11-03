@@ -1,7 +1,7 @@
 ---
 title: "Apply New Kubernetes Pod/Deployment Configuration"
 author: "timothy loftus (n3s0)"
-date: 2025-11-03t11:25:27-06:00
+date: 2025-11-03T11:25:27-06:00
 lastmod: 2025-11-03
 description: "Notes for applying new kubernetes pod/deployment configuration in the default or named namespaces."
 cover: '/img/kubernetes-concept.png'
