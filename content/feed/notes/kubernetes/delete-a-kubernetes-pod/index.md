@@ -3,6 +3,7 @@ title: "Delete A Kubernetes Pod"
 author: "Timothy Loftus (n3s0)"
 date: 2025-11-03T11:25:27-06:00
 lastmod: 2025-11-03
+cover: '/img/kubernetes-concept.png'
 description: "Some notes on deleting a kubernetes pod."
 draft: true
 tags: ["kubernetes"]

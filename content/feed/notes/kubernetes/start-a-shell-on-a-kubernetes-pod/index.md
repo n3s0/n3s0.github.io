@@ -4,6 +4,7 @@ author: "Timothy Loftus (n3s0)"
 date: 2025-10-28T11:25:27-06:00
 lastmod: 2025-10-28
 description: "Some notes on starting shells on Kubernetes pods."
+cover: '/img/kubernetes-concept.png'
 draft: false
 tags: ["kubernetes"]
 ---
