@@ -2741,6 +2741,77 @@ of the coordinates in the file. They don't lead to anywhere. Unless I need to
 concatenate the broken latitude and longitudes to fix those. I'm not too sure
 about that theory though.
 
+One thing to note is as you look through the file. some of the values go past
+the 180 W and 180 E values. So we might not be looking at coordinates on the
+map. But, something else.
+
+I used python to write a script that would plot the data in the `OSD.longitude`
+and `OSD.latitude` columns. Initially the X axis was too narrow to show the
+output so I widened it a little and I saved the figure as a PNG file so I could
+put it in this write up.
+
+I think I want to do this in `go` sometime to compare that as well.
+
+```python
+import matplotlib.pyplot as plt
+import pandas as pd
+
+def geoPlot(file):
+
+    df = pd.read_csv(file)
+
+    plt.figure().set_figwidth(12)
+    
+    plt.plot(df['OSD.longitude'], df['OSD.latitude'])
+
+    plt.title('ELF-HAWK Dump')
+
+    plt.savefig('ELF-HAWK-dump.png')
+
+if __name__ == "__main":
+    file = "ELF-HAWK-dump.csv"
+    geoPlot(file)
+
+```
+
+Ran the code and it looks like it says:
+
+- `DroneDataAnalystExpertMedal` 
+
+Which must be the code for the `Admin Code Verfication Console`.
+
+{{< image src="drone-path/ELF-HAWK-dump-graph.png" alt="line graph of elf-hawk dump csv file." position="center" style="border-radius: 8px;" >}}
+
+After entering `DroneDataAnalystExpertMedal` into the Admin Code Verification
+Console. The console displays a message saying, "Success: Code accepted! You 
+may now steer the fleet of drones. You are officially certified as a Drone Data 
+Analyst Expert!". 
+
+{{< image src="drone-path/admin-console-success.png" alt="admin code verification console success message" position="center" style="border-radius: 8px;" >}}
+
+Now that's complete. I'm awarded the Silver medal for the first part of the
+challenge. We'll see what the gold part of the challenge looks like soon.
+
+We also have more dialog from Chimeny Scissorsticks after completing this.
+
+> Bravo! You've tackled the drone challenge and navigated through those KML 
+> files like a true expert. Your skills are just what we need to prevent the 
+> big snowball battle—the North Pole thanks you!
+>
+> -- **Chimeny Scissorsticks (Front Yard (Act II))**
+
+### Solution (Gold)
+
+> Well done! You cracked the code from the drones and showed you've mastered 
+> the basics of KML files. This kind of expertise will be invaluable as we gear 
+> up for what’s ahead!
+>
+> But I need you to dig deeper. Make sure you’re checking those file structures 
+> carefully, and remember—rumor has it there is some injection flaw that might 
+> just give you the upper hand. Keep your eyes sharp!
+>
+> -- **Chimeny Scissorsticks (Front Yard (Act II))**
+
 ## PowerShell
 
 {{< image src="powershell/powershell-terminal.png" alt="Piney Sappington and the PowerShell terminal" position="center" style="border-radius: 8px;" >}}
