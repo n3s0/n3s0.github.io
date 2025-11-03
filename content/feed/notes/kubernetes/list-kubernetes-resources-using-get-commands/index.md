@@ -4,6 +4,7 @@ author: "Timothy Loftus (n3s0)"
 date: 2025-11-03T11:25:27-06:00
 lastmod: 2025-11-03
 description: "Some notes on listing kubernetes resources using get commands."
+cover: '/img/kubernetes-concept.png'
 draft: false
 tags: ["kubernetes"]
 ---
