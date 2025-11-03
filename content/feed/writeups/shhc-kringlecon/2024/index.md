@@ -170,7 +170,7 @@ about 1,600 points for each round.
 Going to recircle back to that math at some point. But, my case here is a high
 score of 50,000 points is impossible.
 
-{{< image src="elf_connect/elf_connect.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-connect/elf_connect.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
 
 This is a category matching game named Elf Connect and Angel Candysalt is
 suspicious about `randomElf` and their high score in Elf Connect.
@@ -592,11 +592,9 @@ Time to say `yes` to the prompt and get started.
 Are you ready to begin? [y]es: 
 ```
 
-> **Question 1**
-> 
-> Unlike the defined standards of a curling sheet, embedded devices often have 
-> web servers on non-standard ports.  Use curl to retrieve the web page on host 
-> "curlingfun" port 8080. If you need help, run the 'hint' command.
+1. Unlike the defined standards of a curling sheet, embedded devices often have 
+   web servers on non-standard ports.  Use curl to retrieve the web page on host 
+   "curlingfun" port 8080. If you need help, run the 'hint' command.
 
 First question is asking how to access web servers on a non-standard port. In
 this case we're accessing `curlingfun` on port `8080`.
@@ -616,11 +614,9 @@ You have successfully accessed the site on port 8080!
 If you need help, please remember to run "hint" for a hint!
 ```
  
-> **Question 2**
->
-> Embedded devices often use self-signed certificates, where your browser will 
-> not trust the certificate presented.  Use curl to retrieve the TLS-protected 
-> web page at https://curlingfun:9090/
+2. Embedded devices often use self-signed certificates, where your browser will 
+   not trust the certificate presented.  Use curl to retrieve the TLS-protected 
+   web page at https://curlingfun:9090/
 
 Second question we're diving into how to deal with self-signed/insecure
 certificates using curl. It's requesting that we use the URL
@@ -677,11 +673,9 @@ Subsequent requests will continue to require "--insecure", or "-k" for short.
 If you need help, please remember to run "hint" for a hint!
 ```
 
-> **Question 3**
->
-> Working with APIs and embedded devices often requires making HTTP POST requests. 
-> Use curl to send a request to https://curlingfun:9090/ with the parameter "skip" 
-> set to the value "alabaster", declaring Alabaster as the team captain.
+3. Working with APIs and embedded devices often requires making HTTP POST requests. 
+   Use curl to send a request to https://curlingfun:9090/ with the parameter "skip" 
+   set to the value "alabaster", declaring Alabaster as the team captain.
 
 In question 3 we go into working with APIs and the use of parameters with
 requests. Specifically how to send one. In this question they are asking us to
@@ -702,12 +696,10 @@ succesfully.
 You have successfully made a POST request!
 ```
 
-> **Question 4**
-> 
-> Working with APIs and embedded devices often requires maintaining session 
-> state by passing a cookie.  Use curl to send a request to 
-> https://curlingfun:9090/ with a cookie called "end" with the value "3", 
-> indicating we're on the third end of the curling match.
+4. Working with APIs and embedded devices often requires maintaining session 
+   state by passing a cookie.  Use curl to send a request to 
+   https://curlingfun:9090/ with a cookie called "end" with the value "3", 
+   indicating we're on the third end of the curling match.
 
 This question discusses sending a cookie to `https://curlingfun:9090/` named
 `end` with the value of `3`. This is intended to indicate that we're on the
@@ -727,11 +719,9 @@ a cookie.
 You have successfully set a cookie!
 ```
 
-> **Question 5**
-> 
-> Working with APIs and embedded devices sometimes requires working with raw 
-> HTTP headers. Use curl to view the HTTP headers returned by a request to 
-> https://curlingfun:9090/
+5. Working with APIs and embedded devices sometimes requires working with raw 
+   HTTP headers. Use curl to view the HTTP headers returned by a request to 
+   https://curlingfun:9090/
 
 The objective for question 5 is to send a request that will output the raw HTTP
 headers to `https://curlingfun:9090`.
@@ -790,11 +780,9 @@ Connection: keep-alive
 Custom-Header: You have found the custom header!
 ```
 
-> **Question 6**
->
-> Working with APIs and embedded devices sometimes requires working with custom 
-> HTTP headers. Use curl to send a request to https://curlingfun:9090/ with an 
-> HTTP header called "Stone" and the value "Granite".
+6. Working with APIs and embedded devices sometimes requires working with custom 
+   HTTP headers. Use curl to send a request to https://curlingfun:9090/ with an 
+   HTTP header called "Stone" and the value "Granite".
 
 This one discusses working with APIs again. Question 6 has an objective to send
 a custom HTTP header using curl to `https://curlingfun:9090/` with the header
@@ -815,11 +803,9 @@ request.
 You have successfully set a custom HTTP header!
 ```
 
-> **Question 7**
-> 
-> curl will modify your URL unless you tell it not to.  For example, use curl 
-> to retrieve the ollowing URL containing special characters: 
-> https://curlingfun:9090/../../etc/hacks
+7. curl will modify your URL unless you tell it not to.  For example, use curl 
+   to retrieve the ollowing URL containing special characters: 
+   https://curlingfun:9090/../../etc/hacks
 
 In question 7 our objective is to send a `GET` request to `curlingfun` with the
 path `/../../etc/hacks`. We need to find the option that doesn't mess with these
@@ -3476,7 +3462,7 @@ RelationLink      : {}
 
 ```
 
-11) That looks like base64! Decode it so we can get the final secret!
+11. That looks like base64! Decode it so we can get the final secret!
 
 Looks like we're in the end game for the silver challenge now! Need to decode
 the following base64 string to finish this up.
