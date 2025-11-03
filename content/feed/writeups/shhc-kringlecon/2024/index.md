@@ -3526,8 +3526,6 @@ Once HHC grants your achievement, you can close this terminal.
 > 
 > I overheard some of the other elves talking. Even though the endpoints have been redacted, they are still operational. This means that you can probably elevate your access by communicating with them. I suggest working out the hashing scheme to reproduce the redacted endpoints. Luckily one of them is still active and can be tested against. Try hashing the token with SHA256 and see if you can reliably reproduce the endpoint. This might help, pipe the tokens to Get-FileHash -Algorithm SHA256.
 
-
-
 ## Showball Showdown
 
 Wombley has recruited many elves to his side for the great snowball fight we 
@@ -3564,24 +3562,546 @@ than he does to us.
 
 ## Microsoft KC7 (The Great Elf Conflict)
 
-[Answer](http://kc7cyber.com/go/hhc24) two sections for silver, all four 
-sections for gold.
+This challenge utilizes KC7 to go through questions for this challenge. Which is
+a volunteer project named the KC7 Foundation. Who's mission is to help teach
+anyone with the skills to succeed in the cybersecurity workforce by creating fun
+scenarios that are accessible to anyone. Either beginner or expert.
+
+In this challenge there are four parts as listed in the headers below. All of
+which increase in difficulty as you work through them.
+
+> [Answer](http://kc7cyber.com/go/hhc24) two sections for silver, all four 
+> sections for gold.
+
+This challenge will be centered around `The Great Elf Conflict` which you can
+see Pepper Minstix and Wunorse Openslae gathered in the DMZ around a globe that
+says `The Great Elf Conflict`. This will take you to the KC7 page for it as
+well.
+
+{{< image src="microsoft-kc7/the-great-elf-conflict-globe.png" alt="Pepper the great elf conflict and Wunorse" position="center"  style="border-radius: 8px;" >}}
+
+> This is weird, I got some intel about an imminent attack.
+> 
+> Pepper Minstix here! I’ve got urgent news from neutral ground.
+>
+> The North Pole is facing a serious cyber threat, and it’s putting all the 
+> factions on edge. The culprits? Some troublemakers from Team Wombley.
+> 
+> They’ve launched a barrage of phishing attacks, ransomware, and even some 
+> sneaky espionage, causing quite the stir.
+>
+> It’s time to jump into action and get cracking on this investigation—there’s 
+> plenty of cyber-sleuthing to do.
+>
+> You’ll be digging into KQL logs, tracking down phishing schemes, and tracing 
+> compromised accounts like a seasoned pro.
+> 
+> Malware infections have already breached Alabaster Snowball’s systems, so we 
+> need swift action.
+> 
+> Your top mission: neutralize these threats, with a focus on the ransomware 
+> wreaking havoc from Team Wombley.
+> 
+> It’s a hefty challenge, but I know you’re up to it. We need your expertise to 
+> restore order and keep the peace.
+> 
+> You’ve got the tools, the skills, and the know-how—let’s show Team Wombley we 
+> mean business.
+>
+> Ready to dive in? Let's defend the North Pole and bring back the holiday 
+> harmony!
+> 
+> -- **Pepper Minstix (Front Yard (Act II))**
+
+Here is Wunorse Opensle's dialog as well. Just for fun. It doesn't get more
+techbro then Wunorse in this dialog. Granted, it doesn't provide much else apart
+from more story dialog.
+
+> Hey, Wunorse here. We at Team Wombley pulled off some nasty stuff.
+>
+> Phishing attacks, ransomware, and cyber espionage, oh yeah!
+> 
+> We pulled loads of all-nighters to make it all happen. Energy drinks rock!
+>
+> Our teams did what Alabaster said we never could and breached Santa's network. 
+> We're so rad.
+> 
+> It would take a master defender to fix all the damage we caused. But defense 
+> is so lame! Offense is where it's at.
+>
+> You should just leave them to panic and join our side. We're the coolest, 
+> don't you want to be like us?
+> 
+> -- **Wunorse Opensle (Front Yard (Act II))**
+
+Back to KC7. We're given a little view into the summary of the mission. I've
+never worked with Kusto Query Language (KQL) or Azure Data Explorer (ADX) so I'm
+excited to work through these security logs and solve the challenge.
+
+> Welcome to your mission! In this mission, you'll be tasked with uncovering the 
+> truth behind the The Great Elf Conflict. Your key tool will be the power of 
+> Kusto Query Language (KQL), which you'll use to navigate through security logs 
+> and uncover critical evidence of malicious activity. This challenge was created 
+> as part of the SANS Holiday Hack Challenge 2024 in collaboration with Microsoft 
+> Federal.
+
+Below is the structure of this challenge. I'm showing you the complete challenge
+because I took a couple of days to get this done so I could focus on other
+challenges.
+
+In this case you need to open the questions and ADX in split screen to
+participate in this. It does not just open this unless I'm running into a
+Firefox issue here.
 
 {{< image src="microsoft-kc7/microsoftkc7.png" alt="intial page for microsoft kc7" position="center"  style="border-radius: 8px;" >}}
 
+There is a lot to unpack here. So, I will get started on getting all of this
+moving. Have fun reading all of this. It might be useful for me down the road in
+case ADX is ever used at someone's company.
+
+**Disclaimer:** You'll want to create and account with the KC7 Foundation and 
+go through some of the initial challenges. It took me a few hours to work 
+through the inial challanges of the site to reach level 10 or so. I could not 
+move forward with the challenge unless I joined the game as a guest.
+
+I will be providing the dialog from the challenges in KC7 to provide context to
+these challenges.
+
+Remember that all queries need to be run on the `NorthPoleWorkshop` database.
+
 ## KQL 101
 
+This is `Section 1: KQL 101` and what looks like when all of the questions have
+been answered for this. There are 10 questions for this challenge. So, let's get
+to it.
+
 {{< image src="microsoft-kc7/section1.png" alt="KQL 101 section" position="center"  style="border-radius: 8px;" >}}
+
+The thing I like about these challenges are the level of detail you're provided.
+It's a breath of fresh air.
+
+### Question 1
+
+Initially it welcomes you to the challenge and we're informed we're going to
+learn Kusto Query Language (KQL) to query the data and uncover evidence. We are
+meeting Eve Snowshoes who will teach us how to use it.
+
+> Welcome to your mission to solve the The Great Elf Conflict! To do so, you'll 
+> need to harness the power of KQL (Kusto Query Language) to navigate through 
+> the data and uncover crucial evidence.
+>
+> Your next step is to meet with Eve Snowshoes, Cyber Engineer, at the at the 
+> North Pole Cyber Defense Unit. Eve is known for unmatched expertise in KQL 
+> and has been eagerly awaiting your arrival.
+>
+> Eve greets you with a nod and gestures toward the terminal. "KQL is like a 
+> key, unlocking the hidden secrets buried within the data."
+
+Question 1 just requires you to put the text in the box and hit submit. So you
+know how to do that.
+
+**Question:** Type `let's do this` to begin your KQL training.
+
+I typed the following into the submission form and there we go! First question
+in the books.
+
+```txt
+let's do this
+```
+
+Looks like that was successful. Next!
+
+### Question 2
+
+The first command we're taught about is `take 10` or `take <number>`.  Which
+will take the first 10 or number of data from the specified table of the
+database.
+
+> The first command Eve Snowshoes teaches you is one of the most useful in 
+> querying data with KQL. It helps you peek inside each table, which is critical 
+> for understanding the structure and the kind of information you're dealing 
+> with. By knowing what's in each table, you’ll be able to create more precise 
+> queries and uncover exactly what you need.
+
+This command will take the first 10 employees in the `Employees` table of the
+database.
+
+```sql
+Employees
+| take 10
+```
+
+I was also instructed to look at the other tables for information. It looks like
+there are multiple. With data related to employees, email, web traffic, passive
+DNS queries, etc.
+
+> Eve has shared the first table with you. Now, run a take 10 on all the other 
+> tables to see what they contain.
+> 
+> You can find the tables you have access to at the top of the ADX query window.
+
+This is an exercise in exploration. Once we're finished with it. We just enter
+the text provided in the question.
+
+**Question:** Once you've examined all the tables, type `when in doubt take 10` 
+to proceed.
+
+After running this in ADX a few times. I entered the following for my
+submission.
+
+```txt
+when in doubt take 10
+```
+
+Looks like that was successful. Next!
+
+### Question 3
+
+Now we're getting into gathering some more information using the `count`
+operator. Which will count the total rows in a table.
+
+> Now, let’s gather more intelligence on the employees. To do this, we can use 
+> the count operator to quickly calculate the number of rows in a table. This is 
+> helpful for understanding the scale of the data you’re working with.
+
+Below is the command we will be entering.
+
+```sql
+Employees
+| count 
+```
+
+The output is a table that kind of looks like this. In the `NorthPoleWorkshop`
+database there are `90` employees stored.
+
+| **Count** |
+|-----------:|
+| 90 |
+
+**Question:** How many elves did you find?
+
+```txt
+90
+```
+
+### Question 4
+
+> You can use the where operator with the Employees table to locate a specific 
+> elf. Here’s a template you can follow:
+
+```sql
+Employees
+| where <field><operator><value>
+```
+
+> **Field:** The column you want to filter by (e.g., role).
+>
+> **Operator:** The condition you’re applying (e.g., == for an exact match).
+> 
+> **Value:** The specific value you’re looking for in the field (e.g., Chief 
+> Elf Officer).
+
+Question asks if we can find the name for the employee who's the Chief Toy
+Maker.
+
+**Question:** Can you find out the name of the Chief Toy Maker?
+
+When you look at the initial output. There is a `role` field in the data
+containing the employee's job title. So, I decided to use the `==` (equal to)
+operator set to `Chief Toy Maker`.
+
+```sql
+Employees
+| where role == "Chief Toy Maker"
+```
+
+Here is the output of the command entered with their `username`, laptop name,
+and most importantly of all. Their `role` name and it its indeed `Chief Toy
+Maker`. 
+
+```json
+"hire_date": 2023-11-27T00:00:00.000Z,
+"name": Shinny Upatree,
+"user_agent": Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.110 Safari/537.36,
+"ip_addr": 10.10.0.5,
+"email_addr": shinny_upatree@santaworkshopgeeseislands.org,
+"username": shupatree,
+"role": Chief Toy Maker,
+"hostname": Elf-Lap-A-Upatree,
+"mfa_enabled": True,
+"company_domain": santaworkshopgeeseislands.org
+```
+
+Looks like the answer to this question is `Shinny Upatree`. I've provided this
+below to make copying the name easier.
+
+```txt
+Shinny Upatree
+```
+
+After entering it in. It was a success! Ten more points have been added and
+we're ready to go to the next question!
+
+### Question 5
+
+This question seems to be going over the operators a lot. At least the ones they
+feel is going to be the most useful for this challenge.
+
+> Here are some additional operators the North Pole Cyber Defense Unit commonly 
+> uses.
+> 
+> **==** : Checks if two values are exactly the same. Case-sensitive.
+> 
+> **contains** : Checks if a string appears anywhere, even as part of a word. 
+> Not case-sensitive.
+> 
+> **has** : Checks if a string is a whole word. Not case-sensitive.
+> 
+> **has_any** : Checks if any of the specified words are present. Not 
+> case-sensitive.
+> 
+> **in** : Checks if a value matches any item in a list. Case-sensitive.
+
+**Question:** Type `operator` to continue.
+
+The question requests that we type `operator` in the submission form and
+continue to the next question.
+
+```txt
+operator
+```
+
+After entering it in. It was a success! Ten more points have been added and
+we're ready to go to the next question!
+
+### Question 6
+
+> We can learn more about an elf by cross-referencing information from other tables. Let’s take a look at Angel Candysalt’s correspondence. First, retrieve her email address from the Employees table, and then use it in a query in the Email table.
+
+```sql
+Email
+| where recipient == "<insert Angel Candysalt’s email address here>"
+| count
+```
+
+**Question:** How many emails did Angel Candysalt receive?
+
+```sql
+Email
+| where recipient == "angel_candysalt@santaworkshopgeeseislands.org"
+| count
+```
+
+| **Count** |
+|----------:|
+| 31 |
+
+```txt
+31
+```
+
+### Question 7
+
+> You can use the distinct operator to filter for unique values in a specific 
+> column.
+
+Here's a start:
+
+```sql
+Email
+| where sender has "<insert domain name here>"
+| distinct <field you need>
+| count
+```
+
+**Question:** How many distinct recipients were seen in the email logs from 
+`twinkle_frostington@santaworkshopgeeseislands.org`?
+
+```sql
+Email
+| where sender has "twinkle_frostington@santaworkshopgeeseislands.org"
+| distinct recipient
+| count
+```
+
+| **Count** |
+|----------:|
+| 32 |
+
+```txt
+32
+```
+
+### Question 8
+
+> It’s time to put everything we’ve learned into action!
+
+```sql
+OutboundNetworkEvents
+| where src_ip == "<insert IP here>"
+| <operator> <field>
+| <operator>
+```
+
+**Question:** How many distinct websites did Twinkle Frostington visit?
+
+I didn't know what their IP was so I needed to do some back tracking.
+
+```sql
+Employees
+| where name == "Twinkle Frostington"
+```
+
+```json
+"hire_date": 2021-11-22T00:00:00.000Z,
+"name": Twinkle Frostington,
+"user_agent": Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0,
+"ip_addr": 10.10.0.36,
+"email_addr": twinkle_frostington@santaworkshopgeeseislands.org,
+"username": twfrostington,
+"role": Craftsperson Elf (Team Wombley),
+"hostname": Elf-Lap-W-Frostington,
+"mfa_enabled": False,
+"company_domain": santaworkshopgeeseislands.org
+```
+
+```sql
+OutboundNetworkEvents
+| where src_ip == "10.10.0.36"
+| distinct url
+| count
+```
+
+| **Count** |
+|----------:|
+| 4 |
+
+```txt
+4
+```
+
+### Question 9
+
+> You may have notice we’re using contains instead of has here. That’s because has will look for an exact match (the word on its own), while contains will look for the specified sequence of letters, regardless of what comes before or after it. You can try both on your query to see the difference!
+
+```sql
+PassiveDns
+| where <field> contains “<value>”
+| <operator> <field>
+| <operator>
+```
+
+**Question:** How many distinct domains in the PassiveDns records contain the 
+word green?
+
+```sql
+PassiveDns
+| where domain contains "green"
+| distinct domain
+| count
+```
+
+| **Count** |
+|----------:|
+| 10 |
+
+```txt
+10
+```
+
+### Question 10
+
+> Sometimes, you’ll need to investigate multiple elves at once. Typing each one manually or searching for them one by one isn’t practical. That’s where let statements come in handy. A let statement allows you to save values into a variable, which you can then easily access in your query.
+>
+> Let’s look at an example. To find the URLs they accessed, we’ll first need their IP addresses. But there are so many Twinkles! So we’ll save the IP addresses in a let statement, like this:
+
+```sql
+let twinkle_ips =
+Employees
+| where name has "<the name we’re looking for>"
+| distinct ip_addr;
+```
+
+> This saves the result of the query into a variable. Now, you can use that result easily in another query:
+
+```sql 
+OutboundNetworkEvents  
+| where src_ip in (twinkle_ips)  
+| distinct <field>
+```
+
+**Question:** How many distinct URLs did elves with the first name Twinkle visit?
+
+| Count |
+|------:|
+| 8 |
+
+```txt
+8
+```
 
 ## Operation Surrender
 
 {{< image src="microsoft-kc7/section2.png" alt="operation surrender section" position="center"  style="border-radius: 8px;" >}}
 
+### Question 1
+
+### Question 2
+
+### Question 3
+
+### Question 4
+
+### Question 5
+
+### Question 6
+
+### Question 7
+
 ## Operation Snowfall
 
 {{< image src="microsoft-kc7/section3.png" alt="operation snowfall section" position="center"  style="border-radius: 8px;" >}}
+
+### Question 1
+
+### Question 2
+
+### Question 3
+
+### Question 4
+
+### Question 5
+
+### Question 6
+
+### Question 7
 
 ## Echos in the Frost
 
 {{< image src="microsoft-kc7/section4.png" alt="echos in the frost section" position="center"  style="border-radius: 8px;" >}}
 
+### Question 1
+
+### Question 2
+
+### Question 3
+
+### Question 4
+
+### Question 5
+
+### Question 6
+
+### Question 7
+
+### Question 8
+
+### Question 9
+
+### Question 10
+
+### Question 11
+
+# Act III
+
+I have not started this act yet...
