@@ -1863,7 +1863,7 @@ pretty suspencful outro for Act I.
 
 Here is a map of Act II for future reference.
 
-{{< image src="frontyardact2.jpg" alt="Act II map of the front yard." position="center" style="width=100%; border-radius: 8px;" >}}
+{{< image src="maps/frontyardact2.jpg" alt="Act II map of the front yard." position="center" style="width=100%; border-radius: 8px;" >}}
 
 ## Mobile Analysis
 
@@ -2651,6 +2651,58 @@ Then it provides a CSV file named `Preparations-drone-name.csv`.
 
 {{< image src="drone-path/fritjolf-profile.png" alt="fritjolf drone path profile" position="center" style="border-radius: 8px;" >}}
 
+Something tells me this is going to help with the Elf Drone Workshop Drone
+search page as seen below. The problem with this is I need the name of the 
+drone to lookup in order to proceed with this.
+
+{{< image src="drone-path/elf-drone-workshop-page.png" alt="elf drone workshop page" position="center" style="border-radius: 8px;" >}}
+
+The `Preparations-drone-name.csv` file has a small list of coorinates in the
+`OSD.longitude` and `OSD.latitude` columns of the file. The latitude and
+longitude can be looked up in Google Maps see the satalite imagry for each
+location.
+
+First image from **latitude:** `-37.42277804382341` and **longitude:** 
+`144.8567879816271` is an `E`. I filtered to look at it in the terrain view so 
+it was easier to see. 
+
+{{< image src="drone-path/satimage-e.png" alt="elf drone workshop page" position="center" style="border-radius: 8px;" >}}
+
+Second image from **latitude:** `-38.0569169391843` and **longitude:** 
+`142.4357677725014` is an `L`.
+
+{{< image src="drone-path/satimage-l.png" alt="elf drone workshop page" position="center" style="border-radius: 8px;" >}}
+
+Third image from **latitude:** -37.80217469906655 and **longitude:** 
+143.9329094555584is an `F`.
+
+{{< image src="drone-path/satimage-f.png" alt="elf drone workshop page" position="center" style="border-radius: 8px;" >}}
+
+Fourth image from **latitude:** -38.0682499155867 and **longitude:** 
+142.2754454646221 is an `-` or hiphen.
+
+{{< image src="drone-path/satimage-hiphen.png" alt="elf drone workshop page" position="center" style="border-radius: 8px;" >}}
+
+Fifth image from **latitude:** -34.52324587244343 and **longitude:** 
+141.756352258091 is an `H`.
+
+{{< image src="drone-path/satimage-h.png" alt="elf drone workshop page" position="center" style="border-radius: 8px;" >}}
+
+Sixth image from **latitude:** -36.74357572393437 and **longitude:** 
+145.513859306511 is an `A` or hiphen.
+
+{{< image src="drone-path/satimage-a.png" alt="elf drone workshop page" position="center" style="border-radius: 8px;" >}}
+
+Seventh image from **latitude:** -37.89721189352699 and **longitude:** 
+144.745994150535 is an `W` or hiphen.
+
+{{< image src="drone-path/satimage-w.png" alt="elf drone workshop page" position="center" style="border-radius: 8px;" >}}
+
+Eigth and final image from **latitude:** -37.00702150480869 and **longitude:** 
+145.8966329539992 is an `K` or hiphen.
+
+{{< image src="drone-path/satimage-k.png" alt="elf drone workshop page" position="center" style="border-radius: 8px;" >}}
+
 I have also provided a table with links to the satallite views in Google maps.
 Contains the Longitude and Latitude and the letter I see.
 
@@ -2667,12 +2719,27 @@ Contains the Longitude and Latitude and the letter I see.
 
 Looks like the answer to this is `ELF-HAWK`. After referencing all of the 
 
-After going to the Elf Drone Workshop page. I enter `ELF-HAWK` and it shows the
-following screen. 
+I went to the Elf Drone Workshop drone search page. I enter `ELF-HAWK` and it 
+shows the following screen. With more information we'll need to parse through.
+It says they've hidden the activation code in the 
+[ELF-HAWK-dump.csv](https://hhc24-dronepath.holidayhackchallenge.com/files/secret/ELF-HAWK-dump.csv) file; stored in the `/files/secret` directory.
 
-{{< image src="#" alt="Elf drone workshop page with drone name entered" position="center" style="border-radius: 8px;" >}}
+The page says they've hidden the activation code in this dataset. Stating that
+it will take anyone who needs to sift through it a `LONG` time or forever to get
+the activation code. Hopping that it's the `LATTER`. These seem like hints. But,
+I'm unsure.
 
+{{< image src="drone-path/eh-drone-page.png" alt="Elf drone workshop page with drone name entered" position="center" style="border-radius: 8px;" >}}
 
+After downloading the file you come to learn that the data has been mangled a
+little bit. I checked the line count for it and it looks to be `3,274` lines
+long. Opening it with `csview` proves some difficulty and in `LibreOffice Calc`
+it's formatted weirdly. 
+
+Header of the CSV file was formatted weird so I fixed that. Looking through some
+of the coordinates in the file. They don't lead to anywhere. Unless I need to
+concatenate the broken latitude and longitudes to fix those. I'm not too sure
+about that theory though.
 
 ## PowerShell
 
@@ -2712,6 +2779,14 @@ opened.
 - [PowerShell](https://hhc24-wetty.holidayhackchallenge.com/?&challenge=termPowershell)
 
 ### Solution (Silver)
+
+Opening the terminal welcomes us and allows to say yes or no to beginning with
+the challenge. I typed `y` to get started.
+
+{{< image src="powershell/powershell-term-init.png" alt="Initial terminal when it's opened" position="center" style="border-radius: 8px;" >}}
+
+After typing yes. It's now time to get to finishing this challenge. First
+question is below. 
 
 1. There is a file in the current directory called 'welcome.txt'. Read the 
    contents of this file
