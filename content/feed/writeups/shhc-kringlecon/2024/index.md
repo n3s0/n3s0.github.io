@@ -3123,7 +3123,7 @@ We do have more data in this file too.
 - **SHA256 Hash:** `4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C`
 - **URL Format:** `http://127.0.0.1:1225/tokens/<sha256sum>`
 
-That looks to be the gist of everythign that I can see. 
+That looks to be the gist of everything that I can see. 
 
 ```csv
 file_MD5hash,Sha256(file_MD5hash)
@@ -3246,7 +3246,7 @@ RelationLink      : {}
 
 ```
 
-9) It looks like it requires a cookie token, set the cookie and try again.
+9. It looks like it requires a cookie token, set the cookie and try again.
 
 In this question the objective is to add the `token` cookie and attempt the
 request again.
@@ -3327,8 +3327,8 @@ One thing I'd like to note about this challenge is the MFA code updates with
 every request. So, when the code is sent. It's probably best stored in a
 variable for easy scripting.
 
-10) Sweet we got a MFA token! We might be able to get access to the system.
- Validate that token at the endpoint!
+10. Sweet we got a MFA token! We might be able to get access to the system.
+    Validate that token at the endpoint!
 
 In this question the objective is to use the MFA token to gain access to the
 endpoint.
@@ -3516,7 +3516,12 @@ Once HHC grants your achievement, you can close this terminal.
 >
 > Terminal: PowerShell
 >
->They also mentioned this lazy elf who programmed the security settings in the weapons terminal. He created a fakeout protocol that he dubbed Elf Detection and Response "EDR". The whole system is literally that you set a threshold and after that many attempts, the response is passed through... I can't believe it. He supposedly implemented it wrong so the threshold cookie is highly likely shared between endpoints!
+> They also mentioned this lazy elf who programmed the security settings in the 
+> weapons terminal. He created a fakeout protocol that he dubbed Elf Detection 
+> and Response "EDR". The whole system is literally that you set a threshold 
+> and after that many attempts, the response is passed through... I can't 
+> believe it. He supposedly implemented it wrong so the threshold cookie is 
+> highly likely shared between endpoints!
 
 > PowerShell Admin Access - Total Control
 >
@@ -3524,13 +3529,96 @@ Once HHC grants your achievement, you can close this terminal.
 >
 > Terminal: PowerShell
 > 
-> I overheard some of the other elves talking. Even though the endpoints have been redacted, they are still operational. This means that you can probably elevate your access by communicating with them. I suggest working out the hashing scheme to reproduce the redacted endpoints. Luckily one of them is still active and can be tested against. Try hashing the token with SHA256 and see if you can reliably reproduce the endpoint. This might help, pipe the tokens to Get-FileHash -Algorithm SHA256.
+> I overheard some of the other elves talking. Even though the endpoints have 
+> been redacted, they are still operational. This means that you can probably 
+> elevate your access by communicating with them. I suggest working out the 
+> hashing scheme to reproduce the redacted endpoints. Luckily one of them is 
+> still active and can be tested against. Try hashing the token with SHA256 and 
+> see if you can reliably reproduce the endpoint. This might help, pipe the 
+> tokens to Get-FileHash -Algorithm SHA256.
+
+Decided to start on the `token_overview.csv` file to see if we can produce a new
+one with the `REDACTED` entries updated with the appropriate `SHA256` hash.
+
+```csv
+file_MD5hash,Sha256(file_MD5hash)
+04886164e5140175bafe599b7f1cacc8,REDACTED
+664f52463ef97bcd1729d6de1028e41e,REDACTED
+3e03cd0f3d335c6fb50122553f63ef78,REDACTED
+f2aeb18f5b3f08420eed9b548b6058c3,REDACTED
+32b9401a6d972f8c1a98de145629ea9d,REDACTED
+3a79238df0a92ab0afa44a85f914fc3b,REDACTED
+49c2a68b21b9982aa9fd64cf0fd79f72,REDACTED
+f8142c1304efb9b7e9a7f57363c2d286,REDACTED
+706457f6dd78729a8bed5bae1efaeb50,REDACTED
+bb0564aa5785045937a35a9fa3fbbc73,REDACTED
+4173a7bc22aee35c5fc48261b041d064,REDACTED
+198b8bf2cd30a7c7fed464cca1720a88,REDACTED
+3a7c8ecffeeadb164c31559f8f24a1e7,REDACTED
+288e60e318d9ad7d70d743a614442ffc,REDACTED
+87ab4cb29649807fdb716ac85cf560ea,REDACTED
+89f3ec1275407c9526a645602d56e799,REDACTED
+33539252b40b5c244b09aee8a57adbc9,REDACTED
+152899789a191d9e9150a1e3a5513b7f,REDACTED
+7cd48566f118a02f300cdfa75dee7863,REDACTED
+d798a55fca64118cea2df3c120f67569,REDACTED
+6ef5570cd43a3ec9f43c57f662201e55,REDACTED
+bf189d47c3175ada98af398669e3cac3,REDACTED
+743ac25389a0b430dd9f8e72b2ec9d7f,REDACTED
+270aabd5feaaf40185f2effa9fa2cd6e,REDACTED
+8b58850ee66bd2ab7dd2f5f850c855f8,REDACTED
+6fd00cbda10079b1d55283a88680d075,REDACTED
+612001dd92369a7750c763963bc327f0,REDACTED
+010f2cc580f74521c86215b7374eead6,REDACTED
+29860c67296d808bc6506175a8cbb422,REDACTED
+7b7f6891b6b6ab46fe2e85651db8205f,REDACTED
+45ffb41c4e458d08a8b08beeec2b4652,REDACTED
+d0e6bfb6a4e6531a0c71225f0a3d908d,REDACTED
+bd7efda0cb3c6d15dd896755003c635c,REDACTED
+5be8911ced448dbb6f0bd5a24cc36935,REDACTED
+1acbfea6a2dad66eb074b17459f8c5b6,REDACTED
+0f262d0003bd696550744fd43cd5b520,REDACTED
+8cac896f624576d825564bb30c7250eb,REDACTED
+8ef6d2e12a58d7ec521a56f25e624b80,REDACTED
+b4959370a4c484c10a1ecc53b1b56a7d,REDACTED
+38bdd7748a70529e9beb04b95c09195d,REDACTED
+8d4366f08c013f5c0c587b8508b48b15,REDACTED
+67566692ca644ddf9c1344415972fba8,REDACTED
+8fbf4152f89b7e309e89b9f7080c7230,REDACTED
+936f4db24a290032c954073b3913f444,REDACTED
+c44d8d6b03dcd4b6bf7cb53db4afdca6,REDACTED
+cb722d0b55805cd6feffc22a9f68177d,REDACTED
+724d494386f8ef9141da991926b14f9b,REDACTED
+67c7aef0d5d3e97ad2488babd2f4c749,REDACTED
+5f8dd236f862f4507835b0e418907ffc,4216B4FAF4391EE4D3E0EC53A372B2F24876ED5D124FE08E227F84D687A7E06C
+# [*] SYSTEMLOG
+# [*] Defence mechanisms activated, REDACTING endpoints, starting with sensitive endpoints
+# [-] ERROR, memory corruption, not all endpoints have been REDACTED
+# [*] Verification endpoint still active
+# [*] http://127.0.0.1:1225/tokens/<sha256sum>
+# [*] Contact system administrator to unlock panic mode
+# [*] Site functionality at minimum to keep weapons active
+```
+
+After downloading the file it's time to script this out.
+
+```powershell
+$tokenCsv = Import-Csv './token_overview.csv'
+
+foreach ($md5 in $tokenCsv.file_MD5hash) {
+    $hashStream = [IO.MemoryStream]::new([byte[]][char[]]$md5)
+    $sha256Hash = (Get-FileHash -InputStream $md5Stream -Algorithm SHA256).Hash
+    Write-Output ("$md5,$sha256Hash").ToLower() | Out-File -FilePath ./new-token-overview.csv -Append
+}
+```
 
 ## Showball Showdown
 
 Wombley has recruited many elves to his side for the great snowball fight we 
 are about to wage. Please help us defeat him by hitting him with more snowballs 
 than he does to us. 
+
+{{< image src="snowball-showdown/snowball-showdown-initial-screen.png" alt="Snowball Showdown initial game screen." position="center"  style="border-radius: 8px;" >}}
 
 > Hi there! I'm Dusty Giftwrap, back from the battlefield! I'm mostly here for 
 > the snowball fights!
@@ -3557,6 +3645,145 @@ than he does to us.
 >
 > Confidence! Wit! We've got what it takes. Team up with a friend or find a way 
 > to go solo - no matter how, let's end this conflict and take down Wombley!
+>
+> -- **Dusty Giftwrap (Front Yard (Act II))**
+
+### Solution (Silver)
+
+{{< image src="snowball-showdown/ss-private-room-screen.png" alt="Snowball Showdown private room game screen" position="center"  style="border-radius: 8px;" >}}
+
+Played the initial game to see if I can win this honestly. Unfortunately not. It
+would have taken far to long to try I feel. I did notice that there is a
+JavaScript variable named `singlePlayer` and it's set to `false`. So that may
+come in use. I am playing at a time where there aren't many others playing the
+game. So, multiplayer may prove difficult.
+
+```js
+var singlePlayer = "false"
+function checkAndUpdateSinglePlayer() {
+    const localStorageValue = localStorage.getItem('singlePlayer');
+    if (localStorageValue === 'true' || localStorageValue === 'false') {
+        singlePlayer = String(localStorageValue === 'true');
+    }
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlValue = urlParams.get('singlePlayer');
+    if (urlValue === 'true' || urlValue === 'false') {
+        singlePlayer = String(urlValue === 'true');
+    }
+}
+```
+
+I set the variable found in the code snippet above to `&singlePlayer=true` to
+set it to single player mode and refreshed the page.
+
+```sh
+http://hhc24-snowballshowdown.holidayhackchallenge.com/game.html?username=n3s00&roomId=11617cc00&roomType=private&id=07131657-454a-413e-974d-328fbdcbbc15&dna=ATATATTAATATATATATATGCATATATATATATCGATTAATATATATATATATATATATATATATATATGCATATGCCGATATATATATATTACGATATATATATATATGCATATATGC&singlePlayer=true
+```
+
+I looked around in the code to see if I could find anything that may help with
+the game. I read the `/js/parser-snowball-game.js` file and given this is
+client-side JavaScript. I thought I would try my hand at overwritting some
+values in it within a Chromium workspace.
+
+I updated the `throwSpeed` and the `throwRateOfFire` and set them both to `800`.
+This will increase the rate of fire. Allowing more snowballs to be thrown.
+
+```js
+constructor() {
+    super({ key: "game" });
+    this.hasBgDebug = typeof window.bgDebug !== 'undefined'
+    this.groundOffset = groundOffset;
+    this.yellowTint = 0xffeb99;
+    this.blueTint = 0x99ddff;
+    this.snowballLiveTime = 12000;
+    this.healingTerrain = true;
+    this.terrainHealDelay = 15000;
+    this.elfGroundOffset = GAME_HEIGHT - 115;
+    this.wombleyXLocation = GAME_WIDTH - 40;
+    this.alabasterXLocation = 40;
+    this.playerMoveSpeed = 150;
+    this.lastTimePlayerArrowsFromUpdate = 0
+    this.lastTimePlayerArrowsFromUpdateDelay = 20
+    this.percentageShotPower = 0;
+    this.alabasterElvesThrowDelayMin = 2500;
+    this.alabasterElvesThrowDelayMax = 5000;
+    this.wombleyElvesThrowDelayMin = 1500;
+    this.wombleyElvesThrowDelayMax = 2500;
+    this.wombleyElvesIncompacitateTime = 2500;
+    this.alabasterElvesIncompacitateTime = 5000;
+    this.playerIncompacitateTime = 5000;
+    this.throwSpeed = 800; // Updated
+    this.throwRateOfFire = 800; // Updated
+    this.lastThrowTime = 0;
+    this.mouseIsOverCanvas = false;
+    this.lastPointerPosition = { x: 0, y: 0 };
+    this.tempMatrix = new Phaser.GameObjects.Components.TransformMatrix();
+    this.tempParentMatrix = new Phaser.GameObjects.Components.TransformMatrix();
+    this.lastProjectileCollisionDetectionTime = 0;
+    this.projectileCollisionDetectionRate = 25;
+    this.isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
+    this.ws = null;
+    this.hand_offsets = {
+        lx: 20,
+        ly: 40,
+        rx: 60,
+        ry: 10,
+    }
+    this.snowball_offset = {
+        x: this.hand_offsets.rx - 15,
+        y: this.hand_offsets.ry - 135
+    }
+}
+```
+
+I updated the `snowBallBlastRadius` to `2400` and saved the override in
+Chromium. This will make the blast radius larger. Increasing the possibility of
+hitting the desired target.
+
+```js 
+create() {
+    this.setupWebSocket();
+    mainScene = this;
+    if (this.isFirefox) {
+        console.error("Firefox detected, please use Chrome or Safari for best experience!");
+        this.add.text(5, GAME_HEIGHT - 5, "  Runs best in\nChrome or Safari!", { fontSize: '25px', fill: '#fff', fontFamily: 'monospace', stroke: '#000000', strokeThickness: 8 }).setOrigin(0, 1).setDepth(10);
+    }
+    this.snowBallBlastRadius = 2400; // Updated
+    this.onlyMoveHorizontally = true;
+    this.projectiles = this.physics.add.group();
+    this.elves = [];
+    this.setupBackgroundImages();
+    this.setResetDestructibleScenery();
+    this.anims.create({
+        key: 'throw',
+        frames: this.anims.generateFrameNumbers('hand_sh', { start: 0, end: 13 }),
+        frameRate: 70,
+        repeat: 0,
+        hideOnComplete: false
+    });
+```
+
+With the game patched I won and we get this screen saying that we're one step
+closer to beating Wombley Cube!
+
+{{< image src="snowball-showdown/snowball-showdown-beat-wombly.png" alt="Snowball Showdown beating Wombley" position="center"  style="border-radius: 8px;" >}}
+
+With that being finished. I got the silver medal for this challenge and some
+dialog from Dusty Giftwrap.
+
+> Fantastic work! You've used your hacker skills to lead Alabaster’s forces to 
+> victory. That was some impressive strategy!
+>
+> -- **Dusty Giftwrap (Front Yard (Act II))**
+
+### Solution (Gold)
+
+> Excellent! With Wombley’s forces defeated, they’ll have no choice but to 
+> admit defeat and abandon their wild plans to hijack Christmas.
+>
+> Christmas is on the line! For a mischievous edge-up, dive into the game’s 
+> code - a few client-side tweaks to speed, movement, or power might shift the 
+> balance… or just help us find that secret weapon we misplaced!
 >
 > -- **Dusty Giftwrap (Front Yard (Act II))**
 
@@ -4102,6 +4329,54 @@ OutboundNetworkEvents
 
 ### Question 11
 
+## Act II Conclusion
+
+> Both sides want to see Christmas mission fulfilled. Will either yield? Who can 
+> bring order to such chaos?
+
 # Act III
 
-I have not started this act yet...
+I've had a few experiences with ransomware. But, I've never been able to do much
+apart from restore from a clean backup. So, we'll have to see how this goes.
+
+> Now Wombley's gone and gotten the Naughty-Nice list ransomwared! Santa is not 
+> pleased...
+> 
+> Maybe Fitzy, Ribb, and Tangle can help mend the situation.
+
+We are met in Act III by Santa within the DMZ. Here is the dialog we are given.
+In a nutshell. Santa isn't too happy about what's going on and needs a minute.
+
+> My eyes must be deceiving me. I cannot believe what I am seeing! The North Pole 
+> in shambles, a civil war brewing amongst the elves, and the Naughty-Nice List 
+> locked away behind ransomware!
+>
+> You know me, I am the face of jolly. But today... jolly is getting thrown out 
+> the castle window! These elves have made my face as red as my hat with rage! 
+> It's a good thing I took that distress call seriously.
+> 
+> I was away for the last few weeks because I was on Planet Frost to ensure Jack 
+> Frost received proper justice—neither too harsh nor too lenient—for his crimes 
+> last year, and you elves start acting like trolls?
+> 
+> Is this your true nature? Are you all just Frostian trolls under those pointy 
+> ears and rosy cheeks? Wombley, I thought you were more insightful than this. 
+> And Alabaster, I thought you more wise.
+> 
+> And the rest of you, you are all one people, one family. How could you listen 
+> to these two knuckleheads and turn on each other so easily? You should all be 
+> ashamed of yourselves! You should be in court on Planet Frost with Jack!
+> 
+> I am so disappointed in all of you. We will decide on repercussions later. 
+> For now, you all need to clean this place up, stop broadcasting propaganda, 
+> and get the Naughty-Nice List unlocked before you ruin the holidays for the 
+> whole world!
+>
+> ...Oh, hello there, and sorry you had to hear all that. I apologize for the 
+> state of the North Pole. I'll be sure you receive a wonderful gift if you 
+> could please assist these troublemakers in restoring operations. Thank you. 
+> Please excuse me and allow me a moment to collect myself... ahem...
+> 
+> -- **Santa (Front Yard (Act III))**
+
+
