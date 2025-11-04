@@ -4007,6 +4007,9 @@ database there are `90` employees stored.
 
 **Question:** How many elves did you find?
 
+Found 90 employees in the `NorthPoleWorkshop` database. Submitted the answer and
+we were good to go!
+
 ```txt
 90
 ```
