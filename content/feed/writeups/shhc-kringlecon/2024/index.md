@@ -4584,6 +4584,673 @@ In a nutshell. Santa isn't too happy about what's going on and needs a minute.
 > 
 > -- **Fitzy Shortstack (Front Yard (Act III))**
 
+There is a lot of output for this challenge. Thought it would be useful to jot
+down the documentation provided for `Elf Stack` just for the sake of having it.
 
+I don't include the ELF Stack container setup in this because I walk through how
+setup later. I'm just providing this because it gives more context for the
+challenge.
+
+> **Elf Stack Help**
+> 
+> **Description**
+> 
+> - Help the ElfSOC analysts and test your technical and security skills while 
+>   you investigate a malicious attack. You will parse a set of log files to 
+>   identify the malicious attack vector and various events within an attack 
+>   chain.
+> - The log parsing skills emphasized by this challenge can be done with the 
+>   provided containerized Elf Stack SIEM, through traditional Linux CLI tools, 
+>   or however you want. There are two challenge modes (EASY and HARD) which 
+>   determines the difficulty of questions presented to you.
+> - Note: You do not have to use the containerized SIEM to solve any of the 
+>   questions, but it might make things a bit easier!
+> - You can download the containerized Elf Stack SIEM configuration and log 
+>   files by selecting the "Download" button.
+> 
+> **Challenge Modes**
+>
+> **Easy Mode**
+>
+> - This mode teaches basic log parsing with a common SIEM utility like the ELK 
+>   stack. You are provided a Docker Compose configuration that allows you to 
+>   fully setup an ELK stack within a containerized environment.
+> - Select this mode if you are new to security, or you want to continue on 
+>   with the story. This mode is meant to help you learn while doing.
+>
+> **Hard Mode**
+>
+> - This mode expects you have some knowledge on parsing log files. The attack 
+>   path is more complex and you will need to research how to identify the 
+>   steps within the attack chain.
+> - Select this mode if you want to challenge your security skills.
+
+
+The `sudo(1)` command may be needed for the docker-compose commands depending on
+your setup. I couldn't get this to work in `podman-compose` so I needed to
+uninstall that and install `docker` and `docker-compose`. Which is no big deal. 
+
+After downloading the files and unzipping them. I went through the setup process
+using the following command.
+
+```sh
+docker-compose up setup
+```
+
+Personally I didn't know this was something you could do and it was done pretty
+well. Running this `setup` docker service first gets the `elf_net`, a volume,
+and some of the containers for Elastic Search created. 
+
+```sh
+[+] Running 2/3
+[+] Running 4/4net               Created                                                                                                                                                0.1s
+ ✔ Network elf_net               Created                                                                                                                                                0.1s
+ ✔ Volume ess_elastisearch_data  Created                                                                                                                                                0.0s
+ ✔ Container ess_elasticsearch   Created                                                                                                                                                0.1s
+ ✔ Container ess_setup           Recreated                                                                                                                                              0.1s
+Attaching to ess_setup
+ess_setup  | [+] Waiting for availability of Elasticsearch. This can take several minutes.
+ess_setup  |    ⠿ Elasticsearch is running
+ess_setup  | [+] Waiting for initialization of built-in users
+ess_setup  |    ⠿ Built-in users were initialized
+ess_setup  | [+] Role 'heartbeat_writer'
+ess_setup  |    ⠿ Creating/updating
+ess_setup  | [+] Role 'metricbeat_writer'
+ess_setup  |    ⠿ Creating/updating
+ess_setup  | [+] Role 'filebeat_writer'
+ess_setup  |    ⠿ Creating/updating
+ess_setup  | [+] Role 'logstash_writer'
+ess_setup  |    ⠿ Creating/updating
+ess_setup  | [+] User 'filebeat_internal'
+ess_setup  |    ⠿ User does not exist, creating
+ess_setup  | [+] User 'kibana_system'
+ess_setup  |    ⠿ User exists, setting password
+ess_setup  | [+] User 'logstash_internal'
+ess_setup  |    ⠿ User does not exist, creating
+ess_setup  | [+] User 'heartbeat_internal'
+ess_setup  |    ⠿ User does not exist, creating
+ess_setup  | [+] User 'metricbeat_internal'
+ess_setup  |    ⠿ User does not exist, creating
+ess_setup  | [+] User 'monitoring_internal'
+ess_setup  |    ⠿ User does not exist, creating
+ess_setup  | [+] User 'beats_system'
+ess_setup  |    ⠿ User exists, setting password
+ess_setup exited with code 0
+```
+Next we bring everything up with the `up` command. Which will begin the process
+for building the the ELK - ELF Stack.
+
+```sh
+docker compose up
+```
+
+This brings up all of the necessary components. Which is pretty impressive
+having a local instance of this within a few containers. SANs and Counter Hack
+really put in some work on this and it shows.
+
+Speaking of things that I loved about this. Look at that ASCII art! It's great!
+
+So, this will setup the `Elasticsearch`, `Kibana`, and `Logstash` containers.
+Along with another container that will aggregate the logs for us after
+everything is setup.
+
+Once the logs are ingested. The login information is displayed in the logs as
+well.
+
+- URL: http://localhost:5601
+- User: elastic
+- Password: ELFstackLogin!
+
+Now we should be ready to start working on the questions.
+
+```sh
+[+] Running 5/5
+ ✔ Volume ess_logstash_queue_data  Created                                                                                                                                              0.0s
+ ✔ Container ess_elasticsearch     Running                                                                                                                                              0.0s
+ ✔ Container ess_kibana            Created                                                                                                                                              0.1s
+ ✔ Container ess_logstash          Created                                                                                                                                              0.1s
+ ✔ Container ess_syslog_sender     Created                                                                                                                                              0.1s
+Attaching to ess_elasticsearch, ess_kibana, ess_logstash, ess_syslog_sender
+ess_logstash  | Using bundled JDK: /usr/share/logstash/jdk
+ess_kibana    | Kibana is currently running with legacy OpenSSL providers enabled! For details and instructions on how to disable see https://www.elastic.co/guide/en/kibana/8.15/production.html#openssl-legacy-provider
+ess_kibana    | {"log.level":"info","@timestamp":"2025-11-05T04:55:05.143Z","log.logger":"elastic-apm-node","ecs.version":"8.10.0","agentVersion":"4.7.0","env":{"pid":7,"proctitle":"/usr/share/kibana/bin/../node/glibc-217/bin/node","os":"linux 6.17.5-arch1-1","arch":"x64","host":"64731fa98a74","timezone":"UTC+00","runtime":"Node.js v20.15.1"},"config":{"active":{"source":"start","value":true},"breakdownMetrics":{"source":"start","value":false},"captureBody":{"source":"start","value":"off","commonName":"capture_body"},"captureHeaders":{"source":"start","value":false},"centralConfig":{"source":"start","value":false},"contextPropagationOnly":{"source":"start","value":true},"environment":{"source":"start","value":"production"},"globalLabels":{"source":"start","value":[["git_rev","f66ec5b0ddd990d103489c47ca1bcb97dc50bc6b"]],"sourceValue":{"git_rev":"f66ec5b0ddd990d103489c47ca1bcb97dc50bc6b"}},"logLevel":{"source":"default","value":"info","commonName":"log_level"},"metricsInterval":{"source":"start","value":120,"sourceValue":"120s"},"serverUrl":{"source":"start","value":"https://kibana-cloud-apm.apm.us-east-1.aws.found.io/","commonName":"server_url"},"transactionSampleRate":{"source":"start","value":0.1,"commonName":"transaction_sample_rate"},"captureSpanStackTraces":{"source":"start","sourceValue":false},"secretToken":{"source":"start","value":"[REDACTED]","commonName":"secret_token"},"serviceName":{"source":"start","value":"kibana","commonName":"service_name"},"serviceVersion":{"source":"start","value":"8.15.1","commonName":"service_version"}},"activationMethod":"require","message":"Elastic APM Node.js Agent v4.7.0"}
+ess_kibana    | Native global console methods have been overridden in production environment.
+ess_syslog_sender  | 🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄
+ess_syslog_sender  | 🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄
+ess_syslog_sender  |
+ess_syslog_sender  |   _____  _      _____     ____   _____     _      ____  _  __
+ess_syslog_sender  |  | ____|| |    |  ___|   / ___| |_   _|   / \    / ___|| |/ /
+ess_syslog_sender  |  |  _|  | |    | |_      \___ \   | |    / _ \  | |    | ' /
+ess_syslog_sender  |  | |___ | |___ |  _|      ___) |  | |   / ___ \ | |___ | . \
+ess_syslog_sender  |  |_____||_____||_|       |____/   |_|  /_/   \_\ \____||_|\_\
+ess_syslog_sender  |
+ess_syslog_sender  |   _          _                    _    _
+ess_syslog_sender  |  (_) ___    | |__    ___    ___  | |_ (_) _ __    __ _
+ess_syslog_sender  |  | |/ __|   | '_ \  / _ \  / _ \ | __|| || '_ \  / _` |
+ess_syslog_sender  |  | |\__ \   | |_) || (_) || (_) || |_ | || | | || (_| | _  _  _
+ess_syslog_sender  |  |_||___/   |_.__/  \___/  \___/  \__||_||_| |_| \__, |(_)(_)(_)
+ess_syslog_sender  |                                                  |___/
+ess_syslog_sender  |
+ess_syslog_sender  |    ****READY AT APPROXIMATELY: 2025-11-05 05:26:00+00:00 (~20-30 MINUTES)****
+ess_syslog_sender  |
+ess_syslog_sender  | 🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄
+ess_syslog_sender  | 🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄
+ess_syslog_sender  | [2025-11-05T04:55:12.133413+00:00] INFO: Elasticsearch is up!
+ess_syslog_sender  | [2025-11-05T04:55:12.135715+00:00] INFO: The Logstash connection is not available yet...
+ess_syslog_sender  | [2025-11-05T04:55:12.135756+00:00] INFO: Retrying connection to Logstash in 15 seconds...
+ess_logstash       | Sending Logstash logs to /usr/share/logstash/logs which is now configured via log4j2.properties
+ess_syslog_sender  | [2025-11-05T04:55:27.209720+00:00] INFO: Logstash is up!
+ess_syslog_sender  | [2025-11-05T04:55:27.211934+00:00] INFO: The Kibana connection is not available yet...
+ess_syslog_sender  | [2025-11-05T04:55:27.211995+00:00] INFO: Retrying connection to Kibana in 15 seconds...
+ess_syslog_sender  | [2025-11-05T04:55:42.272550+00:00] INFO: Kibana is up!
+ess_syslog_sender  | [2025-11-05T04:55:52.291447+00:00] INFO: Replica settings applied to all indexes.
+ess_syslog_sender  | [2025-11-05T04:55:52.494379+00:00] INFO: Index settings updated successfully.
+ess_syslog_sender  | [2025-11-05T04:55:53.349617+00:00] INFO: Data View created successfully!
+ess_syslog_sender  | [2025-11-05T04:55:53.349989+00:00] INFO: Starting log ingestion for file: /root/log_chunk_1.log
+ess_syslog_sender  | [2025-11-05T05:00:21.299152+00:00] INFO: Starting log ingestion for file: /root/log_chunk_2.log
+ess_syslog_sender  | [2025-11-05T05:04:49.308823+00:00] INFO: Total number of lines sent across all log files: 2343146.
+ess_syslog_sender  | [2025-11-05T05:04:49.308856+00:00] INFO: Total time taken for ingestion: 0:09:37.
+ess_syslog_sender  | 🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄
+ess_syslog_sender  | 🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄
+ess_syslog_sender  |   _____  _      _____     ____   _____     _      ____  _  __
+ess_syslog_sender  |  | ____|| |    |  ___|   / ___| |_   _|   / \    / ___|| |/ /
+ess_syslog_sender  |  |  _|  | |    | |_      \___ \   | |    / _ \  | |    | ' /
+ess_syslog_sender  |  | |___ | |___ |  _|      ___) |  | |   / ___ \ | |___ | . \
+ess_syslog_sender  |  |_____||_____||_|       |____/   |_|  /_/   \_\ \____||_|\_\
+ess_syslog_sender  |
+ess_syslog_sender  |   _                                 _         _
+ess_syslog_sender  |  (_) ___     _ __   ___   __ _   __| | _   _ | |
+ess_syslog_sender  |  | |/ __|   | '__| / _ \ / _` | / _` || | | || |
+ess_syslog_sender  |  | |\__ \   | |   |  __/| (_| || (_| || |_| ||_|
+ess_syslog_sender  |  |_||___/   |_|    \___| \__,_| \__,_| \__, |(_)
+ess_syslog_sender  |                                        |___/
+ess_syslog_sender  |
+ess_syslog_sender  | ****************************************
+ess_syslog_sender  |    LOGIN INFORMATION:
+ess_syslog_sender  |            URL: http://localhost:5601
+ess_syslog_sender  |            Username: elastic
+ess_syslog_sender  |            Password: ELFstackLogin!
+ess_syslog_sender  |
+ess_syslog_sender  |            SET DATE IN ANALYSIS: DISCOVER TO 2024
+ess_syslog_sender  | ****************************************
+ess_syslog_sender  |
+ess_syslog_sender  | 🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄
+ess_syslog_sender  | 🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄⇇🎄✖🎄✖🎄
+ess_syslog_sender  | Finished
+ess_syslog_sender exited with code 0
+```
+
+**Troubleshooting:**
+
+When shutting down this environment they recommend to use the following command.
+
+```sh
+docker-compose down --volumes
+```
+
+I also ran into something where I messed this up and Kibana wouldn't load for
+whatever reason. It would fail to connect. So, I found a solution. Found that 
+I needed to run `setup --force-recreate` so the `elf_net` container network 
+would be available in some cases. This will force the service to be rebuilt.
+Just a minor troubleshooting tidbit that isn't related to the challenge.
+
+```sh
+docker-compose up setup --force-recreate
+```
+
+### Question 1
+
+> How many unique values are there for the event_source field in all logs?
+
+To check this I used a bar graph to get the unique sources.
+
+```txt
+5
+```
+
+### Question 2: 
+
+> Which event_source has the fewest number of events related to it?
+
+Looks like the fewest number of events goes to `AuthLog` at `256` events.
+
+```txt
+AuthLog
+```
+
+### Question 3: 
+
+> Using the event_source from the previous question as a filter, what is the 
+> field name that contains the name of the system the log event originated 
+> from?
+
+```sql
+event_source: AuthLog
+```
+
+```json
+{
+  "@timestamp": [
+    "2024-09-16T16:00:01.000Z"
+  ],
+  "@version": [
+    "1"
+  ],
+  "data_stream.dataset": [
+    "generic"
+  ],
+  "data_stream.namespace": [
+    "default"
+  ],
+  "data_stream.type": [
+    "logs"
+  ],
+  "event_source": [
+    "AuthLog"
+  ],
+  "event.hostname": [
+    "kringleSSleigH"
+  ],
+  "event.message": [
+    "pam_unix(cron:session): session closed for user root"
+  ],
+  "event.OpcodeDisplayNameText": [
+    "Unknown"
+  ],
+  "event.service": [
+    "CRON[6780]:"
+  ],
+  "event.timestamp": [
+    "2024-09-16T19:00:01.353Z"
+  ],
+  "host.ip": [
+    "172.18.0.5"
+  ],
+  "hostname": [
+    "kringleSSleigH"
+  ],
+  "log.syslog.facility.code": [
+    1
+  ],
+  "log.syslog.facility.name": [
+    "user-level"
+  ],
+  "log.syslog.facility.name.text": [
+    "user-level"
+  ],
+  "log.syslog.severity.code": [
+    5
+  ],
+  "log.syslog.severity.name": [
+    "notice"
+  ],
+  "log.syslog.severity.name.text": [
+    "notice"
+  ],
+  "tags": [
+    "match"
+  ],
+  "type": [
+    "syslog"
+  ],
+  "_id": "35d8ab1086149596cb39a72fe27183092196e8c4",
+  "_index": ".ds-logs-generic-default-2025.11.05-000001",
+  "_score": null
+}
+```
+
+```txt
+event.hostname
+```
+
+### Question 4: 
+
+> Which event_source has the second highest number of events related to it?
+
+The event_source with the second highest number of events related to it would
+be `NetflowPmacct` with a count of `34,679`.
+
+```txt
+NetflowPmacct
+```
+### Question 5 
+
+> Using the event_source from the previous question as a filter, what is the 
+> name of the field that defines the destination port of the Netflow logs?
+
+
+```sql
+event_source: "NetflowPmacct"
+```
+
+```json
+{
+  "@timestamp": [
+    "2024-09-15T14:38:43.000Z"
+  ],
+  "@version": [
+    "1"
+  ],
+  "data_stream.dataset": [
+    "generic"
+  ],
+  "data_stream.namespace": [
+    "default"
+  ],
+  "data_stream.type": [
+    "logs"
+  ],
+  "event_source": [
+    "NetflowPmacct"
+  ],
+  "event.bytes": [
+    41
+  ],
+  "event.dst_host": [
+    ""
+  ],
+  "event.event_type": [
+    "purge"
+  ],
+  "event.ip_dst": [
+    "146.75.81.44"
+  ],
+  "event.ip_proto": [
+    "tcp"
+  ],
+  "event.ip_src": [
+    "172.24.25.20"
+  ],
+  "event.OpcodeDisplayNameText": [
+    "Unknown"
+  ],
+  "event.packets": [
+    1
+  ],
+  "event.port_dst": [
+    443
+  ],
+  "event.port_src": [
+    52218
+  ],
+  "event.src_host": [
+    ""
+  ],
+  "event.timestamp_end": [
+    "0000-00-00T00:00:00-00:00"
+  ],
+  "event.timestamp_start": [
+    "2024-09-15T10:38:43-04:00"
+  ],
+  "host.ip": [
+    "172.18.0.5"
+  ],
+  "hostname": [
+    "kringleconnect"
+  ],
+  "log.syslog.facility.code": [
+    1
+  ],
+  "log.syslog.facility.name": [
+    "user-level"
+  ],
+  "log.syslog.facility.name.text": [
+    "user-level"
+  ],
+  "log.syslog.severity.code": [
+    5
+  ],
+  "log.syslog.severity.name": [
+    "notice"
+  ],
+  "log.syslog.severity.name.text": [
+    "notice"
+  ],
+  "tags": [
+    "match"
+  ],
+  "type": [
+    "syslog"
+  ],
+  "_id": "1b4f83cb09f6ca81d5a58ccb916172410d74784c",
+  "_index": ".ds-logs-generic-default-2025.11.05-000001",
+  "_score": null
+}
+```
+
+```txt
+event.port_dst
+```
+
+ Question 6: Which event_source is related to email traffic?
+
+```sql
+event_source: "SnowGlowMailPxy"
+```
+
+```txt
+SnowGlowMailPxy
+```
+
+ Question 7: Looking at the event source from the last question, what is the name of the field that contains the actual email text?
+
+
+```sql
+event_source: "SnowGlowMailPxy"
+```
+
+```json
+{
+  "@timestamp": [
+    "2024-09-16T16:01:28.000Z"
+  ],
+  "@version": [
+    "1"
+  ],
+  "data_stream.dataset": [
+    "generic"
+  ],
+  "data_stream.namespace": [
+    "default"
+  ],
+  "data_stream.type": [
+    "logs"
+  ],
+  "event_source": [
+    "SnowGlowMailPxy"
+  ],
+  "event.Body": [
+    "Dear elf_user03,\n\nI hope this email finds you in good spirits. I wanted to inform you that it is time for the performance reviews for this quarter. Please make sure all the necessary documents and evaluations are completed and submitted by the deadline, which is next Friday. \n\nBest regards,\nelf_user05\n"
+  ],
+  "event.From": [
+    "elf_user05@northpole.local"
+  ],
+  "event.Message-ID": [
+    "<9EE973CD-029D-4F86-B3B3-D1A9DCCC74BC@SecureElfGwy.northpole.local>"
+  ],
+  "event.OpcodeDisplayNameText": [
+    "Unknown"
+  ],
+  "event.Received_Time": [
+    "2024-09-16T12:01:28-04:00"
+  ],
+  "event.ReceivedIP1": [
+    "172.24.25.25"
+  ],
+  "event.ReceivedIP2": [
+    "172.24.25.20"
+  ],
+  "event.Return-Path": [
+    "elf_user05@northpole.local"
+  ],
+  "event.Subject": [
+    "Performance Reviews"
+  ],
+  "event.To": [
+    "elf_user03@northpole.local"
+  ],
+  "host.ip": [
+    "172.18.0.5"
+  ],
+  "hostname": [
+    "SecureElfGwy"
+  ],
+  "log.syslog.facility.code": [
+    1
+  ],
+  "log.syslog.facility.name": [
+    "user-level"
+  ],
+  "log.syslog.facility.name.text": [
+    "user-level"
+  ],
+  "log.syslog.severity.code": [
+    5
+  ],
+  "log.syslog.severity.name": [
+    "notice"
+  ],
+  "log.syslog.severity.name.text": [
+    "notice"
+  ],
+  "tags": [
+    "match"
+  ],
+  "type": [
+    "syslog"
+  ],
+  "_id": "acd44c1fdf34efef5fa14476efdef586956af8c9",
+  "_index": ".ds-logs-generic-default-2025.11.05-000001",
+  "_score": null
+}
+```
+
+```txt
+event.Body
+```
+
+ Question 8: Using the 'GreenCoat' event_source, what is the only value in the hostname field?
+
+```sql
+event_source: GreenCoat
+```
+
+```json
+{
+  "@timestamp": [
+    "2024-09-16T15:36:26.000Z"
+  ],
+  "@version": [
+    "1"
+  ],
+  "data_stream.dataset": [
+    "generic"
+  ],
+  "data_stream.namespace": [
+    "default"
+  ],
+  "data_stream.type": [
+    "logs"
+  ],
+  "event_source": [
+    "GreenCoat"
+  ],
+  "event.additional_info": [
+    "outgoing via 172.24.25.25"
+  ],
+  "event.host": [
+    "SnowSentry"
+  ],
+  "event.http_protocol": [
+    "HTTP/1.1"
+  ],
+  "event.ip": [
+    "172.24.25.93"
+  ],
+  "event.method": [
+    "CONNECT"
+  ],
+  "event.OpcodeDisplayNameText": [
+    "Unknown"
+  ],
+  "event.protocol": [
+    "HTTPS"
+  ],
+  "event.response_size": [
+    0
+  ],
+  "event.status_code": [
+    200
+  ],
+  "event.timestamp": [
+    "2024-09-16T15:36:26.000Z"
+  ],
+  "event.url": [
+    "fastlane.rubiconproject.com:443"
+  ],
+  "event.user_identifier": [
+    "elf_user03"
+  ],
+  "host.ip": [
+    "172.18.0.5"
+  ],
+  "hostname": [
+    "SecureElfGwy"
+  ],
+  "log.syslog.facility.code": [
+    1
+  ],
+  "log.syslog.facility.name": [
+    "user-level"
+  ],
+  "log.syslog.facility.name.text": [
+    "user-level"
+  ],
+  "log.syslog.severity.code": [
+    5
+  ],
+  "log.syslog.severity.name": [
+    "notice"
+  ],
+  "log.syslog.severity.name.text": [
+    "notice"
+  ],
+  "tags": [
+    "match"
+  ],
+  "type": [
+    "syslog"
+  ],
+  "_id": "9d9036d19ff81e440513998cc11f8f99bac838b2",
+  "_index": ".ds-logs-generic-default-2025.11.05-000001",
+  "_score": null
+}
+```
+
+```txt
+SecureElfGwy
+```
+ Question 9: Using the 'GreenCoat' event_source, what is the name of the field that contains the site visited by a client in the network?
+
+```json
+  "event.url": [
+    "fastlane.rubiconproject.com:443"
+  ],
+```
+
+```txt
+event.url
+```
+Question 10: Using the 'GreenCoat' event_source, which unique URL and port (URL:port) did clients in the TinselStream network visit most?
+
+```sql
+event_source: 'GreenCoat'
+```
+
+```txt
+pagead2.googlesyndication.com:443
+```
+
+Question 11: Using the 'WindowsEvent' event_source, how many unique Channels is the SIEM receiving Windows event logs from?
 
 ## Decrypt The Naughty List
