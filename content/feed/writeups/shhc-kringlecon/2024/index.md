@@ -4554,6 +4554,225 @@ In a nutshell. Santa isn't too happy about what's going on and needs a minute.
 
 ## Santa Vision
 
+Alabaster and Wombley have poisoned the Santa Vision feeds! Knock them out to restore everyone back to their regularly scheduled programming.
+
+### Santa Vision A (Silver)
+
+> What username logs you into the SantaVision portal?
+
+The IP addresss we need to start assessing is `35.226.138.216`. So I decided to
+start off with an `nmap(1)` scan on all TCP ports with the `-sV` (version) scan
+flag.
+
+```sh
+sudo nmap -p 0-65535 -sV 35.226.138.216
+```
+
+
+
+```sh
+Starting Nmap 7.98 ( https://nmap.org ) at 2025-11-06 00:09 -0600
+Nmap scan report for 216.138.226.35.bc.googleusercontent.com (35.226.138.216)
+Host is up (0.029s latency).
+Not shown: 65531 closed tcp ports (reset)
+PORT     STATE    SERVICE     VERSION
+22/tcp   open     ssh         OpenSSH 9.2p1 Debian 2+deb12u3 (protocol 2.0)
+1883/tcp open     mqtt
+5355/tcp filtered llmnr
+8000/tcp open     http        Gunicorn
+9001/tcp open     tor-orport?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9001-TCP:V=7.98%I=7%D=11/6%Time=690C3BBC%P=x86_64-pc-linux-gnu%r(SS
+SF:LSessionReq,F5,"HTTP/1\.0\x20403\x20Forbidden\r\ncontent-type:\x20text/
+SF:html\r\ncontent-length:\x20173\r\n\r\n<html><head><meta\x20charset=utf-
+SF:8\x20http-equiv=\"Content-Language\"\x20content=\"en\"/><link\x20rel=\"
+SF:stylesheet\"\x20type=\"text/css\"\x20href=\"/error\.css\"/></head><body
+SF:><h1>403</h1></body></html>")%r(SSLv23SessionReq,F5,"HTTP/1\.0\x20403\x
+SF:20Forbidden\r\ncontent-type:\x20text/html\r\ncontent-length:\x20173\r\n
+SF:\r\n<html><head><meta\x20charset=utf-8\x20http-equiv=\"Content-Language
+SF:\"\x20content=\"en\"/><link\x20rel=\"stylesheet\"\x20type=\"text/css\"\
+SF:x20href=\"/error\.css\"/></head><body><h1>403</h1></body></html>")%r(Ja
+SF:vaRMI,F5,"HTTP/1\.0\x20403\x20Forbidden\r\ncontent-type:\x20text/html\r
+SF:\ncontent-length:\x20173\r\n\r\n<html><head><meta\x20charset=utf-8\x20h
+SF:ttp-equiv=\"Content-Language\"\x20content=\"en\"/><link\x20rel=\"styles
+SF:heet\"\x20type=\"text/css\"\x20href=\"/error\.css\"/></head><body><h1>4
+SF:03</h1></body></html>")%r(Radmin,F5,"HTTP/1\.0\x20403\x20Forbidden\r\nc
+SF:ontent-type:\x20text/html\r\ncontent-length:\x20173\r\n\r\n<html><head>
+SF:<meta\x20charset=utf-8\x20http-equiv=\"Content-Language\"\x20content=\"
+SF:en\"/><link\x20rel=\"stylesheet\"\x20type=\"text/css\"\x20href=\"/error
+SF:\.css\"/></head><body><h1>403</h1></body></html>")%r(mongodb,F5,"HTTP/1
+SF:\.0\x20403\x20Forbidden\r\ncontent-type:\x20text/html\r\ncontent-length
+SF::\x20173\r\n\r\n<html><head><meta\x20charset=utf-8\x20http-equiv=\"Cont
+SF:ent-Language\"\x20content=\"en\"/><link\x20rel=\"stylesheet\"\x20type=\
+SF:"text/css\"\x20href=\"/error\.css\"/></head><body><h1>403</h1></body></
+SF:html>")%r(tarantool,F5,"HTTP/1\.0\x20403\x20Forbidden\r\ncontent-type:\
+SF:x20text/html\r\ncontent-length:\x20173\r\n\r\n<html><head><meta\x20char
+SF:set=utf-8\x20http-equiv=\"Content-Language\"\x20content=\"en\"/><link\x
+SF:20rel=\"stylesheet\"\x20type=\"text/css\"\x20href=\"/error\.css\"/></he
+SF:ad><body><h1>403</h1></body></html>")%r(RPCCheck,F5,"HTTP/1\.0\x20403\x
+SF:20Forbidden\r\ncontent-type:\x20text/html\r\ncontent-length:\x20173\r\n
+SF:\r\n<html><head><meta\x20charset=utf-8\x20http-equiv=\"Content-Language
+SF:\"\x20content=\"en\"/><link\x20rel=\"stylesheet\"\x20type=\"text/css\"\
+SF:x20href=\"/error\.css\"/></head><body><h1>403</h1></body></html>");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 73.00 seconds
+```
+```sh
+curl -I http://35.226.138.216:8000
+HTTP/1.1 200 OK
+Server: gunicorn
+Date: Thu, 06 Nov 2025 06:42:43 GMT
+Connection: close
+Content-Type: text/html; charset=utf-8
+Content-Length: 2946
+Vary: Cookie
+Set-Cookie: svCookie=-9Igqb4XbbgsBmgdvsu3JkM_5oJXmxk--QP2QaoQt4s; Expires=Sun, 07 Dec 2025 06:42:43 GMT; HttpOnly; Path=/
+```
+
+Looked at the source code for the site and in the footer I found a few things.
+
+First I found what looks like it might be an MQTT channel/topic named
+`sitestatus`.
+
+Then it looks like I find a username and password for MQTT in the comments.
+
+- Username: elfanon
+- Password: elfanon
+
+```html
+<div class="footer" id="footer">
+  <b>©2024 Santavision Elventech Co., Ltd. Snow Rights Reserved.<br>(<i>topic 'sitestatus'</i> available.)</b>
+</div> <!-- mqtt: elfanon:elfanon -->
+```
+
+```sh
+mosquitto_sub -h  35.226.138.216 -u elfanon -P elfanon -t sitestatus
+Broker Authentication failed: AlabasterS
+Broker Authentication as admin succeeded
+Broker Authentication failed: AlabasterS
+Broker Authentication as superadmin succeeded
+Broker Authentication failed: WomblyC
+Broker Authentication failed: WomblyC
+Broker Authentication failed: WomblyC
+Broker Authentication as admin succeeded
+Broker Authentication succeeded: AlabasterS
+Broker Authentication succeeded: WomblyC
+File downloaded: /static/sv-application-2024-SuperTopSecret-9265193/applicationDefault.bin
+Broker Authentication as admin succeeded
+Broker Authentication succeeded: AlabasterS
+Broker Authentication failed: WomblyC
+Broker Authentication succeeded: WomblyC
+Broker Authentication succeeded: AlabasterS
+File downloaded: /static/sv-application-2024-SuperTopSecret-9265193/applicationDefault.bin
+Broker Authentication as superadmin succeeded
+File downloaded: /static/sv-application-2024-SuperTopSecret-9265193/applicationDefault.bin
+Broker Authentication as admin succeeded
+Broker Authentication failed: WomblyC
+File downloaded: /static/sv-application-2024-SuperTopSecret-9265193/applicationDefault.bin
+Broker Authentication failed: WomblyC
+Broker Authentication as superadmin succeeded
+Broker Authentication failed: WomblyC
+Broker Authentication failed: WomblyC
+Broker Authentication succeeded: WomblyC
+Broker Authentication failed: WomblyC
+File downloaded: /static/sv-application-2024-SuperTopSecret-9265193/applicationDefault.bin
+Broker Authentication succeeded: AlabasterS
+File downloaded: /static/sv-application-2024-SuperTopSecret-9265193/applicationDefault.bin
+Broker Authentication failed: AlabasterS
+File downloaded: /static/sv-application-2024-SuperTopSecret-9265193/applicationDefault.bin
+Broker Authentication as superadmin succeeded
+Broker Authentication failed: AlabasterS
+Broker Authentication failed: AlabasterS
+Broker Authentication as superadmin succeeded
+Broker Authentication as admin succeeded
+Broker Authentication succeeded: AlabasterS
+
+```
+
+Answer for this one is below. Found it in the comments of the web page.
+
+```
+elfanon
+```
+
+Great work! You've taken the first step—nicely done. You're on the silver path and off to a strong start!
+
+You've gained access, but there’s still much more to uncover. Patience and persistence will guide you—silver or gold, you're making progress!
+
+Now that you're in, it’s time to go deeper. We need access to the northpolefeeds. This won't work if you use Wombley or Alabaster’s credentials—find the right user to log in.
+
+-- Ribb Bonbowford (Front Yard (Act III))
+
+### Santa Vision A (Gold)
+
+(Gold hint) Stay curious. Sometimes, the smallest details—often overlooked—hold the keys to the kingdom. Pay close attention to what’s hidden in the source.
+
+-- Ribb Bonbowford (Front Yard (Act III))
+
+What username logs you into the SantaVision portal?
+
+```
+sqlite3 SantasTopSecretDB-2024-Z.sqlite
+```
+```
+select * from users;
+```
+```
+1|santaSiteAdmin|S4n+4sr3411yC00Lp455wd|2024-01-23 06:05:29.466071|1
+```
+
+```
+santaSiteAdmin
+```
+
+### Santa Vision B (Silver)
+
+Once logged on, authenticate further without using Wombley's or Alabaster's accounts to see the northpolefeeds on the monitors. What username worked here?
+
+Like a Good Header on Your HTTP?
+
+From: Ribb Bonbowford
+
+Objective: Santa Vision B
+
+Be on the lookout for strange HTTP headers...
+
+HTTP/1.1 200 OK
+Server: gunicorn
+Date: Thu, 06 Nov 2025 08:21:54 GMT
+Connection: close
+Content-Type: text/html; charset=utf-8
+Content-Length: 5370
+Cache-Control: public, max-age=0
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+BrkrTopic: northpolefeeds
+BrkrUser: santashelper2024
+BrkrPswd: playerSantaHelperPass6156585340
+Vary: Cookie
+Set-Cookie: svCookie=71jjTh9ocBtyjtFRiV32S8wgzXgY_MZFGNml15KNRXI; Expires=Sun, 07 Dec 2025 08:21:54 GMT; HttpOnly; Path=/
+
+santashelper2024
+
+
+
+### Santa Vision C (Silver)
+
+Using the information available to you in the SantaVision platform, subscribe to the frostbitfeed MQTT topic. Are there any other feeds available? What is the code name for the elves' secret operation?
+
+```
+Idemcerybu
+```
+
+### Santa Vision D (Silver)
+
+There are too many admins. Demote Wombley and Alabaster with a single MQTT message to correct the northpolefeeds feed. What type of contraption do you see Santa on?
+
 ## Elf Stack
 
 > Greetings! I'm the genius behind the North Pole Elf Stack SIEM. And oh boy, 
@@ -5227,7 +5446,7 @@ event_source: GreenCoat
 }
 ```
 
-```txt
+``txt
 SecureElfGwy
 ```
  Question 9: Using the 'GreenCoat' event_source, what is the name of the field that contains the site visited by a client in the network?
