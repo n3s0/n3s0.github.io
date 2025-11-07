@@ -998,11 +998,132 @@ Found the frosty book. URL is below.
 
 ### Solution (Silver)
 
-i have not finished writting this section yet.
+There is a book that can be found amoungst the boxes. The note in the top-left
+corner plays a crucial role for this alongside `The Frosty Book`.
+
+In the note we get the following text. (I'm presenting it in a list for ease of
+use. I've created a table with the letter 
+
+This is using the schema of `page:word:letter`.
+
+- 2:6:1
+- 4:10:3
+- 6:1:1
+- 3:10:4
+- 14:8:3
+
+
+| Page | Word | Letter | Answer |
+|-------|----|--------|------|
+| 2 | 6 | 1 | S |
+| 4 | 19 | 3 | A |
+| 6 | 1 | 1 | N |
+| 3 | 10 | 4 | T |
+| 14 | 8 | 3 | A |
+
+`SANTA` which is `72682`
+
+With that entered. It shows a message on the screen that says 
 
 ### Solution (Gold)
 
-I have not finished this section yet.
+Looks like the keypad accepts five digits. Otherwise it over writes the first
+digit with the updated number. So we probably wont be dealing with digits
+crossing the boundry of the input.
+
+Looks like the numbers we're to be working with are `2768`. I initially tried it
+in that order. But, it failed.
+
+```js
+ function checkOverlap() {
+            clearOverlays();
+            const keysToCheck = ['2', '7', '6', '8', 'Enter'];
+
+            keysToCheck.forEach(key => {
+```
+
+
+```sh
+https://hhc24-frostykeypad.holidayhackchallenge.com/submit?id=$id
+```
+
+```json
+{"answer":""}
+```
+
+```json
+{"error":"The data you've provided seems to have gone on a whimsical adventure, losing all sense of order and coherence!"}
+```
+
+```json
+{"output":"success"}
+```
+
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"log"
+	"io"
+	"bytes"
+	"net/http"
+)
+
+type Answer struct {
+	Answer string `json:"answer"`
+}
+
+type Output struct {
+	Output string `json:"output"`
+}
+
+type AuthError struct {
+	Error string `json:"error"`
+}
+
+func sendPinAttempt(pin, userId string) (string) {
+
+	answer := Answer{Answer: pin}
+	
+	answerJson, err := json.Marshal(answer)
+	if err != nil {
+		log.Fatalf("Error: %+v\n", err)
+	}
+
+	url := fmt.Sprintf("https://hhc24-frostykeypad.holidayhackchallenge.com/submit?id=%s", userId)
+
+	req, err := http.NewRequest("POST", url, bytes.NewBuffer(answerJson))
+	if err != nil {
+		log.Fatalf("Error: %+v\n", err)
+	}
+	
+	req.Header.Set("Content-Type", "application/json; charset=UTF-8")
+
+	client := &http.Client{}
+	resp, err := client.Do(req)
+	if err != nil {
+		log.Fatalf("Error: %+v\n", err)
+	}
+	defer resp.Body.Close()
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		log.Fatalf("Error: %+v\n", err)
+	}
+
+	return fmt.Sprintf("%s", string(body))
+}
+
+func main() {
+	id := ""
+
+
+
+	results := sendPinAttempt("72682", id)
+}
+```
 
 ## Hardware Hacking 101: Part 1
 
