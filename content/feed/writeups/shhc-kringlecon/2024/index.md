@@ -6461,3 +6461,5 @@ pagead2.googlesyndication.com:443
 Question 11: Using the 'WindowsEvent' event_source, how many unique Channels is the SIEM receiving Windows event logs from?
 
 ## Decrypt The Naughty List
+
+I have not completed this challenge yet.
