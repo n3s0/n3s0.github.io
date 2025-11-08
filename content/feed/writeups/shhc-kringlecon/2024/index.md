@@ -464,6 +464,8 @@ the comedic relief I needed.
 
 ## Elf Minder 9000
 
+{{< image src="elf-minder-9000/elfminder9000.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+
 This game took me a while to complete. 
 
 > Center your mind, and become one with the island!
@@ -486,6 +488,19 @@ This game took me a while to complete.
 
 ### Solution (Silver)
 
+{{< image src="elf-minder-9000/sandystart01.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/wavesandcrates02.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/tidaltreasures03.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/dunedash04.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/coralcove05.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/shellseekers06.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/palmgroveshuffle07.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/tropicaltangle08.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/cratecaper09.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/shorelineshuffle10.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/beachbounty11.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/driftwooddunes12.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+
 ### Solution (Gold)
 
 I haven't completed this challenge yet. Need to obtain more images of what is
@@ -495,6 +510,8 @@ After solving the `Silver` challenges the story was updated.
 
 > With challenges solved, we're ready to head to the North Pole! Let's hope 
 > Santa is back already to direct operations.
+
+{{< image src="elf-minder-9000/arealpickle13.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
 
 # Act I
 
@@ -1013,15 +1030,6 @@ be able to work through this now.
 
 ### Solution (Silver)
 
-<<<<<<< HEAD
-There is a book that can be found amoungst the boxes. The note in the top-left
-corner plays a crucial role for this alongside `The Frosty Book`.
-
-In the note we get the following text. (I'm presenting it in a list for ease of
-use. I've created a table with the letter 
-
-This is using the schema of `page:word:letter`.
-=======
 When you click to connect to the `Frosty Keypad` you're met by a keypad with a
 note. Objective behind this is we need to figure out how to enter the correct
 codes to open the keypad.
@@ -1045,7 +1053,6 @@ this cipher that can be used. But, in this case the note encoded as
 `page:word:letter`.
 
 Here is a list of the values in the note they encoded for this challenge.
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 
 - 2:6:1
 - 4:10:3
@@ -1053,10 +1060,7 @@ Here is a list of the values in the note they encoded for this challenge.
 - 3:10:4
 - 14:8:3
 
-<<<<<<< HEAD
-=======
 When you put the pieces together. You get the following letters as the answer.
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 
 | Page | Word | Letter | Answer |
 |-------|----|--------|------|
@@ -1066,18 +1070,12 @@ When you put the pieces together. You get the following letters as the answer.
 | 3 | 10 | 4 | T |
 | 14 | 8 | 3 | A |
 
-<<<<<<< HEAD
-`SANTA` which is `72682`
-
-With that entered. It shows a message on the screen that says 
-=======
 Basically the answer to this challenge is `SANTA` which is `72682` on the
 numerical keypad. This will need to be entered manually into the keypad.
 
 With that entered. It shows a message on the screen that says the code was
 entered successfully and that we beat the code. Silver medal is provided and we
 can move on to the next stage of the challenge.
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 
 ### Solution (Gold)
 
@@ -1096,24 +1094,18 @@ in that order. But, it failed.
             keysToCheck.forEach(key => {
 ```
 
-<<<<<<< HEAD
-=======
 Looked at all more information in the requests and the source code. Looked at
 the requests and it looks like when it sends a submission to the keypad it uses
 `/submit` with the `?id=$id` parameter. ID parameter was redacted so no one
 could send these requests as my SHHC account.
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 
 ```sh
 https://hhc24-frostykeypad.holidayhackchallenge.com/submit?id=$id
 ```
-
-<<<<<<< HEAD
 ```json
 {"answer":""}
 ```
 
-=======
 When you look at one of these post requests it sends the answer to the URL using
 a JSON payload.
 
@@ -1124,96 +1116,26 @@ a JSON payload.
 When you get an error; because I intend to filter out failures, it shows the
 following repsonse.
 
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 ```json
 {"error":"The data you've provided seems to have gone on a whimsical adventure, losing all sense of order and coherence!"}
 ```
 
-<<<<<<< HEAD
-=======
 When you get a success output. It shows the following response from the server.
 
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 ```json
 {"output":"success"}
 ```
 
-<<<<<<< HEAD
-=======
 Here is the code I wrote for this. I've been learning `Go` lately and I wanted
 to see the overhead associated with this.
 
 One thing that I would probably change about this is rate limiting it a little.
 It generates like `1024` PINs and sends them as an answer using a `for` loop.
 
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 ```go
 package main
 
 import (
-<<<<<<< HEAD
-	"encoding/json"
-	"fmt"
-	"log"
-	"io"
-	"bytes"
-	"net/http"
-)
-
-type Answer struct {
-	Answer string `json:"answer"`
-}
-
-type Output struct {
-	Output string `json:"output"`
-}
-
-type AuthError struct {
-	Error string `json:"error"`
-}
-
-func sendPinAttempt(pin, userId string) (string) {
-
-	answer := Answer{Answer: pin}
-	
-	answerJson, err := json.Marshal(answer)
-	if err != nil {
-		log.Fatalf("Error: %+v\n", err)
-	}
-
-	url := fmt.Sprintf("https://hhc24-frostykeypad.holidayhackchallenge.com/submit?id=%s", userId)
-
-	req, err := http.NewRequest("POST", url, bytes.NewBuffer(answerJson))
-	if err != nil {
-		log.Fatalf("Error: %+v\n", err)
-	}
-	
-	req.Header.Set("Content-Type", "application/json; charset=UTF-8")
-
-	client := &http.Client{}
-	resp, err := client.Do(req)
-	if err != nil {
-		log.Fatalf("Error: %+v\n", err)
-	}
-	defer resp.Body.Close()
-
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		log.Fatalf("Error: %+v\n", err)
-	}
-
-	return fmt.Sprintf("%s", string(body))
-}
-
-func main() {
-	id := ""
-
-
-
-	results := sendPinAttempt("72682", id)
-}
-```
-=======
     "encoding/json"
     "fmt"
     "strconv"
@@ -1222,6 +1144,7 @@ func main() {
     "bytes"
     "net/http"
 )
+
 type Answer struct {
     Answer string `json:"answer"`
 }
@@ -1323,7 +1246,6 @@ achievement was granted.
 
 Out of that I got myself a random number generator and PIN cracker. I will be
 uploading that to Github at some point.
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 
 ## Hardware Hacking 101: Part 1
 
@@ -4340,15 +4262,7 @@ these challenges.
 
 Remember that all queries need to be run on the `NorthPoleWorkshop` database.
 
-<<<<<<< HEAD
-## KQL 101
-=======
 ## Section 1: KQL 101
-
-This is `Section 1: KQL 101` and what looks like when all of the questions have
-been answered for this. There are 10 questions for this challenge. So, let's get
-to it.
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 
 This is `Section 1: KQL 101` and what looks like when all of the questions have
 been answered for this. There are 10 questions for this challenge. So, let's get
@@ -4629,11 +4543,7 @@ to the next question.
 
 ### Question 7
 
-<<<<<<< HEAD
-In this they're having us go through the `distrinct` operator.
-=======
 In this they're having us go through the `distinct` operator.
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 
 > You can use the distinct operator to filter for unique values in a specific 
 > column.
@@ -4765,8 +4675,6 @@ OutboundNetworkEvents
 
 **Question:** How many distinct URLs did elves with the first name Twinkle visit?
 
-<<<<<<< HEAD
-=======
 ```sql
 let twinkle_ips = Employees
 | where name has "Twinkle"
@@ -4777,7 +4685,6 @@ OutboundNetworkEvents
 | count
 ```
 
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 | Count |
 |------:|
 | 8 |
@@ -4786,31 +4693,12 @@ OutboundNetworkEvents
 8
 ```
 
-<<<<<<< HEAD
-## Operation Surrender
-=======
 ## Section 2: Operation Surrender: Alabaster's Espionage
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 
 {{< image src="microsoft-kc7/section2.png" alt="operation surrender section" position="center"  style="border-radius: 8px;" >}}
 
 ### Question 1
 
-<<<<<<< HEAD
-### Question 2
-
-### Question 3
-
-### Question 4
-
-### Question 5
-
-### Question 6
-
-### Question 7
-
-## Operation Snowfall
-=======
 Eve Snowshoes approaches with a focused expression. "Welcome to Operation Surrender: Alabaster's Espionage. In this phase, Team Alabaster has executed a covert operation, and your mission is to unravel their tactics. You'll need to piece together the clues and analyze the data to understand how they gained an advantage."
 
 **Question:** Type surrender to get started!
@@ -5036,27 +4924,11 @@ a2V5bG9nZ2VyLmV4ZQ==
 ```
 
 ## Section 3: Operation Snowfall: Team Wombley's Ransomware Raid
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 
 {{< image src="microsoft-kc7/section3.png" alt="operation snowfall section" position="center"  style="border-radius: 8px;" >}}
 
 ### Question 1
 
-<<<<<<< HEAD
-### Question 2
-
-### Question 3
-
-### Question 4
-
-### Question 5
-
-### Question 6
-
-### Question 7
-
-## Echos in the Frost
-=======
 "Fantastic work on completing Section 2!" Eve Snowshoes, Senior Security Analyst, says with a proud smile.
 
 "You’ve demonstrated sharp investigative skills, uncovering every detail of Team Wombley’s attack on Alabaster. Your ability to navigate the complexities of cyber warfare has been impressive.
@@ -5288,34 +5160,11 @@ RW5jcnlwdEV2ZXJ5dGhpbmcuZXhl
 ```
 
 ## Section 4: Echos in the Frost: Tracking the Unknown Threat
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 
 {{< image src="microsoft-kc7/section4.png" alt="echos in the frost section" position="center"  style="border-radius: 8px;" >}}
 
 ### Question 1
 
-<<<<<<< HEAD
-### Question 2
-
-### Question 3
-
-### Question 4
-
-### Question 5
-
-### Question 6
-
-### Question 7
-
-### Question 8
-
-### Question 9
-
-### Question 10
-
-### Question 11
-
-=======
 As you close out the investigation into Team Wombley’s attack, Eve Snowshoes meets you with a serious expression. "You’ve done an incredible job so far, but now we face our most elusive adversary yet. This isn’t just another team—it’s an unknown, highly skilled threat actor who has been operating in the shadows, leaving behind only whispers of their presence. We’ve seen traces of their activity, but they’ve covered their tracks well."
 
 She pauses, the weight of the challenge ahead clear. "This is where things get even more difficult. We’re entering uncharted territory—prepare yourself for the toughest investigation yet. Follow the clues, stay sharp, and let’s uncover the truth behind these Echoes in the Frost."
@@ -5662,7 +5511,6 @@ print base64_encoded
 ZnJvc3R5
 ```
 
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
 ## Act II Conclusion
 
 > Both sides want to see Christmas mission fulfilled. Will either yield? Who can 
@@ -6634,8 +6482,5 @@ pagead2.googlesyndication.com:443
 Question 11: Using the 'WindowsEvent' event_source, how many unique Channels is the SIEM receiving Windows event logs from?
 
 ## Decrypt The Naughty List
-<<<<<<< HEAD
-=======
 
 I have not completed this challenge yet.
->>>>>>> 393f0722ab6cebc243c3d65497c30aba14fd7dd1
