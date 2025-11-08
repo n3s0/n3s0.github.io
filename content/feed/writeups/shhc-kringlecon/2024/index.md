@@ -511,6 +511,57 @@ After solving the `Silver` challenges the story was updated.
 > With challenges solved, we're ready to head to the North Pole! Let's hope 
 > Santa is back already to direct operations.
 
+```html
+<div class="admin-controls hidden">
+    <!-- <button id="startBtn">Start</button> -->
+    <button id="resetBtn">Reset</button>
+    <button id="clearPathBtn">Clear Path</button>
+    <button id="clearEntitiesBtn">Clear Entities</button>
+    <fieldset id="tools">
+        <legend>Select a tool:</legend>
+
+        <input type="radio" id="path" name="tool-select" value="path" checked />
+        <label for="path">Path</label>
+
+        <input type="radio" id="eraser" name="tool-select" value="eraser" />
+        <label for="eraser">Eraser</label>
+
+        <input type="radio" id="portal" name="tool-select" value="portal" />
+        <label for="portal">Tunnel</label>
+
+        <input type="radio" id="start" name="tool-select" value="start" />
+        <label for="start">Start</label>
+
+        <input type="radio" id="end" name="tool-select" value="end" />
+        <label for="end">End</label>
+
+        <input type="radio" id="crate" name="tool-select" value="crate" />
+        <label for="crate">Crate</label>
+
+        <input type="radio" id="blocker" name="tool-select" value="blocker" />
+        <label for="blocker">Blocker</label>
+
+        <input type="radio" id="hazard" name="tool-select" value="hazard" />
+        <label for="hazard">Hazard</label>
+
+        <input type="radio" id="steam" name="tool-select" value="steam" />
+        <label for="steam">Steam</label>
+
+        <input type="radio" id="spring" name="tool-select" value="spring" />
+        <label for="spring">Spring</label>
+    </fieldset>
+</div>
+```
+
+```js
+if (this.isPointInAnySegment(nextPoint) || entityHere) {
+    if (entityHere) return this.segments[0][0]; // fix this
+    return nextPoint;
+} else {
+    return;
+}    
+```
+
 {{< image src="elf-minder-9000/arealpickle13.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
 
 # Act I
