@@ -464,6 +464,8 @@ the comedic relief I needed.
 
 ## Elf Minder 9000
 
+{{< image src="elf-minder-9000/elfminder9000.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+
 This game took me a while to complete. 
 
 > Center your mind, and become one with the island!
@@ -486,6 +488,19 @@ This game took me a while to complete.
 
 ### Solution (Silver)
 
+{{< image src="elf-minder-9000/sandystart01.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/wavesandcrates02.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/tidaltreasures03.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/dunedash04.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/coralcove05.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/shellseekers06.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/palmgroveshuffle07.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/tropicaltangle08.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/cratecaper09.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/shorelineshuffle10.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/beachbounty11.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+{{< image src="elf-minder-9000/driftwooddunes12.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
+
 ### Solution (Gold)
 
 I haven't completed this challenge yet. Need to obtain more images of what is
@@ -495,6 +510,59 @@ After solving the `Silver` challenges the story was updated.
 
 > With challenges solved, we're ready to head to the North Pole! Let's hope 
 > Santa is back already to direct operations.
+
+```html
+<div class="admin-controls hidden">
+    <!-- <button id="startBtn">Start</button> -->
+    <button id="resetBtn">Reset</button>
+    <button id="clearPathBtn">Clear Path</button>
+    <button id="clearEntitiesBtn">Clear Entities</button>
+    <fieldset id="tools">
+        <legend>Select a tool:</legend>
+
+        <input type="radio" id="path" name="tool-select" value="path" checked />
+        <label for="path">Path</label>
+
+        <input type="radio" id="eraser" name="tool-select" value="eraser" />
+        <label for="eraser">Eraser</label>
+
+        <input type="radio" id="portal" name="tool-select" value="portal" />
+        <label for="portal">Tunnel</label>
+
+        <input type="radio" id="start" name="tool-select" value="start" />
+        <label for="start">Start</label>
+
+        <input type="radio" id="end" name="tool-select" value="end" />
+        <label for="end">End</label>
+
+        <input type="radio" id="crate" name="tool-select" value="crate" />
+        <label for="crate">Crate</label>
+
+        <input type="radio" id="blocker" name="tool-select" value="blocker" />
+        <label for="blocker">Blocker</label>
+
+        <input type="radio" id="hazard" name="tool-select" value="hazard" />
+        <label for="hazard">Hazard</label>
+
+        <input type="radio" id="steam" name="tool-select" value="steam" />
+        <label for="steam">Steam</label>
+
+        <input type="radio" id="spring" name="tool-select" value="spring" />
+        <label for="spring">Spring</label>
+    </fieldset>
+</div>
+```
+
+```js
+if (this.isPointInAnySegment(nextPoint) || entityHere) {
+    if (entityHere) return this.segments[0][0]; // fix this
+    return nextPoint;
+} else {
+    return;
+}    
+```
+
+{{< image src="elf-minder-9000/arealpickle13.png" alt="Elf connect initial screen" position="center"  style="border-radius: 8px;" >}}
 
 # Act I
 
@@ -1085,6 +1153,9 @@ could send these requests as my SHHC account.
 ```sh
 https://hhc24-frostykeypad.holidayhackchallenge.com/submit?id=$id
 ```
+```json
+{"answer":""}
+```
 
 When you look at one of these post requests it sends the answer to the URL using
 a JSON payload.
@@ -1124,6 +1195,7 @@ import (
     "bytes"
     "net/http"
 )
+
 type Answer struct {
     Answer string `json:"answer"`
 }
