@@ -4,7 +4,7 @@ author: "Timothy Loftus (n3s0)"
 date: 2026-02-06T00:18:01+06:00
 lastmod: 2026-02-06
 summary: "Reading updates for 02-2026."
-draft: true
+draft: false
 tags: ["journal"]
 ---
 ## Somthing Different
