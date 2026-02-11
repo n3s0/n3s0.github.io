@@ -3,18 +3,6 @@ title: "Ubuntu Server Inital Setup & Config Baseline"
 date: 2022-12-31T15:59:15-06:00
 summary: "Notes for my Ubuntu Server baseline."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: false
-showHeadingAnchors: true
 ---
 
 ## Summary
@@ -34,7 +22,30 @@ If it hasn't been set already or it's been orchestrated with a generic hostname.
 It might be useful to provde hostname setup for the server.
 
 ```sh
-hostnamectl set-hostname HOSTNAME
+hostnamectl set-hostname [HOSTNAME]
+```
+
+The command should update the `/etc/hostname` file on the server so updating it
+isn't required. However, confirmation is always good.
+
+Confirm that it's setup correctly in the `/etc/hostname` file. Using the
+`cat(1)` command you should be able to read the hostname in the file.
+
+You may need to update the `/etc/hosts` file with the correct configuration. The
+following lines should be visable or set when you configure this. If it's not
+set to your hostname. Update it with the appropriate hostname on the line that
+says `HOSTNAME`.
+
+```sh
+127.0.0.1       localhost
+127.0.1.1       HOSTNAME.localdomain        HOSTNAME
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
 ```
 
 ## Configure DNS
@@ -46,7 +57,8 @@ between the following if I already don't have a DNS server on the production
 network.
 
 Later I'll put the configuration for the setup I use when I host everything in
-house.
+house. Might even put my per location design for how I would prefer to setup DNS
+for an organization. When that's finished. I will post the articles below.
 
 I generally don't configure IPv6. At some point I will though. Generally I'll
 let services like Vultr assign a v6 address. The choices would be either 
@@ -185,7 +197,8 @@ that I'm working on to automate the update process for Ubuntu on my Github.
 ## Some Personal Install Preferences
 ---
 
-Just some things I do as personal touches to servers I deploy so they’re more familiar and have the tools I need.
+Just some things I do as personal touches to servers I deploy so they’re more 
+familiar and have the tools I need.
 
 ### Ubuntu Server 22.04 LTS
 ---
@@ -193,14 +206,22 @@ Just some things I do as personal touches to servers I deploy so they’re more 
 Some software that I generally install to aid me in my workflow on the server.
 
 ```sh
-apt install vim nmap htop tcpdump sysstat git
+apt install nmap htop tcpdump sysstat git
+```
+
+Included in this will also be whatever software I intend to host on the server.
+But, that will be covered in other articles related to the setup.
+
+My text editor of choice is neovim and Snap normally has the latest version. So,
+I install that.
+
+```sh
+snap install neovim
 ```
 
 ## SSH
----
 
 ### Generate New Host Keys
----
 
 Generating new host keys for SSH can be a good baseline for new servers. I 
 generally do this upon a fresh installation.
@@ -235,7 +256,8 @@ Restart the SSH service.
 systemctl restart sshd
 ```
 
-If doing this from an SSH prompt. It will be prudent to remove the key from known_hosts as well using the following command from the client computer.
+If doing this from an SSH prompt. It will be prudent to remove the key from i
+known_hosts as well using the following command from the client computer.
 
 ```sh
 ssh-keygen -R "<hostname/ip>"
@@ -244,13 +266,15 @@ ssh-keygen -R "<hostname/ip>"
 ### Configure the SSH Server
 ---
 
-Some little things that need to be performed to make it so the ssh server is configured appropriately. Added will be a little 99-company/99-.
+Some little things that need to be performed to make it so the ssh server is 
+configured appropriately. Added will be a little 99-company/99-.
 
 File is generally put in the sshd_config directory.
 
 - /etc/sshd/sshd_config.d/99-n3s0.conf
 
-The configuration below may change frequently. But, this is generally the baseline.
+The configuration below may change frequently. But, this is generally the 
+baseline.
 
 ```sh
 Port 22
@@ -274,9 +298,11 @@ AllowUsers <users>
 ## Generate Keys for All Users
 ---
 
-Need to generate or import the appropriate SSH keys for all users. This is especially for the root user.
+Need to generate or import the appropriate SSH keys for all users. This is 
+especially for the root user.
 
-Run the following command on the root user account. Also make sure to instruct or login then run the following command to generate the keys for the users.
+Run the following command on the root user account. Also make sure to instruct 
+or login then run the following command to generate the keys for the users.
 
 ```sh
 ssh-keygen -t ed25519
@@ -302,7 +328,8 @@ systemctl restart sshd
 
 If cloud-init isn’t being used. I disable it.
 
-Since I have an article for doing this already. Below is the link to that article.
+Since I have an article for doing this already. Below is the link to that 
+article.
 
 - [Ubuntu 22.04 LTS: Disable & Remove Cloud-Init](#)
 
@@ -351,9 +378,11 @@ Status: active
 ## UFW (Strict)
 ---
 
-Then I decide to disable the use of IPv6 because I’m not necessarily ready to go that route. Some day. But, not now.
+Then I decide to disable the use of IPv6 because I’m not necessarily ready to 
+go that route. Some day. But, not now.
 
-To do this I edit the /etc/default/ufw file on the following line and reload ufw.
+To do this I edit the /etc/default/ufw file on the following line and reload 
+ufw.
 
 ```sh
 # Set to yes to apply rules to support IPv6 (no means only IPv6 on loopback
@@ -412,4 +441,32 @@ ufw reload
 ## UFW (Less Strict)
 ---
 
-Provided is configuration for environments where implicit deny isn’t necessarily needed on hosts. If it’s internal or where values regarding security aren’t necessarily that large.
+Provided is configuration for environments where implicit deny isn’t necessarily 
+needed on hosts. If it’s internal or where values regarding security aren’t 
+necessarily that large.
+
+Generally with this setup. All traffic is allowed outbound and traffic ingress
+is dropped. Makes things a little more frictionless.
+
+I normally start this out by disabling IPv6 because I'm not quite ready to
+implement that in my environments.
+
+```sh
+# Set to yes to apply rules to support IPv6 (no means only IPv6 on loopback
+# accepted). You will need to 'disable' and then 'enable' the firewall for
+# the changes to take affect.
+IPV6=no
+```
+
+The command below will reload UFW.
+
+```sh
+ufw reload
+```
+
+Allow SSH in on the server. If there are other services hosted on the server. I
+will allow those ports in as well.
+
+```sh
+ufw allow in 22/tcp
+```
