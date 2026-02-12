@@ -1,15 +1,9 @@
 ---
-title: 'Design: Simple Residential Network Design (Fiber To The Home)'
-date: 2025-06-20T03:00:00-06:00
+title: 'Simple Residential Network Design (Fiber To The Home)'
+date: 2026-02-10T03:00:00-06:00
+lastmod: 2026-02-12
 summary: "Design a simple home network with a fiber provider."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
 tags: ["networks"]
 ---
 
@@ -117,22 +111,51 @@ This may be a little redundant. But, this is the overall design here. Can be
 used for future reference.
 
 ### Stakeholder Requirements
----
 
-Coming soon...
+For these requirements the stakeholder doesn't need anything special. They just
+need sufficient wireless perfromance throughout their home. Depending on where
+the router is.
+
+The network needs to be able to support multiple devices. This is just random
+list of devices you commonly see in some homes.
+
+- Desktop Computers: 1
+- Cell Phones: 3
+- TVs: 1
+- Gaming Consoles: 2
+- Laptops: 3
+- IoT Light Bulbs: 5
+- Ring Cameras: 2
+- Wireless Cameras: 4
+- Printers: 1
+
+They can connect their desktop computer, TV, or gaming console to the wireless 
+router. This of course is optional. But, there are times where stakeholders
+would like to have this.
 
 ### WAN Options & Internet Access
----
 
-Coming soon...
+Internet access will be a NATed network allowing traffic outbound and dropping
+inbound traffic unless port forwarding rules are created for gaming. 
 
 ### Physical Topology
----
 
-Coming soon...
+Although I haven't provided every device for the physical topology. I think we
+can all get the jist with this. There is an Optical Network Terminal (ONT)
+connected to the ISP network using fiber as a medium. Which provides Internet 
+access.
+
+The router connects the end devices using either wireless or wired connections
+to the Internet via a copper cabling through the ONT. This will provide just
+about everything needed to the network.
+
+![Physical topology for simple residential fiber to the home network topology](simple-residential-network-ftth-physical-topology.jpg "Simple Fiber To The Home Network Topology")
 
 ### Logical Design
----
+
+Below is a list of the subnet that will be used for this scenario. Which is
+pretty simple. This sticks to the defaults for most wireless routers that get
+installed in homes.
 
 - Network: 192.168.0.0/24
     - Network Address: 192.168.0.0
@@ -143,18 +166,11 @@ Coming soon...
     - Addresses: 256
     - Available Addresses: 254
 
+### Logical Topology
+
 ### Device Details
----
-
-Coming soon...
-
-### Network Topology
----
-
-Coming soon...
 
 ### Access Details
----
 
 In order to access the network. Devices will either need to connect to one of
 the physical ports on the router or the wireless SSID it broadcasts.
@@ -163,7 +179,6 @@ Wireless SSID(s) will be set with a PSK. Both of which users will need to know
 before they can connect.
 
 ### Security Measures
----
 
 Network Address Translation (NAT): 
 
@@ -178,11 +193,10 @@ as the client doesn't just get rid of it. This will prevent unauthorized access
 to your network from the wireless network.
 
 
-## Implementation & Justification
+## Implementation
 ---
 
 ### Internet Service Provider
----
 
 The service provider chosen depends on the markets available to the consumer. 
 But, in this case we're willing to pay for fiber to the home. So the customer
@@ -223,7 +237,6 @@ Chosen option:
 - 500 Mbps / 500 Mbps
 
 ### Customer Premise Equiptment (CPE)
----
 
 In this network it could be done in a few ways. The gear could range from any
 vendor the service provider supports/installs.
@@ -234,14 +247,13 @@ be Calix.
 The CPE equiptment may be as follows.
 
 - ONT
-- Wireless router
+- Wireless router (Unless a different one is purchased)
 
 Connection generally looks like the following with a configuration like this.
 
 ISP network -> ONT -> wireless router WAN/Internet port
 
 ### Subnetting
----
 
 The subnet is probably shared between the wired and wireless network. Below are
 usually the default classful ranges associated with this setup.
@@ -261,7 +273,6 @@ choose Subnet Possibilty 1 as an example.
   - Gateway: 192.168.0.1
 
 ### IP Addressing
----
 
 Some IP addresses that will be set.
 
@@ -274,10 +285,9 @@ Common DHCP scope and configuration setup on the router.
 - DCHP Scope:
   - Range: 192.168.0.10 - 192.168.0.250
   - Gateway: 192.168.0.1
-  - DNS: Set to ISP DNS. Which is provided by DHCP public IP.
+  - DNS: Set to ISP DNS.
 
 ### Wireless Configuration
----
 
 Normally in this case the involvement for the user is setting the SSID name and
 the wireless password. This can be setup with the assistance of the ISP
@@ -297,16 +307,14 @@ usecase. FortiAPs for example have a hard time with it. I've seen APs within
 the same network on the same channel.
 
 ### Device Connectivity
----
 
 All devices will be on the same network. Depending on what is supported by the
-device. It will connect to either the 2.4 G wireless or the 5G wireless.
+device. It will connect to either the 2.4G wireless or the 5G wireless.
 
 Ethernet connectivity to devices will be dependent to how close they are to
 where the router was installed.
 
 ### Internet Installation
----
 
 Technician will run the fiber to the home from either the pedistal or the
 overhead run that's available. Just depends on where that is. It may even
@@ -324,3 +332,18 @@ WAN or Internet interface on the router.
 
 Sometimes the technician will help you or walk you through setting up your
 wirelss network and confirm everything is working as expected.
+
+## Conclusion
+---
+
+Hopefully this provided some explaination for some of the basics related to a
+simple intalled as is fiber to the home network design. In a longer format this
+kind of goes into the ins and outs of what a simple network design looks like
+for fiber to the home customers. I'll do some more research and post some fiber
+to the business simplified installs at some point.
+
+This is really just for perspective. ISPs provide a different solution depending
+on user needs and what they're willing to purchase.
+
+I'll also create one for cable providers as well. The change with that is
+normally the medium being used. Which will be explained in that post.
