@@ -107,7 +107,7 @@ it. On the other hand. I thought to myself, Shit. I'm going to need to get a
 different safe.
 
 I attempted the same method for probably an hour before I gave up and discovered
-the mag-well was blocking my trusty silverware side-kick access to the reset
+the magwell was blocking my trusty silverware side-kick access to the reset
 button. Which is something to consider. What you place and how you place items
 in the safe can determine how difficult it can be to exploit this vulnerability.
 
