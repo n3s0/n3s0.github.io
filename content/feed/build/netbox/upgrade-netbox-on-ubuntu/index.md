@@ -5,7 +5,7 @@ cover: "/feed/build/netbox/img/netbox-community-login-screen.jpg"
 date: 2026-02-28T08:08:15-06:00
 lastmod: 2026-02-28
 draft: false
-tags: ["linux"]
+tags: ["Linux", "Netbox"]
 ---
 
 ## Summary
