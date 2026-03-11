@@ -3,6 +3,7 @@ title: "Ubuntu Server Inital Setup & Config Baseline"
 date: 2022-12-31T15:59:15-06:00
 summary: "Notes for my Ubuntu Server baseline."
 draft: false
+author: Timothy Loftus (n3s0)
 ---
 
 ## Summary
@@ -171,7 +172,8 @@ their application. It's a standard belief of mine that updating these systems is
 for a betterment as far as operation and security is concerned.
 
 Generally with Ubuntu I have rarely seen an update break an application that I 
-installed. 
+installed. However, for others. I've heard some stories. Removed the `-y` flag
+if you want to perform this operation safely. 
 
 Update package repositories.
 
@@ -194,19 +196,19 @@ apt autoremove -y
 I have an [Ansible playbook](https://github.com/n3s0/ubuntu-update-playbook) 
 that I'm working on to automate the update process for Ubuntu on my Github.
 
-## Some Personal Install Preferences
+## Personal Install Preferences
 ---
 
 Just some things I do as personal touches to servers I deploy so they’re more 
 familiar and have the tools I need.
 
-### Ubuntu Server 22.04 LTS
+### Ubuntu Server 24.04 LTS
 ---
 
 Some software that I generally install to aid me in my workflow on the server.
 
 ```sh
-apt install nmap htop tcpdump sysstat git
+apt install nmap htop tcpdump sysstat git acct
 ```
 
 Included in this will also be whatever software I intend to host on the server.
@@ -218,6 +220,23 @@ I install that.
 ```sh
 snap install neovim
 ```
+
+Another one that may work better for newer versions of Ubuntu is the following
+command.
+
+```sh
+snap install nvim
+```
+
+## Setup Process Accounting
+
+There is another article available 
+
+```sh
+systemctl enable --now acct
+```
+
+Make sure there are good defaults for logrotate
 
 ## SSH
 
@@ -266,15 +285,30 @@ ssh-keygen -R "<hostname/ip>"
 ### Configure the SSH Server
 ---
 
+I like to use a group for permitting users login to permit access to SSH. That
+way all users but those in the `sshusers` group are blocked from SSH login.
+
+To do this. Just need to create the group using the `groupadd(1)` command.
+
+```sh
+groupadd sshusers
+```
+
+Then add the user to the group using the `usermod(1)` command.
+
+```sh
+usermod -aG sshusers <username>
+```
+
 Some little things that need to be performed to make it so the ssh server is 
 configured appropriately. Added will be a little 99-company/99-.
 
 File is generally put in the sshd_config directory.
 
-- /etc/sshd/sshd_config.d/99-n3s0.conf
+- `/etc/ssh/sshd_config.d/99-n3s0.conf`
 
 The configuration below may change frequently. But, this is generally the 
-baseline.
+baseline. Generally I create a generic user for account redundancy 
 
 ```sh
 Port 22
@@ -292,7 +326,7 @@ PermitEmptyPasswords no
 PermitRootLogin no
 
 DenyUsers root
-AllowUsers <users>
+AllowGroups sshusers
 ```
 
 ## Generate Keys for All Users
@@ -317,6 +351,13 @@ To check the ssh configuration. The following command can be entered.
 sshd -t
 ```
 
+May need to reload the systemd daemon after putting the configuration file in
+the `/etc/ssh/sshd_config.d/` path. This can be done with the following command.
+
+```sh
+systemctl daemon-reload
+```
+
 Once this is complete. SSH server should be restarted.
 
 ```sh
@@ -331,7 +372,7 @@ If cloud-init isn’t being used. I disable it.
 Since I have an article for doing this already. Below is the link to that 
 article.
 
-- [Ubuntu 22.04 LTS: Disable & Remove Cloud-Init](#)
+- [Ubuntu 22.04 LTS: Disable & Remove Cloud-Init](/feed/notes/linux/disable-and-remove-cloud-init-on-ubuntu-22-04-lts/)
 
 The server will need to be rebooted after adding this file.
 
