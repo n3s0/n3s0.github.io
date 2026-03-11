@@ -111,7 +111,7 @@ the mag-well was blocking my trusty silverware side-kick access to the reset
 button. Which is something to consider. What you place and how you place items
 in the safe can determine how difficult it can be to exploit this vulnerability.
 
-{{< youtube T5Salk5Fay >}}
+{{< youtube T5YsZLJ5FjY >}}
 
 Here is a QR code for the video if you need to run and want to watch it on your
 phone. I'd recommend watching it to the end if interested.
