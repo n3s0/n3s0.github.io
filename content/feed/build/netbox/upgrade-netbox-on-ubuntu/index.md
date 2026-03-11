@@ -1,7 +1,7 @@
 ---
 title: "Upgrade Netbox On Ubuntu Server 24.04 LTS Using Git"
 description: "Notes on upgrading Netbox on Ubuntu Server using Git."
-cover: "/feed/build/netbox/netbox-community-login-screen.jpg"
+cover: "/feed/build/netbox/img/netbox-community-login-screen.jpg"
 date: 2026-02-28T08:08:15-06:00
 lastmod: 2026-02-28
 draft: false

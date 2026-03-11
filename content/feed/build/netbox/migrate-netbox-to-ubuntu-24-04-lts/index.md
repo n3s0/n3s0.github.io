@@ -1,7 +1,7 @@
 ---
 title: "Migrate Netbox from Ubuntu Server 22.04 LTS to Ubuntu Server 24.04 LTS"
 description: "Working through the installation and setup for Netbox on Ubuntu Server 24.04 LTS."
-cover: "/feed/build/netbox/netbox-community-login-screen.jpg"
+cover: "/feed/build/netbox/img/netbox-community-login-screen.jpg"
 date: 2026-02-23T08:08:15-06:00
 lastmod: 2026-02-23
 draft: false
@@ -409,5 +409,5 @@ There are multiple ways to confirm things are working as expected. The normal
 one is to actually just use a browser to confirm everything is playing well with
 each other.
 
-![Netbox Community login screen](/feed/build/netbox/netbox-community-login-screen.jpg)
+![Netbox Community login screen](/feed/build/netbox/img/netbox-community-login-screen.jpg)
 
