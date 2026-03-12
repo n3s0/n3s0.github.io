@@ -222,6 +222,87 @@ applications for this site.
 - [Amazon Web Services (AWS)](https://aws.amazon.com/)
 - [Google Cloud Platform (GCP)](https://console.cloud.google.com/)
 
+
+## Windows
+
+Provides resources related to the Windows Operating System.
+
+- [Windows Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx)
+- [Windows Blogs](https://blogs.windows.com/)
+- [Windows Central](https://www.windowscentral.com/)
+- [MS Poweruser](https://mspoweruser.com/)
+- [All About Widnows Phone](https://allaboutwindowsphone.com/)
+- [ONMSFT](https://www.onmsft.com/)
+- [TheWindowsClub](https://www.thewindowsclub.com/)
+- [Windows Latest](https://www.windowslatest.com/)
+- [Cloud Perspectives (Microsoft Blogs)](https://cloudblogs.microsoft.com/)
+- [file.net](https://www.file.net)
+- [Get Windows 10 (Media Creation Tool)](https://www.microsoft.com/en-us/software-download/windows10)
+- [Microsoft Assistants](https://assistants.microsoft.com/)
+- [Windows Technical Documentation](https://docs.microsoft.com/en-us/windows/)
+- [Microsoft Exchange Documentation](https://docs.microsoft.com/en-us/Exchange/)
+
+## InfoSec
+
+- [PCI Security Standards Council](https://www.pcisecuritystandards.org/)
+- [National Institute of Standards and Technology](https://www.nist.gov/)
+- [U.S. Department of Heath and Human Services - HIPAA](https://www.hhs.gov/hipaa/for-professionals/index.html)
+- [HIPAA - Health Insurance Portability Accountability Act](https://aspe.hhs.gov/reports/health-insurance-portability-accountability-act-1996)
+- [Forensic Focus](https://www.forensicfocus.com/)
+- [SANS Information Security White Papers](https://www.sans.org/white-papers/)
+- [Blackbag Toool](https://blackbag.toool.nl/)
+- [Association of Czech Lockpickers](http://lockpicking.team/en/)
+- [Pick Pals](https://www.pickpals.com.au/)
+- [Art of Lockpicking](https://www.art-of-lockpicking.com/)
+- [Picker of Locks](https://pickeroflocks.com/)
+
+## Online Dashboards
+
+- [Patch Tuesday Dashboard](https://patchtuesdaydashboard.com/)
+
+## Internet Curated Lists
+
+- [sindresorhus/awesome](https://github.com/sindresorhus/awesome)
+- [kahun/awesome-sysadmin](https://github.com/kahun/awesome-sysadmin)
+- [epicm/awesome-sysadmin2](https://github.com/epcim/awesome-sysadmin2)
+- [facyber/awesome-networking](https://github.com/facyber/awesome-networking)
+- [awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted)
+- [onlurking/awesome-infosec](https://github.com/onlurking/awesome-infosec)
+- [0xedward/awesome-infosec](https://github.com/0xedward/awesome-infosec)
+
+
+## Online Challenges & Hackathons
+
+- [SadServers](https://sadservers.com/)
+- [The Python Challenge](http://www.pythonchallenge.com/)
+- [Advent of Code](https://adventofcode.com/)
+- [CTF Time](https://ctftime.org/)
+- [Blue Team Labs Online](https://blueteamlabs.online)
+- [SANs Holiday Hack Challenge (KringleCon)](https://holidayhackchallenge.com/)
+- [Exploit-Exercises](https://www.vulnhub.com/series/exploit-exercises,11/)
+- [Vulnhub](https://www.vulnhub.com/)
+- [Over The Wire](https://overthewire.org/wargames/)
+- [Under The Wire](https://underthewire.tech/)
+- [Embedded Security CTF](https://microcorruption.com/login)
+
+## Learning
+
+- [CBTnuggets](https://www.cbtnuggets.com/login)
+- [Open Courseware Standford](https://online.stanford.edu/free-courses)
+- [MIT Open Courseware](https://ocw.mit.edu/index.htm#)
+- [MIT Open Learning](https://openlearning.mit.edu/courses-programs/open-learning-library)
+- [Open Yale Courses](https://oyc.yale.edu/courses)
+- [University of California, Berkley Open Courses](https://www.classcentral.com/university/berkeley)
+- [Cybrary](https://www.cybrary.it)
+- [Codecademy](https://www.codecademy.com)
+- [Khan Academy](https://www.khanacademy.org/)
+- [Math-Only-Math](https://www.math-only-math.com/)
+- [CUEMATH](https://www.cuemath.com/)
+- [Sciencing](https://sciencing.com/)
+- [Calculus Made Easy](https://calculusmadeeasy.org/)
+- [How Stuff Works](https://auto.howstuffworks.com/)
+- [boot.dev](https://www.boot.dev/)
+
 ## Documentation
 
 ### Software Languages
@@ -322,86 +403,6 @@ applications for this site.
 - [FreeCAD](https://www.freecadweb.org/?lang=en)
 - [OpenSCAD](https://openscad.org/)
 - [QCAD](https://qcad.org/)
-
-## Windows
-
-Provides resources related to the Windows Operating System.
-
-- [Windows Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx)
-- [Windows Blogs](https://blogs.windows.com/)
-- [Windows Central](https://www.windowscentral.com/)
-- [MS Poweruser](https://mspoweruser.com/)
-- [All About Widnows Phone](https://allaboutwindowsphone.com/)
-- [ONMSFT](https://www.onmsft.com/)
-- [TheWindowsClub](https://www.thewindowsclub.com/)
-- [Windows Latest](https://www.windowslatest.com/)
-- [Cloud Perspectives (Microsoft Blogs)](https://cloudblogs.microsoft.com/)
-- [file.net](https://www.file.net)
-- [Get Windows 10 (Media Creation Tool)](https://www.microsoft.com/en-us/software-download/windows10)
-- [Microsoft Assistants](https://assistants.microsoft.com/)
-- [Windows Technical Documentation](https://docs.microsoft.com/en-us/windows/)
-- [Microsoft Exchange Documentation](https://docs.microsoft.com/en-us/Exchange/)
-
-## InfoSec
-
-- [PCI Security Standards Council](https://www.pcisecuritystandards.org/)
-- [National Institute of Standards and Technology](https://www.nist.gov/)
-- [U.S. Department of Heath and Human Services - HIPAA](https://www.hhs.gov/hipaa/for-professionals/index.html)
-- [HIPAA - Health Insurance Portability Accountability Act](https://aspe.hhs.gov/reports/health-insurance-portability-accountability-act-1996)
-- [Forensic Focus](https://www.forensicfocus.com/)
-- [SANS Information Security White Papers](https://www.sans.org/white-papers/)
-- [Blackbag Toool](https://blackbag.toool.nl/)
-- [Association of Czech Lockpickers](http://lockpicking.team/en/)
-- [Pick Pals](https://www.pickpals.com.au/)
-- [Art of Lockpicking](https://www.art-of-lockpicking.com/)
-- [Picker of Locks](https://pickeroflocks.com/)
-
-## Online Dashboards
-
-- [Patch Tuesday Dashboard](https://patchtuesdaydashboard.com/)
-
-## Internet Curated Lists
-
-- [sindresorhus/awesome](https://github.com/sindresorhus/awesome)
-- [kahun/awesome-sysadmin](https://github.com/kahun/awesome-sysadmin)
-- [epicm/awesome-sysadmin2](https://github.com/epcim/awesome-sysadmin2)
-- [facyber/awesome-networking](https://github.com/facyber/awesome-networking)
-- [awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted)
-- [onlurking/awesome-infosec](https://github.com/onlurking/awesome-infosec)
-- [0xedward/awesome-infosec](https://github.com/0xedward/awesome-infosec)
-
-
-## Online Challenges & Hackathons
-
-- [SadServers](https://sadservers.com/)
-- [The Python Challenge](http://www.pythonchallenge.com/)
-- [Advent of Code](https://adventofcode.com/)
-- [CTF Time](https://ctftime.org/)
-- [Blue Team Labs Online](https://blueteamlabs.online)
-- [SANs Holiday Hack Challenge (KringleCon)](https://holidayhackchallenge.com/2020/)
-- [Exploit-Exercises](https://www.vulnhub.com/series/exploit-exercises,11/)
-- [Vulnhub](https://www.vulnhub.com/)
-- [Over The Wire](https://overthewire.org/wargames/)
-- [Under The Wire](https://underthewire.tech/)
-- [Embedded Security CTF](https://microcorruption.com/login)
-
-## Learning
-
-- [CBTnuggets](https://www.cbtnuggets.com/login)
-- [Open Courseware Standford](https://online.stanford.edu/free-courses)
-- [MIT Open Courseware](https://ocw.mit.edu/index.htm#)
-- [MIT Open Learning](https://openlearning.mit.edu/courses-programs/open-learning-library)
-- [Open Yale Courses](https://oyc.yale.edu/courses)
-- [University of California, Berkley Open Courses](https://www.classcentral.com/university/berkeley)
-- [Cybrary](https://www.cybrary.it)
-- [Codecademy](https://www.codecademy.com)
-- [Khan Academy](https://www.khanacademy.org/)
-- [Math-Only-Math](https://www.math-only-math.com/)
-- [CUEMATH](https://www.cuemath.com/)
-- [Sciencing](https://sciencing.com/)
-- [Calculus Made Easy](https://calculusmadeeasy.org/)
-- [How Stuff Works](https://auto.howstuffworks.com/)
-- [boot.dev](https://www.boot.dev/)
 
 ## Automotive
 
