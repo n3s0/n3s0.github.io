@@ -2,7 +2,7 @@
 title: "Error Saving to USB Storage On PlayStation 4"
 date: "2022-06-15T22:31:45-05:00"
 lastmod: 2025-10-10
-author: "Timothy Loftus"
+author: "Timothy Loftus (n3s0)"
 description: "Notes for troubleshooting an error while saving to USB storage."
 draft: false
 tags: [ "troubleshooting", "ps4" ]
@@ -66,3 +66,4 @@ backups.
 Going to attempt to recreate this issue again so I can confirm that this
 post will be helpful for others. This was just a case of mild
 frustration. 
+
