@@ -2,7 +2,7 @@
 title: "Cario: Time for a Timer"
 date: 2026-03-17T18:40:47-06:00
 lastmod: 2025-10-18
-description: "A tricky challenge who's solution can be found in rules that aren't healthy."
+description: "A tricky challenge with a health check script who's solution can be found in rules that aren't so healthy."
 author: "Timothy Loftus (n3s0)"
 cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 draft: false
