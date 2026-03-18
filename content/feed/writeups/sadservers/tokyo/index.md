@@ -4,17 +4,21 @@ date: 2023-11-05T18:40:47-06:00
 lastmod: 2026-03-18
 description: "Notes from running through the Tokyo scenario from SadServers."
 author: "Timothy Loftus (n3s0)"
+cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 draft: false
 tags: ["SadServers"]
 ---
 
-## Scenario
+## Summary
 ---
 
 Should anyone want to do this challenge. You can do so at the following 
 link.
 
 - [Tokyo: can't serve web file](https://sadservers.com/scenario/tokyo)
+
+## Scenario
+---
 
 Level: Medium
 

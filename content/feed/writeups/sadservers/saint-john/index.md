@@ -3,7 +3,8 @@ title: "Saint John: what is writing to this log file?"
 author: "Timothy Loftus (n3s0)"
 date: 2023-11-13T18:40:47-06:00
 lastmod: 2025-10-15
-summary: "Notes from running through the Saint John scenario from SadServers. Where you troubleshoot why a rouge program made by a developer is filling up disk space and terminating it."
+description: "Notes from running through the Saint John scenario from SadServers. Where you troubleshoot why a rouge program made by a developer is filling up disk space and terminating it."
+cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 draft: false
 tags: ["SadServers", "Linux"]
 ---

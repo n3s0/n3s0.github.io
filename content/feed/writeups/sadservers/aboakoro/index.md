@@ -4,6 +4,7 @@ author: "Timothy Loftus (n3s0)"
 date: 2025-10-13T13:40:06-05:00
 lastmod: 2025-10-15
 summary: "My writeup for SadServers Aboakoro challenge."
+cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 draft: true
 tags: ["sadservers", "mysql"]
 ---

@@ -3,6 +3,7 @@ title: "Lhasa: Easy Math/Calculating With Numbers"
 date: 2024-03-09T09:56:01-05:00
 lastmod: 2026-03-18
 description: "Write up for the Lhasa Challenge."
+cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 author: "Timothy Loftus (n3s0)"
 draft: true
 tags: ["SadServers"]

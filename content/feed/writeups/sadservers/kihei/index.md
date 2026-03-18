@@ -2,7 +2,8 @@
 title: "Kihei: Surely Not Another Disk Space Scenario"
 date: 2024-10-11T09:56:01-05:00
 lastmod: 2026-03-18
-summary: "Write up for the Linux Upskill Challenge."
+description: "Write up for the Linux Upskill Challenge."
+cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 author: "Timothy Loftus (n3s0)"
 draft: true
 tags: ["SadServers", "Linux"]

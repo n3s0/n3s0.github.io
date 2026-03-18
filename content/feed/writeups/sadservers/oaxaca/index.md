@@ -4,6 +4,7 @@ date: 2026-03-17T18:40:47-06:00
 lastmod: 2025-10-18
 description: "One of those challenges where you need to close a pesky file that a process keeps opening."
 author: "Timothy Loftus (n3s0)"
+cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 draft: false
 tags: ["SadServers", "Linux"]
 ---

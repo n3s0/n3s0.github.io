@@ -3,7 +3,8 @@ title: "Geneva: Renew an SSL Certificate"
 author: "Timothy Loftus (n3s0)"
 date: 2024-09-23T09:56:47-06:00
 lastmod: 2025-10-15
-summary: "Notes from running through the Geneva scenario from SadServers. Need to regenerate a TLS certificate for an Nginx server."
+description: "Notes from running through the Geneva scenario from SadServers. Need to regenerate a TLS certificate for an Nginx server."
+cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 draft: false
 tags: ["sadservers", "tls"]
 ---

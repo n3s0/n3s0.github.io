@@ -3,7 +3,8 @@ title: "Bata: Find in /proc"
 author: "Timothy Loftus (n3s0)"
 date: 2024-10-11T20:56:01-05:00
 lastmod: 2025-10-15
-summary: "Write up for the Bata: Find in /proc. Where you need to find a file that contains the string 'secret'."
+description: "Write up for the Bata: Find in /proc. Where you need to find a file that contains the string 'secret'."
+cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 draft: false
 tags: ["sadservers", "linux"]
 ---

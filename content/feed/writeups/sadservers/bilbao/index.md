@@ -3,7 +3,8 @@ title: "Bilbao: Basic Kubernetes Problems"
 author: "Timothy Loftus (n3s0)"
 date: 2024-10-15T00:07:47-06:00
 lastmod: 2025-10-15
-summary: "Notes from running through the Bilbao scenario from SadServers. Where you fix basic Kubernetes problems."
+description: "Notes from running through the Bilbao scenario from SadServers. Where you fix basic Kubernetes problems."
+cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 draft: false
 tags: ["sadservers", "kubernetes"]
 ---

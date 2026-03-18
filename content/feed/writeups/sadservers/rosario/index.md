@@ -4,6 +4,7 @@ author: "Timothy Loftus (n3s0)"
 date: 2024-03-09T09:56:47-06:00
 lastmod: 2025-10-15
 summary: "Notes from running through the Rosario scenario from SadServers."
+cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 draft: false
 tags: ["sadservers", "mysql"]
 ---
