@@ -1,20 +1,11 @@
 ---
-title: "Saint Paul: Merge Many CSVs files"
+title: "Kihei: Surely Not Another Disk Space Scenario"
 date: 2024-10-11T09:56:01-05:00
+lastmod: 2026-03-18
 summary: "Write up for the Linux Upskill Challenge."
+author: "Timothy Loftus (n3s0)"
 draft: true
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: false
-showHeadingAnchors: true
+tags: ["SadServers", "Linux"]
 ---
 
 ## Summary
@@ -38,4 +29,5 @@ Time to Solve: 30 minutes.
 OS: Debian 11
 
 Root (sudo) Access: No
+
 

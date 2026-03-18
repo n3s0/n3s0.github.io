@@ -1,20 +1,10 @@
 ---
 title: "Saint Paul: Merge Many CSVs files"
 date: 2024-10-11T09:56:01-05:00
-summary: "Write up for the Linux Upskill Challenge."
+lastmod: 2026-03-18
+description: "Write up for the Linux Upskill Challenge."
+author: "Timothy Loftus (n3s0)"
 draft: true
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-invertPagination: true
-showToC: true
-openToC: false
-showComments: false
-showHeadingAnchors: true
 ---
 
 ## Summary
@@ -49,6 +39,9 @@ Now to get started with the solution of this challenge.
 
 ```sh
  ls
+```
+
+```sh
 README.txt
 agent
 polldayregistrations.zip
@@ -67,5 +60,6 @@ polldayregistrations_enregistjourduscrutin12001.csv
 polldayregistrations_enregistjourduscrutin12002.csv
  ...
 ```
+
 
 

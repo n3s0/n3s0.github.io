@@ -1,16 +1,11 @@
 ---
 title: "Personal VPN Setup Using Wireguard, OpenBSD, and Vultr VPS"
 date: 2022-12-03T17:01:37-06:00
-summary: "Notes for building my personal WireGuard VPN on OpenBSD hosted on Vultr VPS."
+lastmod: 2026-03-17
+author: "Timothy Loftus (n3s0)"
+description: "Notes for building my personal WireGuard VPN on OpenBSD hosted on Vultr VPS."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-tags: ["sysadmin"]
+tags: ["Sysadmin", "Wireguard"]
 ---
 
 ## Summary
@@ -610,4 +605,5 @@ accomplishing this.
 - [Install Wireguard VPN Server on OpenBSD 7.0](https://www.vultr.com/docs/install-wireguard-vpn-server-on-openbsd-7-0/)
 - [Howto: WireGuard on OpenBSD](https://ianix.com/wireguard/openbsd-howto.html)
 - [Securely tunnel smart phone traffic with WireGuard and OpenBSD](https://thomasward.com/openbsd-wireguard/)
+
 

@@ -51,7 +51,7 @@ grep -ri "secret" /proc/sys/
 
 This provides a list of files in the /proc/sys directory. Most of which show
 permission denied. With the exception of a file found in the
-/proc/sys/kernel/core_pattern path. This show
+`/proc/sys/kernel/core_pattern` path. This shows there's a file named `secret`.
 
 ```sh
 grep: /proc/sys/fs/binfmt_misc/register: Permission denied
@@ -117,3 +117,4 @@ OK
 ```
 
 That was fun.
+

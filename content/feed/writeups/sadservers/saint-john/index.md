@@ -5,7 +5,7 @@ date: 2023-11-13T18:40:47-06:00
 lastmod: 2025-10-15
 summary: "Notes from running through the Saint John scenario from SadServers. Where you troubleshoot why a rouge program made by a developer is filling up disk space and terminating it."
 draft: false
-tags: ["sadserver", "linux"]
+tags: ["SadServers", "Linux"]
 ---
 
 ## Scenario
@@ -107,3 +107,4 @@ admin@i-026e175d7c7e192d7:~$ ls -lah /var/log/bad.log
 ```
 
 Clicked the Check Solution button in the challenge and it shows that it’s solved. Time for the next one.
+

@@ -1,16 +1,11 @@
 ---
 title: "Install & Watch Binary Defense's Artillery Work In A Azure Ubuntu VM"
 date: 2019-04-18T04:16:17-06:00
-summary: "Notes for installing and configuring Binary Defense's Honeypot Artillery on an Azure Ubuntu VM. I also review how it works a little at the end of the post."
+lastmod: 2026-03-17
+description: "Notes for installing and configuring Binary Defense's Honeypot Artillery on an Azure Ubuntu VM. I also review how it works a little at the end of the post."
+author: "Timothy Loftus (n3s0)"
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
-showPagination: true
-tags: ["infosec"]
+tags: ["infosec", "Artillery"]
 ---
 
 ## Summary
@@ -279,3 +274,4 @@ I briefely went over the configuration file for Artillery and what it looks like
 
 This is an older post that I'll be working through and updating with a 
 later version of Artillery. This will be provided in a future post.
+
