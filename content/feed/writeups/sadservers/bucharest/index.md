@@ -3,7 +3,8 @@ title: "Bucharest: Connecting to Postgres"
 author: "Timothy Loftus (n3s0)"
 date: 2024-03-09T18:40:47-06:00
 lastmod: 2025-10-15
-summary: "Notes from running through the Bucharest scenario from SadServers. Where you troubleshoot and fix a PostgresSQL server."
+description: "Notes from running through the Bucharest scenario from SadServers. Where you troubleshoot and fix a PostgresSQL server."
+cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 draft: false
 tags: ["sadservers", "postgresql"]
 ---
