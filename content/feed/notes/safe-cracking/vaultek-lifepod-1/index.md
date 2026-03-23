@@ -2,7 +2,7 @@
 title: "Cracking The Vaultek LifePod 1.0 (VLP10-BK) Safe"
 description: "Note on cracking the Vaultek LifePod 1.0 (VLP10-BK)."
 date: 2026-03-09T07:25:01-06:00
-lastmod: 2026-03-09
+lastmod: 2026-03-23
 author: "Timothy Loftus (n3s0)"
 cover: "img/vaultek-lifepod-1.jpg"
 draft: false
@@ -10,6 +10,7 @@ tags: ["Safe Cracking", "Vaultek Lifepod"]
 ---
 
 ## Summary
+---
 
 I have a Vaultek LifePod 1.0 (VLP10-BK) safe I bought a few years ago to store 
 valuables or keep firearms away from children. Not to mention keep away from 
@@ -33,6 +34,7 @@ for reasons I'll explain later. But, I'm sure if not for that detail. It
 probably would have worked.
 
 ## Vaultek LifePod 1.0 (VLP10-BK)
+---
 
 Vaultek designed the LifePod 1.0 as a portable secure case designed for handguns, 
 travel, and outdoor use. It can hold any number of items including your
@@ -41,6 +43,7 @@ passports, jewelry, wallet, keys, and full-sized semi-automatic pistols.
 ![Vaultek LifePod 1.0 (VLP10-BK)](img/vaultek-lifepod-1.jpg)
 
 ### Dimensions & Weight
+---
 
 Dimensions and weight are as follows:
 
@@ -49,6 +52,7 @@ Dimensions and weight are as follows:
 - Weight: 2.3 lb
 
 ### Features
+---
 
 Listed are some of the features of the Vaultek LifePod 1.0:
 
@@ -63,6 +67,7 @@ Listed are some of the features of the Vaultek LifePod 1.0:
 - Maximum 8 digit PIN with a minimum of 4 digits.
 
 ### Accessories
+---
 
 This product comes with a few accessories in box.
 
@@ -76,6 +81,7 @@ This product comes with a few accessories in box.
 > of its features strengths and weaknesses.
 
 ## Using The Key
+---
 
 I attempted to utilize the key to access the safe. But, turning on the
 anti-picking feature prevents the key from being used on the safe. Which makes a
@@ -86,6 +92,7 @@ feature disables the key hole preventing it from being turned or used to unlock
 the case.
 
 ## Prying Open The Vaultek LifePod 1.0
+---
 
 I wouldn't recommend this. I tried to do this by hand and considered using a
 hand saw to cut through the hinges. Crow bar attempts failed to break the lock.
@@ -96,6 +103,7 @@ moved on to other methods. Cave man method didn't work out. I will admit that it
 wasn't one of my brighter ideas anyway.
 
 ## Lock Picking Lawyer: Opening Vaultek LifePod Gun Safe With Fork
+---
 
 The Lock Picking Lawyer has great content on YouTube. I've learned much about
 lock picking from his videos. Stuff that I didn't think of. I personally believe
@@ -126,6 +134,7 @@ go along. A fork may not work depending on the placement in the safe. But, maybe
 a paperclip will.
 
 ## Cracking The Vaultek LifePod 1.0 PIN
+---
 
 I will say out of the gate. The method that worked was brute forcing the PIN.
 But, I would like to discuss how I got there, explain some of the math, and
@@ -158,6 +167,7 @@ However, I have not seen this to be the case with the Vaultek LifePod 1.0 model.
 From what I've seen is only a 4 digit PIN can be set.
 
 ### With Permutations & Minimum Digits
+---
 
 If the PIN has no repeating numbers it takes less time. Especially when you
 consider how little options there are. In this case. If it's entirely unique
@@ -220,6 +230,7 @@ Total combinations: 24
 ```
 
 ### With Repetitions Minimum Digits
+---
 
 Now to discuss PIN options where repetitions are possible. Believe it or not. It
 actually takes longer with this one. If you were to start from beginning to end
@@ -295,6 +306,7 @@ Total combinations: 256
 ```
 
 ### With Maximum Digits
+---
 
 While doing some more research into this case. There is a possibility of having
 an 8-digit pin. Which really doesn't provide PIN options that don't repeat.
@@ -412,6 +424,7 @@ Total combinations: 65536
 ```
 
 ### Brute Forcing The PIN
+---
 
 Brute forcing the PIN number is what re-gained me access to this case. With a
 little time an patience it I was able to reclaim my valuables, reset the PIN,
@@ -420,6 +433,7 @@ PIN with repeating numbers or go up and use an 8 digit PIN instead of a 4 digit
 PIN. Be mindful of the repeated numbers also. Don't make it obvious.
 
 ## Conclusion
+---
 
 Everything I've done in an attempt to break into the Vaultek LifePod 1.0
 (VLP10-BK) is in this write-up. The failed attempts with the successful one. This
