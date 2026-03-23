@@ -224,6 +224,7 @@ gotty   589 admin    8u      CHR                5,2      0t0   83 /dev/ptmx
 ```
 
 ## Conclusion
+---
 
 Used the `check.sh` script to confirm the solution was correct.
 
