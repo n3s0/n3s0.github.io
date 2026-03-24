@@ -33,10 +33,14 @@ of utilizing it for every day use.
 ## Master Lock No. 3 (Master Lock No. 3D)
 ---
 
+## Where To Find These Locks
+---
+
 ## Lock Pickers United Rating (White belt)
 ---
 
-Using the [LPU Belt Explorer](https://lpubelts.com/) this lock is sitting in the
+Now it's time to discuss this in relation to the lock sport community. Using 
+the [LPU Belt Explorer](https://lpubelts.com/) this lock is sitting in the
 `White belt` category. So, to their standards these locks are good for beginners.
 
 The requirement for this to pick this lock with any tool. I think this applies
