@@ -1,9 +1,10 @@
 ---
 title: 'Gained An Achievement On SadServers'
 date: 2026-03-19T00:17:01+06:00
-lastmod: 2026-03-19
+lastmod: 2026-03-24
 author: "Timothy Loftus (n3s0)"
 description: "Just a little boasting after looking at the SadServers Certificate of Achievements Page."
+cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 draft: false
 tags: ["Journal","SadServers"]
 ---

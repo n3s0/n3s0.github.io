@@ -6,7 +6,7 @@ lastmod: 2026-03-23
 author: "Timothy Loftus (n3s0)"
 cover: ""
 draft: true
-tags: ["Lock Picking", "Master Lock"]
+tags: ["Lock Picking", "Master Lock", "Padlock"]
 ---
 
 ## Summary

@@ -1,7 +1,9 @@
 ---
 title: 'Upcoming Projects In 2026'
 date: 2026-02-10T08:20:10+06:00
-summary: "Discussion on upcoming projects in 2026."
+lastmod: 2026-03-24
+author: "Timothy Loftus (n3s0)"
+description: "Discussion on upcoming projects in 2026."
 draft: false
 tags: ["journal"]
 ---
@@ -12,7 +14,7 @@ Yes. I'm alive. I've just been focusing on some things in my personal life.
 Not too many problems come up that I feel I may see again. So, I haven't been
 writting How-tos. Mostly just reading and being present with my family.
 
-I tend to go through spurts of energy where I can focus on writting. But, there
+I tend to go through spurts of energy where I can focus on writing. But, there
 is also writters block.
 
 I have written a Go application; that isn't ready for release, that will probe
@@ -85,3 +87,4 @@ I don't intend to finish all of these projects in 2026. But, I would like to at
 least get a start on all of them if not finishing the first revision of two.
 I'll provide some updates as time goes on with more detail when I work through
 it.
+
