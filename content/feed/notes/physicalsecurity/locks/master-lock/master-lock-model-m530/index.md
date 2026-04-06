@@ -142,6 +142,19 @@ Can see these locks used for locking up trailor hitches (if it fits), sheds,
 doors on enclosed trailors, tool boxes, etc. in comercial and residential
 settings.
 
+## Lock Pickers United Rating (Unknown)
+---
+
+The Master Lock Model M930 does not have a rating or belk rank associated with 
+it with the Lock Pickers United belt system. I'm providing this for the benefit
+of having it in this lock library.
+
+Though there is a possibility that no one will recieve a rank from submission.
+Post it on [r/lockpicking](https://www.reddit.com/r/lockpicking/) anyway and
+interact with the community. Pick the lock and gut the lock and post it to get
+the conversation going. You may learn a few things you didn't know along the
+way.
+
 ## Gutting The Master Lock Model M530
 ---
 
@@ -151,14 +164,17 @@ left side of the lock. Where a philips head screw driver can remove the screw.
 Once this screw is removed. The plate holding the core of the lock can be
 removed exposing the core of the lock.
 
-## Picking Attacks
+## Vulnerabilties
+---
+
+### Picking Attacks
 ---
 
 Here is where I'll discuss methods that worked for me as far as picking the
 `Master Lock Model M530` padlock is concerned. I'll provide the tools used and
 one of my videos for picking the lock.
 
-### Single-Pin Picking
+#### Single-Pin Picking
 ---
 
 > Note: Pick the tool that works best for you. I am merely providing the tools
@@ -187,18 +203,6 @@ with spool pins. Given that all pins - at least in the `M530` that I bought -
 are spool pins. This lock provides a good reference for anyone that wants to 
 get a feel for counter rotation or detecting false sets within the lock.
 
-## Lock Pickers United Rating (Unknown)
----
-
-The Master Lock Model M930 does not have a rating or belk rank associated with 
-it with the Lock Pickers United belt system. I'm providing this for the benefit
-of having it in this lock library.
-
-Though there is a possibility that no one will recieve a rank from submission.
-Post it on [r/lockpicking](https://www.reddit.com/r/lockpicking/) anyway and
-interact with the community. Pick the lock and gut the lock and post it to get
-the conversation going. You may learn a few things you didn't know along the
-way.
 
 ## Conclusions & Opinions
 ---
@@ -215,7 +219,8 @@ M530. But, I will continue looking into other vulnerabilities. But, single-pin
 picking works best for me.
 
 My favorite part of this lock was the ability to gut/disassemble it after it's
-unlocked. Which I've provided in the [Gutting The Master Lock Model M530]() 
+unlocked. Which I've provided in the [Gutting The Master Lock Model
+M530](#gutting-the-master-lock-model-m530) 
 section. I think my enjoyment comes from this being the first lock that I've
 gutted. But, we all have to start somewhere.
 
