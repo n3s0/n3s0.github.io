@@ -4,9 +4,9 @@ description: "Notes on picking the Master Lock Model M530"
 date: 2026-04-03T07:25:01-06:00
 lastmod: 2026-04-03
 author: "Timothy Loftus (n3s0)"
-cover: "/feed/notes/physicalsecurity/locks/master-lock/master-lock-model-m530/imgs/master-lock-model-m530.jpg"
-draft: true
-tags: ["Lock Picking", "Master Lock", "Padlock"]
+cover: "imgs/master-lock-model-m530.jpg"
+draft: false
+tags: ["Lock Picking", "Master Lock", "Padlock", "Lock Notes"]
 ---
 
 > Notes for this lock are not complete. But, by all means read away!
