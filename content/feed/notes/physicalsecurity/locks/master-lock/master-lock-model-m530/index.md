@@ -1,6 +1,6 @@
 ---
 title: "Master Lock Model M530"
-description: "Notes on picking the Master Lock Model M530"
+description: "Notes on the Master Lock Model M530."
 date: 2026-04-03T07:25:01-06:00
 lastmod: 2026-04-03
 author: "Timothy Loftus (n3s0)"
