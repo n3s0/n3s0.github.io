@@ -4,7 +4,7 @@ description: "Notes on the Master Lock Model M530."
 date: 2026-04-03T07:25:01-06:00
 lastmod: 2026-04-03
 author: "Timothy Loftus (n3s0)"
-cover: "imgs/master-lock-model-m530.jpg"
+cover: "imgs/master-lock-model-m530-keyway.jpg"
 draft: false
 tags: ["Lock Picking", "Master Lock", "Padlock", "Lock Notes"]
 ---
@@ -43,7 +43,7 @@ lock before I provide my full opinion.
 ## Master Lock Model M530
 ---
 
-![Master Lock Model M530](/feed/notes/physicalsecurity/locks/master-lock/master-lock-model-m530/imgs/master-lock-model-m530.jpg)
+![Master Lock Model M530](imgs/master-lock-model-m530.jpg)
 
 > It doesn't look like this lock is listed on the Master Lock website anymore.
 > So, I've been pulling information from different sources. This includes
@@ -53,6 +53,12 @@ The `Master Lock Model M530` is labeled as a heavy duty outdoor padlock with a
 Boron-Carbide Shackle and a weather resistant solid steel body. Providing a
 four-pin pin and tumbler cylinder and a dual ball bearing locking mechanism. Of
 course. This padlock comes with two keys.
+
+### History
+---
+
+I will include some history of this lock to provide context after I've completed
+research on it. Stay tuned for more in the future.
 
 ### Intended Use:
 ---
@@ -167,24 +173,35 @@ removed exposing the core of the lock.
 ## Vulnerabilties
 ---
 
+Here is where I discuss the vulnerabilities associated with this lock. What
+worked with a brief summary of what didn't work for me. This will be provided
+after I've exhausted testing. Down the road as I progress some attacks may
+become easier. Just depends on the day in some cases.
+
+![Blurry image of the Master Lock Model
+M530](imgs/master-lock-model-m530-blur-opened.jpg)
+
 ### Picking Attacks
 ---
 
-Here is where I'll discuss methods that worked for me as far as picking the
-`Master Lock Model M530` padlock is concerned. I'll provide the tools used and
-one of my videos for picking the lock.
+With the `Master Lock Model M530` I was focused more on the picking attacks.
+This lock in particular was frustrating initially. But, as I kept coming back to
+it after focusing on learning how to pick locks and not just a lock. Picking the
+`Master Lock Model M530` became easier.
 
 #### Single-Pin Picking
 ---
-
-> Note: Pick the tool that works best for you. I am merely providing the tools
-> that worked best for me while picking this lock.
 
 For picking the `Master Lock Model M530` I used the `Covert Instruments Short 
 Hook` in 25 (0.025) thousands of an inch with a `Covert Instruments Precision
 2 in 1 Turning Tool` in 30 (0.030) thousands of an inch. Using bottom of the
 keyway tension with heavy tension and gradually reducing tension whenever I
-felt counter rotation or a false set from the spool pins.
+felt counter rotation from one of the spool pins.
+
+> Note: Pick the tool that works best for you. I am merely providing the tools
+> that worked best for me while picking this lock.
+
+![Master Lock Model M530 Single Pin Picked](imgs/master-lock-model-m530-spp.jpg)
 
 Initially I used the `Covert Instruments Short Hook` in 20 (0.020) thousands
 of an inch. But, found I didn't get as much feedback as I did from the
@@ -192,7 +209,7 @@ of an inch. But, found I didn't get as much feedback as I did from the
 have been the day. But, the keyway is wide enough where I can get away with it.
 So, it doesn't really matter. 
 
-If this was a [Mossberg & Sons Cable Lock](#) 
+If this was a [Mossberg & Sons Cable Lock](#) (link will work in time.)
 I would need the 20 (0.020) tousands of an inch thickness though. At the end of
 the day. It's about what tool works best for the job.
 
