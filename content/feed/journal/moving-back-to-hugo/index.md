@@ -1,14 +1,9 @@
 ---
 title: 'Moving Back To Hugo'
+author: "Timothy Loftus (n3s0)"
 date: 2022-09-16T10:30:22+06:00
-description: "I've been moving back and forth between static site generators for this site and I keep going back to Hugo."
+summary: "I've been moving back and forth between static site generators for this site and I keep going back to Hugo."
 draft: false
-hidden: false
-externalURL: false
-showDate: true
-showModDate: true
-showReadingTime: true
-showTags: true
 showPagination: true
 tags: ["journal"]
 ---
@@ -46,3 +41,4 @@ documentation anyway. It’s not that hard.
 
 Excuse the rambling, please. I’ve had five cups of coffee today. That is all. 
 Thank you.
+
