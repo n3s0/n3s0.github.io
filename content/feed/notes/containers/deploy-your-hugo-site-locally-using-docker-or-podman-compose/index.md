@@ -5,8 +5,10 @@ date: 2023-10-13T11:05:44-05:00
 lastmod: 2025-10-11
 summary: "Some workflow updates for the blog. A simple Hugo Podman/Docker container for writting content with docker/podman-compose."
 draft: false
-tags: ["devops", "containers"]
+tags: ["devops", "containers", "docker", "podman"]
 ---
+
+## Summary
 
 Note that this container imagedeploys an old version of hugo and it may
 not be suitable for all deployments.
@@ -85,3 +87,4 @@ With that. I think that covers the fun for this today. If I miss
 anything I'll put an update on this. But, I think the next steps for
 this are to actually hone a production build so I can comfortably deploy
 this anywhere. 
+
