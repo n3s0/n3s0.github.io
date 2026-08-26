@@ -1,10 +1,13 @@
-FROM hugomods/hugo:alpine AS build
+FROM alpine:latest AS builder
+
+RUN apk add --update hugo
+
 WORKDIR /src
-COPY ./ .
-RUN hugo --baseURL "/"
 
-FROM hugomods/hugo:nginx
-COPY --from=build /src/public /usr/share/nginx/html
-EXPOSE 80
+COPY . .
 
-CMD ["nginx", "-g", "daemon off;"]
+RUN hugo -gc --minify
+
+FROM caddy:alpine
+
+COPY --from=builder /src/public
