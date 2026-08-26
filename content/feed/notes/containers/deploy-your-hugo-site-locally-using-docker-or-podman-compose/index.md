@@ -2,7 +2,7 @@
 title: "Deploying Your Hugo Blog Development Server Using Podman/Docker Compose"
 author: "Timothy Loftus (n3s0)"
 date: 2023-10-13T11:05:44-05:00
-lastmod: 2025-10-11
+lastmod: 2026-08-26
 summary: "Some workflow updates for the blog. A simple Hugo Podman/Docker container for writting content with docker/podman-compose."
 draft: false
 tags: ["devops", "containers", "docker", "podman"]
@@ -10,78 +10,84 @@ tags: ["devops", "containers", "docker", "podman"]
 
 ## Summary
 
-Note that this container imagedeploys an old version of hugo and it may
-not be suitable for all deployments.
+I revamped this post a little bit. Revisited the development container for my
+`n3s0.tech` journal site. I can say now that I enjoy it a little more.
 
-Thought that I'd play a little bit with the workflow of this site.
-Perhaps it will be useful to others. Although installing Hugo extended
-isn't difficult. I've needed an environment that's suitable for testing
-and reviewing before I deploy to the world.
+Soon I'll be building my own images for development and production. Along with
+docker compose files and maybe even some supporting helm charts to go along with
+them. But, until that happens I will use a container image that's more mature 
+to save some time. What I have now will indeed work and works well.
 
-Although Docker is still relevant to the world and I'll still learn it.
-Ever since they started asking for more money. I shy away 
-from it and started poking more at Podman. With that. There's also 
-podman-compose. Which is equally as effective at getting the job done. 
-I haven't run into a lot of issues with it other then some networking 
-hiccups that I will discuss in a later post. Nothing major. Just
-annoying.
+## Docker Compose Setup
 
-For the review portion of the workflow I will be utilizing podman/docker
-with podman/docker-compose. Which will make it easier because I won't be
-limited to installing the software on every machine I get on. Just pull
-the container and allow it to do the work for me.
-
-Eventually I would like to noodle the creation of new posts and make
-that a little more streamline. Another consideration is how to deploy to
-production should I decide to host it in a different manner. At this
-time, the bare minimum dev configuration is setup for the container.
-
-Below is the Dockerfile used for deploying the dev container. The
-Dockerfile will utilize klakegg's hugo:ext-alpine image and copy the
-entire directory into the src directory of the container.
-
-```Dockerfile
-FROM klakegg/hugo:ext-alpine
-COPY . /src
-```
-
-Below is the docker-compose.yml file used for deploying the dev
-container. This will build a service named server that utilizes the
-klakegg/hugo:ext-alpine image, execute the hugo server command with a
-poll of 700ms, add a volume as the current working directory, and set
-the port to 1313.
+Below is the docker-compose.yml file used for deploying the dev container. Name 
+of the file is `docker-compose-dev.yml` in the repository. This will build a 
+service named server that utilizes the `hugomods/hugo:exts-non-root` image.
+BaseURL needs to be set explicitly for all of the theme bits.
 
 ```yaml
-version: 3
 services:
-  server:
-    image: klakegg/hugo:ext-alpine
-    command: server --poll 700ms
+  hugo_n3s0:
+    image: hugomods/hugo:exts-non-root
+    container_name: hugo-n3s0
+    environment:
+      - HUGO_ENV=development
+    restart: always
+    working_dir: /src
     volumes:
-      - ".:/src"
+      - ./:/src
     ports:
       - "1313:1313"
+    command: server --bind 0.0.0.0 --port 1313 --appendPort=false --baseURL http://localhost:1313
 ```
 
 It's very simple. Just the way I like it. Though, I have yet to test it
 on a fresh environment. Something that I would also like to note. To
 those who have never used docker-compose or podman-compose. They both
-need to see the compose file. 
+need to see the compose file.
+
+## Deploy The Container
 
 After cloning the project there are a few commands that need to be
 executed before seeing the site locally. This command will bring up the
 container. To just deploy it without needing to interact with the
-container. Add the ```-d``` flag to deploy it.
+container. Add the ```-d``` flag to detach from the stdout of the container.
+
+I have included both podman and docker commands to accomplish this.
+
+### Podman Compose
 
 ```sh
 podman-compose up
 ```
 
-To tear down the stack. Execute the following command.
+### Docker Compose
+
+```sh
+docker compose up
+```
+
+## Spinning Everything Down
+
+To shut everything down. Use the following command(s). This will remove the
+container and the networks associated with it.
+
+Included are both podman-compose and docker compose commands that can be used
+for this.
+
+### Podman Compose
 
 ```sh
 podman-compose down
 ```
+
+### Docker Compose
+
+```sh
+docker compose down
+```
+
+## Conclusion
 
 With that. I think that covers the fun for this today. If I miss
 anything I'll put an update on this. But, I think the next steps for
