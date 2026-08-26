@@ -73,6 +73,7 @@ jobs:
         run: |
           hugo \
             --gc \
+            --cleanDestinationDir \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
       - name: Cache Save
