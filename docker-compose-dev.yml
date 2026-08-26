@@ -1,0 +1,13 @@
+services:
+  hugo_n3s0:
+    image: hugomods/hugo:exts-non-root
+    container_name: hugo-n3s0
+    environment:
+      - HUGO_ENV=development
+    restart: always
+    working_dir: /src
+    volumes:
+      - ./:/src
+    ports:
+      - "1313:1313"
+    command: server --bind 0.0.0.0 --port 1313 --appendPort=false --baseURL http://localhost:1313
