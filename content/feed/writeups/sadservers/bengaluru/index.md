@@ -1,9 +1,9 @@
 ---
 title: "Bengaluru: Kubernetes StatefulSet least known characteristic"
 author: "Timothy Loftus (n3s0)"
-date: 2026-17-08T00:07:47-06:00
+date: 2026-08-17T00:07:47-06:00
 lastmod: 2026-08-17
-description: ""
+description: "Bengaluru writeup"
 cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 draft: true
 tags: ["sadservers", "kubernetes"]
