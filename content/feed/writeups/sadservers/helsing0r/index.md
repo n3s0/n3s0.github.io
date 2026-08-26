@@ -3,7 +3,7 @@ title: "Helsingør: The first walls of postgres physical replication"
 author: "Timothy Loftus (n3s0)"
 date: 2026-08-17T18:45:47-06:00
 lastmod: 2026-08-17
-description: ""
+description: "Writeup/notes for the SadServers Helsingør challenge. Which walks through troubleshooting a postgres replication issue where the replica container wont start."
 cover: "/feed/writeups/sadservers/img/sadservers.jpg"
 draft: false
 tags: ["sadservers", "postgresql", "docker"]
