@@ -1,5 +1,5 @@
 ---
-title: "Personal VPN Setup Using Wireguard, OpenBSD, and Vultr VPS"
+title: "Personal VPN Setup Using Wireguard, OpenBSD 7.2, and Vultr VPS"
 date: 2022-12-03T17:01:37-06:00
 lastmod: 2026-03-17
 author: "Timothy Loftus (n3s0)"
