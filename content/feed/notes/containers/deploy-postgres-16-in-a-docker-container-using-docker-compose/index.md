@@ -1,11 +1,11 @@
 ---
-title: "Deploying A Postgres 16 Container Using Docker & Docker Compose (Development)"
+title: "Deploying A Development Postgres 16 Container Using Docker & Docker Compose"
 author: "Timothy Loftus (n3s0)"
 date: 2026-08-25T11:06:44-05:00
 lastmod: 2026-08-25
-summary: "Running document containing notes on deploying PostgreSQL 16 container using Docker & Docker Compose."
+summary: "Running document containing notes on deploying a development PostgreSQL 16 container using Docker & Docker Compose."
 draft: false
-tags: ["devops", "containers", "docker", "podman"]
+tags: ["devops", "containers", "docker"]
 ---
 
 ## Summary
