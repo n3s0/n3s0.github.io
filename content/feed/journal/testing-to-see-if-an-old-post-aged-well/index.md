@@ -18,7 +18,7 @@ needed to use my personal laptop at a hotel or at an air port.
 
 Here is the post I'll be reviewing:
 
-- [Personal VPN Setup Using Wireguard, OpenBSD, and Vultr VPS](/feed/build/wireguard/personal-wireguard-server-on-openbsd/)
+- [Personal VPN Setup Using Wireguard, OpenBSD 7.2, and Vultr VPS](/feed/build/wireguard/personal-wireguard-server-on-openbsd/)
 
 I will update this post with more information on how everything went. I'll
 either update the post or create a new one.
