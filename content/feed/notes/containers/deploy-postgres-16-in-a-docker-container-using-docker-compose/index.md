@@ -4,7 +4,7 @@ author: "Timothy Loftus (n3s0)"
 date: 2026-08-25T11:06:44-05:00
 lastmod: 2026-08-25
 summary: "Running document containing notes on deploying PostgreSQL 16 container using Docker & Docker Compose."
-draft: true
+draft: false
 tags: ["devops", "containers", "docker", "podman"]
 ---
 
