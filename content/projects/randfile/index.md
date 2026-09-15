@@ -15,6 +15,37 @@ a random file. This is a small project. But, it has its place in my setup.
 For my purposes this is for learning and randomly picking a wallpaper PNG or
 JPEG and outputting its full path for Sway or i3wm.
 
+> Will be testing this on Hyprland eventually.
+
+## Project Directory Structure
+
+Here is the directory structure for the project. I've done some refactoring of
+the code to make updates a little more managable.
+
+Here is an explaination of some of the more important aspects of the
+application.
+
+- **cmd:** Where the code for the commandline interaction is housed.
+- **internal/filesystem:** Provides the filesystem logic. (e.g. obtaining a list
+  of files in the specified directory from the path variable and picks a
+  "random" filepath for use.
+
+Below is the directory structure at a glance.
+
+```sh
+randfile
+├── cmd
+│   ├── root.go
+│   └── version.go
+├── go.mod
+├── go.sum
+├── internal
+│   └── filesystem
+│       └── filesystem.go
+├── main.go
+└── README.md
+```
+
 ## Build from Source
 
 Clone the randfile repository.
