@@ -1,7 +1,7 @@
 ---
 title: "randfile"
 date: 2025-10-14T10:05:15-06:00
-lastmod: 2025-10-15
+lastmod: 2026-09-15
 description: "Small random file path fetcher written for the command line in Go."
 draft: false
 tags: ["randfile"]
