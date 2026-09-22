@@ -214,6 +214,12 @@ applications for this site.
 
 - [image-upscaling.net](https://image-upscaling.net/upscaling/en.html)
 
+## Media Purchasing
+
+- [alibris](https://www.alibris.com/)
+- [ebooks.com](https://www.ebooks.com/en-us/)
+- [HDtracks](https://www.hdtracks.com/)
+- [Bandcamp](https://bandcamp.com/)
 
 ## Cloud Providers
 
@@ -221,7 +227,6 @@ applications for this site.
 - [Azure](https://azure.microsoft.com/en-us)
 - [Amazon Web Services (AWS)](https://aws.amazon.com/)
 - [Google Cloud Platform (GCP)](https://console.cloud.google.com/)
-
 
 ## Windows
 
