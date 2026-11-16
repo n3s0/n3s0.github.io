@@ -1,0 +1,144 @@
+.album-title {
+  position: relative;
+  color: var(--accent);
+  margin-top: 0 !important;
+  margin-bottom: 15px !important;
+  padding-bottom: 15px;
+  border-bottom: 3px dotted var(--accent);
+  text-decoration: none !important;
+}
+
+.album-title::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  display: block;
+  width: 100%;
+  border-bottom: 3px dotted var(--accent);
+}
+
+.album-title a {
+  text-decoration: none;
+}
+
+.album-content {
+  margin-top: 25px;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.album-cover-container {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+}
+
+.album-cover {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.album-title {
+  position: relative;
+  color: var(--accent);
+  margin-top: 0 !important;
+  margin-bottom: 15px !important;
+  padding-bottom: 15px;
+  border-bottom: 3px dotted var(--accent);
+  text-decoration: none !important;
+}
+
+.album-title::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  display: block;
+  width: 100%;
+  border-bottom: 3px dotted var(--accent);
+}
+
+.album-grid-album-page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.album-cover-container-album-page {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+}
+
+.album-cover-album-page {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.album-title-album-page {
+  font-size: 3rem;
+  position: relative;
+  object-fit: cover;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  text-decoration: none;
+}
+
+.album-song-section-title {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 684px) {
+  .album-grid-album-page {
+    display: column;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2px;
+    max-width: 684px;
+    margin: 0 auto;
+  }
+  .album-cover-container-album-page {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+  } 
+  .album-title-album-page {
+    font-size: 2rem;
+    position: relative;
+    object-fit: cover;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+  .album-artist-album-page {
+    position: relative;
+    object-fit: cover;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+  .album-genre-album-page {
+    position: relative;
+    object-fit: cover;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+  .album-release-date-album-page {
+    position: relative;
+    object-fit: cover;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+}
+

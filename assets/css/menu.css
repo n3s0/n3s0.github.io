@@ -56,12 +56,15 @@
   padding: 10px;
   top: 10px;
   left: 0;
+  width: max-content;
+  min-width: 100%;
   list-style: none;
   z-index: 99;
 }
 
 .open .menu__dropdown {
   display: flex;
+  left: 0;
 }
 
 .menu__dropdown > li {

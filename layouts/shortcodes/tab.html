@@ -1,0 +1,34 @@
+<div class="music-tab-wrapper">
+  {{ with .Get "title" }}
+    <div class="music-tab-header">{{ . }}</div>
+  {{ end }}
+  <pre class="music-tab"><code>{{ trim .Inner "\n\r" }}</code></pre>
+</div>
+
+<style>
+  .music-tab-wrapper {
+    margin: 1.5rem 0;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .music-tab-header {
+    background: var(--background); 
+    padding: 0.4rem 1rem;
+    font-size: var(--font-size);
+    font-weight: bold;
+    border-bottom: 1px solid var(--accent);
+  }
+  .music-tab {
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+    font-family: "Fira Code", Courier, monospace;
+    font-size: 0.9rem;
+    line-height: 1.35;
+    white-space: pre;
+    background: var(--background);
+    color: var(--foreground);
+  }
+</style>
+

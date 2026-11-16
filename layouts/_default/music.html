@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <div class="album-title">
+    <h1>{{ .Title }}</h1>
+  </div>
+  {{ $paginator := .Paginate ( where .Pages "Type" "artist" ) 24 }}
+  {{ if ne $paginator.PageNumber 2 }} 
+    {{ if .Content }}
+      <div class="index-content {{ if .Params.framed -}}framed{{- end -}}">
+        {{ .Content }}
+      </div>
+    {{ end }}
+  {{ else }}
+      <div class="index-content {{ if .Params.framed -}}framed{{- end -}}">
+        <h1>Artists</h1>
+        <hr>
+      </div>
+  {{ end }}
+  <div class="artist-grid">
+
+  {{ range $paginator.Pages }}
+    <div class="artist-grid-item">
+      <div class="artist-image-wrapper">
+        <a href="{{ .Permalink }}">
+          <img class="artist-img" src="{{ .Params.Cover }}" alt="{{ .Title }}" />
+        </a>
+      </div>
+      <span class="grid-title">
+        <a class="grid-title-link" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+      </span>
+      </div>
+  {{ end }}
+  </div>
+  
+  {{ partial "artist_pagination.html" . }}
+{{ end }}
+

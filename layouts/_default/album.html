@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <div class="album-grid-album-page">
+    {{ partial "album-cover-album-page.html" . }}
+    <div class="album-cover-album-page-container">
+      <h1 class="album-title-album-page">{{ .Title }}</h1>
+      <h4 class="album-artist-album-page"><a href="{{ .Params.artistpage }}">{{ .Params.artists }}</a></h4>
+      <h4 class="album-genre-album-page">Genre: {{ .Params.genre }}</h4>
+      <h2 class="album-summary-header-album-page">Summary</h4>
+      <p>{{ .Summary }}</p>
+      <h4 class="album-release-date-album-page">Release Date: {{ .Params.releasedate | time.Format "01-02-2006" }}</h4>
+    </div>
+  </div>
+  <div class="posts">
+    <h1 class="album-song-section-title">Songs</h1>
+    {{ $paginator := .Paginate (where .Pages "Type" "song") 15 }}
+
+    {{ range $paginator.Pages }}
+      <article class="post on-list">
+        <h2 class="post-title">
+          <a href="{{ .Permalink }}">{{ .Params.trackno }} - {{ .Title | markdownify }}</a>
+        </h2>
+
+      </article>
+    {{ end }}
+
+    {{ partial "artist_pagination.html" . }}
+  </div>
+{{ end }}
+
+

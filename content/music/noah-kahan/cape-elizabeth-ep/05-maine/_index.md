@@ -1,0 +1,15 @@
+---
+title: "Maine"
+artists: "Noah Kahan"
+date: 2026-11-06T03:08:15-06:00
+summary: ""
+lastmod: 2026-11-06
+author: "Timothy Loftus (n3s0)"
+cover: "/img/music/artists/noah-kahan/album-covers/cape-elizabeth-ep.jpg"
+draft: false
+type: song
+layout: song
+instrument: guitar
+trackno: 5
+---
+

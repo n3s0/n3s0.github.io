@@ -1,0 +1,114 @@
+.song-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.song-album-cover-container {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+}
+
+.song-album-cover {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.song-title {
+  font-size: 3rem;
+  position: relative;
+  object-fit: cover;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+
+.song-artist {
+  position: relative;
+  object-fit: cover;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.song-album {
+  position: relative;
+  object-fit: cover;
+  text-decoration: none;
+  padding-top: 5px;
+  margin: 0 auto;
+}
+
+.song-genre {
+  position: relative;
+  object-fit: cover;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 0 auto;
+}
+
+
+.song-tunning {
+  position: relative;
+  object-fit: cover;
+  text-decoration: none;
+  padding-top: 5px;
+  margin: 0 auto;
+}
+
+.song-capo {
+  position: relative;
+  object-fit: cover;
+  text-decoration: none;
+  padding-top: 5px;
+  margin: 0 auto;
+}
+
+@media (max-width: 684px) {
+  .song-page-grid {
+    display: column;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2px;
+    max-width: 684px;
+    margin: 0 auto;
+  }
+  .song-album-cover-container {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+  } 
+  .song-album-cover {
+    font-size: 2rem;
+    position: relative;
+    object-fit: cover;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+  .song-artist {
+    position: relative;
+    object-fit: cover;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+  .song-genre {
+    position: relative;
+    object-fit: cover;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+  .song-album {
+    position: relative;
+    object-fit: cover;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+}
+
+

@@ -1,0 +1,11 @@
+{{ $src := .Get "src" }}
+{{ $height := .Get "height" | default "800px" }}
+
+<div class="pdf-container" style="--pdf-height: {{ $height }};">
+  <object data="{{ $src }}" type="application/pdf" width="100%" height="100%">
+    <embed src="{{ $src }}" width="100%" height="100%" style="border: none;" />
+      <p>Your browser does not support inline PDFs. 
+        <a href="{{ $src }}" download>Download the PDF</a> instead.
+      </p>
+  </object>
+</div>

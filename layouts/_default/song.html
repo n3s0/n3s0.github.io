@@ -1,0 +1,47 @@
+{{ define "main" }}
+<article class="song">
+  <div class="song-page-grid">
+    {{ partial "album-cover-album-page.html" . }}
+    <div class="song-album-meta-container">
+      <h1 class="song-title">{{ .Title }}</h1>
+      <h4 class="song-artist">Artist: <a href="{{ .Params.artistpage }}">{{ .Params.artists }}</a></h4>
+      <h4 class="song-album">Album: <a href="{{ .Params.albumpage }}">{{ .Params.album }}</a></h4>
+      <h4 class="song-genre">Genre: {{ .Params.genre }}</h4>
+      {{ if .Params.tuning }}
+        <h4 class="song-tunning">Tuning: {{ .Params.tuning }}</h4>
+      {{ end }}
+      {{ if .Params.capo }}
+        <h4 class="song-capo">Capo: {{ .Params.capo }} fret</h4>
+      {{ end }}
+    </div>
+  </div>
+  <div class="post-meta">
+    {{- if .Date -}}
+      <time class="post-date">
+        {{- partial "post-date" . -}}
+        {{- if and $.Site.Params.showLastUpdated .Lastmod -}}
+          &nbsp;{{- partial "post-lastmod" . -}}
+        {{- end -}}
+      </time>
+    {{- end -}}
+  </div>
+
+
+  {{ if (.Params.Toc | default .Site.Params.Toc) }}
+    <div class="table-of-contents">
+      <h2>
+        {{ (.Params.TocTitle | default .Site.Params.TocTitle) | default "Table of Contents" }}
+      </h2>
+      {{ .TableOfContents }}
+    </div>
+  {{ end }}
+
+  <div class="post-content">
+    {{- with .Content -}}
+      <div>
+        {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">#</a> ${3}` | safeHTML }}
+      </div>
+    {{- end -}}
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,46 @@
+{{ define "main" }}
+  <div class="post-title">
+    <h1>{{ .Title }}</h1>
+  </div>
+  {{ partial "artist-cover.html" . }}
+  {{ if .Content }}
+    <div class="index-content {{ if .Params.framed -}}framed{{- end -}}">
+      {{ .Content }}
+    </div>
+  {{ end }}
+  <div class="posts">
+    <div class="album-grid">
+    {{ $paginator := .Paginate (where .Pages "Type" "album") 6 }}
+
+    {{ range ($paginator.Pages.ByParam "releasedate") }}
+      <article class="post on-list">
+        <h2 class="post-title">
+          <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+        </h2>
+
+        {{ partial "album-cover.html" . }}
+
+        <div class="album-content">
+          {{ if .Description }}
+            <p>{{ .Description | markdownify }}</p>
+          {{ end }}
+        </div>
+
+        <div class="album-song-content">
+          <h3>Tracks:</h3>
+          {{ $songs := where .Pages "Type" "song" }}
+
+          {{ range $songs.ByParam "trackno" }}
+            <h4>
+          <a href="{{ .RelPermalink }}">{{ .Params.Trackno }} - {{ .Title }}</a>
+            </h3>
+          {{ end }}
+        </div>
+
+      </article>
+    {{ end }}
+    </div>
+    {{ partial "artist_pagination.html" . }}
+  </div>
+{{ end }}
+
